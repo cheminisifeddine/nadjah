@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عرض العمر - مستقبل أولادك مضمون بين يديك!</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Meta Pixel Code --> 
+    <script> 
+    !function(f,b,e,v,n,t,s) 
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod? 
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)}; 
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0'; 
+    n.queue=[];t=b.createElement(e);t.async=!0; 
+    t.src=v;s=b.getElementsByTagName(e)[0]; 
+    s.parentNode.insertBefore(t,s)}(window, document,'script', 
+    'https://connect.facebook.net/en_US/fbevents.js'); 
+    fbq('init', '2191072564678210'); 
+    fbq('track', 'PageView'); 
+    </script> 
+    <noscript><img height="1" width="1" style="display:none" 
+    src="https://www.facebook.com/tr?id=2191072564678210&ev=PageView&noscript=1" 
+    /></noscript> 
+    <!-- End Meta Pixel Code -->
+
+    <!-- Google tag (gtag.js) --> 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3L0GFDKB19"></script> 
+    <script> 
+      window.dataLayer = window.dataLayer || []; 
+      function gtag(){dataLayer.push(arguments);} 
+      gtag('js', new Date()); 
+    
+      gtag('config', 'G-3L0GFDKB19'); 
+    </script>
+
+    <style>
+        :root {
+            --primary-blue: #0A2463;
+            --secondary-blue: #0d2a70;
+            --accent-gold: #FFD700;
+            --accent-green: #28a745;
+            --dark-text: #333333;
+            --light-text: #FFFFFF;
+            --background-light: #F8F9FA;
+            --price-red: #dc3545;
+            --facebook-blue: #1877F2;
+            --facebook-gray: #F0F2F5;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            direction: rtl;
+            margin: 0; padding: 0; box-sizing: border-box;
+            color: var(--dark-text); background-color: #fff;
+            padding-top: 40px;
+        }
+
+        .urgency-banner {
+            background: linear-gradient(90deg, #d32f2f, #c62828);
+            color: white; padding: 8px 10px;
+            text-align: center;
+            position: fixed; top: 0; left: 0; width: 100%; z-index: 1002;
+            display: flex; align-items: center; justify-content: center;
+            flex-wrap: wrap; font-weight: 700; box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        }
+        .urgency-banner p { margin: 2px 8px; font-size: 0.9em; }
+        #banner-countdown {
+            font-size: 1em; font-weight: 900; background-color: rgba(255,255,255,0.2);
+            padding: 2px 8px; border-radius: 5px; margin: 0 5px;
+        }
+
+        .container { width: 90%; max-width: 960px; margin: 0 auto; padding: 50px 0; }
+        
+        .main-header {
+            background-color: #fff; padding: 15px 0; text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 40px;
+            z-index: 1000;
+        }
+        .main-header img { 
+            max-height: 50px;
+        }
+
+        .cta-button {
+            background: linear-gradient(145deg, var(--accent-green), #218838);
+            color: var(--light-text); border: none; padding: 18px 35px; font-size: 1.5em;
+            font-weight: 900; font-family: 'Tajawal', sans-serif; border-radius: 12px;
+            cursor: pointer; transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 5px 20px rgba(40, 167, 69, 0.5); text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+            animation: pulse 1.5s infinite; text-decoration: none; display: inline-flex;
+            align-items: center; justify-content: center;
+        }
+        .cta-button:hover { transform: translateY(-5px) scale(1.05); box-shadow: 0 8px 25px rgba(40, 167, 69, 0.7); animation: none; }
+        .cta-button .icon { margin-right: 10px; width: 24px; height: 24px; }
+        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.03); } 100% { transform: scale(1); } }
+
+        section { padding: 50px 0; text-align: center; }
+        .section-light { background-color: #fff; }
+        .section-dark { background-color: var(--background-light); }
+        .section-blue { background-color: var(--primary-blue); color: white; }
+        section h2 { font-size: 2.8em; margin-bottom: 50px; font-weight: 900; position: relative; display: inline-block; line-height: 1.4; }
+        .section-blue h2 { color: white; }
+        section h2::after {
+            content: ''; position: absolute; bottom: -15px; left: 50%;
+            transform: translateX(-50%); width: 80px; height: 5px;
+            background-color: var(--accent-gold); border-radius: 2px;
+        }
+
+        #hero {
+            background: linear-gradient(rgba(10, 36, 99, 0.88), rgba(10, 36, 99, 0.88)), url(https://i.ibb.co/yFL7jHFK/Whisk-a0b0644d83.jpg);
+            background-size: cover; background-position: center; background-attachment: fixed;
+            color: var(--light-text); text-align: center; padding: 60px 0 40px 0;
+        }
+        #hero h1 { font-size: 3.2em; font-weight: 900; margin-bottom: 15px; text-shadow: 2px 2px 8px rgba(0,0,0,0.6); }
+        #hero .subtitle { font-size: 1.5em; max-width: 750px; margin: 0 auto 30px auto; line-height: 1.6; font-weight: 500; }
+        
+        .pain-points-image img {
+            max-width: 100%; max-height: 450px;
+            height: auto; display: block; margin: 0 auto;
+            border-radius: 12px; box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+        }
+        
+        .columns-container { display: flex; flex-wrap: wrap; gap: 25px; justify-content: center; align-items: stretch; }
+        .column {
+            flex: 1 1 300px; background: #fff; padding: 30px; border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08); border-bottom: 5px solid var(--price-red);
+            display: flex; flex-direction: column;
+        }
+        .column h3 { margin-top: 0; color: var(--primary-blue); font-size: 1.4em; }
+        .benefit-card {
+            background: #fff; padding: 30px 20px; border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08); border-top: 5px solid var(--accent-gold);
+            display: flex; flex-direction: column; flex: 1 1 300px;
+        }
+        .benefit-card h3 { color: var(--primary-blue); font-size: 1.5em; }
+        .benefit-card p { font-size: 1.1em; line-height: 1.6; flex-grow: 1; }
+        .benefit-card img { max-width: 100%; margin-top: 15px; border-radius: 8px; height: 220px; object-fit: cover; }
+        
+        .offer-box {
+            background-color: #fff; color: var(--dark-text); border-radius: 20px;
+            padding: 30px 40px; max-width: 800px; margin: 0 auto 40px auto;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2); border: 3px solid var(--accent-gold);
+        }
+        .offer-box .offer-justification {
+            background-color: var(--accent-gold); color: var(--primary-blue); font-weight: bold;
+            padding: 10px; border-radius: 8px; margin-bottom: 20px; display: inline-block;
+        }
+        .offer-item { display: flex; align-items: center; gap: 20px; padding: 15px 0; border-bottom: 1px dashed #ccc; }
+        .offer-item:last-child { border-bottom: none; }
+        .offer-icon { font-size: 3em; color: var(--primary-blue); }
+        .bonus-tag { background-color: var(--accent-gold); color: var(--primary-blue); font-weight: 800; padding: 3px 8px; border-radius: 5px; font-size: 0.8em; display: inline-block; }
+        .price-section { margin-top: 30px; background-color: #fff8e1; padding: 20px; border-radius: 10px; border: 2px dashed var(--price-red); }
+        .old-price { font-size: 2em; color: #777; text-decoration: line-through; font-weight: 700; }
+        .new-price { font-size: 4em; color: var(--price-red); font-weight: 900; margin: 5px 0; animation: price-pop 2s infinite; }
+        @keyframes price-pop { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.08); color: #e53935; } }
+        
+        #curriculum .curriculum-container { max-width: 800px; margin: 0 auto; }
+        #curriculum details {
+            background: #fff; border: 1px solid #e0e0e0; border-radius: 10px;
+            margin-bottom: 10px; text-align: right;
+        }
+        #curriculum summary {
+            padding: 20px; font-size: 1.4em; font-weight: 700;
+            cursor: pointer; list-style: none; display: flex;
+            align-items: center; gap: 15px; color: var(--primary-blue);
+        }
+        #curriculum summary::before { content: '📚'; }
+        #curriculum summary:hover { background-color: #f7f7f7; }
+        #curriculum ul {
+            list-style: none; padding: 0 40px 20px 40px; margin: 0;
+            background-color: #fcfcfc;
+        }
+        #curriculum li {
+            padding: 10px; border-bottom: 1px solid #eee;
+            font-size: 1.1em;
+        }
+        #curriculum li:last-child { border-bottom: none; }
+
+        #teacher .teacher-profile {
+             max-width: 700px; margin: 0 auto; background: #fff; padding: 30px;
+             border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        #teacher .teacher-main-image {
+            width: 150px; height: 150px; border-radius: 50%; border: 5px solid var(--accent-gold);
+            margin-bottom: 20px; object-fit: cover;
+        }
+        #teacher .teacher-profile h3 { font-size: 1.8em; margin: 0 0 5px 0; color: var(--primary-blue); }
+        #teacher .teacher-profile h4 { font-size: 1.1em; margin: 0 0 20px 0; color: #555; font-weight: 600; }
+        #teacher .teacher-profile ul {
+            text-align: right; list-style: none; padding: 0;
+            display: inline-block;
+        }
+        #teacher .teacher-profile li {
+            font-size: 1.1em; margin-bottom: 8px; font-weight: 500;
+        }
+        #teacher .teacher-profile li::before { content: '✅'; margin-left: 10px; }
+        
+        #testimonials { background-color: var(--facebook-gray); }
+        .testimonials-container {
+            max-width: 700px; margin: 0 auto; display: flex;
+            flex-direction: column; gap: 20px;
+        }
+        .fb-comment {
+            background-color: #fff; border-radius: 18px;
+            padding: 12px 16px; display: flex; gap: 10px;
+            text-align: right;
+        }
+        .fb-comment-pfp img {
+            width: 40px; height: 40px; border-radius: 50%;
+            object-fit: cover;
+        }
+        .fb-comment-main { flex-grow: 1; }
+        .fb-comment-content {
+            background-color: var(--facebook-gray);
+            border-radius: 18px; padding: 8px 12px;
+            position: relative;
+        }
+        .fb-comment-header { display: flex; flex-direction: column; align-items: flex-start; }
+        .fb-comment-name { font-weight: 700; color: #050505; }
+        .fb-comment-text { font-size: 1em; color: #050505; margin: 4px 0 0 0; line-height: 1.6; }
+        .fb-comment-actions { display: flex; gap: 15px; padding: 8px 12px 4px; font-size: 0.8em; color: #65676B; font-weight: bold; }
+        .fb-comment-actions span { cursor: pointer; }
+        .fb-comment-actions .like { color: var(--facebook-blue); }
+        
+        .fb-reactions {
+            position: absolute;
+            left: -10px;
+            bottom: -15px;
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+            padding: 2px 4px;
+            display: flex;
+            align-items: center;
+        }
+        .fb-reactions .reaction-icon {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 2px solid #fff;
+            margin-right: -6px;
+        }
+        .fb-reactions .reaction-count {
+            font-size: 0.8em;
+            font-weight: 600;
+            color: #65676B;
+            margin-right: 10px;
+        }
+
+        #guarantee { padding-top: 0; }
+        .guarantee-seal {
+            max-width: 800px; margin: 0 auto; display: flex; align-items: center;
+            gap: 25px; background: #fff8e1; border-radius: 15px;
+            padding: 30px; border: 3px solid var(--accent-gold);
+            box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+        }
+        .guarantee-seal .icon { width: 80px; height: 80px; }
+        .guarantee-seal .text h3 { font-size: 1.8em; margin: 0 0 10px 0; color: var(--primary-blue); }
+        .guarantee-seal .text p { margin: 0; font-size: 1.1em; line-height: 1.6; text-align: right; }
+
+        #registration { background: var(--background-light); padding: 60px 0; }
+        .registration-container {
+            max-width: 800px; margin: 0 auto; background-color: white; border-radius: 15px;
+            padding: 40px; box-shadow: 0 10px 40px rgba(0,0,0,0.15); color: var(--dark-text);
+            border-top: 8px solid var(--primary-blue);
+            position: relative; overflow: hidden;
+        }
+        .form-title { color: var(--primary-blue); font-size: 2.2em; margin-bottom: 15px; text-align: center; font-weight: 900; }
+        .form-description { text-align: center; margin-bottom: 15px; font-size: 1.2em; color: #555; }
+        #dynamic-proof {
+            text-align: center; margin-bottom: 30px; font-size: 1.1em; color: var(--price-red);
+            font-weight: bold; background-color: #ffebee; padding: 10px; border-radius: 8px;
+            opacity: 0; transition: opacity 0.5s ease;
+        }
+        #dynamic-proof.visible { opacity: 1; }
+        #dynamic-proof .icon { animation: fire 1s infinite; margin-left: 5px; }
+        @keyframes fire { 0%{transform:scale(1)} 50%{transform:scale(1.2)} 100%{transform:scale(1)} }
+        
+        #registration-form { display: grid; grid-template-columns: 1fr; gap: 20px; text-align: right; }
+        .form-group input, .form-group select {
+            width: 100%; padding: 15px; border: 2px solid #ccc; border-radius: 8px;
+            font-family: 'Tajawal', sans-serif; font-size: 1.1em; text-align: right;
+            box-sizing: border-box; transition: border-color 0.3s;
+        }
+        .form-group input:focus, .form-group select:focus { border-color: var(--primary-blue); outline: none; }
+        #registration-form .submit-button { width: 100%; padding: 18px; margin-top: 10px; }
+        .submit-button:disabled { background: #9ca3af; cursor: not-allowed; }
+        
+        #confirmation-message { display: none; text-align: center; padding: 40px 20px; position: relative; z-index: 2; }
+        #confirmation-message h3 { font-size: 2em; color: var(--primary-blue); margin-bottom: 15px; }
+        #confirmation-message p { font-size: 1.2em; line-height: 1.7; color: var(--dark-text); }
+        #confirmation-message .call-info {
+            margin-top: 25px; padding: 15px; background-color: #e3f2fd;
+            border-radius: 10px; border: 2px solid var(--primary-blue); font-weight: bold;
+        }
+
+        #confetti-canvas {
+            position: absolute; top: 0; left: 0;
+            width: 100%; height: 100%; pointer-events: none; z-index: 1;
+        }
+
+        @media (min-width: 769px) {
+            #registration-form { grid-template-columns: 1fr 1fr; }
+            .form-group.full-width { grid-column: 1 / -1; }
+            #registration-form .submit-button { grid-column: 1 / -1; }
+        }
+
+        @media (max-width: 768px) {
+            body { padding-top: 40px; }
+            .main-header { top: 40px; }
+            .urgency-banner { flex-direction: column; padding: 5px 10px;}
+            #hero { padding: 40px 0 30px 0; }
+            #hero h1 { font-size: 2.2em; }
+            #hero .subtitle { font-size: 1.1em; }
+            section h2 { font-size: 2.2em; }
+            .cta-button { font-size: 1.2em; padding: 15px 25px; }
+            .registration-container, .offer-box { padding: 25px; }
+            .guarantee-seal { flex-direction: column; text-align: center; }
+            .fb-comment { flex-direction: column; align-items: flex-start;}
+        }
+    </style>
+</head>
+<body>
+
+    <div class="urgency-banner">
+        <p>توصيل مجاني لكل 58 ولاية | الدفع عند الإستلام</p>
+        <p>عرض اليوم ينتهي خلال: <span id="banner-countdown">00:00:00</span></p>
+    </div>
+
+    <header class="main-header">
+        <img src="https://i.ibb.co/fVsQmfBb/Whisk-333cd5e316.jpg" alt="شعار أكاديمية نجاح">
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="container">
+                <h1>وليدك راح يتقن الإنجليزية ويصنع ألعابه بـعرض واحد فقط!</h1>
+                <p class="subtitle">أقوى استثمار في مستقبل أولادك. باقة تعليمية متكاملة تمنحهم مهارات المستقبل وتصلك حتى باب الدار.</p>
+                <a href="#registration" class="cta-button">
+                    <svg class="icon" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M5 4a2 2 0 012-2h6a2 2 0 012 2v14l-5-2.5L5 18V4z"></path></svg>
+                    نعم، أريد تأمين مستقبل أولادي!
+                </a>
+            </div>
+        </section>
+
+        <section id="pain-points" class="section-dark">
+            <div class="container">
+                <h2>هل هذا هو حالك مع أولادك؟ (ماتخافش، كاين الحل)</h2>
+                <div class="pain-points-image"><img src="https://i.ibb.co/rRJ98hJS/Whisk-173e7a7377.jpg" loading="lazy" alt="أم قلقة تساعد طفلها"></div>
+                <div class="columns-container">
+                    <div class="column"><h3>ساعات الدعم غالية والنتيجة والو؟</h3><p>تصرف دراهم كبار في دروس الدعم، لكن ولدك مازال يخاف يهدر بـ l'anglais و ماكان حتى نتيجة ملموسة.</p></div>
+                    <div class="column"><h3>تشوف وليدك حشمان ويفقد الثقة؟</h3><p>يحس روحو ناقص قدام صحابو كي مايفهمش الألعاب والرسوم، وثقته بنفسه تهبط كل يوم.</p></div>
+                    <div class="column"><h3>خايف عليه من المستقبل؟</h3><p>العالم يتبدل بسرعة والإنجليزية والبرمجة هوما سلاح المستقبل. راك خايف وليدك يضيع فرص حياتو.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="curriculum" class="section-light">
+            <div class="container">
+                <h2>ماذا سيتعلم إبنك بالضبط في هذه الباقة؟</h2>
+                <div class="curriculum-container">
+                    <details>
+                        <summary>الوحدة 1-5: أساسيات اللغة الإنجليزية</summary>
+                        <ul>
+                            <li>المقدمة و كل الحروف الأبجدية (A-Z)</li>
+                            <li>الأرقام من 1 إلى 100</li>
+                            <li>الأعداد الترتيبية (الأول، الثاني، الثالث...)</li>
+                            <li>جميع الألوان الأساسية والثانوية</li>
+                        </ul>
+                    </details>
+                    <details>
+                        <summary>الوحدة 6-10: بناء المفردات</summary>
+                        <ul>
+                           <li>الأشكال الهندسية الشائعة والمتقدمة</li>
+                            <li>الفاكهة والخضروات بأنواعها وألوانها</li>
+                            <li>فصول السنة الأربعة</li>
+                            <li>أنواع الملابس الصيفية والشتوية</li>
+                        </ul>
+                    </details>
+                     <details>
+                        <summary>الوحدة 11-16: مهارات الحياة اليومية</summary>
+                        <ul>
+                            <li>شهور السنة و أيام الأسبوع</li>
+                            <li>تسمية الغرف والأثاث في المنزل</li>
+                            <li>أهم الأفعال المستخدمة يومياً</li>
+                            <li>كتاب PDF تفاعلي لتمارين إضافية</li>
+                        </ul>
+                    </details>
+                     <details>
+                        <summary>دورة البرمجة بلغة سكراتش (هدية)</summary>
+                        <ul>
+                            <li>مقدمة في التفكير المنطقي والبرمجي</li>
+                            <li>شرح واجهة سكراتش والبلوكات الأساسية</li>
+                            <li>صناعة أول قصة تفاعلية</li>
+                            <li>بناء أول لعبة بسيطة خاصة به</li>
+                        </ul>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section id="offer" class="section-blue">
+            <div class="container">
+                <h2>عرض الإطلاق الذي لن يتكرر!</h2>
+                <div class="offer-box">
+                    <p class="offer-justification">عرض خاص بمناسبة إطلاق منصتنا الجديدة!</p>
+                    <div class="offer-item"><div class="offer-icon">🇬🇧</div><div><h3>دورة الإنجليزية المتكاملة (القيمة: 10000 دج)</h3><p>دروس فيديو مسجلة من الصفر للاحتراف، تصلك على DVD وفي المنصة، مع كراس تلوين وشهادة معتمدة.</p></div></div>
+                    <div class="offer-item"><div class="offer-icon">💻</div><div><h3><span class="bonus-tag">هدية مجانية</span> دورة البرمجة (القيمة: 7000 دج)</h3><p>وليدك يتعلم أساسيات التفكير المنطقي ويصنع برامجه وألعابه الخاصة بلغة سكراتش العالمية.</p></div></div>
+                    <div class="offer-item"><div class="offer-icon">👩‍🏫</div><div><h3><span class="bonus-tag">هدية مجانية</span> حصص مباشرة (القيمة: 2000 دج)</h3><p>أسبوعان من الحصص المباشرة مع الأستاذة لتطبيق ما تعلمه والحصول على الدعم المباشر.</p></div></div>
+                    <div class="price-section"><p style="font-size:1.2em;">القيمة الحقيقية لكل هذا هي <span class="old-price">19000 دج</span></p><p style="font-size:1.4em; font-weight:bold;">لكن اليوم فقط، احصل على كل شيء بسعر:</p><p class="new-price">4900 دج فقط!</p></div>
+                </div>
+                <a href="#registration" class="cta-button">
+                    <svg class="icon" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path></svg>
+                    أطلب الباقة الكاملة الآن!
+                </a>
+            </div>
+        </section>
+
+        <section id="teacher" class="section-dark">
+            <div class="container">
+                <h2>تعرف على الأستاذة المشرفة</h2>
+                <div class="teacher-profile">
+                    <img src="https://i.ibb.co/WNzjRH8y/Whisk-d5ff6314af.jpg" class="teacher-main-image" loading="lazy" alt="الأستاذة نادية">
+                    <h3>الأستاذة نادية</h3>
+                    <h4>خبيرة في تعليم الإنجليزية للأطفال</h4>
+                    <ul>
+                        <li>متحصلة على شهادة الماجستير في اللسانيات التطبيقية.</li>
+                        <li>خبرة 12 سنة في تدريس الأطفال في الجزائر.</li>
+                        <li>مدربة معتمدة في أساليب التعليم التفاعلي.</li>
+                        <li>صممت هذا البرنامج خصيصاً ليناسب عقلية الطفل الجزائري.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="section-light">
+            <div class="container">
+                <h2>آراء الأولياء الذين وثقوا فينا... هذا ما قالوه!</h2>
+                <div class="testimonials-container">
+                    <!-- Testimonial 1 -->
+                    <div class="fb-comment">
+                        <div class="fb-comment-pfp">
+                            <img src="https://th.bing.com/th?id=OIF.taY4s7%2fbPd8UTAb7RBLWcQ&rs=1&pid=ImgDetMain" alt="فاطمة" loading="lazy">
+                        </div>
+                        <div class="fb-comment-main">
+                            <div class="fb-comment-content">
+                                <div class="fb-comment-header">
+                                    <span class="fb-comment-name">فاطمة الزهراء ب.</span>
+                                </div>
+                                <p class="fb-comment-text">يعطيكم الصحة والله! وليدي كان يكره حاجة اسمها anglais، درك ولا هو اللي يحل الكراس وحدو ويتبع معاكم. فرحانة بزاف بالنتيجة الحمد لله.</p>
+                                <div class="fb-reactions">
+                                    <img class="reaction-icon" src="https://cdn.iconscout.com/icon/free/png-256/free-like-icon-download-in-svg-png-gif-file-formats--love-emoji-logo-facebook-reaction-pack-sign-symbols-icons-1991059.png" alt="like">
+                                    <img class="reaction-icon" src="https://cdn.iconscout.com/icon/free/png-256/free-love-logo-icon-download-in-svg-png-gif-file-formats--facebook-heart-reactionsemoticons-pack-logos-icons-894769.png?f=webp" alt="love">
+                                    <span class="reaction-count">42</span>
+                                </div>
+                            </div>
+                            <div class="fb-comment-actions">
+                                <span class="like">أعجبني</span>
+                                <span>رد</span>
+                                <span>· منذ يومين</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 2 -->
+                    <div class="fb-comment">
+                        <div class="fb-comment-pfp">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDDDqyJQzwJQWFKZZ_6bfGhEAr5fPyBQpWlA&s" alt="كريم" loading="lazy">
+                        </div>
+                        <div class="fb-comment-main">
+                            <div class="fb-comment-content">
+                                <div class="fb-comment-header">
+                                    <span class="fb-comment-name">كريم ل. (وهران)</span>
+                                </div>
+                                <p class="fb-comment-text">أحسن استثمار درتو في وليدي. الباكج وصلني للدار، خدمة ماشاء الله. دورة البرمجة وحدها كنز. أنصح به كل أب.</p>
+                                <div class="fb-reactions">
+                                    <img class="reaction-icon" src="https://cdn.iconscout.com/icon/free/png-256/free-like-icon-download-in-svg-png-gif-file-formats--love-emoji-logo-facebook-reaction-pack-sign-symbols-icons-1991059.png" alt="like">
+                                    <img class="reaction-icon" src="https://cdn.iconscout.com/icon/free/png-256/free-love-logo-icon-download-in-svg-png-gif-file-formats--facebook-heart-reactionsemoticons-pack-logos-icons-894769.png?f=webp" alt="love">
+                                    <span class="reaction-count">28</span>
+                                </div>
+                            </div>
+                            <div class="fb-comment-actions">
+                                <span class="like">أعجبني</span>
+                                <span>رد</span>
+                                <span>· منذ 5 أيام</span>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- Testimonial 3 -->
+                    <div class="fb-comment">
+                        <div class="fb-comment-pfp">
+                             <img src="https://img.freepik.com/photos-gratuite/vue-face-femme-portant-halal-exterieur_23-2150701516.jpg?semt=ais_items_boosted&w=740" alt="ليلى" loading="lazy">
+                        </div>
+                        <div class="fb-comment-main">
+                            <div class="fb-comment-content">
+                                <div class="fb-comment-header">
+                                    <span class="fb-comment-name">ليلى م. (قسنطينة)</span>
+                                </div>
+                                <p class="fb-comment-text">كنت خايفة من الشراء عبر الإنترنت، لكن الحق يقال خدمة في القمة. احترافية كبيرة والتوصيل سريع. شكرا جزيلا لفريق العمل.</p>
+                                <div class="fb-reactions">
+                                    <img class="reaction-icon" src="https://cdn.iconscout.com/icon/free/png-256/free-like-icon-download-in-svg-png-gif-file-formats--love-emoji-logo-facebook-reaction-pack-sign-symbols-icons-1991059.png" alt="like">
+                                    <img class="reaction-icon" src="https://cdn.iconscout.com/icon/free/png-256/free-love-logo-icon-download-in-svg-png-gif-file-formats--facebook-heart-reactionsemoticons-pack-logos-icons-894769.png?f=webp" alt="love">
+                                    <span class="reaction-count">51</span>
+                                </div>
+                            </div>
+                            <div class="fb-comment-actions">
+                                <span class="like">أعجبني</span>
+                                <span>رد</span>
+                                <span>· الأسبوع الماضي</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="guarantee" class="section-dark">
+             <div class="container">
+                 <div class="guarantee-seal">
+                      <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 20.944A12.02 12.02 0 0012 22a12.02 12.02 0 009-1.056c.343-.344.65-.724.925-1.126a2.01 2.01 0 00.632-1.456A11.955 11.955 0 0121.618 8.984z"></path></svg>
+                      <div class="text">
+                          <h3>ضماننا الذهبي 100%</h3>
+                          <p>تفقد المنتج عند استلامه، إذا لم يعجبك أو لم يكن كما توقعت، لا تدفع أي شيء. رضاك هو أولويتنا المطلقة.</p>
+                      </div>
+                 </div>
+             </div>
+        </section>
+
+        <section id="registration">
+            <div class="container">
+                <div class="registration-container" id="registration-container">
+                    <canvas id="confetti-canvas"></canvas>
+                    <div id="form-wrapper">
+                        <h3 class="form-title">املأ الاستمارة وأكمل طلبك الآن</h3>
+                        <p class="form-description">المقاعد في هذا العرض محدودة جداً، املأ معلوماتك لتأكيد حجزك.</p>
+                        <div id="dynamic-proof"></div>
+                        <form id="registration-form" method="POST" action="https://script.google.com/macros/s/AKfycby21c0JAbNnaDLgwpyY2kMdVioSSdbmYmAOv_g7iXcnrtU_QhgBu_Te_cH9jxRVDKF-/exec">
+                            <div class="form-group full-width"><label for="fullName">الإسم و اللقب الكامل</label><input type="text" id="fullName" name="fullName" placeholder="مثال: كريم فضيل" required></div>
+                            <div class="form-group"><label for="phone">رقم الهاتف (ضروري لنتصل بك)</label><input type="tel" id="phone" name="phone" placeholder="مثال: 0555123456" required pattern="[0-9]{10}"></div>
+                            <div class="form-group"><label for="wilaya">الولاية</label><select id="wilaya" name="wilaya" required><option value="">-- اختر ولايتك --</option></select></div>
+                            <div class="form-group full-width"><label for="address">العنوان الكامل للจัดส่ง (اختياري)</label><input type="text" id="address" name="address" placeholder="الحي، الشارع، معلومات إضافية..."></div>
+                            <button type="submit" class="cta-button submit-button">
+                                <svg class="icon" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                                أؤكد طلبي الآن!
+                            </button>
+                        </form>
+                    </div>
+                    <div id="confirmation-message">
+                        <h3>🎉 تهانينا! تم تأكيد طلبك بنجاح.</h3>
+                        <p>شكراً لثقتك فينا! لقد تم تسجيل طلبك وسنتصل بك في أقرب وقت ممكن لتأكيد التفاصيل النهائية معك.</p>
+                        <div class="call-info">
+                            سيقوم فريقنا بالاتصال بك من أحد أرقامنا الرسمية، يرجى إبقاء هاتفك قيد التشغيل.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+    // Countdown Timer Logic
+    function startCountdown() {
+        const countdownElement = document.getElementById('banner-countdown');
+        let duration = 24 * 60 * 60; // 24 hours in seconds
+
+        const timer = setInterval(function () {
+            let hours = parseInt(duration / 3600, 10);
+            let minutes = parseInt((duration % 3600) / 60, 10);
+            let seconds = parseInt(duration % 60, 10);
+
+            hours = hours < 10 ? "0" + hours : hours;
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+            countdownElement.textContent = hours + ":" + minutes + ":" + seconds;
+
+            if (--duration < 0) {
+                clearInterval(timer);
+                countdownElement.textContent = "العرض انتهى!";
+            }
+        }, 1000);
+    }
+
+    // Wilaya (State/Province) Dropdown Logic
+    function populateWilayas() {
+        const wilayas = [
+            "أدرار", "الشلف", "الأغواط", "أم البواقي", "باتنة", "بجاية", "بسكرة", "بشار", "البليدة", "البويرة",
+            "تمنراست", "تبسة", "تلمسان", "تيارت", "تيزي وزو", "الجزائر", "الجلفة", "جيجل", "سطيف", "سعيدة",
+            "سكيكدة", "سيدي بلعباس", "عنابة", "قالمة", "قسنطينة", "المدية", "مستغانم", "المسيلة", "معسكر",
+            "ورقلة", "وهران", "البيض", "إليزي", "برج بوعريريج", "بومرداس", "الطارف", "تندوف", "تيسمسيلت",
+            "الوادي", "خنشلة", "سوق أهراس", "تيبازة", "ميلة", "عين الدفلى", "النعامة", "عين تموشنت", "غرداية",
+            "غليزان", "تيميمون", "برج باجي مختار", "أولاد جلال", "بني عباس", "عين صالح", "عين قزام", "تقرت",
+            "جانت", "المغير", "المنيعة"
+        ];
+        const select = document.getElementById('wilaya');
+        wilayas.forEach(wilaya => {
+            let option = document.createElement('option');
+            option.value = wilaya;
+            option.textContent = wilaya;
+            select.appendChild(option);
+        });
+    }
+
+    // Dynamic Social Proof Logic
+    function showDynamicProof() {
+        const proofElement = document.getElementById('dynamic-proof');
+        const messages = [
+            "🔥 قام شخص من وهران بتقديم طلبه للتو!",
+            "🔥 والد من العاصمة حجز مقعداً لابنه الآن!",
+            "🔥 سيدة من قسنطينة أكدت طلبها للتو!",
+            "🔥 مقعد آخر تم حجزه من طرف ولي من سطيف!",
+            "🔥 شخص من عنابة استغل العرض للتو!"
+        ];
+        let lastMessageIndex = -1;
+
+        setInterval(() => {
+            let randomIndex;
+            do {
+                randomIndex = Math.floor(Math.random() * messages.length);
+            } while (randomIndex === lastMessageIndex);
+            
+            lastMessageIndex = randomIndex;
+            proofElement.innerHTML = `<span class="icon">🔥</span> ${messages[randomIndex]}`;
+            proofElement.classList.remove('visible');
+            // Use a timeout to allow the fade out transition to complete before fading in
+            setTimeout(() => {
+                 proofElement.classList.add('visible');
+            }, 100);
+           
+        }, 7000); // Change message every 7 seconds
+    }
+
+    // Confetti Animation Logic
+    const confettiCanvas = document.getElementById('confetti-canvas');
+    const confettiCtx = confettiCanvas.getContext('2d');
+    let confettiPieces = [];
+    const numberOfPieces = 100;
+    const colors = ['#FFD700', '#0A2463', '#28a745', '#dc3545', '#FFFFFF'];
+
+    function resizeCanvas() {
+        confettiCanvas.width = confettiCanvas.parentElement.offsetWidth;
+        confettiCanvas.height = confettiCanvas.parentElement.offsetHeight;
+    }
+
+    function ConfettiPiece(x, y) {
+        this.x = x;
+        this.y = y;
+        this.size = Math.random() * 8 + 4;
+        this.speedX = Math.random() * 3 - 1.5;
+        this.speedY = Math.random() * 5 + 2;
+        this.color = colors[Math.floor(Math.random() * colors.length)];
+        this.rotation = Math.random() * 360;
+        this.rotationSpeed = Math.random() * 20 - 10;
+    }
+
+    ConfettiPiece.prototype.update = function() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+        this.rotation += this.rotationSpeed;
+        if (this.y > confettiCanvas.height) {
+            this.y = -20;
+            this.x = Math.random() * confettiCanvas.width;
+        }
+    }
+
+    ConfettiPiece.prototype.draw = function() {
+        confettiCtx.save();
+        confettiCtx.translate(this.x, this.y);
+        confettiCtx.rotate(this.rotation * Math.PI / 180);
+        confettiCtx.fillStyle = this.color;
+        confettiCtx.fillRect(-this.size / 2, -this.size / 2, this.size, this.size);
+        confettiCtx.restore();
+    }
+
+    function animateConfetti() {
+        confettiCtx.clearRect(0, 0, confettiCanvas.width, confettiCanvas.height);
+        confettiPieces.forEach(p => {
+            p.update();
+            p.draw();
+        });
+        requestAnimationFrame(animateConfetti);
+    }
+
+    function launchConfetti() {
+        resizeCanvas();
+        confettiPieces = [];
+        for (let i = 0; i < numberOfPieces; i++) {
+            confettiPieces.push(new ConfettiPiece(Math.random() * confettiCanvas.width, -Math.random() * confettiCanvas.height));
+        }
+    }
+
+    // Form Submission Logic
+    document.getElementById('registration-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const form = e.target;
+        const submitButton = form.querySelector('.submit-button');
+        const formWrapper = document.getElementById('form-wrapper');
+        const confirmationMessage = document.getElementById('confirmation-message');
+
+        submitButton.disabled = true;
+        submitButton.textContent = 'جاري إرسال طلبك...';
+
+        // --- Fire Facebook Purchase Event ---
+        if (typeof fbq === 'function') {
+            fbq('track', 'Purchase', {currency: "DZD", value: 4900.00});
+        }
+        
+        const data = new FormData(form);
+        fetch(form.action, {
+            method: 'POST',
+            body: data,
+        })
+        .then(response => response.text())
+        .then(() => {
+            formWrapper.style.display = 'none';
+            confirmationMessage.style.display = 'block';
+            launchConfetti();
+        }).catch(error => {
+            console.error('Error!', error.message);
+            submitButton.disabled = false;
+            submitButton.textContent = 'حدث خطأ, حاول مجدداً';
+        });
+    });
+
+    // --- Initialize everything on page load ---
+    document.addEventListener('DOMContentLoaded', function() {
+        startCountdown();
+        populateWilayas();
+        // Delay the social proof to let the user settle in
+        setTimeout(showDynamicProof, 3000); 
+        animateConfetti(); // Start animation loop, but it will be empty until launched
+        window.addEventListener('resize', resizeCanvas);
+    });
+    </script>
+</body>
+</html>
