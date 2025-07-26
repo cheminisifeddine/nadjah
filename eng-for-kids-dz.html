@@ -9,8 +9,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/scrollreveal"></script>
-    <!-- Tailwind CSS Aspect Ratio Plugin is not needed for Wistia's responsive wrapper, but harmless to keep -->
-    <script src="https://cdn.tailwindcss.com?plugins=aspect-ratio"></script>
 
     <!-- Meta Pixel Code -->
     <script>
@@ -41,6 +39,12 @@
     </script>
 
     <style>
+        /* --- RESPONSIVE FIX --- */
+        /* This prevents any horizontal scrolling on all devices */
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+        }
         body {
             font-family: 'Cairo', sans-serif;
             scroll-behavior: smooth;
