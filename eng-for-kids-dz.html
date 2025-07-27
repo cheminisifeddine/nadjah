@@ -40,7 +40,6 @@
 
     <style>
         /* --- RESPONSIVE FIX --- */
-        /* This prevents any horizontal scrolling on all devices */
         html, body {
             overflow-x: hidden;
             width: 100%;
@@ -65,14 +64,14 @@
 <body class="bg-slate-50 antialiased">
 
     <!-- Header -->
-    <header class="bg-white/80 backdrop-blur-lg shadow-sm sticky top-0 z-40">
+    <header class="bg-white/90 backdrop-blur-lg shadow-sm sticky top-0 z-50">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center gap-3">
                 <img src="https://lh3.googleusercontent.com/P0b31L29-pHm_qqMwAREuImuNJ4CRs4c4k8DmllT7aczi23RYAQXjgRKTJdVVUXZeDTuvRoX25XdPBaZbDofW-6AgPradJ7qBIs" alt="Nadjah Academy Logo" class="h-12 w-auto" onerror="this.onerror=null;this.src='https://placehold.co/150x50/ffffff/000000?text=Logo';">
                 <span class="text-xl font-bold text-gray-800 hidden sm:block">أكاديمية النجاح</span>
             </div>
             <button class="open-popup-btn bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-2 px-6 rounded-full text-sm sm:text-base transition-transform transform hover:scale-105 shadow-md">
-                سجل الآن بخصم 55%
+                سجل الآن بخصم 67%
             </button>
         </div>
     </header>
@@ -157,7 +156,7 @@
         <div class="container mx-auto px-4">
             <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 md:gap-12 items-center">
                  <div class="price-card">
-                    <img src="https://lh3.googleusercontent.com/pw/AP1GczOU4msXk7tSDMoMO95KP4wlOa8axpCN8AsJstOBOBBLfQ3ekMHvzPJV91b6AepNkHUuRJ6mGDffnuGM-cAnFp-RLDBRpq7pal4xwXtk8soXOnQ9aSx2ZGqJdzv3q4J3kXS0j6FSIP5i_CJv88DDF3Tc=w1024-h559-s-no-gm" alt="صورة طرد الدورة" class="rounded-2xl shadow-xl w-full">
+                    <img src="https://lh3.googleusercontent.com/pw/AP1GczNtkDXtq4teHQdzqgg6GEzvnieY5MviyMv2u0nHUqrtb0aACYRXrV7llFElX9Ut6MEqf2D22oqk6wLV4f4mXccfnwl40I52jSCaCScoDEYmfuro3YW0AwYAchG9jScnf0NwovxeSyYx7dWmwezF91ej=w1024-h559-s-no-gm?authuser=0" alt="صورة طرد الدورة" class="rounded-2xl shadow-xl w-full">
                 </div>
                 <div class="price-card">
                     <h2 class="text-3xl md:text-4xl font-cairo-black text-gray-900 mb-4">كيف ستصلك الدورة إلى باب منزلك؟</h2>
@@ -180,7 +179,7 @@
             <h2 class="text-3xl md:text-4xl font-cairo-black mb-4">لا تضيع هذه الفرصة الذهبية!</h2>
             <p class="text-lg text-emerald-100 max-w-2xl mx-auto mb-8">المقاعد محدودة والعرض على وشك الانتهاء. استثمر في مستقبل طفلك اليوم بسعر لن يتكرر.</p>
             <button class="open-popup-btn bg-yellow-400 hover:bg-yellow-500 text-yellow-900 font-bold py-4 px-10 rounded-xl text-xl transition-transform transform hover:scale-105 shadow-lg">
-                أطلب الدورة الآن بـ 4900 د.ج فقط
+                أطلب الدورة الآن بـ 2900 د.ج فقط
             </button>
         </div>
     </section>
@@ -200,7 +199,7 @@
     </footer>
 
     <!-- Registration Form Popup -->
-    <div id="form-popup" class="hidden fixed inset-0 bg-black bg-opacity-60 z-50 flex items-center justify-center p-4 transition-opacity duration-300 ease-in-out">
+    <div id="form-popup" class="hidden fixed inset-0 bg-black bg-opacity-60 z-60 flex items-center justify-center p-4 transition-opacity duration-300 ease-in-out">
         <div class="bg-white w-full max-w-2xl rounded-2xl shadow-lg p-6 md:p-8 text-center relative transform transition-transform duration-300 ease-in-out scale-95" id="popup-content">
             <!-- Close Button -->
             <button id="close-popup-btn" class="absolute top-4 left-4 text-gray-400 hover:text-gray-600">
@@ -211,7 +210,7 @@
             <p class="text-lg text-gray-600 mb-6">املأ الاستمارة، وسنتصل بك للتأكيد. <span class="font-bold text-emerald-600">الدفع يكون عند استلام الطرد.</span></p>
             <div class="mb-6">
                 <p class="text-2xl font-bold text-gray-500 line-through">8900 د.ج</p>
-                <p class="text-5xl font-cairo-black text-emerald-600">4900 د.ج</p>
+                <p class="text-5xl font-cairo-black text-emerald-600">2900 د.ج</p>
             </div>
             <form id="registration-form" method="POST" action="https://script.google.com/macros/s/AKfycby21c0JAbNnaDLgwpyY2kMdVioSSdbmYmAOv_g7iXcnrtU_QhgBu_Te_cH9jxRVDKF-/exec" class="space-y-5 text-right">
                 <div>
