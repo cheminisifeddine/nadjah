@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>اطلب دورتك الآن</title>
     <style>
-        /* CSS للتصميم */
+        /* كود CSS للتصميم */
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
@@ -50,7 +50,7 @@
 
     <div class="container">
         <h1>اطلب دورتك الآن واستفد من خصم 55%</h1>
-        <p>املأ الاستمارة، وسنتصل بك للتأكيد. **الدفع يكون عند استلام الطرد.**</p>
+        <p>املأ الاستمارة، وسنقوم بتسجيل طلبك. **الدفع يكون عند استلام الطرد.**</p>
 
         <div class="price-wrapper">
             <span class="old-price">8900 د.ج</span>
@@ -85,8 +85,8 @@
         const form = document.getElementById('orderForm');
         const submitButton = document.getElementById('submitButton');
 
-        // *** الرابط المُحدَّث الأخير الذي قدمته ***
-        const WEBHOOK_URL = 'https://yal-eco-manager-api.link/api/apps/shopify/events/order-created?secret=e4211f508e1a4aaf62ad';
+        // *** رابط الـ Web App URL الذي أرسلته (تم وضعه مباشرة هنا) ***
+        const GOOGLE_SHEET_URL = 'https://script.google.com/macros/s/AKfycbxxVw-v7m_9nkWz_N5yyCA7HWXmvG72psEJaMtsKya1IAwr_UHmi8-5pqOrpzkl0oy5/exec'; 
 
         // تعريف تفاصيل المنتج
         const PRODUCT_NAME = "دورة الايلتس - منتج تعليمي";
@@ -96,68 +96,44 @@
         form.addEventListener('submit', function(event) {
             event.preventDefault();
 
-            submitButton.textContent = '...جاري إرسال الطلب';
+            submitButton.textContent = '...جاري تسجيل الطلب';
             submitButton.disabled = true;
 
-            const fullName = document.getElementById('name').value;
-            const nameParts = fullName.split(' ');
-            const firstName = nameParts[0] || "عميل";
-            const lastName = nameParts.slice(1).join(' ') || "";
-
-            // بناء كائن البيانات (Payload) الذي يحاكي طلب Shopify
-            const webhookPayload = {
-                // بيانات العميل
-                customer: {
-                    first_name: firstName,
-                    last_name: lastName,
-                    phone: document.getElementById('phone').value,
-                },
-                // بيانات العنوان
-                shipping_address: {
-                    address1: document.getElementById('address').value,
-                    province: document.getElementById('wilaya').value,
-                    country: 'الجزائر',
-                    name: fullName 
-                },
-                // بيانات المنتجات المطلوبة
-                line_items: [
-                    {
-                        name: PRODUCT_NAME,
-                        sku: PRODUCT_SKU,
-                        quantity: 1,
-                        price: PRODUCT_PRICE,
-                    }
-                ],
-                // المبالغ المالية
-                total_price: PRODUCT_PRICE,
-                currency: "DZD",
-                // معلومات إضافية
-                note: "تم طلب دورة الايلتس عبر صفحة هبوط خارجية. الدفع عند الاستلام."
+            // بناء كائن البيانات (Payload) الذي يتطابق مع أسماء الحقول في Google Apps Script
+            const payload = {
+                // يجب أن تتطابق هذه الأسماء مع أعمدة جدولك: Full Name, Phone, City/Wilaya, Address, Product Name, SKU, Price
+                fullName: document.getElementById('name').value,
+                phone: document.getElementById('phone').value,
+                wilaya: document.getElementById('wilaya').value,
+                address: document.getElementById('address').value,
+                productName: PRODUCT_NAME,
+                sku: PRODUCT_SKU,
+                price: PRODUCT_PRICE 
             };
 
-            // إرسال البيانات إلى الـ Webhook
-            fetch(WEBHOOK_URL, {
+            // إرسال البيانات إلى Google Sheet عبر الـ Web App URL
+            fetch(GOOGLE_SHEET_URL, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify(webhookPayload)
+                body: JSON.stringify(payload)
             })
             .then(response => {
-                if (response.ok || response.status === 200 || response.status === 201) {
-                    return response.text(); 
+                if (response.ok) {
+                    return response.json();
                 } else {
-                    return response.text().then(text => { throw new Error('فشل الإرسال. (Status: ' + response.status + '). الرسالة: ' + text); });
+                    return response.text().then(text => { throw new Error('فشل في الاتصال بـ Google Sheet. (Status: ' + response.status + ').'); });
                 }
             })
             .then(data => {
-                console.log('Webhook Success Response:', data);
-                alert('🎉 **تم إرسال طلبك بنجاح!** يرجى التحقق من نظام yal-eco-manager.');
+                console.log('Sheet Success:', data);
+                alert('🎉 **تم تسجيل طلبك بنجاح!** يمكنك مراجعة جدول البيانات.');
                 form.reset(); 
             })
             .catch((error) => {
                 console.error('Error:', error);
-                alert('⚠️ **عذراً، حدث خطأ!** الطلب لم يتم إرساله. المشكلة غالباً في تنسيق البيانات. يرجى مراجعة لوحة التحكم للتفاصيل.');
+                alert('⚠️ **عذراً، حدث خطأ!** الطلب لم يتم تسجيله. يرجى مراجعة إعدادات الـ Google Apps Script وخصوصاً اسم ورقة العمل.');
             })
             .finally(() => {
                 submitButton.textContent = 'أطلب الآن وادفع عند الاستلام';
