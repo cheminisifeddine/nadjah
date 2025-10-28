@@ -79,6 +79,23 @@
             box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
         }
     </style>
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '2191072564678210');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=2191072564678210&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
 </head>
 <body class="overflow-x-hidden">
 
@@ -2004,9 +2021,7 @@ Béni Abbès	DZA52	Ouled Khoudir	DZA525203`;
                 form.addEventListener('submit', (e) => {
                     e.preventDefault();
                     
-                    // IMPORTANT: Replace the placeholder URL below with your new Google Apps Script Web App URL.
-                    // To get this URL, deploy your Google Apps Script as a Web App.
-                    const scriptURL = 'PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE';
+                    const scriptURL = 'https://script.google.com/macros/s/AKfycbz1PJ-nKjuB5SaoXfdCLCunksGngwqdyYaxwaCB0D8fOdyMr4Dipz16tL-fpeW8XXe3/exec';
                     
                     if (scriptURL === 'PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE') {
                         errorElement.textContent = 'خطأ في الإعداد: يرجى تحديث رابط Google Sheet.';
