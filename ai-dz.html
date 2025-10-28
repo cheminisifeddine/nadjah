@@ -89,11 +89,11 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '2191072564678210');
+    fbq('init', '1378666260287586');
     fbq('track', 'PageView');
     </script>
     <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=2191072564678210&ev=PageView&noscript=1"
+    src="https://www.facebook.com/tr?id=1378666260287586&ev=PageView&noscript=1"
     /></noscript>
     <!-- End Meta Pixel Code -->
 </head>
@@ -2037,6 +2037,11 @@ Béni Abbès	DZA52	Ouled Khoudir	DZA525203`;
                     fetch(scriptURL, { method: 'POST', body: formData })
                         .then(response => {
                             if (response.ok) {
+                                // Fire the purchase event for Facebook Pixel
+                                if (typeof fbq === 'function') {
+                                    fbq('track', 'Purchase');
+                                }
+
                                 formContainer.innerHTML = `
                                     <div class="text-center p-8 flex flex-col items-center justify-center h-full">
                                         <svg class="w-16 h-16 text-green-500 mx-auto mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>
