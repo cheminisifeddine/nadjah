@@ -3,278 +3,2051 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>دورة IELTS الشاملة - أكاديمية النجاح</title>
+    <title>الدورة رقم #1 في الجزائر | أتقن الذكاء الاصطناعي و ChatGPT</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Cairo', sans-serif; scroll-behavior: smooth; }
-        .font-cairo-black { font-family: 'Cairo', sans-serif; font-weight: 900; }
-        .hero-gradient { background: linear-gradient(180deg, #F0F9FF 0%, #FFFFFF 100%); }
+        :root {
+            --primary-color: #0ea5e9; /* sky-500 */
+            --secondary-color: #f59e0b; /* amber-500 */
+            --swiper-theme-color: #0ea5e9;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f8fafc; /* slate-50 */
+            color: #1e293b; /* slate-800 */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .font-cairo-black {
+            font-weight: 900;
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at 50% 0%, #f0f9ff, #f8fafc 80%);
+        }
+        .form-summary-gradient {
+            background: linear-gradient(135deg, #0c4a6e 0%, #075985 100%);
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .swiper-button-next, .swiper-button-prev {
+            color: var(--primary-color);
+        }
+        .swiper-button-next:after, .swiper-button-prev:after {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .swiper-pagination-bullet-active {
+            background: var(--primary-color);
+        }
+        .testimonial-card {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+        }
     </style>
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1378666260287586');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1378666260287586&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
 </head>
-<body class="bg-slate-50 antialiased">
+<body class="overflow-x-hidden">
 
-    <!-- Header -->
     <header class="bg-white/90 backdrop-blur-lg shadow-sm sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <img src="https://lh3.googleusercontent.com/P0b31L29-pHm_qqMwAREuImuNJ4CRs4c4k8DmllT7aczi23RYAQXjgRKTJdVVUXZeDTuvRoX25XdPBaZbDofW-6AgPradJ7qBIs" alt="Nadjah Academy Logo" class="h-12 w-auto" onerror="this.onerror=null;this.src='https://placehold.co/150x50/ffffff/000000?text=Logo';">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-3">
+                <div class="flex items-center gap-3">
+                    <img src="https://lh3.googleusercontent.com/P0b31L29-pHm_qqMwAREuImuNJ4CRs4c4k8DmllT7aczi23RYAQXjgRKTJdVVUXZeDTuvRoX25XdPBaZbDofW-6AgPradJ7qBIs" alt="AI Mastery Logo" class="h-10 sm:h-12 w-auto" />
+                </div>
+                <a href="#form" class="bg-amber-500 hover:bg-amber-400 text-amber-950 font-bold py-2.5 px-6 rounded-lg text-sm sm:text-base transition-all transform hover:scale-105 shadow-lg hover:shadow-amber-500/40">
+                    <span>أريد التسجيل الآن</span>
+                </a>
             </div>
-            <a href="#form" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full text-sm sm:text-base transition-transform transform hover:scale-105 shadow-md">
-                أريد التسجيل الآن
-            </a>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero-gradient pt-16 pb-24">
-        <div class="container mx-auto px-4">
-            <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-                <div class="text-center md:text-right">
-                    <span class="inline-block bg-blue-100 text-blue-800 text-sm font-bold px-4 py-1 rounded-full mb-4">للهجرة، الدراسة، أو العمل في الخارج</span>
-                    <h1 class="text-4xl lg:text-6xl font-cairo-black text-gray-900 leading-tight mb-4">
-                        راك حاب تنجح في IELTS وتجيب فوق 6.0؟
+    <main>
+        <section class="hero-gradient pt-12 pb-16 md:pt-20 md:pb-24">
+            <div class="container mx-auto px-4 text-center">
+                <div class="max-w-4xl mx-auto fade-in">
+                    <h1 class="text-4xl lg:text-6xl font-cairo-black text-slate-900 leading-tight mb-6">
+                        واش صح الذكاء الاصطناعي راح يدي بلاصتنا في الخدمة؟
                     </h1>
-                    <p class="text-lg text-gray-600 mb-8">
-                        هذا هو الكورس الوحيد في الجزائر اللي يوريلك أسرار الامتحان خطوة بخطوة، مع خبير وممتحن معتمد في IELTS. انسى الخوف والإحباط، وحضر روحك للنجاح.
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                        <a href="#form" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition-transform transform hover:scale-105 shadow-lg flex items-center justify-center gap-2">
-                            <span>سجل في العرض الخاص</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-                        </a>
-                    </div>
-                </div>
-                <div>
-                    <img src="https://lh3.googleusercontent.com/pw/AP1GczOkA30KF1SuhXCheJ7fzk-WkcEwTXAnb2_7jygPiTC1Xu1zeCkK5OwSDzbDYof3fAImcvbXzSfA_Yh5NqwCKWj_8vqbGKbWicjoHBDRqipUMNQ0CVEzAvBqOYrsOlibp7az53N84BGb0vq8zPO0cF-A=w1024-h558-s-no-gm?authuser=0" alt="IELTS Certificate and Passport for Visa" class="rounded-2xl shadow-2xl w-full" onerror="this.onerror=null;this.src='https://placehold.co/600x500/ffffff/3b82f6?text=Your+Future';">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Instructor Section -->
-    <section class="bg-white py-16 md:py-24">
-        <div class="container mx-auto px-4">
-            <div class="max-w-4xl mx-auto text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-cairo-black text-gray-900 mb-4">تعلم من خبير حقيقي في الميدان</h2>
-                <p class="text-lg text-gray-600">ما غاديش تقرا عند أي واحد. أستاذك هو خبير معتمد بخبرة تفوق 33 سنة.</p>
-            </div>
-            <div class="bg-slate-50 p-8 rounded-2xl shadow-lg border border-slate-200 grid md:grid-cols-3 gap-8 items-center">
-                <div class="md:col-span-1 flex justify-center">
-                    <img src="https://lh3.googleusercontent.com/pw/AP1GczO29cpNz1FO3PO6QYnIzmQLfZwLy3b9--yZO56Y4QOiRzLPWIpTcJwMONpnwesigpaIIPPjhsjpT-b1ZVdp2ZYMlc6mAivcSF2rqtdFaD16ssLbnch2IpMvk8NJDBzBZidHRtTJM0mKJFSkFZh_sv2l=w750-h422-s-no-gm?authuser=0" alt="Instructor Shaiban Harith Ahmed with students" class="rounded-2xl shadow-xl w-full" onerror="this.onerror=null;this.src='https://placehold.co/300x200/E2E8F0/4A5568?text=Instructor';">
-                </div>
-                <div class="md:col-span-2 text-center md:text-right">
-                    <h3 class="text-3xl font-bold text-gray-800">Shaiban Harith Ahmed</h3>
-                    <p class="text-blue-600 font-bold text-lg mb-4">مصمم برامج تدريب ومحاضر أكاديمي</p>
-                    <ul class="space-y-3 text-lg text-gray-700">
-                        <li class="flex items-center"><span class="bg-blue-100 text-blue-700 rounded-full h-6 w-6 flex items-center justify-center font-bold ml-3">✓</span> <strong>ممتحن IELTS معتمد:</strong> يعرف خبايا الامتحان وكيفية التصحيح.</li>
-                        <li class="flex items-center"><span class="bg-blue-100 text-blue-700 rounded-full h-6 w-6 flex items-center justify-center font-bold ml-3">✓</span> <strong>+33 سنة خبرة:</strong> في تدريس اللغة الإنجليزية والتحضير للاختبارات الدولية.</li>
-                        <li class="flex items-center"><span class="bg-blue-100 text-blue-700 rounded-full h-6 w-6 flex items-center justify-center font-bold ml-3">✓</span> <strong>شرح بالعربية والدارجة:</strong> لضمان فهمك 100% لكل تفاصيل وتقنيات الإجابة.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- What You'll Learn Section -->
-    <section class="bg-slate-50 py-16 md:py-24">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl md:text-4xl font-cairo-black text-gray-900 mb-12">هذا هو برنامجك للوصول إلى +6.0 في IELTS</h2>
-            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="bg-white p-6 rounded-xl shadow-md border border-slate-200 feature-card">
-                    <h3 class="text-2xl font-bold text-gray-800 mb-2">القراءة (Reading)</h3>
-                    <p class="text-gray-600">تعلّم كيفاش تجاوب على كل أنواع الأسئلة بسرعة، حتى ولو ما فهمتش كل الكلمات.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-md border border-slate-200 feature-card">
-                    <h3 class="text-2xl font-bold text-gray-800 mb-2">الكتابة (Writing)</h3>
-                    <p class="text-gray-600">أتقن كتابة التقارير (Task 1) والمقالات (Task 2) بطريقة أكاديمية تضمن لك علامة ممتازة.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-md border border-slate-200 feature-card">
-                    <h3 class="text-2xl font-bold text-gray-800 mb-2">الاستماع (Listening)</h3>
-                    <p class="text-gray-600">طور قدرتك على التركيز وفهم اللهجات المختلفة وتجنب الأخطاء الشائعة.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-md border border-slate-200 feature-card">
-                    <h3 class="text-2xl font-bold text-gray-800 mb-2">المحادثة (Speaking)</h3>
-                    <p class="text-gray-600">اكتسب الثقة والطلاقة للإجابة على جميع أسئلة الممتحن بثقة واحترافية.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FORM SECTION -->
-    <section id="form" class="bg-slate-100 py-16 md:py-24">
-        <div class="container mx-auto px-4">
-            <div class="max-w-2xl mx-auto text-center">
-                <h2 class="text-3xl md:text-4xl font-cairo-black text-gray-900 mb-2">اطلب دورتك الآن واستفد من خصم 55%</h2>
-                <p class="text-lg text-gray-600 mb-8">املأ الاستمارة، وسنتصل بك للتأكيد. <span class="font-bold text-blue-600">الدفع يكون عند استلام الطرد.</span></p>
-                <div class="bg-white p-8 md:p-10 rounded-2xl shadow-lg border border-slate-200">
-                    <div class="mb-6">
-                        <p class="text-2xl font-bold text-gray-500 line-through">8900 د.ج</p>
-                        <p class="text-6xl font-cairo-black text-blue-600">4900 د.ج</p>
+                    
+                    <!-- Video Player -->
+                    <div class="rounded-2xl shadow-2xl mb-6 overflow-hidden max-w-3xl mx-auto border-4 border-slate-200">
+                        <script src="https://fast.wistia.com/player.js" async></script>
+                        <script src="https://fast.wistia.com/embed/8la0dnbqys.js" async type="module"></script>
+                        <style>wistia-player[media-id='8la0dnbqys']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/8la0dnbqys/swatch'); display: block; filter: blur(5px); padding-top:56.25%; }</style>
+                        <wistia-player media-id="8la0dnbqys" seo="false" aspect="1.7777777777777777"></wistia-player>
                     </div>
 
-                    <form id="ielts-form-pro" class="space-y-4 text-right">
-                        <div>
-                            <label for="name-pro" class="block text-sm font-bold text-gray-700 mb-1">الاسم و اللقب</label>
-                            <input type="text" name="name" id="name-pro" required class="w-full px-4 py-3 bg-white border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-300" placeholder="مثال: كريم فضيل">
-                        </div>
+                    <!-- The "Wow Factor" Proof Box -->
+                    <div class="bg-sky-100 border-2 border-sky-300 text-sky-900 font-bold text-lg md:text-xl p-4 rounded-xl max-w-3xl mx-auto mb-8 shadow-lg">
+                        باش تعرف: هاد الفيديو ڨاع مخدوم بالذكاء الاصطناعي (السكريبت، الصوت، و حتى التصويرة).<br> في هاد الدورة، نورولك كيفاش تخدم كيفو و خير منو!
+                    </div>
 
-                        <div>
-                            <label for="phone-pro" class="block text-sm font-bold text-gray-700 mb-1">رقم الهاتف</label>
-                            <input type="tel" name="phone" id="phone-pro" required class="w-full px-4 py-3 bg-white border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-300" placeholder="سنتصل بك على هذا الرقم للتأكيد" inputmode="numeric">
-                        </div>
-
-                        <!-- Wilaya -->
-                        <div>
-                            <label for="wilaya-pro" class="block text-sm font-bold text-gray-700 mb-1">الولاية</label>
-                            <select id="wilaya-pro" name="wilaya" required class="w-full px-4 py-3 bg-white border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-300">
-                                <option value="" disabled selected>اختر ولايتك...</option>
-                                <!-- filled by JS -->
-                            </select>
-                        </div>
-
-                        <!-- City -->
-                        <div>
-                            <label for="city-pro" class="block text-sm font-bold text-gray-700 mb-1">المدينة / البلدية</label>
-                            <select id="city-pro" name="city" required class="w-full px-4 py-3 bg-white border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-300" disabled>
-                                <option value="" disabled selected>اختر مدينتك...</option>
-                                <!-- filled by JS -->
-                            </select>
-                        </div>
-
-                        <div>
-                            <label for="address-pro" class="block text-sm font-bold text-gray-700 mb-1">العنوان الكامل</label>
-                            <input type="text" name="address" id="address-pro" required class="w-full px-4 py-3 bg-white border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-300" placeholder="الحي، الشارع، البلدية... لتسهيل التوصيل">
-                        </div>
-
-                        <div>
-                            <button type="submit" id="submit-button-pro" class="w-full bg-yellow-400 hover:bg-yellow-500 text-yellow-900 font-bold py-4 px-6 rounded-lg text-xl transition-transform transform hover:scale-105 shadow-lg">
-                                أطلب الآن وادفع عند الاستلام
-                            </button>
-                        </div>
-                    </form>
-
+                    <div class="max-w-2xl mx-auto">
+                        <p class="text-xl lg:text-2xl text-slate-700 mb-8 leading-relaxed">
+                            الإجابة بسيطة: <span class="font-bold text-red-600">نعم</span>، راح يدي بلاصة لي بقاو يتفرجو و يخافو منو. 
+                            <br>و <span class="font-bold text-green-600">لا</span>، بالنسبة للناس لي تعلمو يخدمو بيه و يرجعوه مساعد ليهم.
+                        </p>
+                        <p class="text-xl lg:text-2xl text-slate-800 font-bold mb-8">
+                            الدورة هادي هي الطريق تاعك باش تكون من الفئة الثانية و تزيد في إنتاجيتك 10 خطرات.
+                        </p>
+                    </div>
+                    
+                    <a href="#form" class="w-full sm:w-auto bg-sky-600 hover:bg-sky-700 text-white font-bold py-4 px-10 rounded-xl text-lg transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-sky-500/50 flex items-center justify-center gap-3 max-w-md mx-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>
+                        <span>ورولي كيفاش نأمن مستقبلي</span>
+                    </a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8">
-        <div class="container mx-auto px-4 text-center">
-            <img src="https://lh3.googleusercontent.com/P0b31L29-pHm_qqMwAREuImuNJ4CRs4c4k8DmllT7aczi23RYAQXjgRKTJdVVUXZeDTuvRoX25XdPBaZbDofW-6AgPradJ7qBIs" alt="Nadjah Academy Logo" class="h-12 w-auto mx-auto mb-4" onerror="this.onerror=null;this.src='https://placehold.co/150x50/374151/ffffff?text=Logo';">
-            <p>&copy; 2025 | أكاديمية النجاح. جميع الحقوق محفوظة.</p>
-            <div class="mt-2 text-slate-300">
-                <a href="#" class="hover:text-white transition-colors">شروط الاستخدام</a>
-                <span class="mx-2">-</span>
-                <a href="#" class="hover:text-white transition-colors">سياسة الخصوصية</a>
+        <section id="benefits" class="bg-white py-16 md:py-24">
+            <div class="container mx-auto px-4">
+                <div class="max-w-3xl mx-auto text-center mb-12 fade-in">
+                    <h2 class="text-3xl md:text-4xl font-cairo-black text-slate-900 mb-4">واش راح تستفاد كي تدخل معانا؟</h2>
+                    <p class="text-lg text-slate-600">هادي ماشي مجرد دورة، بل استثمار مضمون في مستقبلك. شوف علاش الآلاف خيرونا.</p>
+                </div>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <div class="bg-slate-50 p-8 rounded-xl shadow-lg hover:shadow-sky-500/10 border border-slate-200 transition-all duration-300 transform hover:-translate-y-2 fade-in">
+                        <div class="flex items-center justify-center bg-sky-100 text-sky-600 rounded-full h-16 w-16 mb-5 ring-4 ring-white shadow-md"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0 0 12 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75Z" /></svg></div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">منصة أونلاين + DVD</h3>
+                        <p class="text-slate-600">اقرا وقت لي تحب و وين ما تحب. شوف الدورة على المنصة تاعنا ولا بالـDVD لي يلحقك لباب الدار، حتى بلا أنترنت!</p>
+                    </div>
+                     <div class="bg-slate-50 p-8 rounded-xl shadow-lg hover:shadow-sky-500/10 border border-slate-200 transition-all duration-300 transform hover:-translate-y-2 fade-in">
+                        <div class="flex items-center justify-center bg-sky-100 text-sky-600 rounded-full h-16 w-16 mb-5 ring-4 ring-white shadow-md"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8"><path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 11.667 0l3.181-3.183m-4.991-2.691v4.992h4.992v-.001M2.985 4.355v4.992m0 0h4.992m-4.993 0 3.181-3.183a8.25 8.25 0 0 1 11.667 0l3.181 3.183" /></svg></div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">تحديثات مدى الحياة (Mise à jour)</h3>
+                        <p class="text-slate-600">الدومان هذا يتبدل كل يوم! بصح متخافش، الدورة تاعك تتحدث ديما بآخر الأدوات والتقنيات... باطل!</p>
+                    </div>
+                     <div class="bg-slate-50 p-8 rounded-xl shadow-lg hover:shadow-sky-500/10 border border-slate-200 transition-all duration-300 transform hover:-translate-y-2 fade-in">
+                        <div class="flex items-center justify-center bg-sky-100 text-sky-600 rounded-full h-16 w-16 mb-5 ring-4 ring-white shadow-md"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 1 1-3 0m3 0a1.5 1.5 0 1 0-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-9.75 0h9.75" /></svg></div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">تطبيق عملي 100% (Pas de blabla)</h3>
+                        <p class="text-slate-600">مكانش النظريات المملة. كل درس مخدوم باش يعطيك مهارات عملية تخدم بيها في الكاريار تاعك ومشاريعك من اليوم اللول.</p>
+                    </div>
+                </div>
             </div>
+        </section>
+        
+        <section id="content" class="py-16 md:py-24">
+            <div class="container mx-auto px-4">
+                <div class="max-w-3xl mx-auto text-center mb-12 fade-in">
+                    <h2 class="text-3xl md:text-4xl font-cairo-black text-slate-900 mb-4">واش كاين لداخل في الدورة؟</h2>
+                    <p class="text-lg text-slate-600">كلش واش تحتاج باش تولي خبير في الذكاء الاصطناعي، حتى ولو كنت عاد بديت من الصفر. راح تتعلم:</p>
+                </div>
+                <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-6 text-lg fade-in">
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-200 flex items-center gap-4">
+                        <span class="text-sky-500 bg-sky-100 p-2 rounded-md">✓</span>
+                        <span class="font-bold text-slate-700">كيفاش تكتب Prompts كي المحترفين</span>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-200 flex items-center gap-4">
+                        <span class="text-sky-500 bg-sky-100 p-2 rounded-md">✓</span>
+                        <span class="font-bold text-slate-700">صناعة الصور والفيديوهات بالـ AI</span>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-200 flex items-center gap-4">
+                        <span class="text-sky-500 bg-sky-100 p-2 rounded-md">✓</span>
+                        <span class="font-bold text-slate-700">أتمتة المهام لي تدي الوقت (Automation)</span>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-200 flex items-center gap-4">
+                        <span class="text-sky-500 bg-sky-100 p-2 rounded-md">✓</span>
+                        <span class="font-bold text-slate-700">استغلال الـ AI في خدمتك لزيادة الإنتاجية</span>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-200 flex items-center gap-4">
+                        <span class="text-sky-500 bg-sky-100 p-2 rounded-md">✓</span>
+                        <span class="font-bold text-slate-700">تقوية الكاريار تاعك و بناء مشاريع جديدة</span>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-200 flex items-center gap-4">
+                        <span class="text-sky-500 bg-sky-100 p-2 rounded-md">✓</span>
+                        <span class="font-bold text-slate-700">و بزاف أدوات و أسرار حصرية...</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="bg-white py-16 md:py-24">
+            <div class="container mx-auto px-4">
+                <div class="max-w-3xl mx-auto text-center mb-12 fade-in">
+                    <h2 class="text-3xl md:text-4xl font-cairo-black text-slate-900 mb-4">متآمنش كلامنا، شوف واش قالو +4000 طالب!</h2>
+                    <p class="text-lg text-slate-600">آراء حقيقية من ناس كيما نتا، بدلو حياتهم المهنية بفضل هاد الدورة.</p>
+                </div>
+                <div class="max-w-7xl mx-auto relative fade-in">
+                    <div class="swiper testimonials-slider">
+                        <div class="swiper-wrapper" id="testimonials-wrapper">
+                            <!-- Testimonials will be injected by JavaScript -->
+                        </div>
+                        <div class="swiper-pagination mt-8 relative"></div>
+                    </div>
+                    <div class="swiper-button-next hidden md:flex"></div>
+                    <div class="swiper-button-prev hidden md:flex"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="form" class="py-16 md:py-24">
+            <div class="container mx-auto px-4 fade-in">
+                 <div class="max-w-5xl mx-auto bg-slate-100 rounded-2xl shadow-2xl overflow-hidden p-2">
+                    <div class="grid md:grid-cols-2 gap-0">
+                        <div class="form-summary-gradient text-white p-8 md:p-10 rounded-2xl flex flex-col justify-center order-last md:order-first">
+                            <h3 class="text-3xl font-cairo-black mb-4">واش راح يلحقك في الكولي تاعك:</h3>
+                            <ul class="space-y-3 mb-6 text-lg">
+                                <li class="flex items-center gap-3"><svg class="w-6 h-6 text-amber-300 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg> وصول مدى الحياة للمنصة + قرص DVD</li>
+                                <li class="flex items-center gap-3"><svg class="w-6 h-6 text-amber-300 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg> +120 درس تطبيقي محدث باستمرار</li>
+                                <li class="flex items-center gap-3"><svg class="w-6 h-6 text-amber-300 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg> شهادة إتمام الدورة معتمدة</li>
+                            </ul>
+                            <div class="mt-auto bg-black/20 p-4 rounded-lg text-center border-2 border-amber-300/50">
+                                <p class="font-bold text-amber-300 text-xl">الدفع عند الاستلام والتوصيل مجاني</p>
+                                <p class="text-sm text-slate-200">متخلص والو درك. حتى يلحقك الكولي، تشوفو، و مبعد تخلص.</p>
+                            </div>
+                        </div>
+
+                        <div id="form-container" class="p-8 md:p-10 bg-white rounded-2xl">
+                            <div class="text-center">
+                                <h2 class="text-3xl md:text-4xl font-cairo-black text-slate-900 mb-2">استثمر في مستقبلك اليوم!</h2>
+                                <p class="text-lg text-slate-600 mb-4">عمّر الاستمارة و نعيطولك نأكدو الطلب.</p>
+                                <div id="countdown" class="flex justify-center gap-2 sm:gap-4 text-center mb-4"></div>
+                                <div class="bg-slate-50 p-4 rounded-2xl shadow-inner border border-slate-200">
+                                    <p class="text-2xl font-bold text-slate-400 line-through">11900 دج</p>
+                                    <p class="text-6xl font-cairo-black text-sky-600">5900 دج فقط</p>
+                                    <p class="font-bold text-green-600 mt-2">راك رابح 6000 دج + توصيل باطل!</p>
+                                </div>
+                            </div>
+                            <form id="enrollment-form" class="space-y-4 text-right mt-6">
+                                <div>
+                                    <label for="name" class="block text-sm font-bold text-slate-700 mb-1">الاسم واللقب</label>
+                                    <input type="text" name="name" id="name" required class="w-full px-4 py-3 bg-white border border-slate-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition duration-300" placeholder="مثال: كريم فضيل" />
+                                </div>
+                                <div>
+                                    <label for="phone" class="block text-sm font-bold text-slate-700 mb-1">رقم الهاتف</label>
+                                    <input type="tel" name="phone" id="phone" required class="w-full px-4 py-3 bg-white border border-slate-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition duration-300" placeholder="نعيطولك في هاد النيميرو للتأكيد" />
+                                </div>
+                                <div>
+                                    <label for="wilaya" class="block text-sm font-bold text-slate-700 mb-1">الولاية</label>
+                                    <select id="wilaya" name="wilaya" required class="w-full px-4 py-3 bg-white border border-slate-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition duration-300">
+                                        <!-- Wilayas options will be injected by JavaScript -->
+                                    </select>
+                                </div>
+                                <div id="city-container" class="hidden">
+                                    <label for="city" class="block text-sm font-bold text-slate-700 mb-1">المدينة / البلدية</label>
+                                    <select id="city" name="city" required class="w-full px-4 py-3 bg-white border border-slate-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition duration-300" disabled>
+                                        <!-- Cities options will be injected by JavaScript -->
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="address" class="block text-sm font-bold text-slate-700 mb-1">العنوان الكامل</label>
+                                    <input type="text" name="address" id="address" required class="w-full px-4 py-3 bg-white border border-slate-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition duration-300" placeholder="الحي، الشارع... باش يلحقك livreur" />
+                                </div>
+                                <div>
+                                    <button type="submit" class="w-full font-bold py-4 px-6 rounded-lg text-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-amber-500/50 bg-amber-500 hover:bg-amber-400 text-amber-950">
+                                        ✅ أؤكد طلبي وأستفيد من العرض
+                                    </button>
+                                    <p id="form-error-message" class="text-red-500 text-sm mt-2 text-center"></p>
+                                </div>
+                                <p class="text-xs text-slate-500 pt-2 text-center">راح نعيطولك للتأكيد. متخلص والو درك.</p>
+                            </form>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="bg-slate-900 text-slate-300 py-12">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex items-center justify-center gap-3 mb-4">
+                <img src="https://lh3.googleusercontent.com/P0b31L29-pHm_qqMwAREuImuNJ4CRs4c4k8DmllT7aczi23RYAQXjgRKTJdVVUXZeDTuvRoX25XdPBaZbDofW-6AgPradJ7qBIs" alt="AI Mastery Logo" class="h-10 w-auto" />
+            </div>
+            <p class="max-w-2xl mx-auto my-4 text-slate-400">
+                المهمة تاعنا هي نخليو قوة الذكاء الاصطناعي في متناول كل واحد في دزاير، باش يعاونهم يلحقو لأهدافهم.
+            </p>
+            <p class="font-bold text-white">&copy; 2025 | جميع الحقوق محفوظة.</p>
         </div>
     </footer>
 
-    <!-- Data: ALL Wilayas & Cities (from your Excel) -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
-    const ALG_WILAYAS_CITIES={"Adrar":["Adrar","Aoulef","In Zghmir","Reggane","Tamekten","Tamest","Tamantit","Tit","Tsabit","Zaouiet Kounta"],"Alger":["Alger Centre","Baba Hassen","Baba M’Hamed","Bachedjerah","Bains Romains","Baraki","Birtouta","Bologhine","Bordj El Kiffan","Bordj El Bahri","Bouzareah","Dar El Beïda","Draria","Dely Ibrahim","El Harrach","El Madania","El Magharia","El Mouradia","El Biar","El Hammamet","Eucalyptus","H’raoua","Hussein Dey","Kouba","Khracia","Mohammadia","Oued Koriche","Ouled Chebel","Ouled Fayet","Rais Hamidou","Rahmania","Rouiba","Sidi M’Hamed","Sehaoula","Staoueli","Souidania","Tessala El Merdja","Zeralda"],"Annaba":["Annaba","Aïn El Berda","Aïn Berda","Berrahel","Chetaibi","Cheurfa","El Bouni","El Hadjar","El Eulma","Oued El Aneb","Seraïdi","Sidi Amar"],"Aïn Defla":["Aïn Defla","Aïn Lechiakh","Aïn Soltane","Aïn Torki","Arib","Bathia","Bordj Emir Khaled","Bourached","Bir Ould Khelifa","Djelida","Djemaa Ouled Cheikh","El Abadia","El Amra","El Attaf","El Hassania","Hammam Righa","Hoceinia","Khemis Miliana","Mekhatria","Miliana","Oued Chorfa","Rouina","Sidi Lakhdar","Tacheta Zougagha","Tarik Ibn Ziad","Zeddine"],"Aïn Témouchent":["Aïn Témouchent","Aïn El Arbaa","Aghlal","Aïn Kihal","Aïn Tolba","Aoubellil","Ouled Kihal","Chaabat El Leham","El Amria","El Malah","El Messaid","El Abtal","Hammam Bou Hadjar","Hassi El Ghella","Hassi El Gherbi","Oued Berkeche","Oued Sabah","Ouled Boudjemaa","Ouled Bouïche","Sidi Ben Adda","Sidi Boumediene","Sidi Ouriache","Sidi Safi","Sidi Cherif","Tamazoura","Terga"],"Batna":["Batna","Aïn Djasser","Aïn Touta","Aïn Yagout","Barika","Boumia","Bitam","Bouzina","Boumagueur","Boulhilet","Ben Foudhala El Hakania","Chir","Chemora","Djerma","El Madher","El Hassi","El Maadher","El Maadher (dup)","Fesdis","Foum Toub","Ghassira","Hidoussa","Iceraouen","Kimmel","Ksar Bellezma","Lemcen","Larbaâ","M’Doukel","Merouana","N’Gaous","Oued Chaaba","Oued El Ma","Ouled Aouf","Ouled Ammar","Ouled Fadel","Ouled Sellem","Ouled Si Slimane","Rahbat","Ras El Aioun","Sefiane","Seriana","Seggana","T’Kout","Tazoult","Teniet El Abed","Taxlent","Timgad"],"Biskra":["Biskra","Aïn Naga","Aïn Zaatout","Aïn Zora","Bordj Ben Azzouz","Branis","Bouchakroun","Branis (dup)","Chetma","Djemoura","El Feidh","El Ghrous","El Hadjab","El Haouch","El Kantara","El Outaya","Khenguet Sidi Nadji","Lioua","M’Chouneche","Mekhadma","Meziraa","Oumache","Ourlal","Ourlal (dup)","Sidi Khaled","Sidi Okba","Tolga","Zeribet El Oued"],"Blida":["Blida","Aïn Romana","Beni Mered","Benkhelil","Beni Tamou","Bouarfa","Boufarik","Bouinan","Bouinane (dup)","Chebli","Chiffa","Chréa","El Affroun","Guerouaou","Hammam Melouane","Larbaa","Meftah","Mouzaïa","Ouled Slama","Ouled Yaïch","Soumaa"],"Bordj Badji Mokhtar":["Bordj Badji Mokhtar","Timiaouine"],"Bordj Bou Arreridj":["Bordj Bou Arreridj","Aïn Taghrout","Aïn Tesra","Belimour","Ben Daoud","Bir Kasdali","Bordj Ghédir","Bordj Zemoura","Colla","Djaafra","El Achir","El Anseur","El Main","Ghilassa","Haraza","Hasnaoua","Khelil","Khoubana","Mansoura","Medjana","Ouled Brahem","Ouled Dahmane","Ouled Sidi Brahim","Rabta","Ras El Oued","Sidi Embarek","Taglait","Tafreg","Teniet En Nasr","Tixter"],"Bouira":["Bouira","Aïn Bessem","Aïn El Hadjar","Aïn El Turc? (ignore)","Bechloul","Bir Ghbalou","Bordj Okhriss","Chorfa","El Asnam","El Hachimia","El Khabouzia","El Mokrani","El Hakimia","Guerrouma","Haizer","Kadiria","Lakhdaria","Maamora","M'Chedallah","Mezdour","Ouled Rached","Ras El Ain","Saharidj","Sour El Ghozlane","Souk El Khemis","Taghzout","Taguedit"],"Boumerdès":["Boumerdès","Afir","Ammal","Baghlia","Ben Choud","Beni Amrane","Bordj Menaïel","Boudouaou","Boudouaou El Bahri","Bouzegza Keddara","Chabet El Ameur","Corso","Dellys","Djinet","El Kharrouba","Hammedi","Isser","Khemis El Khechna","Larbatache","Leghata","Naciria","Ouled Aïssa","Ouled Hedadj","Ouled Moussa","Si Mustapha","Souk El Had","Sidi Daoud","Tadmaït","Thenia","Tidjelabine","Timezrit"],"Béchar":["Béchar","Abadla","Beni Ounif","Boukais","Erg Ferradj","Igli","Kenadsa","Lahmar","Mechraa Houari Boumediene","Meridja","Mogheul","Ouled Khoudir","Taghit","Tamtert"],"Béjaïa":["Béjaïa","Adekar","Akbou","Amizour","Aït R'zine","Aït Smail","Barbacha","Beni Djellil","Beni Maouche","Beni K'sila","Boukhelifa","Boudjellil","Chemini","Darguina","Draâ El Kaïd","El Kseur","Fenaïa Il Maten","Ighil Ali","Kherrata","Melbou","Oued Ghir","Seddouk","Sidi Aïch","Souk El Tenine","Tala Hamza","Tamokra","Tamridjet","Taskriout","Tichy","Tifra","Tinebdar","Tizi N'berber"],"Chlef":["Chlef","Abou El Hassane","Aïn Merane","Benairia","Beni Haoua","Bou Kadir","Bouzghaia","Breira","Chettia","El Karimia","El Marsa","Harchoun","Harbil","Labiod Medjadja","Moussadek","Oued Fodda","Oued Goussine","Oum Drou","Ouled Abbes","Ouled Ben Abdelkader","Ouled Fares","Sendjas","Sidi Abderrahmane","Sidi Akkacha","Sobha","Taougrite","Tadjena","Tenes","Zeboudja"],"Constantine":["Constantine","Aïn Abid","Aïn Smara","Ben Badis","Didouche Mourad","El Khroub","Hamma Bouziane","Ibn Ziad","Messaoud Boudjriou","Ouled Rahmoun","Zighoud Youcef"],"Djelfa":["Djelfa","Aïn El Ibel","Aïn Maabed","Aïn Oussera","Benhar","Birine","Bouira Lahdeb","Charef","Dar Chioukh","El Guedid","El Idrissia","El Khemis","Faidh El Botma","Guernini","Had Sahary","Hassi Bahbah","Hassi El Euch","M'Liliha","Messad","Oum Laadham","Sed Rahal","Sidi Baizid","Sidi Ladjel","Tadmit","Zaccar"],"El Bayadh":["El Bayadh","Aïn El Orak","Arbaouat","Boualem","Brezina","Boussemghoune","Chellala","El Abiodh Sidi Cheikh","El Bnoud","El Kheither","Ghassoul","Kef El Ahmar","Krakda","Labiod Sidi Cheikh","Rogassa","Stiten","Sidi Ameur","Sidi Slimane","Tinerkouk (new wilaya)","Tousmouline"],"El Oued":["El Oued","Bayadha","Debila","Douar El Maa","Guemar","Hamraia","Hassani Abdelkrim","Hassi Khalifa","Kouinine","Magrane","Mih Ouensa","Nakhla","Oued El Alenda","Robbah","Reguiba","Sidi Aoun","Taghzout","Taleb Larbi"],"El Tarf":["El Tarf","Aïn El Assel","Ben M'Hidi","Beskra? (ignore)","Bouhadjar","Boutheldja","Bougous","Chebaita Mokhtar","Chihani","Drean","El Aioun","El Kala","Hammam Beni Salah","Lac Des Oiseaux","Oued Zitoun","Raml Souk","Souarekh","Zerizer","Zitouna"],"Ghardaïa":["Ghardaïa","Berriane","Bounoura","Daya Ben Dahoua","El Atteuf","El Guerrara","Mansoura","Metlili","Sebseb","Zelfana"],"Guelma":["Guelma","Aïn Ben Beida","Aïn Larbi","Aïn Makhlouf","Belkheir","Bendjedid","Beni Mezline","Bouati Mahmoud","Bou Hachana","Bouchegouf","Boumahra Ahmed","Dahouara","Djeballah Khemissi","El Fedjoudj","El Gahra","El Mechira? (ignore)","Guelaat Bou Sbaa","Hammam Debagh","Hammam N'bails","Heliopolis","Houari Boumedienne","Khezara","Medjez Sfa","Medjez Amar","Nechmaya","Oued Fragha","Oued Zenati","Ras El Agba","Roknia","Salaoua Announa","Sellaoua Announa (dup)","Tamlouka"],"Illizi":["Illizi","Bordj El Haouès","Debdeb","Djanet (now separate)","In Amenas"],"Jijel":["Jijel","Bordj T'har","Bouraoui Belhadef","Chekfa","Djimla","El Aouana","El Kennar Nouchfi","El Milia","Emir Abdelkader","Ghebala","Kaous","Kemir Oued Adjoul","Ouadjana","Selma Benziada","Settara","Sidi Abdelaziz","Sidi Maarouf","Taher","Texenna","Ziama Mansouriah"],"Khenchela":["Khenchela","Aïn Touila","Baghai","Bab El Oued? (ignore)","Babar","Bouhmama","Chechar","Djellal","El Hamma","El Mahmal","Grarem? (ignore)","Kais","Khirane","M'Sara","M'Toussa","Ouled Rechache","Remila","Taouzient","Yabous"],"Laghouat":["Laghouat","Aïn Madhi","Aflou","Benacer Benchohra","Brida","El Assafia","El Ghicha","Gueltat Sidi Saad","Hadj Mechri","Hassi Delaa","Hassi R'Mel","Kheneg","Ksar El Hirane","Oued Morra","Oued M'zi","Sidi Bouzid","Sidi Makhlouf","Tadjemout","Tadjmout (dup)"],"Mascara":["Mascara","Aïn Fares","Aïn Fekan","Aouf","Beniane","Bou Hanifia","Bou Henni","Chorfa","El Bordj","El Ghomri","El Hachem","Ferraguig","Froha","Gharrous","Gharrous (dup)","Guerdjoum","Hachem (dup)","Khalouia","Maoussa","Matemore","Mohammadia","Mocta-Douz","Oggaz","Oued El Abtal","Oued Taria","Sehailia","Sedjerara","Sidi Abdeldjebar","Sidi Abdellah","Sidi Boussaid","Sidi Kada","Sig","Tighennif","Tizi","Zahana"],"Médéa":["Médéa","Aïn Boucif","Aïn Ouksir","Aziz","Baata","Beni Slimane","Berrouaghia","Boughezoul","Bouskene","Chelalet El Adhaoura","Chahbounia","Derrag","Deux Bassins","Djouab","Djouab (dup)","El Azizia","El Guelbelkebir","El Ouinet","Hannacha","Kef Lakhdar","Ksar El Boukhari","Meghraoua","Meftaha? (ignore)","Medjebar","Mihoub","Ouamri","Ouled Antar","Ouled Bouachra","Ouled Brahim","Ouled Deide","Ouled Hellal","Oum El Djellil","Ouzera","Rebaia","Saneg","Sedraya","Seghouane","Si Mahdjoub","Sidi Damed","Sidi Naamane","Souagui","Tablat","Tafraout? (ignore)","Tamesguida","Tletat Ed Douair"],"Mila":["Mila","Ahmed Rachedi","Aïn Beida Harriche","Aïn Mellouk","Aïn Tine","Amira Arres","Benyahia Abderrahmane","Bouhatem","Chelghoum Laïd","Chigara","Derrahi Bousselah","Derradji Bousselah (dup)","El Ayadi Barbes","El Mechira","Ferdjioua","Grahia","Hamala","Minar Zarza","Oued Endja","Oued Seguen","Sidi Khelifa","Sidi Merouane","Tadjenanet","Tassadane Haddada","Teleghma","Terrai Bainen","Yahia Beni Guecha","Zanet El Beida"],"Mostaganem":["Mostaganem","Achaacha","Aïn Boudinar","Aïn Nouissy","Aïn Tedles","Bouguirat","Hadjadj","Hassi Mameche","Khadra","Kheir Eddine","Mansourah","Mesra","Nekmaria","Oued El Kheir","Sidi Ali","Sidi Belattar","Sidi Lakhdar","Souaflia","Sour","Stidia","Tazgait","Touahria"],"Msila":["M’Sila","Aïn El Hadjel","Aïn El Melh","Aïn Errich","Aïn Fares? (ignore)","Ben Srour","Belaiba","Beni Ilmane","Berhoum","Benzouh","Bou Saâda","Dehahna","Djebel Messaad","Hammam Dalaa","Khettouti Sed El Djir","Khoubana","M'Cif","M'Tarfa","Magra","Maarif","Mohammed Boudiaf","Ouled Addi Guebala","Ouled Derradj","Ouled Madhi","Ouled Mansour","Ouled Sidi Brahim","Sidi Aïssa","Sidi Ameur","Sidi Hadjeres","Slim","Souamaa","Tamsa","Tarmount"],"Naama":["Naâma","Aïn Ben Khelil","Aïn Sefra","Assela","Kasdir","Mekmen Ben Amar","Mecheria","Moghrar","Sfissifa","Tiout"],"Oran":["Oran","Aïn El Turk","Arzew","Bénaï Saf? (ignore)","Bir El Djir","Boufatis","Boutelelis","El Ançor","El Braya? (ignore)","Es Senia","Gdyel","Hassi Ben Okba","Hassi Bounif","Hassi Mefsoukh","Marsat El Hadjadj","Mers El Kebir","Oued Tlelat","Sidi Ben Yebka","Sidi Chami","Tafraoui"],"Oum El Bouaghi":["Oum El Bouaghi","Aïn Babouche","Aïn Beida","Aïn Diss","Aïn Fekroun","Aïn Kercha","Aïn M’lila","Behir Chergui","Bir Chouhada","Dhalaa","El Amiria","El Belala","El Djazia","El Fedjouz Boughrara Saoudi","El Harmilia","Hanchir Toumghani","Ksar Sbahi","Meskiana","Ouled Gacem","Ouled Hamla","Ouled Zouai","Sigus","Souk Naamane","Zorg"],"Relizane":["Relizane","Aïn Rahma","Ammi Moussa","Belaassel Bouzegza","Bendaoud","Beni Dergoun","Djidiouia","El Guettar","El H'Madna","El Matmar","Had Echkalla","Hamri","Kalaa","Lahlef","Mendes","Mazouna","Mediouna","Ouarizane","Oued Essalem","Oued Rhiou","Ramka","Sidi Khettab","Sidi Lazreg","Sidi M’Hamed Ben Ali","Sidi M’hamed Benaouda","Sidi Saada","Souk El Haad","Yellel","Zemmoura"],"Saida":["Saïda","Aïn El Hadjar","Aïn Sekhouna","Doui Thabet","El Hassasna","Hounet","Moulay Larbi","Ouled Brahim","Ouled Khaled","Sidi Ahmed","Sidi Amar","Tircine","Youb"],"Sidi Bel Abbès":["Sidi Bel Abbès","Aïn Adden","Aïn Kada","Aïn Thrid","Ben Badis","Benachiba Chelia","Boufatis? (ignore)","Chetouane Belaila","Dhaya","El Hacaiba","Hassi Dahou","Lamtar","Marhoum","Merine","Mostefa Ben Brahim","Moulay Slissen","Oued Sefioun","Oued Taourira","Ouennassa","Safa","Sehala Thaoura","Sidi Ali Benyoub","Sidi Ali Boussidi","Sidi Brahim","Sidi Chaib","Sidi Dahou","Sidi Hamadouche","Sidi Khaled","Sidi Lahcene","Sfisef","Tabia","Tafissour","Teghalimet","Telagh","Tenira","Tessala","Zerarka"],"Skikda":["Skikda","Aïn Charchar","Aïn Kechra","Azzaba","Ben Azzouz","Beni Oulbane","Bekkouche Lakhdar","Bouchtata","Cheraia","Collo","El Harrouch","El Hadaiek","Es Sebt","Filfila","Kanoua","Kerkera","Medjez El Bab? (ignore)","Ouldja Boulbalout","Ouled Attia","Ouled Habbaba","Ramdane Djamel","Salah Bouchaour","Skikda (commune)","Tamalous","Zitouna"],"Souk Ahras":["Souk Ahras","Aïn Soltane? (ignore)","Aïn Zana","Bir Bouhouche","Dréan? (ignore)","Haddada","Hanencha","Khedara? (ignore)","Khemissa","Machroha","M'Daourouch","Merahna","Oued Keberit","Ouled Driss","Ouled Moumen","Sidi Fredj","Sidi Khellil? (ignore)","Taoura","Terraguelt","Tiffech"],"Tamanrasset":["Tamanrasset","Abalessa","Idles","In Ghar","In Guezzam (now separate)","Tazrouk"],"Tebessa":["Tébessa","Aïn Zerga","Bedjene","Bir El Ater","Bir Moghrein? (ignore)","Bir Mokkadem","Bekkaria","Boulhaf Dyr","Cheria","El Aouinet","El Houidjb","El Kouif","El Ma Labiodh","El Ogla","Ferkane","Ghout? (ignore)","Hammamet","Morsott","Negrine","Ouenza","Oum Ali","Safsaf El Ouesra","Stah Guentis","Tlidjen"],"Tiaret":["Tiaret","Aïn Bouchekif","Aïn Deheb","Aïn Kermes","Bougara","Chehaima? (ignore)","Dahmouni","Djebilet Rosfa","Faidja","Frenda","Guertoufa","Hamadia","Ksar Chellala","Madna","Mahdia","Medrissa","Meghila","Mechraa Sfa","Medroussa","Nadorah","Naima","Rahouia","Sebt","Sidi Ali Mellal","Sidi Bakhti","Sidi Hosni","Sougueur","Tagdempt","Takhmaret","Zmalet El Emir Abdelkader"],"Tindouf":["Tindouf","Oum El Assel"],"Tipaza":["Tipaza","Aghaouzi? (ignore)","Aghbal","Ahmer El Aïn","Aïn Tagourait","Beni Mileuk","Bou Haroun","Bou Ismail","Cherchell","Douaouda","Fouka","Gouraya","Hadjout","Khemisti","Kolea","Larhat","Menaceur","Merad","Messelmoun","Nador","Sidi Amar","Sidi Ghiles","Sidi Rached"],"Tissemsilt":["Tissemsilt","Ammari","Beni Chaib","Beni Lahcene","Bordj Emir Abdelkader","Bordj Bounaama","Boucaid","Khemisti (dup)","Lazharia","Layoune","Lardjem","Maacem","Melaab","Ouled Bessam","Sidi Abed","Sidi Boutouchent","Sidi Lantri? (ignore)","Sidi Slimane","Tamalaht","Theniet El Had","Youssoufia"],"Tizi Ouzou":["Tizi Ouzou","Aghribs","Aït Aggouacha","Aït Bouaddou","Aït Chafaa","Aït Khellili","Aït Mahmoud","Aït Oumalou","Aït Toudert","Aït Yahia","Aït Yahia Moussa","Assi Youcef","Azazga","Azeffoun","Beni Aïssi","Beni Douala","Beni Zmenzer","Boghni","Boudjima","Bounouh","Bouzeguene","Draâ Ben Khedda","Draâ El Mizan","Frikat","Freha","Iferhounène","Iflissen","Illilten","Imsouhal","Irdjen","Larbaâ Nath Irathen","Makouda","Mâatkas","Mechtras","Mekla","Mizrana","Ouacif","Ouadhia","Sidi Namane","Souk El Tenine","Souama","Tadmaït","Tigzirt","Timizart","Tirmitine","Tizi Gheniff","Yakouren","Yatafen","Zekri"],"Tlemcen":["Tlemcen","Aïn Fezza","Aïn Fetah","Aïn Ghoraba","Aïn Kebira","Aïn Nehala","Aïn Tallout","Bab El Assa","Beni Bahdel","Beni Boussaid","Beni Khellad","Beni Mester","Beni Ouarsous","Bensekrane","Beni Snous","Chetouane","Dar Yaghmoracen","El Aricha","El Fehoul","El Gor","Fellaoucene","Ghazaouet","Hennaya","Honaine","Maghnia","Mansourah","Nedroma","Ouled Mimoun","Remchi","Sabra","Sebdou","Sebaa Chioukh","Souani","Souk Tleta","Terny Beni Hediel","Tianet","Zenata"],"Tamanghasset?":[""],"Tarf?":[""],"Souk Ahras (dup)?":[""]};
-    </script>
+        document.addEventListener('DOMContentLoaded', function () {
+            
+            // --- DATA ---
+            const locationsCSV = `State	State Code	City	City Code
+Adrar	DZA01	Adrar	DZA010101
+Adrar	DZA01	Tamest	DZA010102
+Adrar	DZA01	Reggane	DZA010104
+Adrar	DZA01	In Zghmir	DZA010105
+Adrar	DZA01	Tit	DZA010106
+Adrar	DZA01	Tsabit	DZA010108
+Adrar	DZA01	Zaouiet Kounta	DZA010111
+Adrar	DZA01	Aoulef	DZA010112
+Adrar	DZA01	Tamekten	DZA010113
+Adrar	DZA01	Tamantit	DZA010114
+Adrar	DZA01	Fenoughil	DZA010115
+Adrar	DZA01	Sali	DZA010118
+Adrar	DZA01	Akabli	DZA010119
+Adrar	DZA01	Ouled Ahmed Tammi	DZA010121
+Adrar	DZA01	Bouda	DZA010122
+Adrar	DZA01	Sebaa	DZA010126
+Chlef	DZA02	Abou El Hassan	DZA020201
+Chlef	DZA02	Aïn Merane	DZA020202
+Chlef	DZA02	Bénairia	DZA020203
+Chlef	DZA02	Beni Bouateb	DZA020204
+Chlef	DZA02	Beni Haoua	DZA020205
+Chlef	DZA02	Beni Rached	DZA020206
+Chlef	DZA02	Boukadir	DZA020207
+Chlef	DZA02	Bouzeghaia	DZA020208
+Chlef	DZA02	Breira	DZA020209
+Chlef	DZA02	Chettia	DZA020210
+Chlef	DZA02	Chlef	DZA020211
+Chlef	DZA02	Dahra	DZA020212
+Chlef	DZA02	El Hadjadj	DZA020213
+Chlef	DZA02	El Karimia	DZA020214
+Chlef	DZA02	El Marsa	DZA020215
+Chlef	DZA02	Harchoun	DZA020216
+Chlef	DZA02	Harenfa	DZA020217
+Chlef	DZA02	Labiod Medjadja	DZA020218
+Chlef	DZA02	Moussadek	DZA020219
+Chlef	DZA02	Oued Fodda	DZA020220
+Chlef	DZA02	Oued Goussine	DZA020221
+Chlef	DZA02	Oued Sly	DZA020222
+Chlef	DZA02	Ouled Abbes	DZA020223
+Chlef	DZA02	Ouled Ben Abdelkader	DZA020224
+Chlef	DZA02	Ouled Fares	DZA020225
+Chlef	DZA02	Oum Drou	DZA020226
+Chlef	DZA02	Sendjas	DZA020227
+Chlef	DZA02	Sidi Abderrahmane	DZA020228
+Chlef	DZA02	Sidi Akkacha	DZA020229
+Chlef	DZA02	Sobha	DZA020230
+Chlef	DZA02	Tadjena	DZA020231
+Chlef	DZA02	Talassa	DZA020232
+Chlef	DZA02	Taougrite	DZA020233
+Chlef	DZA02	Ténès	DZA020234
+Chlef	DZA02	Zeboudja	DZA020235
+Laghouat	DZA03	Laghouat	DZA030301
+Laghouat	DZA03	Ksar El Hirane	DZA030302
+Laghouat	DZA03	Bennasser Benchohra	DZA030303
+Laghouat	DZA03	Sidi Makhlouf	DZA030304
+Laghouat	DZA03	Hassi Delaa	DZA030305
+Laghouat	DZA03	Hassi R'Mel	DZA030306
+Laghouat	DZA03	Aïn Madhi	DZA030307
+Laghouat	DZA03	Tadjemout	DZA030308
+Laghouat	DZA03	Kheneg	DZA030309
+Laghouat	DZA03	Gueltat Sidi Saad	DZA030310
+Laghouat	DZA03	Aïn Sidi Ali	DZA030311
+Laghouat	DZA03	Beidha	DZA030312
+Laghouat	DZA03	Brida	DZA030313
+Laghouat	DZA03	El Ghicha	DZA030314
+Laghouat	DZA03	Hadj Mechri	DZA030315
+Laghouat	DZA03	Sebgag	DZA030316
+Laghouat	DZA03	Taouiala	DZA030317
+Laghouat	DZA03	Tadjrouna	DZA030318
+Laghouat	DZA03	Aflou	DZA030319
+Laghouat	DZA03	El Assafia	DZA030320
+Laghouat	DZA03	Oued Morra	DZA030321
+Laghouat	DZA03	Oued M'Zi	DZA030322
+Laghouat	DZA03	El Houaita	DZA030323
+Laghouat	DZA03	Sidi Bouzid	DZA030324
+Oum El Bouaghi	DZA04	Oum el Bouaghi	DZA040401
+Oum El Bouaghi	DZA04	Aïn Beïda	DZA040402
+Oum El Bouaghi	DZA04	Aïn M'lila	DZA040403
+Oum El Bouaghi	DZA04	Behir Chergui	DZA040405
+Oum El Bouaghi	DZA04	El Amiria	DZA040405
+Oum El Bouaghi	DZA04	Sigus	DZA040406
+Oum El Bouaghi	DZA04	El Belala	DZA040407
+Oum El Bouaghi	DZA04	Aïn Babouche	DZA040408
+Oum El Bouaghi	DZA04	Berriche	DZA040409
+Oum El Bouaghi	DZA04	Ouled Hamla	DZA040410
+Oum El Bouaghi	DZA04	Dhalaa	DZA040411
+Oum El Bouaghi	DZA04	Aïn Kercha	DZA040412
+Oum El Bouaghi	DZA04	Hanchir Toumghani	DZA040413
+Oum El Bouaghi	DZA04	El Djazia	DZA040414
+Oum El Bouaghi	DZA04	Aïn Diss	DZA040415
+Oum El Bouaghi	DZA04	Fkirina	DZA040416
+Oum El Bouaghi	DZA04	Souk Naamane	DZA040417
+Oum El Bouaghi	DZA04	Zorg	DZA040418
+Oum El Bouaghi	DZA04	El Fedjoudj Boughrara Saoudi	DZA040419
+Oum El Bouaghi	DZA04	Ouled Zouaï	DZA040420
+Oum El Bouaghi	DZA04	Bir Chouhada	DZA040421
+Oum El Bouaghi	DZA04	Ksar Sbahi	DZA040422
+Oum El Bouaghi	DZA04	Oued Nini	DZA040423
+Oum El Bouaghi	DZA04	Meskiana	DZA040424
+Oum El Bouaghi	DZA04	Aïn Fakroun	DZA040425
+Oum El Bouaghi	DZA04	Rahia	DZA040426
+Oum El Bouaghi	DZA04	Aïn Zitoun	DZA040427
+Oum El Bouaghi	DZA04	Ouled Gacem	DZA040428
+Oum El Bouaghi	DZA04	El Harmilia	DZA040429
+Batna	DZA05	Batna	DZA050501
+Batna	DZA05	Ghassira	DZA050502
+Batna	DZA05	Maafa	DZA050503
+Batna	DZA05	Merouana	DZA050504
+Batna	DZA05	Seriana	DZA050505
+Batna	DZA05	Menaa	DZA050506
+Batna	DZA05	El Madher	DZA050507
+Batna	DZA05	Tazoult	DZA050508
+Batna	DZA05	N'Gaous	DZA050509
+Batna	DZA05	Guigba	DZA050510
+Batna	DZA05	Inoughissen	DZA050511
+Batna	DZA05	Ouyoun El Assafir	DZA050512
+Batna	DZA05	Djerma	DZA050513
+Batna	DZA05	Bitam	DZA050514
+Batna	DZA05	Abdelkader Azil	DZA050515
+Batna	DZA05	Arris	DZA050516
+Batna	DZA05	Kimmel	DZA050517
+Batna	DZA05	Tilatou	DZA050518
+Batna	DZA05	Aïn Djasser	DZA050519
+Batna	DZA05	Ouled Sellam	DZA050520
+Batna	DZA05	Tigherghar	DZA050521
+Batna	DZA05	Aïn Yagout	DZA050522
+Batna	DZA05	Fesdis	DZA050523
+Batna	DZA05	Sefiane	DZA050524
+Batna	DZA05	Rahbat	DZA050525
+Batna	DZA05	Tighanimine	DZA050526
+Batna	DZA05	Lemsane	DZA050527
+Batna	DZA05	Ksar Bellezma	DZA050528
+Batna	DZA05	Seggana	DZA050529
+Batna	DZA05	Ichmoul	DZA050530
+Batna	DZA05	Foum Toub	DZA050531
+Batna	DZA05	Ben Foudhala El Hakania	DZA050532
+Batna	DZA05	Oued El Ma	DZA050533
+Batna	DZA05	Talkhamt	DZA050534
+Batna	DZA05	Bouzina	DZA050535
+Batna	DZA05	Chemora	DZA050536
+Batna	DZA05	Oued Chaaba	DZA050537
+Batna	DZA05	Taxlent	DZA050538
+Batna	DZA05	Gosbat	DZA050539
+Batna	DZA05	Ouled Aouf	DZA050540
+Batna	DZA05	Boumagueur	DZA050541
+Batna	DZA05	Barika	DZA050542
+Batna	DZA05	Djezar	DZA050543
+Batna	DZA05	T'Kout	DZA050544
+Batna	DZA05	Aïn Touta	DZA050545
+Batna	DZA05	Hidoussa	DZA050546
+Batna	DZA05	Teniet El Abed	DZA050547
+Batna	DZA05	Oued Taga	DZA050548
+Batna	DZA05	Ouled Fadel	DZA050549
+Batna	DZA05	Timgad	DZA050550
+Batna	DZA05	Ras El Aioun	DZA050551
+Batna	DZA05	Chir	DZA050552
+Batna	DZA05	Ouled Si Slimane	DZA050553
+Batna	DZA05	Zanat El Beida	DZA050554
+Batna	DZA05	M'doukel	DZA050555
+Batna	DZA05	Ouled Ammar	DZA050556
+Batna	DZA05	El Hassi	DZA050557
+Batna	DZA05	Lazrou	DZA050558
+Batna	DZA05	Boumia (Batna)	DZA050559
+Batna	DZA05	Boulhilat	DZA050560
+Batna	DZA05	Larbaâ	DZA050561
+Béjaïa	DZA06	Béjaïa	DZA060601
+Béjaïa	DZA06	Amizour	DZA060602
+Béjaïa	DZA06	Ferraoun	DZA060603
+Béjaïa	DZA06	Taourirt Ighil	DZA060604
+Béjaïa	DZA06	Chellata	DZA060605
+Béjaïa	DZA06	Tamokra	DZA060606
+Béjaïa	DZA06	Timezrit	DZA060607
+Béjaïa	DZA06	Souk El Ténine	DZA060608
+Béjaïa	DZA06	M'cisna	DZA060609
+Béjaïa	DZA06	Tinabdher	DZA060610
+Béjaïa	DZA06	Tichy	DZA060611
+Béjaïa	DZA06	Semaoun	DZA060612
+Béjaïa	DZA06	Kendira	DZA060613
+Béjaïa	DZA06	Tifra	DZA060614
+Béjaïa	DZA06	Ighram	DZA060615
+Béjaïa	DZA06	Amalou	DZA060616
+Béjaïa	DZA06	Ighil Ali	DZA060617
+Béjaïa	DZA06	Fenaïa Ilmaten	DZA060618
+Béjaïa	DZA06	Toudja	DZA060619
+Béjaïa	DZA06	Darguina	DZA060620
+Béjaïa	DZA06	Sidi Ayad	DZA060621
+Béjaïa	DZA06	Aokas	DZA060622
+Béjaïa	DZA06	Ait Djellil	DZA060623
+Béjaïa	DZA06	Adekar	DZA060624
+Béjaïa	DZA06	Akbou	DZA060625
+Béjaïa	DZA06	Seddouk	DZA060626
+Béjaïa	DZA06	Tazmalt	DZA060627
+Béjaïa	DZA06	Aït R'zine	DZA060628
+Béjaïa	DZA06	Chemini	DZA060629
+Béjaïa	DZA06	Souk Oufella	DZA060630
+Béjaïa	DZA06	Tibane	DZA060631
+Béjaïa	DZA06	Tala Hamza	DZA060632
+Béjaïa	DZA06	Barbacha	DZA060633
+Béjaïa	DZA06	Aït Ksila	DZA060634
+Béjaïa	DZA06	Ouzellaguen	DZA060635
+Béjaïa	DZA06	Bouhamza	DZA060636
+Béjaïa	DZA06	Taskriout	DZA060637
+Béjaïa	DZA06	Aït Mellikeche	DZA060638
+Béjaïa	DZA06	Sidi Aïch	DZA060639
+Béjaïa	DZA06	El Kseur	DZA060640
+Béjaïa	DZA06	Melbou	DZA060641
+Béjaïa	DZA06	Akfadou	DZA060642
+Béjaïa	DZA06	Leflaye	DZA060643
+Béjaïa	DZA06	Kherrata	DZA060644
+Béjaïa	DZA06	Draâ El Kaïd	DZA060645
+Béjaïa	DZA06	Tamridjet	DZA060646
+Béjaïa	DZA06	Aït Smail	DZA060647
+Béjaïa	DZA06	Boukhelifa	DZA060648
+Béjaïa	DZA06	Tizi N'Berber	DZA060649
+Béjaïa	DZA06	Aït Maouche	DZA060650
+Béjaïa	DZA06	Oued Ghir	DZA060651
+Béjaïa	DZA06	Boudjellil	DZA060652
+Biskra	DZA07	Aïn Naga	DZA070701
+Biskra	DZA07	Aïn Zaatout	DZA070702
+Biskra	DZA07	Biskra	DZA070704
+Biskra	DZA07	Bordj Ben Azzouz	DZA070705
+Biskra	DZA07	Bouchagroune	DZA070706
+Biskra	DZA07	Branis	DZA070707
+Biskra	DZA07	Chetma	DZA070708
+Biskra	DZA07	Djemorah	DZA070709
+Biskra	DZA07	El Feidh	DZA070712
+Biskra	DZA07	El Ghrous	DZA070713
+Biskra	DZA07	El Hadjeb	DZA070714
+Biskra	DZA07	El Haouch	DZA070715
+Biskra	DZA07	El Kantara	DZA070716
+Biskra	DZA07	El Mizaraa	DZA070717
+Biskra	DZA07	El Outaya	DZA070718
+Biskra	DZA07	Foughala	DZA070719
+Biskra	DZA07	Khenguet Sidi Nadji	DZA070720
+Biskra	DZA07	Lichana	DZA070721
+Biskra	DZA07	Lioua	DZA070722
+Biskra	DZA07	M'Chouneche	DZA070723
+Biskra	DZA07	Mekhadma	DZA070724
+Biskra	DZA07	M'Lili	DZA070725
+Biskra	DZA07	Oumache	DZA070727
+Biskra	DZA07	Ourlal	DZA070728
+Biskra	DZA07	Sidi Okba	DZA070731
+Biskra	DZA07	Tolga	DZA070732
+Biskra	DZA07	Zeribet El Oued	DZA070733
+Béchar	DZA08	Béchar	DZA080801
+Béchar	DZA08	Erg Ferradj	DZA080802
+Béchar	DZA08	Meridja	DZA080804
+Béchar	DZA08	Lahmar	DZA080806
+Béchar	DZA08	Mechraa Houari Boumedienne	DZA080809
+Béchar	DZA08	Kenadsa	DZA080810
+Béchar	DZA08	Taghit	DZA080813
+Béchar	DZA08	Boukais	DZA080815
+Béchar	DZA08	Mougheul	DZA080816
+Béchar	DZA08	Abadla	DZA080817
+Béchar	DZA08	Beni Ounif	DZA080821
+Blida	DZA09	Blida	DZA090901
+Blida	DZA09	Chebli	DZA090902
+Blida	DZA09	Bouinan	DZA090903
+Blida	DZA09	Oued Alleug	DZA090904
+Blida	DZA09	Ouled Yaïch	DZA090907
+Blida	DZA09	Chréa	DZA090908
+Blida	DZA09	El Affroun	DZA090910
+Blida	DZA09	Chiffa	DZA090911
+Blida	DZA09	Hammam Melouane	DZA090912
+Blida	DZA09	Benkhelil	DZA090913
+Blida	DZA09	Soumaa	DZA090914
+Blida	DZA09	Mouzaia	DZA090916
+Blida	DZA09	Souhane	DZA090917
+Blida	DZA09	Meftah	DZA090918
+Blida	DZA09	Ouled Slama	DZA090919
+Blida	DZA09	Boufarik	DZA090920
+Blida	DZA09	Larbaa	DZA090921
+Blida	DZA09	Oued Djer	DZA090922
+Blida	DZA09	Beni Tamou	DZA090923
+Blida	DZA09	Bouarfa	DZA090924
+Blida	DZA09	Beni Mered	DZA090925
+Blida	DZA09	Bougara	DZA090926
+Blida	DZA09	Guerouaou	DZA090927
+Blida	DZA09	Aïn Romana	DZA090928
+Blida	DZA09	Djebabra	DZA090929
+Bouira	DZA10	Aïn Bessem	DZA101001
+Bouira	DZA10	Hanif	DZA101002
+Bouira	DZA10	Aghbalou	DZA101003
+Bouira	DZA10	Aïn El Hadjar	DZA101004
+Bouira	DZA10	Ahl El Ksar	DZA101005
+Bouira	DZA10	Aïn Laloui	DZA101006
+Bouira	DZA10	Ath Mansour	DZA101007
+Bouira	DZA10	Aomar	DZA101008
+Bouira	DZA10	Aïn El Turc	DZA101009
+Bouira	DZA10	Aït Laziz	DZA101010
+Bouira	DZA10	Bouderbala	DZA101011
+Bouira	DZA10	Bechloul	DZA101012
+Bouira	DZA10	Bir Ghbalou	DZA101013
+Bouira	DZA10	Boukram	DZA101014
+Bouira	DZA10	Bordj Okhriss	DZA101015
+Bouira	DZA10	Bouira	DZA101016
+Bouira	DZA10	Chorfa	DZA101017
+Bouira	DZA10	Dechmia	DZA101018
+Bouira	DZA10	Dirrah	DZA101019
+Bouira	DZA10	Djebahia	DZA101020
+Bouira	DZA10	El Hakimia	DZA101021
+Bouira	DZA10	El Hachimia	DZA101022
+Bouira	DZA10	El Adjiba	DZA101023
+Bouira	DZA10	El Khabouzia	DZA101024
+Bouira	DZA10	El Mokrani	DZA101025
+Bouira	DZA10	El Asnam	DZA101026
+Bouira	DZA10	Guerrouma	DZA101027
+Bouira	DZA10	Haizer	DZA101028
+Bouira	DZA10	Hadjera Zerga	DZA101029
+Bouira	DZA10	Kadiria	DZA101030
+Bouira	DZA10	Lakhdaria	DZA101031
+Bouira	DZA10	M'Chedallah	DZA101032
+Bouira	DZA10	Mezdour	DZA101033
+Bouira	DZA10	Maala	DZA101034
+Bouira	DZA10	Maamora	DZA101035
+Bouira	DZA10	Oued El Berdi	DZA101036
+Bouira	DZA10	Ouled Rached	DZA101037
+Bouira	DZA10	Raouraoua	DZA101038
+Bouira	DZA10	Ridane	DZA101039
+Bouira	DZA10	Saharidj	DZA101040
+Bouira	DZA10	Sour El Ghouzlane	DZA101041
+Bouira	DZA10	Souk El Khemis	DZA101042
+Bouira	DZA10	Taguedit	DZA101043
+Bouira	DZA10	Taghzout	DZA101044
+Bouira	DZA10	Zbarbar	DZA101045
+Tamanrasset	DZA11	Tamanrasset	DZA111101
+Tamanrasset	DZA11	Abalessa	DZA111102
+Tamanrasset	DZA11	Idles	DZA111105
+Tamanrasset	DZA11	Tazrouk	DZA111106
+Tamanrasset	DZA11	In Amguel	DZA111109
+Tébessa	DZA12	Tébessa	DZA121201
+Tébessa	DZA12	Bir el Ater	DZA121202
+Tébessa	DZA12	Cheria	DZA121203
+Tébessa	DZA12	Stah Guentis	DZA121204
+Tébessa	DZA12	El Aouinet	DZA121205
+Tébessa	DZA12	El Houidjbet	DZA121206
+Tébessa	DZA12	Safsaf El Ouesra	DZA121207
+Tébessa	DZA12	Hammamet	DZA121208
+Tébessa	DZA12	Negrine	DZA121209
+Tébessa	DZA12	Bir Mokkadem	DZA121210
+Tébessa	DZA12	El Kouif	DZA121211
+Tébessa	DZA12	Morsott	DZA121212
+Tébessa	DZA12	El Ogla	DZA121213
+Tébessa	DZA12	Bir Dheb	DZA121214
+Tébessa	DZA12	Ogla Melha	DZA121215
+Tébessa	DZA12	Guorriguer	DZA121216
+Tébessa	DZA12	Bekkaria	DZA121217
+Tébessa	DZA12	Boukhadra	DZA121218
+Tébessa	DZA12	Ouenza	DZA121219
+Tébessa	DZA12	El Ma Labiodh	DZA121220
+Tébessa	DZA12	Oum Ali	DZA121221
+Tébessa	DZA12	Tlidjene	DZA121222
+Tébessa	DZA12	Aïn Zerga	DZA121223
+Tébessa	DZA12	El Meridj	DZA121224
+Tébessa	DZA12	Boulhaf Dir	DZA121225
+Tébessa	DZA12	Bedjene	DZA121226
+Tébessa	DZA12	El Mezeraa	DZA121227
+Tébessa	DZA12	Ferkane	DZA121228
+Tlemcen	DZA13	Tlemcen	DZA131301
+Tlemcen	DZA13	Beni Mester	DZA131302
+Tlemcen	DZA13	Aïn Tallout	DZA131303
+Tlemcen	DZA13	Remchi	DZA131304
+Tlemcen	DZA13	El Fehoul	DZA131305
+Tlemcen	DZA13	Sabra	DZA131306
+Tlemcen	DZA13	Ghazaouet	DZA131307
+Tlemcen	DZA13	Souani	DZA131308
+Tlemcen	DZA13	Djebala	DZA131309
+Tlemcen	DZA13	El Gor	DZA131310
+Tlemcen	DZA13	Oued Lakhdar	DZA131311
+Tlemcen	DZA13	Aïn Fezza	DZA131312
+Tlemcen	DZA13	Ouled Mimoun	DZA131313
+Tlemcen	DZA13	Amieur	DZA131314
+Tlemcen	DZA13	Aïn Youcef	DZA131315
+Tlemcen	DZA13	Zenata	DZA131316
+Tlemcen	DZA13	Beni Snous	DZA131317
+Tlemcen	DZA13	Bab El Assa	DZA131318
+Tlemcen	DZA13	Dar Yaghmouracene	DZA131319
+Tlemcen	DZA13	Fellaoucene	DZA131320
+Tlemcen	DZA13	Azails	DZA131321
+Tlemcen	DZA13	Sebaa Chioukh	DZA131322
+Tlemcen	DZA13	Terny Beni Hdiel	DZA131323
+Tlemcen	DZA13	Bensekrane	DZA131324
+Tlemcen	DZA13	Aïn Nehala	DZA131325
+Tlemcen	DZA13	Hennaya	DZA131326
+Tlemcen	DZA13	Maghnia	DZA131327
+Tlemcen	DZA13	Hammam Boughrara	DZA131328
+Tlemcen	DZA13	Souahlia	DZA131329
+Tlemcen	DZA13	MSirda Fouaga	DZA131330
+Tlemcen	DZA13	Aïn Fetah	DZA131331
+Tlemcen	DZA13	El Aricha	DZA131332
+Tlemcen	DZA13	Souk Tlata	DZA131333
+Tlemcen	DZA13	Sidi Abdelli	DZA131334
+Tlemcen	DZA13	Sebdou	DZA131335
+Tlemcen	DZA13	Beni Ouarsous	DZA131336
+Tlemcen	DZA13	Sidi Medjahed	DZA131337
+Tlemcen	DZA13	Beni Boussaid	DZA131338
+Tlemcen	DZA13	Marsa Ben M'Hidi	DZA131339
+Tlemcen	DZA13	Nedroma	DZA131340
+Tlemcen	DZA13	Sidi Djillali	DZA131341
+Tlemcen	DZA13	Beni Bahdel	DZA131342
+Tlemcen	DZA13	El Bouihi	DZA131343
+Tlemcen	DZA13	Honaïne	DZA131344
+Tlemcen	DZA13	Tienet	DZA131345
+Tlemcen	DZA13	Ouled Riyah	DZA131346
+Tlemcen	DZA13	Bouhlou	DZA131347
+Tlemcen	DZA13	Beni Khellad	DZA131348
+Tlemcen	DZA13	Aïn Ghoraba	DZA131349
+Tlemcen	DZA13	Chetouane	DZA131350
+Tlemcen	DZA13	Mansourah	DZA131351
+Tlemcen	DZA13	Beni Semiel	DZA131352
+Tlemcen	DZA13	Aïn Kebira	DZA131353
+Tiaret	DZA14	Aïn Bouchekif	DZA141401
+Tiaret	DZA14	Aïn Deheb	DZA141402
+Tiaret	DZA14	Aïn El Hadid	DZA141403
+Tiaret	DZA14	Aïn Kermes	DZA141404
+Tiaret	DZA14	Aïn Dzarit	DZA141405
+Tiaret	DZA14	Bougara	DZA141406
+Tiaret	DZA14	Chehaima	DZA141407
+Tiaret	DZA14	Dahmouni	DZA141408
+Tiaret	DZA14	Djebilet Rosfa	DZA141409
+Tiaret	DZA14	Djillali Ben Amar	DZA141410
+Tiaret	DZA14	Faidja	DZA141411
+Tiaret	DZA14	Frenda	DZA141412
+Tiaret	DZA14	Guertoufa	DZA141413
+Tiaret	DZA14	Hamadia	DZA141414
+Tiaret	DZA14	Ksar Chellala	DZA141415
+Tiaret	DZA14	Madna	DZA141416
+Tiaret	DZA14	Mahdia	DZA141417
+Tiaret	DZA14	Mechraa Safa	DZA141418
+Tiaret	DZA14	Medrissa	DZA141419
+Tiaret	DZA14	Medroussa	DZA141420
+Tiaret	DZA14	Meghila	DZA141421
+Tiaret	DZA14	Mellakou	DZA141422
+Tiaret	DZA14	Nadorah	DZA141423
+Tiaret	DZA14	Naima	DZA141424
+Tiaret	DZA14	Oued Lilli	DZA141425
+Tiaret	DZA14	Rahouia	DZA141426
+Tiaret	DZA14	Rechaiga	DZA141427
+Tiaret	DZA14	Sebaine	DZA141428
+Tiaret	DZA14	Sebt	DZA141429
+Tiaret	DZA14	Serghine	DZA141430
+Tiaret	DZA14	Si Abdelghani	DZA141431
+Tiaret	DZA14	Sidi Abderahmane	DZA141432
+Tiaret	DZA14	Sidi Ali Mellal	DZA141433
+Tiaret	DZA14	Sidi Bakhti	DZA141434
+Tiaret	DZA14	Sidi Hosni	DZA141435
+Tiaret	DZA14	Sougueur	DZA141436
+Tiaret	DZA14	Tagdemt	DZA141437
+Tiaret	DZA14	Takhemaret	DZA141438
+Tiaret	DZA14	Tiaret	DZA141439
+Tiaret	DZA14	Tidda	DZA141440
+Tiaret	DZA14	Tousnina	DZA141441
+Tiaret	DZA14	Zmalet El Emir Abdelkader	DZA141442
+Tizi Ouzou	DZA15	Tizi Ouzou	DZA151501
+Tizi Ouzou	DZA15	Ain El Hammam	DZA151502
+Tizi Ouzou	DZA15	Akbil	DZA151503
+Tizi Ouzou	DZA15	Freha	DZA151504
+Tizi Ouzou	DZA15	Souamaâ	DZA151505
+Tizi Ouzou	DZA15	Mechtras	DZA151506
+Tizi Ouzou	DZA15	Irdjen	DZA151507
+Tizi Ouzou	DZA15	Timizart	DZA151508
+Tizi Ouzou	DZA15	Makouda	DZA151509
+Tizi Ouzou	DZA15	Draâ El Mizan	DZA151510
+Tizi Ouzou	DZA15	Tizi Gheniff	DZA151511
+Tizi Ouzou	DZA15	Bounouh	DZA151512
+Tizi Ouzou	DZA15	Aït Chafâa	DZA151513
+Tizi Ouzou	DZA15	Frikat	DZA151514
+Tizi Ouzou	DZA15	Beni Aïssi	DZA151515
+Tizi Ouzou	DZA15	Beni Zmenzer	DZA151516
+Tizi Ouzou	DZA15	Iferhounène	DZA151517
+Tizi Ouzou	DZA15	Azazga	DZA151518
+Tizi Ouzou	DZA15	Illoula Oumalou	DZA151519
+Tizi Ouzou	DZA15	Yakouren	DZA151520
+Tizi Ouzou	DZA15	Larbaâ Nath Irathen	DZA151521
+Tizi Ouzou	DZA15	Tizi Rached	DZA151522
+Tizi Ouzou	DZA15	Zekri	DZA151523
+Tizi Ouzou	DZA15	Ouaguenoun	DZA151524
+Tizi Ouzou	DZA15	Aïn Zaouia	DZA151525
+Tizi Ouzou	DZA15	M'Kira	DZA151526
+Tizi Ouzou	DZA15	Aït Yahia	DZA151527
+Tizi Ouzou	DZA15	Aït Mahmoud	DZA151528
+Tizi Ouzou	DZA15	Mâatkas	DZA151529
+Tizi Ouzou	DZA15	Aït Boumahdi	DZA151530
+Tizi Ouzou	DZA15	Abi Youcef	DZA151531
+Tizi Ouzou	DZA15	Beni Douala	DZA151532
+Tizi Ouzou	DZA15	Illilten	DZA151533
+Tizi Ouzou	DZA15	Bouzguen	DZA151534
+Tizi Ouzou	DZA15	Aït Aggouacha	DZA151535
+Tizi Ouzou	DZA15	Ouadhia	DZA151536
+Tizi Ouzou	DZA15	Azeffoun	DZA151537
+Tizi Ouzou	DZA15	Tigzirt	DZA151538
+Tizi Ouzou	DZA15	Aït Aïssa Mimoun	DZA151539
+Tizi Ouzou	DZA15	Boghni	DZA151540
+Tizi Ouzou	DZA15	Ifigha	DZA151541
+Tizi Ouzou	DZA15	Aït Oumalou	DZA151542
+Tizi Ouzou	DZA15	Tirmitine	DZA151543
+Tizi Ouzou	DZA15	Akerrou	DZA151544
+Tizi Ouzou	DZA15	Yatafen	DZA151545
+Tizi Ouzou	DZA15	Ath Zikki	DZA151546
+Tizi Ouzou	DZA15	Draâ Ben Khedda	DZA151547
+Tizi Ouzou	DZA15	Ouacif	DZA151548
+Tizi Ouzou	DZA15	Idjeur	DZA151549
+Tizi Ouzou	DZA15	Mekla	DZA151550
+Tizi Ouzou	DZA15	Tizi N'Tleta	DZA151551
+Tizi Ouzou	DZA15	Aït Yenni	DZA151552
+Tizi Ouzou	DZA15	Aghribs	DZA151553
+Tizi Ouzou	DZA15	Iflissen	DZA151554
+Tizi Ouzou	DZA15	Boudjima	DZA151555
+Tizi Ouzou	DZA15	Aït Yahia Moussa	DZA151556
+Tizi Ouzou	DZA15	Souk El Thenine	DZA151557
+Tizi Ouzou	DZA15	Aït Khellili	DZA151558
+Tizi Ouzou	DZA15	Sidi Namane	DZA151559
+Tizi Ouzou	DZA15	Iboudraren	DZA151560
+Tizi Ouzou	DZA15	Agouni Gueghrane	DZA151561
+Tizi Ouzou	DZA15	Mizrana	DZA151562
+Tizi Ouzou	DZA15	Imsouhel	DZA151563
+Tizi Ouzou	DZA15	Tadmaït	DZA151564
+Tizi Ouzou	DZA15	Aït Bouadou	DZA151565
+Tizi Ouzou	DZA15	Assi Youcef	DZA151566
+Tizi Ouzou	DZA15	Aït Toudert	DZA151567
+Alger	DZA16	Alger Centre	DZA161601
+Alger	DZA16	Sidi M'Hamed	DZA161602
+Alger	DZA16	El Madania	DZA161603
+Alger	DZA16	Belouizdad	DZA161604
+Alger	DZA16	Bab El Oued	DZA161605
+Alger	DZA16	Bologhine	DZA161606
+Alger	DZA16	Casbah	DZA161607
+Alger	DZA16	Oued Koriche	DZA161608
+Alger	DZA16	Bir Mourad Raïs	DZA161609
+Alger	DZA16	El Biar	DZA161610
+Alger	DZA16	Bouzareah	DZA161611
+Alger	DZA16	Birkhadem	DZA161612
+Alger	DZA16	El Harrach	DZA161613
+Alger	DZA16	Baraki	DZA161614
+Alger	DZA16	Oued Smar	DZA161615
+Alger	DZA16	Bachdjerrah	DZA161616
+Alger	DZA16	Hussein Dey	DZA161617
+Alger	DZA16	Kouba	DZA161618
+Alger	DZA16	Bourouba	DZA161619
+Alger	DZA16	Dar El Beïda	DZA161620
+Alger	DZA16	Bab Ezzouar	DZA161621
+Alger	DZA16	Ben Aknoun	DZA161622
+Alger	DZA16	Dely Ibrahim	DZA161623
+Alger	DZA16	El Hammamet	DZA161624
+Alger	DZA16	Raïs Hamidou	DZA161625
+Alger	DZA16	Djasr Kasentina	DZA161626
+Alger	DZA16	El Mouradia	DZA161627
+Alger	DZA16	Hydra	DZA161628
+Alger	DZA16	Mohammadia	DZA161629
+Alger	DZA16	Bordj El Kiffan	DZA161630
+Alger	DZA16	El Magharia	DZA161631
+Alger	DZA16	Beni Messous	DZA161632
+Alger	DZA16	Les Eucalyptus	DZA161633
+Alger	DZA16	Birtouta	DZA161634
+Alger	DZA16	Tessala El Merdja	DZA161635
+Alger	DZA16	Ouled Chebel	DZA161636
+Alger	DZA16	Sidi Moussa	DZA161637
+Alger	DZA16	Aïn Taya	DZA161638
+Alger	DZA16	Bordj El Bahri	DZA161639
+Alger	DZA16	El Marsa	DZA161640
+Alger	DZA16	H'raoua	DZA161641
+Alger	DZA16	Rouïba	DZA161642
+Alger	DZA16	Reghaïa	DZA161643
+Alger	DZA16	Aïn Benian	DZA161644
+Alger	DZA16	Staoueli	DZA161645
+Alger	DZA16	Zeralda	DZA161646
+Alger	DZA16	Mahelma	DZA161647
+Alger	DZA16	Rahmania	DZA161648
+Alger	DZA16	Souidania	DZA161649
+Alger	DZA16	Cheraga	DZA161650
+Alger	DZA16	Ouled Fayet	DZA161651
+Alger	DZA16	El Achour	DZA161652
+Alger	DZA16	Draria	DZA161653
+Alger	DZA16	Douera	DZA161654
+Alger	DZA16	Baba Hassen	DZA161655
+Alger	DZA16	Khraicia	DZA161656
+Alger	DZA16	Saoula	DZA161657
+Djelfa	DZA17	Aïn Chouhada	DZA171701
+Djelfa	DZA17	Aïn El Ibel	DZA171702
+Djelfa	DZA17	Aïn Feka	DZA171703
+Djelfa	DZA17	Aïn Maabed	DZA171704
+Djelfa	DZA17	Aïn Oussara	DZA171705
+Djelfa	DZA17	Amourah	DZA171706
+Djelfa	DZA17	Benhar	DZA171707
+Djelfa	DZA17	Beni Yagoub	DZA171708
+Djelfa	DZA17	Birine	DZA171709
+Djelfa	DZA17	Bouira Lahdab	DZA171710
+Djelfa	DZA17	Charef	DZA171711
+Djelfa	DZA17	Dar Chioukh	DZA171712
+Djelfa	DZA17	Deldoul	DZA171713
+Djelfa	DZA17	Djelfa	DZA171714
+Djelfa	DZA17	Douis	DZA171715
+Djelfa	DZA17	El Guedid	DZA171716
+Djelfa	DZA17	El Idrissia	DZA171717
+Djelfa	DZA17	El Khemis	DZA171718
+Djelfa	DZA17	Faidh El Botma	DZA171719
+Djelfa	DZA17	Guernini	DZA171720
+Djelfa	DZA17	Guettara	DZA171721
+Djelfa	DZA17	Had Sahary	DZA171722
+Djelfa	DZA17	Hassi Bahbah	DZA171723
+Djelfa	DZA17	Hassi El Euch	DZA171724
+Djelfa	DZA17	Hassi Fedoul	DZA171725
+Djelfa	DZA17	Messaad	DZA171726
+Djelfa	DZA17	M'Liliha	DZA171727
+Djelfa	DZA17	Moudjebara	DZA171728
+Djelfa	DZA17	Oum Laadham	DZA171729
+Djelfa	DZA17	Sed Rahal	DZA171730
+Djelfa	DZA17	Selmana	DZA171731
+Djelfa	DZA17	Sidi Baizid	DZA171732
+Djelfa	DZA17	Sidi Ladjel	DZA171733
+Djelfa	DZA17	Tadmit	DZA171734
+Djelfa	DZA17	Zaafrane	DZA171735
+Djelfa	DZA17	Zaccar	DZA171736
+Jijel	DZA18	Jijel	DZA181801
+Jijel	DZA18	Eraguene	DZA181802
+Jijel	DZA18	El Aouana	DZA181803
+Jijel	DZA18	Ziama Mansouriah	DZA181804
+Jijel	DZA18	Taher	DZA181805
+Jijel	DZA18	Emir Abdelkader	DZA181806
+Jijel	DZA18	Chekfa	DZA181807
+Jijel	DZA18	Chahna	DZA181808
+Jijel	DZA18	El Milia	DZA181809
+Jijel	DZA18	Sidi Maarouf	DZA181810
+Jijel	DZA18	Settara	DZA181811
+Jijel	DZA18	El Ancer	DZA181812
+Jijel	DZA18	Sidi Abdelaziz	DZA181813
+Jijel	DZA18	Kaous	DZA181814
+Jijel	DZA18	Ghebala	DZA181815
+Jijel	DZA18	Bouraoui Belhadef	DZA181816
+Jijel	DZA18	Djimla	DZA181817
+Jijel	DZA18	Selma Benziada	DZA181818
+Jijel	DZA18	Boucif Ouled Askeur	DZA181819
+Jijel	DZA18	El Kennar Nouchfi	DZA181820
+Jijel	DZA18	Ouled Yahia Khedrouche	DZA181821
+Jijel	DZA18	Boudriaa Ben Yadjis	DZA181822
+Jijel	DZA18	Kheïri Oued Adjoul	DZA181823
+Jijel	DZA18	Texenna	DZA181824
+Jijel	DZA18	Djemaa Beni Habibi	DZA181825
+Jijel	DZA18	Bordj Tahar	DZA181826
+Jijel	DZA18	Ouled Rabah	DZA181827
+Jijel	DZA18	Ouadjana	DZA181828
+Sétif	DZA19	Aïn Abessa	DZA191901
+Sétif	DZA19	Aïn Arnat	DZA191902
+Sétif	DZA19	Aïn Azel	DZA191903
+Sétif	DZA19	Aïn El Kebira	DZA191904
+Sétif	DZA19	Aïn Lahdjar	DZA191905
+Sétif	DZA19	Aïn Legradj	DZA191906
+Sétif	DZA19	Aïn Oulmene	DZA191907
+Sétif	DZA19	Aïn Roua	DZA191908
+Sétif	DZA19	Aïn Sebt	DZA191909
+Sétif	DZA19	Aït Naoual Mezada	DZA191910
+Sétif	DZA19	Aït Tizi	DZA191911
+Sétif	DZA19	Aït Wertilan	DZA191912
+Sétif	DZA19	Amoucha	DZA191913
+Sétif	DZA19	Babor	DZA191914
+Sétif	DZA19	Bazer Sakhra	DZA191915
+Sétif	DZA19	Beidha Bordj	DZA191916
+Sétif	DZA19	Belaa	DZA191917
+Sétif	DZA19	Beni Aziz	DZA191918
+Sétif	DZA19	Beni Chebana	DZA191919
+Sétif	DZA19	Beni Fouda	DZA191920
+Sétif	DZA19	Beni Hocine	DZA191921
+Sétif	DZA19	Beni Mouhli	DZA191922
+Sétif	DZA19	Bir El Arch	DZA191923
+Sétif	DZA19	Bir Haddada	DZA191924
+Sétif	DZA19	Bouandas	DZA191925
+Sétif	DZA19	Bougaa	DZA191926
+Sétif	DZA19	Bousselam	DZA191927
+Sétif	DZA19	Boutaleb	DZA191928
+Sétif	DZA19	Dehamcha	DZA191929
+Sétif	DZA19	Djemila	DZA191930
+Sétif	DZA19	Draa Kebila	DZA191931
+Sétif	DZA19	El Eulma	DZA191932
+Sétif	DZA19	El Ouldja	DZA191933
+Sétif	DZA19	El Ouricia	DZA191934
+Sétif	DZA19	Guellal	DZA191935
+Sétif	DZA19	Guelta Zerka	DZA191936
+Sétif	DZA19	Guenzet	DZA191937
+Sétif	DZA19	Guidjel	DZA191938
+Sétif	DZA19	Hamma	DZA191939
+Sétif	DZA19	Hammam Guergour	DZA191940
+Sétif	DZA19	Hammam Soukhna	DZA191941
+Sétif	DZA19	Harbil	DZA191942
+Sétif	DZA19	Ksar El Abtal	DZA191943
+Sétif	DZA19	Maaouia	DZA191944
+Sétif	DZA19	Maoklane	DZA191945
+Sétif	DZA19	Mezloug	DZA191946
+Sétif	DZA19	Oued El Barad	DZA191947
+Sétif	DZA19	Ouled Addouane	DZA191948
+Sétif	DZA19	Ouled Sabor	DZA191949
+Sétif	DZA19	Ouled Si Ahmed	DZA191950
+Sétif	DZA19	Ouled Tebben	DZA191951
+Sétif	DZA19	Rasfa	DZA191952
+Sétif	DZA19	Salah Bey	DZA191953
+Sétif	DZA19	Serdj El Ghoul	DZA191954
+Sétif	DZA19	Sétif	DZA191955
+Sétif	DZA19	Tachouda	DZA191956
+Sétif	DZA19	Talaifacene	DZA191957
+Sétif	DZA19	Taya	DZA191958
+Sétif	DZA19	Tella	DZA191959
+Sétif	DZA19	Tizi N'Bechar	DZA191960
+Saïda	DZA20	Aïn El Hadjar	DZA202001
+Saïda	DZA20	Aïn Sekhouna	DZA202002
+Saïda	DZA20	Aïn Soltane	DZA202003
+Saïda	DZA20	Doui Thabet	DZA202004
+Saïda	DZA20	El Hassasna	DZA202005
+Saïda	DZA20	Hounet	DZA202006
+Saïda	DZA20	Maamora	DZA202007
+Saïda	DZA20	Moulay Larbi	DZA202008
+Saïda	DZA20	Ouled Brahim	DZA202009
+Saïda	DZA20	Ouled Khaled	DZA202010
+Saïda	DZA20	Saïda	DZA202011
+Saïda	DZA20	Sidi Ahmed	DZA202012
+Saïda	DZA20	Sidi Amar	DZA202013
+Saïda	DZA20	Sidi Boubekeur	DZA202014
+Saïda	DZA20	Tircine	DZA202015
+Saïda	DZA20	Youb	DZA202016
+Skikda	DZA21	Aïn Bouziane	DZA212101
+Skikda	DZA21	Aïn Charchar	DZA212102
+Skikda	DZA21	Aïn Kechra	DZA212103
+Skikda	DZA21	Aïn Zouit	DZA212104
+Skikda	DZA21	Azzaba	DZA212105
+Skikda	DZA21	Bekkouche Lakhdar	DZA212106
+Skikda	DZA21	Bin El Ouiden	DZA212107
+Skikda	DZA21	Ben Azzouz	DZA212108
+Skikda	DZA21	Beni Bechir	DZA212109
+Skikda	DZA21	Beni Oulbane	DZA212110
+Skikda	DZA21	Beni Zid	DZA212111
+Skikda	DZA21	Bouchtata	DZA212112
+Skikda	DZA21	Cheraia	DZA212113
+Skikda	DZA21	Collo	DZA212114
+Skikda	DZA21	Djendel Saadi Mohamed	DZA212115
+Skikda	DZA21	El Ghedir	DZA212116
+Skikda	DZA21	El Hadaiek	DZA212117
+Skikda	DZA21	El Harrouch	DZA212118
+Skikda	DZA21	El Marsa	DZA212119
+Skikda	DZA21	Emdjez Edchich	DZA212120
+Skikda	DZA21	Es Sebt	DZA212121
+Skikda	DZA21	Filfila	DZA212122
+Skikda	DZA21	Hamadi Krouma	DZA212123
+Skikda	DZA21	Kanoua	DZA212124
+Skikda	DZA21	Kerkera	DZA212125
+Skikda	DZA21	Kheneg Mayoum	DZA212126
+Skikda	DZA21	Oued Zehour	DZA212127
+Skikda	DZA21	Ouldja Boulballout	DZA212128
+Skikda	DZA21	Ouled Attia	DZA212129
+Skikda	DZA21	Ouled Hbaba	DZA212130
+Skikda	DZA21	Oum Toub	DZA212131
+Skikda	DZA21	Ramdane Djamel	DZA212132
+Skikda	DZA21	Salah Bouchaour	DZA212133
+Skikda	DZA21	Sidi Mezghiche	DZA212134
+Skikda	DZA21	Skikda	DZA212135
+Skikda	DZA21	Tamalous	DZA212136
+Skikda	DZA21	Zerdaza	DZA212137
+Skikda	DZA21	Zitouna	DZA212138
+Sidi Bel Abbès	DZA22	Aïn Adden	DZA222201
+Sidi Bel Abbès	DZA22	Aïn El Berd	DZA222202
+Sidi Bel Abbès	DZA22	Aïn Kada	DZA222203
+Sidi Bel Abbès	DZA22	Aïn Thrid	DZA222204
+Sidi Bel Abbès	DZA22	Aïn Tindamine	DZA222205
+Sidi Bel Abbès	DZA22	Amarnas	DZA222206
+Sidi Bel Abbès	DZA22	Badredine El Mokrani	DZA222207
+Sidi Bel Abbès	DZA22	Belarbi	DZA222208
+Sidi Bel Abbès	DZA22	Ben Badis	DZA222209
+Sidi Bel Abbès	DZA22	Benachiba Chelia	DZA222210
+Sidi Bel Abbès	DZA22	Bir El Hammam	DZA222211
+Sidi Bel Abbès	DZA22	Boudjebaa El Bordj	DZA222212
+Sidi Bel Abbès	DZA22	Boukhanafis	DZA222213
+Sidi Bel Abbès	DZA22	Chettouane Belaila	DZA222214
+Sidi Bel Abbès	DZA22	Dhaya	DZA222215
+Sidi Bel Abbès	DZA22	El Haçaiba	DZA222216
+Sidi Bel Abbès	DZA22	Hassi Dahou	DZA222217
+Sidi Bel Abbès	DZA22	Hassi Zehana	DZA222218
+Sidi Bel Abbès	DZA22	Lamtar	DZA222219
+Sidi Bel Abbès	DZA22	Makedra	DZA222220
+Sidi Bel Abbès	DZA22	Marhoum	DZA222221
+Sidi Bel Abbès	DZA22	M'Cid	DZA222222
+Sidi Bel Abbès	DZA22	Merine	DZA222223
+Sidi Bel Abbès	DZA22	Mezaourou	DZA222224
+Sidi Bel Abbès	DZA22	Mostefa Ben Brahim	DZA222225
+Sidi Bel Abbès	DZA22	Moulay Slissen	DZA222226
+Sidi Bel Abbès	DZA22	Oued Sebaa	DZA222227
+Sidi Bel Abbès	DZA22	Oued Sefioun	DZA222228
+Sidi Bel Abbès	DZA22	Oued Taourira	DZA222229
+Sidi Bel Abbès	DZA22	Ras El Ma	DZA222230
+Sidi Bel Abbès	DZA22	Redjem Demouche	DZA222231
+Sidi Bel Abbès	DZA22	Sehala Thaoura	DZA222232
+Sidi Bel Abbès	DZA22	Sfisef	DZA222233
+Sidi Bel Abbès	DZA22	Sidi Ali Benyoub	DZA222234
+Sidi Bel Abbès	DZA22	Sidi Ali Boussidi	DZA222235
+Sidi Bel Abbès	DZA22	Sidi Bel Abbes	DZA222236
+Sidi Bel Abbès	DZA22	Sidi Brahim	DZA222237
+Sidi Bel Abbès	DZA22	Sidi Chaib	DZA222238
+Sidi Bel Abbès	DZA22	Sidi Daho des Zairs	DZA222239
+Sidi Bel Abbès	DZA22	Sidi Hamadouche	DZA222240
+Sidi Bel Abbès	DZA22	Sidi Khaled	DZA222241
+Sidi Bel Abbès	DZA22	Sidi Lahcene	DZA222242
+Sidi Bel Abbès	DZA22	Sidi Yacoub	DZA222243
+Sidi Bel Abbès	DZA22	Tabia	DZA222244
+Sidi Bel Abbès	DZA22	Tafissour	DZA222245
+Sidi Bel Abbès	DZA22	Taoudmout	DZA222246
+Sidi Bel Abbès	DZA22	Teghalimet	DZA222247
+Sidi Bel Abbès	DZA22	Telagh	DZA222248
+Sidi Bel Abbès	DZA22	Tenira	DZA222249
+Sidi Bel Abbès	DZA22	Tessala	DZA222250
+Sidi Bel Abbès	DZA22	Tilmouni	DZA222251
+Sidi Bel Abbès	DZA22	Zerouala	DZA222252
+Annaba	DZA23	Annaba	DZA232301
+Annaba	DZA23	Berrahal	DZA232302
+Annaba	DZA23	El Hadjar	DZA232303
+Annaba	DZA23	Eulma	DZA232304
+Annaba	DZA23	El Bouni	DZA232305
+Annaba	DZA23	Oued El Aneb	DZA232306
+Annaba	DZA23	Cheurfa	DZA232307
+Annaba	DZA23	Seraïdi	DZA232308
+Annaba	DZA23	Aïn Berda	DZA232309
+Annaba	DZA23	Chetaïbi	DZA232310
+Annaba	DZA23	Sidi Amar	DZA232311
+Annaba	DZA23	Treat	DZA232312
+Guelma	DZA24	Aïn Ben Beida	DZA242401
+Guelma	DZA24	Aïn Larbi	DZA242402
+Guelma	DZA24	Aïn Makhlouf	DZA242403
+Guelma	DZA24	Aïn Reggada	DZA242404
+Guelma	DZA24	Aïn Sandel	DZA242405
+Guelma	DZA24	Belkheir	DZA242406
+Guelma	DZA24	Ben Djerrah	DZA242407
+Guelma	DZA24	Beni Mezline	DZA242408
+Guelma	DZA24	Bordj Sabath	DZA242409
+Guelma	DZA24	Bouhachana	DZA242410
+Guelma	DZA24	Bouhamdane	DZA242411
+Guelma	DZA24	Bouati Mahmoud	DZA242412
+Guelma	DZA24	Bouchegouf	DZA242413
+Guelma	DZA24	Boumahra Ahmed	DZA242414
+Guelma	DZA24	Dahouara	DZA242415
+Guelma	DZA24	Djeballah Khemissi	DZA242416
+Guelma	DZA24	El Fedjoudj	DZA242417
+Guelma	DZA24	Guellat Bou Sbaa	DZA242418
+Guelma	DZA24	Guelma	DZA242419
+Guelma	DZA24	Hammam Debagh	DZA242420
+Guelma	DZA24	Hammam N'Bail	DZA242421
+Guelma	DZA24	Héliopolis	DZA242422
+Guelma	DZA24	Houari Boumédiène	DZA242423
+Guelma	DZA24	Khezarra	DZA242424
+Guelma	DZA24	Medjez Amar	DZA242425
+Guelma	DZA24	Medjez Sfa	DZA242426
+Guelma	DZA24	Nechmaya	DZA242427
+Guelma	DZA24	Oued Cheham	DZA242428
+Guelma	DZA24	Oued Fragha	DZA242429
+Guelma	DZA24	Oued Zenati	DZA242430
+Guelma	DZA24	Ras El Agba	DZA242431
+Guelma	DZA24	Roknia	DZA242432
+Guelma	DZA24	Sellaoua Announa	DZA242433
+Guelma	DZA24	Tamlouka	DZA242434
+Constantine	DZA25	Aïn Abid	DZA252501
+Constantine	DZA25	Aïn Smara	DZA252502
+Constantine	DZA25	Beni Hamiden	DZA252503
+Constantine	DZA25	Constantine	DZA252504
+Constantine	DZA25	Didouche Mourad	DZA252505
+Constantine	DZA25	El Khroub	DZA252506
+Constantine	DZA25	Hamma Bouziane	DZA252507
+Constantine	DZA25	Ibn Badis	DZA252508
+Constantine	DZA25	Ibn Ziad	DZA252509
+Constantine	DZA25	Messaoud Boudjriou	DZA252510
+Constantine	DZA25	Ouled Rahmoune	DZA252511
+Constantine	DZA25	Zighoud Youcef	DZA252512
+Médéa	DZA26	Aïn Boucif	DZA262601
+Médéa	DZA26	Aïn Ouksir	DZA262602
+Médéa	DZA26	Aissaouia	DZA262603
+Médéa	DZA26	Aziz	DZA262604
+Médéa	DZA26	Baata	DZA262605
+Médéa	DZA26	Benchicao	DZA262606
+Médéa	DZA26	Beni Slimane	DZA262607
+Médéa	DZA26	Berrouaghia	DZA262608
+Médéa	DZA26	Bir Ben Laabed	DZA262609
+Médéa	DZA26	Boghar	DZA262610
+Médéa	DZA26	Bou Aiche	DZA262611
+Médéa	DZA26	Bouaichoune	DZA262612
+Médéa	DZA26	Bouchrahil	DZA262613
+Médéa	DZA26	Boughezoul	DZA262614
+Médéa	DZA26	Bouskene	DZA262615
+Médéa	DZA26	Chahbounia	DZA262616
+Médéa	DZA26	Chellalet El Adhaoura	DZA262617
+Médéa	DZA26	Cheniguel	DZA262618
+Médéa	DZA26	Derrag	DZA262619
+Médéa	DZA26	Deux Bassins	DZA262620
+Médéa	DZA26	Djouab	DZA262621
+Médéa	DZA26	Draa Essamar	DZA262622
+Médéa	DZA26	El Azizia	DZA262623
+Médéa	DZA26	El Guelb El Kebir	DZA262624
+Médéa	DZA26	El Hamdania	DZA262625
+Médéa	DZA26	El Omaria	DZA262626
+Médéa	DZA26	El Ouinet	DZA262627
+Médéa	DZA26	Hannacha	DZA262628
+Médéa	DZA26	Kef Lakhdar	DZA262629
+Médéa	DZA26	Khams Djouamaa	DZA262630
+Médéa	DZA26	Ksar Boukhari	DZA262631
+Médéa	DZA26	Meghraoua	DZA262632
+Médéa	DZA26	Médéa	DZA262633
+Médéa	DZA26	Moudjbar	DZA262634
+Médéa	DZA26	Meftaha	DZA262635
+Médéa	DZA26	Mezerana	DZA262636
+Médéa	DZA26	Mihoub	DZA262637
+Médéa	DZA26	Ouamri	DZA262638
+Médéa	DZA26	Oued Harbil	DZA262639
+Médéa	DZA26	Ouled Antar	DZA262640
+Médéa	DZA26	Ouled Bouachra	DZA262641
+Médéa	DZA26	Ouled Brahim	DZA262642
+Médéa	DZA26	Ouled Deide	DZA262643
+Médéa	DZA26	Ouled Hellal	DZA262644
+Médéa	DZA26	Ouled Maaref	DZA262645
+Médéa	DZA26	Oum El Djalil	DZA262646
+Médéa	DZA26	Ouzera	DZA262647
+Médéa	DZA26	Rebaia	DZA262648
+Médéa	DZA26	Saneg	DZA262649
+Médéa	DZA26	Sedraia	DZA262650
+Médéa	DZA26	Seghouane	DZA262651
+Médéa	DZA26	Si Mahdjoub	DZA262652
+Médéa	DZA26	Sidi Damed	DZA262653
+Médéa	DZA26	Sidi Errabia	DZA262654
+Médéa	DZA26	Sidi Naamanez	DZA262655
+Médéa	DZA26	Sidi Zahar	DZA262656
+Médéa	DZA26	Sidi Ziane	DZA262657
+Médéa	DZA26	Souagui	DZA262658
+Médéa	DZA26	Tablat	DZA262659
+Médéa	DZA26	Tafraout	DZA262660
+Médéa	DZA26	Tamesguida	DZA262661
+Médéa	DZA26	Tizi Mahdi	DZA262662
+Médéa	DZA26	Tlatet Eddouar	DZA262663
+Médéa	DZA26	Zoubiria	DZA262664
+Mostaganem	DZA27	Abdelmalek Ramdane	DZA272701
+Mostaganem	DZA27	Achaacha	DZA272702
+Mostaganem	DZA27	Aïn Boudinar	DZA272703
+Mostaganem	DZA27	Aïn Nouissy	DZA272704
+Mostaganem	DZA27	Aïn Sidi Cherif	DZA272705
+Mostaganem	DZA27	Aïn Tedles	DZA272706
+Mostaganem	DZA27	Blad Touahria	DZA272707
+Mostaganem	DZA27	Bouguirat	DZA272708
+Mostaganem	DZA27	El Hassaine	DZA272709
+Mostaganem	DZA27	Fornaka	DZA272710
+Mostaganem	DZA27	Hadjadj	DZA272711
+Mostaganem	DZA27	Hassi Mameche	DZA272712
+Mostaganem	DZA27	Khadra	DZA272713
+Mostaganem	DZA27	Kheireddine	DZA272714
+Mostaganem	DZA27	Mansourah	DZA272715
+Mostaganem	DZA27	Mesra	DZA272716
+Mostaganem	DZA27	Mazagran	DZA272717
+Mostaganem	DZA27	Mostaganem	DZA272718
+Mostaganem	DZA27	Nekmaria	DZA272719
+Mostaganem	DZA27	Oued El Kheir	DZA272720
+Mostaganem	DZA27	Ouled Boughalem	DZA272721
+Mostaganem	DZA27	Ouled Maallah	DZA272722
+Mostaganem	DZA27	Safsaf	DZA272723
+Mostaganem	DZA27	Sayada	DZA272724
+Mostaganem	DZA27	Sidi Ali	DZA272725
+Mostaganem	DZA27	Sidi Belattar	DZA272726
+Mostaganem	DZA27	Sidi Lakhdar	DZA272727
+Mostaganem	DZA27	Sirat	DZA272728
+Mostaganem	DZA27	Souaflia	DZA272729
+Mostaganem	DZA27	Sour	DZA272730
+Mostaganem	DZA27	Stidia	DZA272731
+Mostaganem	DZA27	Tazgait	DZA272732
+M'Sila	DZA28	Aïn El Hadjel	DZA282801
+M'Sila	DZA28	Aïn El Melh	DZA282802
+M'Sila	DZA28	Aïn Errich	DZA282803
+M'Sila	DZA28	Aïn Fares	DZA282804
+M'Sila	DZA28	Aïn Khadra	DZA282805
+M'Sila	DZA28	Belaiba	DZA282806
+M'Sila	DZA28	Ben Srour	DZA282807
+M'Sila	DZA28	Beni Ilmane	DZA282808
+M'Sila	DZA28	Benzouh	DZA282809
+M'Sila	DZA28	Berhoum	DZA282810
+M'Sila	DZA28	Bir Foda	DZA282811
+M'Sila	DZA28	Bou Saâda	DZA282812
+M'Sila	DZA28	Bouti Sayah	DZA282813
+M'Sila	DZA28	Chellal	DZA282814
+M'Sila	DZA28	Dehahna	DZA282815
+M'Sila	DZA28	Djebel Messaad	DZA282816
+M'Sila	DZA28	El Hamel	DZA282817
+M'Sila	DZA28	El Houamed	DZA282818
+M'Sila	DZA28	Hammam Dhalaa	DZA282819
+M'Sila	DZA28	Khettouti Sed El Djir	DZA282820
+M'Sila	DZA28	Khoubana	DZA282821
+M'Sila	DZA28	Maadid	DZA282822
+M'Sila	DZA28	Maarif	DZA282823
+M'Sila	DZA28	Magra	DZA282824
+M'Sila	DZA28	M'Cif	DZA282825
+M'Sila	DZA28	Medjedel	DZA282826
+M'Sila	DZA28	Mohammed Boudiaf	DZA282827
+M'Sila	DZA28	M'Sila	DZA282828
+M'Sila	DZA28	M'Tarfa	DZA282829
+M'Sila	DZA28	Ouanougha	DZA282830
+M'Sila	DZA28	Ouled Addi Guebala	DZA282831
+M'Sila	DZA28	Ouled Atia	DZA282832
+M'Sila	DZA28	Ouled Derradj	DZA282833
+M'Sila	DZA28	Ouled Madhi	DZA282834
+M'Sila	DZA28	Ouled Mansour	DZA282835
+M'Sila	DZA28	Ouled Sidi Brahim	DZA282836
+M'Sila	DZA28	Ouled Slimane	DZA282837
+M'Sila	DZA28	Oultem	DZA282838
+M'Sila	DZA28	Sidi Aïssa	DZA282839
+M'Sila	DZA28	Sidi Ameur	DZA282840
+M'Sila	DZA28	Sidi Hadjeres	DZA282841
+M'Sila	DZA28	Sidi M'Hamed	DZA282842
+M'Sila	DZA28	Slim	DZA282843
+M'Sila	DZA28	Souamaa	DZA282844
+M'Sila	DZA28	Tamsa	DZA282845
+M'Sila	DZA28	Tarmount	DZA282846
+M'Sila	DZA28	Zarzour	DZA282847
+Mascara	DZA29	Aïn Fares	DZA292901
+Mascara	DZA29	Aïn Fekan	DZA292902
+Mascara	DZA29	Aïn Ferah	DZA292903
+Mascara	DZA29	Aïn Fras	DZA292904
+Mascara	DZA29	Alaïmia	DZA292905
+Mascara	DZA29	Aouf	DZA292906
+Mascara	DZA29	Beniane	DZA292907
+Mascara	DZA29	Bou Hanifia	DZA292908
+Mascara	DZA29	Bou Henni	DZA292909
+Mascara	DZA29	Chorfa	DZA292910
+Mascara	DZA29	El Bordj	DZA292911
+Mascara	DZA29	El Gaada	DZA292912
+Mascara	DZA29	El Ghomri	DZA292913
+Mascara	DZA29	El Guettana	DZA292914
+Mascara	DZA29	El Keurt	DZA292915
+Mascara	DZA29	El Menaouer	DZA292916
+Mascara	DZA29	Ferraguig	DZA292917
+Mascara	DZA29	Froha	DZA292918
+Mascara	DZA29	Gharrous	DZA292919
+Mascara	DZA29	Guerdjoum	DZA292920
+Mascara	DZA29	Ghriss	DZA292921
+Mascara	DZA29	Hachem	DZA292922
+Mascara	DZA29	Hacine	DZA292923
+Mascara	DZA29	Khalouia	DZA292924
+Mascara	DZA29	Makdha	DZA292925
+Mascara	DZA29	Mamounia	DZA292926
+Mascara	DZA29	Maoussa	DZA292927
+Mascara	DZA29	Mascara	DZA292928
+Mascara	DZA29	Matemore	DZA292929
+Mascara	DZA29	Mocta Douz	DZA292930
+Mascara	DZA29	Mohammadia	DZA292931
+Mascara	DZA29	Nesmoth	DZA292932
+Mascara	DZA29	Oggaz	DZA292933
+Mascara	DZA29	Oued El Abtal	DZA292934
+Mascara	DZA29	Oued Taria	DZA292935
+Mascara	DZA29	Ras El Aïn Amirouche	DZA292936
+Mascara	DZA29	Sedjerara	DZA292937
+Mascara	DZA29	Sehailia	DZA292938
+Mascara	DZA29	Sidi Abdeldjebar	DZA292939
+Mascara	DZA29	Sidi Abdelmoumen	DZA292940
+Mascara	DZA29	Sidi Kada	DZA292941
+Mascara	DZA29	Sidi Boussaid	DZA292942
+Mascara	DZA29	Sig	DZA292943
+Mascara	DZA29	Tighennif	DZA292944
+Mascara	DZA29	Tizi	DZA292945
+Mascara	DZA29	Zahana	DZA292946
+Mascara	DZA29	Zelmata	DZA292947
+Ouargla	DZA30	Aïn Beida	DZA303001
+Ouargla	DZA30	Hassi Ben Abdellah	DZA303007
+Ouargla	DZA30	Hassi Messaoud	DZA303008
+Ouargla	DZA30	N'Goussa	DZA303012
+Ouargla	DZA30	Ouargla	DZA303013
+Ouargla	DZA30	Rouissat	DZA303014
+Ouargla	DZA30	Sidi Khouiled	DZA303015
+Oran	DZA31	Oran	DZA313101
+Oran	DZA31	Gdyel	DZA313102
+Oran	DZA31	Bir El Djir	DZA313103
+Oran	DZA31	Hassi Bounif	DZA313104
+Oran	DZA31	Es Senia	DZA313105
+Oran	DZA31	Arzew	DZA313106
+Oran	DZA31	Bethioua	DZA313107
+Oran	DZA31	Marsat El Hadjadj	DZA313108
+Oran	DZA31	Aïn El Turk	DZA313109
+Oran	DZA31	El Ançor	DZA313110
+Oran	DZA31	Oued Tlelat	DZA313111
+Oran	DZA31	Tafraoui	DZA313112
+Oran	DZA31	Sidi Chami	DZA313113
+Oran	DZA31	Boufatis	DZA313114
+Oran	DZA31	Mers El Kébir	DZA313115
+Oran	DZA31	Bou Sfer	DZA313116
+Oran	DZA31	El Kerma	DZA313117
+Oran	DZA31	El Braya	DZA313118
+Oran	DZA31	Hassi Ben Okba	DZA313119
+Oran	DZA31	Ben Freha	DZA313120
+Oran	DZA31	Hassi Mefsoukh	DZA313121
+Oran	DZA31	Sidi Benyebka	DZA313122
+Oran	DZA31	Misserghin	DZA313123
+Oran	DZA31	Boutlelis	DZA313124
+Oran	DZA31	Aïn El Kerma	DZA313125
+Oran	DZA31	Aïn El Bia	DZA313126
+El Bayadh	DZA32	El Bayadh	DZA323201
+El Bayadh	DZA32	Rogassa	DZA323202
+El Bayadh	DZA32	Stitten	DZA323203
+El Bayadh	DZA32	Brezina	DZA323204
+El Bayadh	DZA32	Ghassoul	DZA323205
+El Bayadh	DZA32	Boualem	DZA323206
+El Bayadh	DZA32	El Abiodh Sidi Cheikh	DZA323207
+El Bayadh	DZA32	Aïn El Orak	DZA323208
+El Bayadh	DZA32	Arbaouat	DZA323209
+El Bayadh	DZA32	Bougtoub	DZA323210
+El Bayadh	DZA32	El Kheiter	DZA323211
+El Bayadh	DZA32	Kef El Ahmar	DZA323212
+El Bayadh	DZA32	Boussemghoun	DZA323213
+El Bayadh	DZA32	Chellala	DZA323214
+El Bayadh	DZA32	Kraakda	DZA323215
+El Bayadh	DZA32	El Bnoud	DZA323216
+El Bayadh	DZA32	Cheguig	DZA323217
+El Bayadh	DZA32	Sidi Ameur	DZA323218
+El Bayadh	DZA32	El Mehara	DZA323219
+El Bayadh	DZA32	Tousmouline	DZA323220
+El Bayadh	DZA32	Sidi Slimane	DZA323221
+El Bayadh	DZA32	Sidi Tifour	DZA323222
+Illizi	DZA33	Illizi	DZA333301
+Illizi	DZA33	Debdeb	DZA333303
+Illizi	DZA33	Bordj Omar Driss	DZA333304
+Illizi	DZA33	In Amenas	DZA333306
+Bordj Bou Arreridj	DZA34	Aïn Taghrout	DZA343401
+Bordj Bou Arreridj	DZA34	Aïn Tesra	DZA343402
+Bordj Bou Arreridj	DZA34	Belimour	DZA343403
+Bordj Bou Arreridj	DZA34	Ben Daoud	DZA343404
+Bordj Bou Arreridj	DZA34	Bir Kasdali	DZA343405
+Bordj Bou Arreridj	DZA34	Bordj Bou Arreridj	DZA343406
+Bordj Bou Arreridj	DZA34	Bordj Ghédir	DZA343407
+Bordj Bou Arreridj	DZA34	Bordj Zemoura	DZA343408
+Bordj Bou Arreridj	DZA34	Colla	DZA343409
+Bordj Bou Arreridj	DZA34	Djaafra	DZA343410
+Bordj Bou Arreridj	DZA34	El Ach	DZA343411
+Bordj Bou Arreridj	DZA34	El Achir	DZA343412
+Bordj Bou Arreridj	DZA34	El Anseur	DZA343413
+Bordj Bou Arreridj	DZA34	El Hamadia	DZA343414
+Bordj Bou Arreridj	DZA34	El Main	DZA343415
+Bordj Bou Arreridj	DZA34	El M'hir	DZA343416
+Bordj Bou Arreridj	DZA34	Ghilassa	DZA343417
+Bordj Bou Arreridj	DZA34	Haraza	DZA343418
+Bordj Bou Arreridj	DZA34	Hasnaoua	DZA343419
+Bordj Bou Arreridj	DZA34	Khelil	DZA343420
+Bordj Bou Arreridj	DZA34	Ksour	DZA343421
+Bordj Bou Arreridj	DZA34	Mansoura	DZA343422
+Bordj Bou Arreridj	DZA34	Medjana	DZA343423
+Bordj Bou Arreridj	DZA34	Ouled Brahem	DZA343424
+Bordj Bou Arreridj	DZA34	Ouled Dahmane	DZA343425
+Bordj Bou Arreridj	DZA34	Ouled Sidi Brahim	DZA343426
+Bordj Bou Arreridj	DZA34	Rabta	DZA343427
+Bordj Bou Arreridj	DZA34	Ras El Oued	DZA343428
+Bordj Bou Arreridj	DZA34	Sidi Embarek	DZA343429
+Bordj Bou Arreridj	DZA34	Tefreg	DZA343430
+Bordj Bou Arreridj	DZA34	Taglait	DZA343431
+Bordj Bou Arreridj	DZA34	Teniet En Nasr	DZA343432
+Bordj Bou Arreridj	DZA34	Tassameurt	DZA343433
+Bordj Bou Arreridj	DZA34	Tixter	DZA343434
+Boumerdès	DZA35	Boumerdes	DZA353501
+Boumerdès	DZA35	Boudouaou	DZA353502
+Boumerdès	DZA35	Afir	DZA353504
+Boumerdès	DZA35	Bordj Menaiel	DZA353505
+Boumerdès	DZA35	Baghlia	DZA353506
+Boumerdès	DZA35	Sidi Daoud	DZA353507
+Boumerdès	DZA35	Naciria	DZA353508
+Boumerdès	DZA35	Djinet	DZA353509
+Boumerdès	DZA35	Issers	DZA353510
+Boumerdès	DZA35	Zemmouri	DZA353511
+Boumerdès	DZA35	Si Mustapha	DZA353512
+Boumerdès	DZA35	Tidjelabine	DZA353513
+Boumerdès	DZA35	Chabet el Ameur	DZA353514
+Boumerdès	DZA35	Thenia	DZA353515
+Boumerdès	DZA35	Timezrit	DZA353518
+Boumerdès	DZA35	Corso	DZA353519
+Boumerdès	DZA35	Ouled Moussa	DZA353520
+Boumerdès	DZA35	Larbatache	DZA353521
+Boumerdès	DZA35	Bouzegza Keddara	DZA353522
+Boumerdès	DZA35	Taourga	DZA353525
+Boumerdès	DZA35	Ouled Aissa	DZA353526
+Boumerdès	DZA35	Ben Choud	DZA353527
+Boumerdès	DZA35	Dellys	DZA353528
+Boumerdès	DZA35	Ammal	DZA353529
+Boumerdès	DZA35	Beni Amrane	DZA353530
+Boumerdès	DZA35	Souk El Had	DZA353531
+Boumerdès	DZA35	Boudouaou El Bahri	DZA353532
+Boumerdès	DZA35	Ouled Hedadj	DZA353533
+Boumerdès	DZA35	Leghata	DZA353535
+Boumerdès	DZA35	Hammedi	DZA353536
+Boumerdès	DZA35	Khemis El Khechna	DZA353537
+Boumerdès	DZA35	El Kharrouba	DZA353538
+El Tarf	DZA36	Aïn El Assel	DZA363601
+El Tarf	DZA36	Aïn Kerma	DZA363602
+El Tarf	DZA36	Asfour	DZA363603
+El Tarf	DZA36	Ben Mehidi	DZA363604
+El Tarf	DZA36	Berrihane	DZA363605
+El Tarf	DZA36	Besbes	DZA363606
+El Tarf	DZA36	Bougous	DZA363607
+El Tarf	DZA36	Bouhadjar	DZA363608
+El Tarf	DZA36	Bouteldja	DZA363609
+El Tarf	DZA36	Chebaita Mokhtar	DZA363610
+El Tarf	DZA36	Chefia	DZA363611
+El Tarf	DZA36	Chihani	DZA363612
+El Tarf	DZA36	Dréan	DZA363613
+El Tarf	DZA36	Echatt	DZA363614
+El Tarf	DZA36	El Aioun	DZA363615
+El Tarf	DZA36	El Kala	DZA363616
+El Tarf	DZA36	El Tarf	DZA363617
+El Tarf	DZA36	Hammam Beni Salah	DZA363618
+El Tarf	DZA36	Lac des Oiseaux	DZA363619
+El Tarf	DZA36	Oued Zitoun	DZA363620
+El Tarf	DZA36	Raml Souk	DZA363621
+El Tarf	DZA36	Souarekh	DZA363622
+El Tarf	DZA36	Zerizer	DZA363623
+El Tarf	DZA36	Zitouna	DZA363624
+Tindouf	DZA37	Oum el Assel	DZA373701
+Tindouf	DZA37	Tindouf	DZA373702
+Tissemsilt	DZA38	Ammari	DZA383801
+Tissemsilt	DZA38	Beni Chaib	DZA383802
+Tissemsilt	DZA38	Beni Lahcene	DZA383803
+Tissemsilt	DZA38	Boucaid	DZA383804
+Tissemsilt	DZA38	Bordj Bou Naama	DZA383805
+Tissemsilt	DZA38	Bordj El Emir Abdelkader	DZA383806
+Tissemsilt	DZA38	Khemisti	DZA383807
+Tissemsilt	DZA38	Larbaa	DZA383808
+Tissemsilt	DZA38	Lardjem	DZA383809
+Tissemsilt	DZA38	Layoune	DZA383810
+Tissemsilt	DZA38	Lazharia	DZA383811
+Tissemsilt	DZA38	Maacem	DZA383812
+Tissemsilt	DZA38	Melaab	DZA383813
+Tissemsilt	DZA38	Ouled Bessem	DZA383814
+Tissemsilt	DZA38	Sidi Abed	DZA383815
+Tissemsilt	DZA38	Sidi Boutouchent	DZA383816
+Tissemsilt	DZA38	Sidi Lantri	DZA383817
+Tissemsilt	DZA38	Sidi Slimane	DZA383818
+Tissemsilt	DZA38	Tamalaht	DZA383819
+Tissemsilt	DZA38	Theniet El Had	DZA383820
+Tissemsilt	DZA38	Tissemsilt	DZA383821
+Tissemsilt	DZA38	Youssoufia	DZA383822
+El Oued	DZA39	El Oued	DZA393901
+El Oued	DZA39	Robbah	DZA393902
+El Oued	DZA39	Oued El Alenda	DZA393903
+El Oued	DZA39	Bayadha	DZA393904
+El Oued	DZA39	Nakhla	DZA393905
+El Oued	DZA39	Guemar	DZA393906
+El Oued	DZA39	Kouinine	DZA393907
+El Oued	DZA39	Reguiba	DZA393908
+El Oued	DZA39	Hamraia	DZA393909
+El Oued	DZA39	Taghzout	DZA393910
+El Oued	DZA39	Debila	DZA393911
+El Oued	DZA39	Hassani Abdelkrim	DZA393912
+El Oued	DZA39	Hassi Khalifa	DZA393913
+El Oued	DZA39	Taleb Larbi	DZA393914
+El Oued	DZA39	Douar El Ma	DZA393915
+El Oued	DZA39	Sidi Aoun	DZA393916
+El Oued	DZA39	Trifaoui	DZA393917
+El Oued	DZA39	Magrane	DZA393918
+El Oued	DZA39	Beni Guecha	DZA393919
+El Oued	DZA39	Ourmas	DZA393920
+El Oued	DZA39	El Ogla	DZA393925
+El Oued	DZA39	Mih Ouansa	DZA393926
+Khenchela	DZA40	Aïn Touila	DZA404001
+Khenchela	DZA40	Babar	DZA404002
+Khenchela	DZA40	Baghai	DZA404003
+Khenchela	DZA40	Bouhmama	DZA404004
+Khenchela	DZA40	Chechar	DZA404005
+Khenchela	DZA40	Chelia	DZA404006
+Khenchela	DZA40	Djellal	DZA404007
+Khenchela	DZA40	El Hamma	DZA404008
+Khenchela	DZA40	El Mahmal	DZA404009
+Khenchela	DZA40	El Oueldja	DZA404010
+Khenchela	DZA40	Ensigha	DZA404011
+Khenchela	DZA40	Kais	DZA404012
+Khenchela	DZA40	Khenchela	DZA404013
+Khenchela	DZA40	Khirane	DZA404014
+Khenchela	DZA40	M'Sara	DZA404015
+Khenchela	DZA40	M'Toussa	DZA404016
+Khenchela	DZA40	Ouled Rechache	DZA404017
+Khenchela	DZA40	Remila	DZA404018
+Khenchela	DZA40	Tamza	DZA404019
+Khenchela	DZA40	Taouzient	DZA404020
+Khenchela	DZA40	Yabous	DZA404021
+Souk Ahras	DZA41	Souk Ahras	DZA414101
+Souk Ahras	DZA41	Sedrata	DZA414102
+Souk Ahras	DZA41	Hanancha	DZA414103
+Souk Ahras	DZA41	Mechroha	DZA414104
+Souk Ahras	DZA41	Ouled Driss	DZA414105
+Souk Ahras	DZA41	Tiffech	DZA414106
+Souk Ahras	DZA41	Zaarouria	DZA414107
+Souk Ahras	DZA41	Taoura	DZA414108
+Souk Ahras	DZA41	Drea	DZA414109
+Souk Ahras	DZA41	Heddada	DZA414110
+Souk Ahras	DZA41	Khedara	DZA414111
+Souk Ahras	DZA41	Merahna	DZA414112
+Souk Ahras	DZA41	Ouled Moumene	DZA414113
+Souk Ahras	DZA41	Bir Bou Haouch	DZA414114
+Souk Ahras	DZA41	M'daourouch	DZA414115
+Souk Ahras	DZA41	Oum El Adhaim	DZA414116
+Souk Ahras	DZA41	Aïn Zana	DZA414117
+Souk Ahras	DZA41	Aïn Soltane	DZA414118
+Souk Ahras	DZA41	Ouillen	DZA414119
+Souk Ahras	DZA41	Sidi Fredj	DZA414120
+Souk Ahras	DZA41	Safel El Ouiden	DZA414121
+Souk Ahras	DZA41	Ragouba	DZA414122
+Souk Ahras	DZA41	Khemissa	DZA414123
+Souk Ahras	DZA41	Oued Keberit	DZA414124
+Souk Ahras	DZA41	Terraguelt	DZA414125
+Souk Ahras	DZA41	Zouabi	DZA414126
+Tipaza	DZA42	Tipaza	DZA424201
+Tipaza	DZA42	Menaceur	DZA424202
+Tipaza	DZA42	Larhat	DZA424203
+Tipaza	DZA42	Douaouda	DZA424204
+Tipaza	DZA42	Bourkika	DZA424205
+Tipaza	DZA42	Khemisti	DZA424206
+Tipaza	DZA42	Aghbal	DZA424210
+Tipaza	DZA42	Hadjout	DZA424212
+Tipaza	DZA42	Sidi Amar	DZA424213
+Tipaza	DZA42	Gouraya	DZA424214
+Tipaza	DZA42	Nador	DZA424215
+Tipaza	DZA42	Chaiba	DZA424216
+Tipaza	DZA42	Aïn Tagourait	DZA424217
+Tipaza	DZA42	Cherchell	DZA424222
+Tipaza	DZA42	Damous	DZA424223
+Tipaza	DZA42	Merad	DZA424224
+Tipaza	DZA42	Fouka	DZA424225
+Tipaza	DZA42	Bou Ismaïl	DZA424226
+Tipaza	DZA42	Ahmar El Aïn	DZA424227
+Tipaza	DZA42	Bouharoun	DZA424230
+Tipaza	DZA42	Sidi Ghiles	DZA424232
+Tipaza	DZA42	Messelmoun	DZA424233
+Tipaza	DZA42	Sidi Rached	DZA424234
+Tipaza	DZA42	Koléa	DZA424235
+Tipaza	DZA42	Attatba	DZA424236
+Tipaza	DZA42	Sidi Semiane	DZA424240
+Tipaza	DZA42	Beni Milleuk	DZA424241
+Tipaza	DZA42	Hadjeret Ennous	DZA424242
+Mila	DZA43	Ahmed Rachedi	DZA434301
+Mila	DZA43	Aïn Beida Harriche	DZA434302
+Mila	DZA43	Aïn Mellouk	DZA434303
+Mila	DZA43	Aïn Tine	DZA434304
+Mila	DZA43	Amira Arrès	DZA434305
+Mila	DZA43	Benyahia Abderrahmane	DZA434306
+Mila	DZA43	Bouhatem	DZA434307
+Mila	DZA43	Chelghoum Laid	DZA434308
+Mila	DZA43	Chigara	DZA434309
+Mila	DZA43	Derradji Bousselah	DZA434310
+Mila	DZA43	El Mechira	DZA434311
+Mila	DZA43	Elayadi Barbes	DZA434312
+Mila	DZA43	Ferdjioua	DZA434313
+Mila	DZA43	Grarem Gouga	DZA434314
+Mila	DZA43	Hamala	DZA434315
+Mila	DZA43	Mila	DZA434316
+Mila	DZA43	Minar Zarza	DZA434317
+Mila	DZA43	Oued Athmania	DZA434318
+Mila	DZA43	Oued Endja	DZA434319
+Mila	DZA43	Oued Seguen	DZA434320
+Mila	DZA43	Ouled Khalouf	DZA434321
+Mila	DZA43	Rouached	DZA434322
+Mila	DZA43	Sidi Khelifa	DZA434323
+Mila	DZA43	Sidi Merouane	DZA434324
+Mila	DZA43	Tadjenanet	DZA434325
+Mila	DZA43	Tassadane Haddada	DZA434326
+Mila	DZA43	Teleghma	DZA434327
+Mila	DZA43	Terrai Bainen	DZA434328
+Mila	DZA43	Tessala Lemtaï	DZA434329
+Mila	DZA43	Tiberguent	DZA434330
+Mila	DZA43	Yahia Beni Guecha	DZA434331
+Mila	DZA43	Zeghaia	DZA434332
+Aïn Defla	DZA44	Aïn Defla	DZA444401
+Aïn Defla	DZA44	Aïn Bouyahia	DZA444402
+Aïn Defla	DZA44	Aïn Benian	DZA444403
+Aïn Defla	DZA44	Aïn Lechiekh	DZA444404
+Aïn Defla	DZA44	Aïn Soltane	DZA444405
+Aïn Defla	DZA44	Aïn Torki	DZA444406
+Aïn Defla	DZA44	Arib	DZA444407
+Aïn Defla	DZA44	Bathia	DZA444408
+Aïn Defla	DZA44	Belaas	DZA444409
+Aïn Defla	DZA44	Ben Allal	DZA444410
+Aïn Defla	DZA44	Birbouche	DZA444411
+Aïn Defla	DZA44	Bir Ould Khelifa	DZA444412
+Aïn Defla	DZA44	Bordj Emir Khaled	DZA444413
+Aïn Defla	DZA44	Boumedfaa	DZA444414
+Aïn Defla	DZA44	Bourached	DZA444415
+Aïn Defla	DZA44	Djelida	DZA444416
+Aïn Defla	DZA44	Djemaa Ouled Cheikh	DZA444417
+Aïn Defla	DZA44	Djendel	DZA444418
+Aïn Defla	DZA44	El Abadia	DZA444419
+Aïn Defla	DZA44	El Amra	DZA444420
+Aïn Defla	DZA44	El Attaf	DZA444421
+Aïn Defla	DZA44	El Hassania	DZA444422
+Aïn Defla	DZA44	El Maine	DZA444423
+Aïn Defla	DZA44	Hammam Righa	DZA444424
+Aïn Defla	DZA44	Hoceinia	DZA444425
+Aïn Defla	DZA44	Khemis Miliana	DZA444426
+Aïn Defla	DZA44	Mekhatria	DZA444427
+Aïn Defla	DZA44	Miliana	DZA444428
+Aïn Defla	DZA44	Oued Chorfa	DZA444429
+Aïn Defla	DZA44	Oued Djemaa	DZA444430
+Aïn Defla	DZA44	Rouina	DZA444431
+Aïn Defla	DZA44	Sidi Lakhdar	DZA444432
+Aïn Defla	DZA44	Tacheta Zougagha	DZA444433
+Aïn Defla	DZA44	Tarik Ibn Ziad	DZA444434
+Aïn Defla	DZA44	Tiberkanine	DZA444435
+Aïn Defla	DZA44	Zeddine	DZA444436
+Naâma	DZA45	Naâma	DZA454501
+Naâma	DZA45	Mecheria	DZA454502
+Naâma	DZA45	Aïn Sefra	DZA454503
+Naâma	DZA45	Tiout	DZA454504
+Naâma	DZA45	Sfissifa	DZA454505
+Naâma	DZA45	Moghrar	DZA454506
+Naâma	DZA45	Assela	DZA454507
+Naâma	DZA45	Djeniene Bourezg	DZA454508
+Naâma	DZA45	Aïn Ben Khelil	DZA454509
+Naâma	DZA45	Makman Ben Amer	DZA454510
+Naâma	DZA45	Kasdir	DZA454511
+Naâma	DZA45	El Biod	DZA454512
+Aïn Témouchent	DZA46	Aghlal	DZA464601
+Aïn Témouchent	DZA46	Aïn El Arbaa	DZA464602
+Aïn Témouchent	DZA46	Aïn Kihal	DZA464603
+Aïn Témouchent	DZA46	Aïn Témouchent	DZA464604
+Aïn Témouchent	DZA46	Aïn Tolba	DZA464605
+Aïn Témouchent	DZA46	Aoubellil	DZA464606
+Aïn Témouchent	DZA46	Beni Saf	DZA464607
+Aïn Témouchent	DZA46	Bouzedjar	DZA464608
+Aïn Témouchent	DZA46	Chaabat El Leham	DZA464609
+Aïn Témouchent	DZA46	Chentouf	DZA464610
+Aïn Témouchent	DZA46	El Amria	DZA464611
+Aïn Témouchent	DZA46	El Emir Abdelkader	DZA464612
+Aïn Témouchent	DZA46	El Malah	DZA464613
+Aïn Témouchent	DZA46	El Messaid	DZA464614
+Aïn Témouchent	DZA46	Hammam Bouhadjar	DZA464615
+Aïn Témouchent	DZA46	Hassasna	DZA464616
+Aïn Témouchent	DZA46	Hassi El Ghella	DZA464617
+Aïn Témouchent	DZA46	Oued Berkeche	DZA464618
+Aïn Témouchent	DZA46	Oued Sabah	DZA464619
+Aïn Témouchent	DZA46	Ouled Boudjemaa	DZA464620
+Aïn Témouchent	DZA46	Ouled Kihal	DZA464621
+Aïn Témouchent	DZA46	Oulhaça El Gheraba	DZA464622
+Aïn Témouchent	DZA46	Sidi Ben Adda	DZA464623
+Aïn Témouchent	DZA46	Sidi Boumedienne	DZA464624
+Aïn Témouchent	DZA46	Sidi Ouriache	DZA464625
+Aïn Témouchent	DZA46	Sidi Safi	DZA464626
+Aïn Témouchent	DZA46	Tamzoura	DZA464627
+Aïn Témouchent	DZA46	Terga	DZA464628
+Ghardaïa	DZA47	Berriane	DZA474701
+Ghardaïa	DZA47	Bounoura	DZA474702
+Ghardaïa	DZA47	Dhayet Bendhahoua	DZA474703
+Ghardaïa	DZA47	El Atteuf	DZA474704
+Ghardaïa	DZA47	El Guerrara	DZA474705
+Ghardaïa	DZA47	Ghardaïa	DZA474707
+Ghardaïa	DZA47	Mansoura	DZA474710
+Ghardaïa	DZA47	Metlili	DZA474711
+Ghardaïa	DZA47	Sebseb	DZA474712
+Ghardaïa	DZA47	Zelfana	DZA474713
+Relizane	DZA48	Aïn Rahma	DZA484801
+Relizane	DZA48	Aïn Tarek	DZA484802
+Relizane	DZA48	Ammi Moussa	DZA484803
+Relizane	DZA48	Belassel Bouzegza	DZA484804
+Relizane	DZA48	Bendaoud	DZA484805
+Relizane	DZA48	Beni Dergoun	DZA484806
+Relizane	DZA48	Beni Zentis	DZA484807
+Relizane	DZA48	Dar Ben Abdellah	DZA484808
+Relizane	DZA48	Djidioua	DZA484809
+Relizane	DZA48	El Guettar	DZA484810
+Relizane	DZA48	El Hamadna	DZA484811
+Relizane	DZA48	El Hassi	DZA484812
+Relizane	DZA48	El Matmar	DZA484813
+Relizane	DZA48	El Ouldja	DZA484814
+Relizane	DZA48	Had Echkalla	DZA484815
+Relizane	DZA48	Hamri	DZA484816
+Relizane	DZA48	Kalaa	DZA484817
+Relizane	DZA48	Lahlef	DZA484818
+Relizane	DZA48	Mazouna	DZA484819
+Relizane	DZA48	Mediouna	DZA484820
+Relizane	DZA48	Mendes	DZA484821
+Relizane	DZA48	Merdja Sidi Abed	DZA484822
+Relizane	DZA48	Ouarizane	DZA484823
+Relizane	DZA48	Oued Essalem	DZA484824
+Relizane	DZA48	Oued Rhiou	DZA484825
+Relizane	DZA48	Ouled Aiche	DZA484826
+Relizane	DZA48	Oued El Djemaa	DZA484827
+Relizane	DZA48	Ouled Sidi Mihoub	DZA484828
+Relizane	DZA48	Ramka	DZA484829
+Relizane	DZA48	Relizane	DZA484830
+Relizane	DZA48	Sidi Khettab	DZA484831
+Relizane	DZA48	Sidi Lazreg	DZA484832
+Relizane	DZA48	Sidi M'Hamed Ben Ali	DZA484833
+Relizane	DZA48	Sidi M'Hamed Benaouda	DZA484834
+Relizane	DZA48	Sidi Saada	DZA484835
+Relizane	DZA48	Souk El Had	DZA484836
+Relizane	DZA48	Yellel	DZA484837
+Relizane	DZA48	Zemmora	DZA484838
+Timimoun	DZA49	Charouine	DZA494903
+Timimoun	DZA49	Ksar Kaddour	DZA494907
+Timimoun	DZA49	Timimoun	DZA494909
+Timimoun	DZA49	Ouled Saïd	DZA494910
+Timimoun	DZA49	Tinerkouk	DZA494916
+Timimoun	DZA49	Deldoul	DZA494917
+Timimoun	DZA49	Metarfa	DZA494920
+Timimoun	DZA49	Aougrout	DZA494923
+Timimoun	DZA49	Talmine	DZA494924
+Timimoun	DZA49	Ouled Aïssa	DZA494927
+Bordj Badji Mokhtar	DZA50	Bordj Badji Mokhtar	DZA505025
+Bordj Badji Mokhtar	DZA50	Timiaouine	DZA505028
+Ouled Djellal	DZA51	Besbes	DZA515103
+Ouled Djellal	DZA51	Doucen	DZA515110
+Ouled Djellal	DZA51	Ech Chaïba	DZA515111
+Ouled Djellal	DZA51	Ouled Djellal	DZA515126
+Ouled Djellal	DZA51	Ras El Miaad	DZA515129
+Ouled Djellal	DZA51	Sidi Khaled	DZA515130
+Béni Abbès	DZA52	Ouled Khoudir	DZA525203`;
+            const testimonials = [
+                { name: 'كريم بن علي', location: 'وهران', rating: 5, text: 'صراحة الدورة هاذي بدلتلي حياتي. كنت حاصل في خدمتي، بصح بفضل قسم "الحياة المهنية"، خدمت سيرة ذاتية احترافية و تدربت على المقابلة. الحمد لله لقيت خدمة خير في شركة كبيرة. شكراً بزاف أستاذ.' },
+                { name: 'فاطمة الزهراء بولم', location: 'الجزائر العاصمة', rating: 5, text: 'أنا عندي صفحة صغيرة نبيع فيها منتجات، و قسم التسويق كان كنز بالنسبة ليا. تعلمت كيفاش ندير إعلانات توصل للناس الصح و نكتب محتوى يخليهم يشريو. المبيعات تاعي تضاعفت في شهر واحد!' },
+                { name: 'ياسين شريف', location: 'قسنطينة', rating: 5, text: 'كنت نظن الذكاء الاصطناعي حاجة معقدة و صعيبة. الأستاذ شرح كلش بطريقة بسيطة تخليك تفهم تم تم. الـDVD عاوني بزاف كي تكون الكونيكسيون ثقيلة.' },
+                { name: 'أمينة حداد', location: 'سطيف', rating: 5, text: 'ما عندي حتى علاقة بالتكنولوجيا، و دخلت للدورة باش نتعلم برك. تفاجأت بكمية الأدوات لي نقدر نستعملها في حياتي اليومية. من تلخيص الكتب للفيديوهات حتى لتنظيم وقتي. دورة عملية 100%.' },
+                { name: 'محمد الأمين', location: 'عنابة', rating: 5, text: 'The quality is amazing. I didn\'t expect this level of detail. The section on automation is worth the price alone. I automated so many tasks for my work. Highly recommended.' },
+                { name: 'سميرة خليفي', location: 'البليدة', rating: 5, text: 'أروع حاجة هي التحديثات المستمرة. كل مرة نلقى دروس جديدة و أدوات جديدة زادوها. تحس صح بلي استثمار للمستقبل ماشي مجرد دورة و خلاص. يعطيكم الصحة.' },
+                { name: 'بلال منصوري', location: 'باتنة', rating: 5, text: 'كنت نصرف دراهم كبار على المصممين باش يديرولي صور للمحتوى تاعي. دروك، بـMidjourney لي تعلمتو في الدورة، وليت نخدم صور خير منهم و في دقائق برك. وفرت وقت و دراهم.' },
+                { name: 'نوال سعيدي', location: 'تلمسان', rating: 5, text: 'الدورة شاملة صح. تبدا معاك من الصفر و توصلك للاحتراف. عجبتني بزاف الأمثلة الواقعية و التطبيقات العملية. ماشي غير هدرة و خلاص. كل درس تخرج منو بمهارة جديدة.' },
+                { name: 'عادل غربي', location: 'بسكرة', rating: 5, text: 'وصلني الـDVD في وقت قصير و التغليف كان ممتاز. خدمة العملاء تاعكم احترافية، اتصلوا بيا للتأكيد و تبعوا معايا حتى وصلني. شكراً على المصداقية.' },
+                { name: 'إيمان جلول', location: 'تيزي وزو', rating: 5, text: 'كنت مترددة في الأول، بصح كي شفت آراء الناس قلت نجرب. مندمتش عليها دقيقة وحدة. المحتوى أغنى بكثير من السعر تاعو. أي واحد حاب يطور من روحو لازم يدير هاد الدورة.' },
+                { name: 'خالد رحال', location: 'سكيكدة', rating: 5, text: 'قسم Google Sheets كان مفاجأة ليا. منعرفش نخدم بيهم مليح، بصح بالذكاء الاصطناعي وليت ندير حوايج جامي تخيلتها. ننظم البيانات و ندير تحليل في ثواني. سلكتني بزاف.' },
+                { name: 'صوفيا بلقاسم', location: 'مستغانم', rating: 5, text: 'أحسن استثمار درتو في روحي هاد العام. الدورة فتحتلي عينيا على عالم جديد و عطاتني أفكار لمشاريع نقدر نبداها. الشرح بالعربية هو لي خلى كلش ساهل. شكراً أستاذ أحمد.' }
+            ];
 
-    <!-- Logic: populate dropdowns + phone rules + submit -->
-    <script>
-        // Elements
-        const wilayaSelect = document.getElementById('wilaya-pro');
-        const citySelect   = document.getElementById('city-pro');
-        const phoneInput   = document.getElementById('phone-pro');
+            // --- FUNCTIONS ---
+            function setupTestimonialsSlider(containerId, data) {
+                const wrapper = document.getElementById(containerId);
+                if (!wrapper) return;
 
-        // Populate wilayas
-        (function fillWilayas() {
-            if (!window.ALG_WILAYAS_CITIES || typeof ALG_WILAYAS_CITIES !== 'object') {
-                console.error('ALG_WILAYAS_CITIES missing.');
-                return;
-            }
-            const wilayas = Object.keys(ALG_WILAYAS_CITIES)
-                .filter(w => ALG_WILAYAS_CITIES[w] && ALG_WILAYAS_CITIES[w].length >= 0)
-                .sort((a,b)=>a.localeCompare(b,'ar'));
-            for (const w of wilayas) {
-                if (!w || !w.trim() || w.endsWith('?')) continue; // skip placeholder/invalid
-                const opt = document.createElement('option');
-                opt.value = w; // send NAME
-                opt.textContent = w;
-                wilayaSelect.appendChild(opt);
-            }
-        })();
+                const starIcon = `<svg class="w-5 h-5 text-amber-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>`;
 
-        // Populate cities on wilaya change
-        wilayaSelect.addEventListener('change', () => {
-            const w = wilayaSelect.value;
-            citySelect.innerHTML = '<option value="" disabled selected>اختر مدينتك...</option>';
-            citySelect.disabled = true;
+                wrapper.innerHTML = data.map(testimonial => `
+                    <div class="swiper-slide h-auto p-2">
+                        <div class="bg-white p-6 rounded-xl border border-slate-100 flex flex-col h-full relative overflow-hidden testimonial-card">
+                             <svg class="absolute top-0 right-0 w-24 h-24 text-sky-50 opacity-75 transform translate-x-1/4 -translate-y-1/4" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6.5 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm11 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-6.3-4.9c.4-.3.7-.8.7-1.2 0-.4-.1-.8-.4-1.1-.3-.3-.7-.4-1.1-.4s-.8.1-1.1.4c-.3.3-.4.7-.4 1.1 0 .4.3.9.7 1.2l-2.2 2.2C6.9 8.2 6 9.5 6 11v1c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2v-1c0-1.5-.9-2.8-2.1-3.7l-2.2-2.2zM20 2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
+                            <div class="flex items-center mb-4 z-10">
+                                ${starIcon.repeat(testimonial.rating)}
+                            </div>
+                            <div class="flex-grow mb-4 z-10">
+                                <p class="text-slate-700 italic text-base leading-relaxed">"${testimonial.text}"</p>
+                            </div>
+                            <div class="mt-auto flex items-center z-10">
+                                <div class="w-12 h-12 rounded-full ml-4 bg-slate-100 text-sky-600 flex items-center justify-center font-bold text-lg border-2 border-white shadow-sm">${testimonial.name.split(' ').map(n=>n[0]).join('')}</div>
+                                <div>
+                                    <p class="font-bold text-base text-slate-800">${testimonial.name}</p>
+                                    <p class="text-sm text-slate-500">${testimonial.location}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
 
-            const list = ALG_WILAYAS_CITIES[w] || [];
-            const cities = [...new Set(list)].filter(Boolean).sort((a,b)=>a.localeCompare(b,'ar'));
-            for (const c of cities) {
-                if (!c || !c.trim() || c.endsWith('? (ignore)')) continue;
-                const opt = document.createElement('option');
-                opt.value = c; // send NAME
-                opt.textContent = c;
-                citySelect.appendChild(opt);
-            }
-            citySelect.disabled = cities.length === 0;
-        });
-
-        // Phone normalization & validation
-        function normalizePhone(raw) {
-            let digits = (raw || '').replace(/\D+/g, '');
-            if (!digits) return '';
-
-            // If starts with 5/6/7 and length 9 => prepend 0
-            if (/^[567]\d{8}$/.test(digits)) digits = '0' + digits;
-
-            // Enforce leading 0, trim to 10
-            if (!digits.startsWith('0')) digits = '0' + digits;
-            if (digits.length > 10) digits = digits.slice(0,10);
-
-            return digits;
-        }
-        function isValidDZMobile(p) { return /^0[567]\d{8}$/.test(p); }
-
-        phoneInput.addEventListener('blur', () => {
-            phoneInput.value = normalizePhone(phoneInput.value);
-        });
-
-        // Submit handler (Google Apps Script)
-        const proForm = document.getElementById('ielts-form-pro');
-        const proSubmitButton = document.getElementById('submit-button-pro');
-        const proScriptURL = 'https://script.google.com/macros/s/AKfycbzVFvC4B5c-2SHlXWgK-Qyc3eIKrf72Z9y9wQMOiX-Zhm7P8MqCgmydl_MY3pZKKtDK/exec';
-
-        proForm.addEventListener('submit', e => {
-            e.preventDefault();
-
-            // Normalize + validate phone
-            const normalized = normalizePhone(phoneInput.value);
-            phoneInput.value = normalized;
-            if (!isValidDZMobile(normalized)) {
-                alert('رقم الهاتف غير صحيح. يجب أن يبدأ بـ 05 أو 06 أو 07 ويحتوي على 10 أرقام.');
-                phoneInput.focus();
-                return;
-            }
-
-            // Require wilaya/city names
-            if (!wilayaSelect.value) { alert('من فضلك اختر ولايتك.'); wilayaSelect.focus(); return; }
-            if (!citySelect.value) { alert('من فضلك اختر مدينتك.'); citySelect.focus(); return; }
-
-            proSubmitButton.disabled = true;
-            proSubmitButton.textContent = '...جاري الإرسال';
-
-            fetch(proScriptURL, { method: 'POST', body: new FormData(proForm)})
-                .then(() => { window.location.href = 'ielts-thank-you.html'; })
-                .catch(error => {
-                    proSubmitButton.disabled = false;
-                    proSubmitButton.textContent = 'حدث خطأ، حاول مرة أخرى';
-                    proSubmitButton.classList.remove('bg-yellow-400','hover:bg-yellow-500');
-                    proSubmitButton.classList.add('bg-red-500');
-                    console.error('Error!', error.message);
+                new Swiper('.testimonials-slider', {
+                    loop: true,
+                    slidesPerView: 1,
+                    spaceBetween: 16,
+                    autoplay: {
+                        delay: 5000,
+                        disableOnInteraction: false,
+                    },
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                    breakpoints: {
+                        768: {
+                            slidesPerView: 2,
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                        }
+                    }
                 });
+            }
+            
+            const lines = locationsCSV.trim().split('\n').slice(1);
+            const locationsMap = new Map();
+
+            lines.forEach(line => {
+                const [state, stateCode, city, cityCode] = line.split('\t').map(s => s.trim());
+                if (!locationsMap.has(state)) {
+                    locationsMap.set(state, {
+                        stateCode: stateCode,
+                        cities: []
+                    });
+                }
+                locationsMap.get(state).cities.push({ name: city, code: cityCode });
+            });
+
+            const locationData = Array.from(locationsMap.entries()).map(([stateName, data]) => ({
+                state: stateName,
+                stateCode: data.stateCode,
+                cities: data.cities.sort((a, b) => a.name.localeCompare(b.name)) // Sort cities alphabetically
+            })).sort((a, b) => { // Sort states by their number
+                const numA = parseInt(a.stateCode.replace('DZA', ''), 10);
+                const numB = parseInt(b.stateCode.replace('DZA', ''), 10);
+                return numA - numB;
+            });
+
+            function populateWilayas(selectId, data) {
+                const select = document.getElementById(selectId);
+                if (!select) return;
+                let options = '<option value="" disabled selected>خير الولاية تاعك...</option>';
+                data.forEach(stateData => {
+                    const wilayaNumber = parseInt(stateData.stateCode.replace('DZA', ''), 10);
+                    // Value sent to the form
+                    const value = `${stateData.state} (${stateData.stateCode})`;
+                    // Text displayed to the user
+                    const text = `${String(wilayaNumber).padStart(2, '0')} - ${stateData.state}`;
+                    options += `<option value="${value}" data-state-name="${stateData.state}">${text}</option>`;
+                });
+                select.innerHTML = options;
+            }
+
+            function setupCityDropdown(data) {
+                const wilayaSelect = document.getElementById('wilaya');
+                const citySelect = document.getElementById('city');
+                const cityContainer = document.getElementById('city-container');
+                
+                if (!wilayaSelect || !citySelect || !cityContainer) return;
+
+                wilayaSelect.addEventListener('change', () => {
+                    const selectedOption = wilayaSelect.options[wilayaSelect.selectedIndex];
+                    const stateName = selectedOption.getAttribute('data-state-name');
+                    
+                    // Reset city dropdown
+                    citySelect.innerHTML = '<option value="" disabled selected>خير المدينة تاعك...</option>';
+                    citySelect.disabled = true;
+                    cityContainer.classList.add('hidden');
+
+                    if (stateName) {
+                        const stateData = data.find(s => s.state === stateName);
+                        if (stateData && stateData.cities) {
+                            let cityOptions = '';
+                            stateData.cities.forEach(city => {
+                                const value = `${city.name} (${city.code})`;
+                                const text = city.name;
+                                cityOptions += `<option value="${value}">${text}</option>`;
+                            });
+                            citySelect.innerHTML += cityOptions;
+                            citySelect.disabled = false;
+                            cityContainer.classList.remove('hidden');
+                        }
+                    }
+                });
+            }
+
+            function setupForm(formId) {
+                const form = document.getElementById(formId);
+                if (!form) return;
+
+                const submitButton = form.querySelector('button[type="submit"]');
+                const errorElement = document.getElementById('form-error-message');
+                const formContainer = document.getElementById('form-container');
+
+                form.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    
+                    const scriptURL = 'https://script.google.com/macros/s/AKfycbz1PJ-nKjuB5SaoXfdCLCunksGngwqdyYaxwaCB0D8fOdyMr4Dipz16tL-fpeW8XXe3/exec';
+                    
+                    if (scriptURL === 'PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE') {
+                        errorElement.textContent = 'خطأ في الإعداد: يرجى تحديث رابط Google Sheet.';
+                        return;
+                    }
+
+                    submitButton.disabled = true;
+                    submitButton.innerHTML = '...جاري التأكيد';
+                    errorElement.textContent = '';
+                    
+                    const formData = new FormData(form);
+
+                    fetch(scriptURL, { method: 'POST', body: formData })
+                        .then(response => {
+                            if (response.ok) {
+                                // Fire the purchase event for Facebook Pixel
+                                if (typeof fbq === 'function') {
+                                    fbq('track', 'Purchase', {value: 5900, currency: 'DZD'});
+                                }
+
+                                formContainer.innerHTML = `
+                                    <div class="text-center p-8 flex flex-col items-center justify-center h-full">
+                                        <svg class="w-16 h-16 text-green-500 mx-auto mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>
+                                        <h2 class="text-3xl font-bold text-green-600 mb-4">يعطيك الصحة! استلمنا طلبك</h2>
+                                        <p class="text-lg text-slate-700">راح نعيطولك في أقرب وقت باش نأكدو معاك الطلب. يرجى تخلي تليفونك خدام.</p>
+                                        <p class="text-sm text-slate-500 mt-4">بعد التأكيد، نبعتولك الكولي تاعك و يلحقك في 1-4 أيام. التوصيل باطل و الخلاص كي يلحقك.</p>
+                                    </div>
+                                `;
+                            } else {
+                                throw new Error('Network response was not ok.');
+                            }
+                        })
+                        .catch(error => {
+                            console.error('Error!', error.message);
+                            errorElement.textContent = 'حدث خطأ، عاود سيي مرة خلاف ولا عيطلنا.';
+                            submitButton.disabled = false;
+                            submitButton.innerHTML = '✅ أؤكد طلبي وأستفيد من العرض';
+                        });
+                });
+            }
+
+            function startCountdown(containerId) {
+                const countdownContainer = document.getElementById(containerId);
+                if (!countdownContainer) return;
+                
+                let endTime = localStorage.getItem('countdownEndTime');
+                if (!endTime || new Date().getTime() > endTime) {
+                    endTime = new Date().getTime() + 24 * 60 * 60 * 1000; // 24 hours from now
+                    localStorage.setItem('countdownEndTime', endTime);
+                }
+
+                function updateTimer() {
+                    const now = new Date().getTime();
+                    const distance = endTime - now;
+
+                    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                    if (distance < 0) {
+                        countdownContainer.innerHTML = "<p class='text-red-600 font-bold'>خلاص العرض!</p>";
+                        localStorage.removeItem('countdownEndTime');
+                        clearInterval(interval);
+                        return;
+                    }
+
+                    countdownContainer.innerHTML = `
+                        <div class="bg-slate-200 p-2 rounded-lg w-16 sm:w-20"><div class="text-2xl sm:text-3xl font-bold text-sky-600">${String(hours).padStart(2, '0')}</div><div class="text-xs text-slate-500">ساعة</div></div>
+                        <div class="bg-slate-200 p-2 rounded-lg w-16 sm:w-20"><div class="text-2xl sm:text-3xl font-bold text-sky-600">${String(minutes).padStart(2, '0')}</div><div class="text-xs text-slate-500">دقيقة</div></div>
+                        <div class="bg-slate-200 p-2 rounded-lg w-16 sm:w-20"><div class="text-2xl sm:text-3xl font-bold text-sky-600">${String(seconds).padStart(2, '0')}</div><div class="text-xs text-slate-500">ثانية</div></div>
+                    `;
+                }
+
+                updateTimer();
+                const interval = setInterval(updateTimer, 1000);
+            }
+
+            function setupScrollAnimations() {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.1 });
+
+                document.querySelectorAll('.fade-in').forEach(el => {
+                    observer.observe(el);
+                });
+            }
+
+            // --- INITIALIZATION ---
+            setupTestimonialsSlider('testimonials-wrapper', testimonials);
+            populateWilayas('wilaya', locationData);
+            setupCityDropdown(locationData);
+            setupForm('enrollment-form');
+            startCountdown('countdown');
+            setupScrollAnimations();
         });
     </script>
 </body>
