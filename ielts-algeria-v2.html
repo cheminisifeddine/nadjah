@@ -2112,18 +2112,33 @@ Béni Abbès	DZA52	Ouled Khoudir	DZA525203`;
                     fetch(scriptURL, { method: 'POST', body: formData })
                         .then(response => {
                             if (response.ok) {
-                                // Facebook Pixel Purchase Event
+                                // Facebook Pixel Purchase Event with Advanced Matching
                                 try {
-                                    const phoneInput = document.getElementById('phone');
-                                    const userPhone = phoneInput ? phoneInput.value : '';
-
                                     if (typeof fbq === 'function') {
-                                        // Re-init with user data for Advanced Matching
-                                        if (userPhone) {
-                                            fbq('init', '2191072564678210', {
-                                                ph: userPhone,
-                                            });
-                                        }
+                                        const name = formData.get('name') || '';
+                                        const phone = formData.get('phone') || '';
+                                        const city = formData.get('city') || '';
+                                        const wilayaRaw = formData.get('wilaya') || ''; // e.g., "01 - Adrar"
+                                        
+                                        const nameParts = name.trim().split(/\s+/);
+                                        const fn = nameParts.length > 0 ? nameParts[0] : '';
+                                        const ln = nameParts.length > 1 ? nameParts.slice(1).join(' ') : '';
+                                        
+                                        const st = wilayaRaw.includes(' - ') ? wilayaRaw.split(' - ')[1] : wilayaRaw;
+
+                                        // Prepare user data for Advanced Matching, normalizing as per FB docs.
+                                        const userData = {};
+
+                                        if (fn) userData.fn = fn.trim().toLowerCase();
+                                        if (ln) userData.ln = ln.trim().toLowerCase();
+                                        if (phone) userData.ph = phone.replace(/\D/g, ''); // Remove all non-digits
+                                        if (city) userData.ct = city.trim().replace(/\s+/g, '').toLowerCase(); // remove spaces and lowercase
+                                        if (st) userData.st = st.trim().replace(/\s+/g, '').toLowerCase(); // remove spaces and lowercase
+                                        userData.country = 'dz';
+
+                                        // Re-initialize the pixel with user data. This overwrites the initial basic init.
+                                        fbq('init', '2191072564678210', userData);
+                                        
                                         // Track the Purchase event
                                         fbq('track', 'Purchase', {value: 4900, currency: 'DZD'});
                                     }
