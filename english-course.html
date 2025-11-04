@@ -318,7 +318,7 @@
                 { question: 'كيف أستلم الدورة بعد ملء الاستمارة؟', answer: 'العملية بسيطة جداً. بعد ملء الاستمارة، سيتصل بك فريقنا لتأكيد طلبك. بعدها مباشرة، سيتم إرسال رابط الدخول للدورة مع كلمة المرور الخاصة بك عبر رسالة نصية أو واتساب. يمكنك البدء في تغيير حياتك فوراً.' },
                 { question: 'لقد جربت دورات أخرى وفشلت. ما الذي يجعل هذه الدورة مختلفة؟', answer: 'لأننا لا نعلمك اللغة فقط، بل نغير طريقة تفكيرك بها. نستخدم طرقاً تعتمد على علم النفس وعلم الأعصاب لتسهيل الحفظ والفهم. هذه ليست دورة، بل هي نظام متكامل ومثبت للنجاح.' },
                 { question: 'هل أحتاج إلى جهاز كمبيوتر؟', answer: 'لا، يمكنك مشاهدة الدورة من أي جهاز: هاتفك، جهازك اللوحي، أو الكمبيوتر. كل ما تحتاجه هو الرغبة الحقيقية في التغيير واتصال بالإنترنت.' },
-                { question: 'هل سأحصل على شهادة؟', answer: 'نعم، بعد إتمامك لخارطة الطريق بنجاح، ستحصل على شهادة إتمام إلكترونية لتكون أول دليل ملموس على التحول الذي حققته.' },
+                { question: 'هل سأحصل على شهادة؟', answer: 'نعم، بعد إتمامك لخارطة الطريق بنجاح، ستحصل على شهادة إتمام إلكترونية ، وهي أول دليل ملموس على التحول الذي حققته.' },
                 { question: 'هل سأكون جاهزاً لاختبار IELTS بعد هذه الدورة؟', answer: 'ستكون أكثر من جاهز. المرحلة الخامسة في الدورة مخصصة بالكامل لتزويدك بالاستراتيجيات والتقنيات الذكية التي تحتاجها لتحقيق الدرجة التي تطمح إليها، وليس فقط اجتياز الاختبار.' }
             ];
             
@@ -2028,35 +2028,35 @@ Béni Abbès	DZA52	Ouled Khoudir	DZA525203`;
                     errorElement.textContent = '';
                     const formData = new FormData(form);
 
-                    fetch(scriptURL, { method: 'POST', body: formData })
-                        .then(response => {
-                            if (response.ok) {
-                                try {
-                                    if (typeof fbq === 'function') {
-                                        const name = formData.get('name') || '', phone = formData.get('phone') || '', city = formData.get('city') || '', wilayaRaw = formData.get('wilaya') || '';
-                                        const nameParts = name.trim().split(/\s+/), fn = nameParts.length > 0 ? nameParts[0] : '', ln = nameParts.length > 1 ? nameParts.slice(1).join(' ') : '';
-                                        const st = wilayaRaw.includes(' - ') ? wilayaRaw.split(' - ')[1] : wilayaRaw;
-                                        const userData = { country: 'dz' };
-                                        if (fn) userData.fn = fn.trim().toLowerCase();
-                                        if (ln) userData.ln = ln.trim().toLowerCase();
-                                        if (phone) userData.ph = phone.replace(/\D/g, '');
-                                        if (city) userData.ct = city.trim().replace(/\s+/g, '').toLowerCase();
-                                        if (st) userData.st = st.trim().replace(/\s+/g, '').toLowerCase();
-                                        fbq('init', '1213918257582888', userData);
-                                        fbq('track', 'Purchase', {value: 4900, currency: 'DZD'});
-                                    }
-                                } catch (pixelError) { console.error('Facebook Pixel Error:', pixelError); }
-                                formContainer.innerHTML = `
-                                    <div class="text-center p-8 flex flex-col items-center justify-center h-full">
-                                        <svg class="w-16 h-16 text-green-500 mx-auto mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>
-                                        <h2 class="text-3xl font-bold text-green-600 mb-4">تهانينا! لقد اتخذت القرار الصحيح.</h2>
-                                        <p class="text-lg text-slate-700">تم استلام طلبك بنجاح. سنتصل بك خلال الساعات القادمة لتأكيد الطلب. الرجاء إبقاء هاتفك قيد التشغيل واستعد لبدء رحلة التغيير!</p>
-                                    </div>`;
-                            } else { throw new Error('Network response was not ok.'); }
+                    fetch(scriptURL, { method: 'POST', body: formData, mode: 'no-cors' })
+                        .then(() => {
+                            // With 'no-cors' mode, we can't read the response, so we optimistically assume success.
+                            try {
+                                if (typeof fbq === 'function') {
+                                    const name = formData.get('name') || '', phone = formData.get('phone') || '', city = formData.get('city') || '', wilayaRaw = formData.get('wilaya') || '';
+                                    const nameParts = name.trim().split(/\s+/), fn = nameParts.length > 0 ? nameParts[0] : '', ln = nameParts.length > 1 ? nameParts.slice(1).join(' ') : '';
+                                    const st = wilayaRaw.includes(' - ') ? wilayaRaw.split(' - ')[1] : wilayaRaw;
+                                    const userData = { country: 'dz' };
+                                    if (fn) userData.fn = fn.trim().toLowerCase();
+                                    if (ln) userData.ln = ln.trim().toLowerCase();
+                                    if (phone) userData.ph = phone.replace(/\D/g, '');
+                                    if (city) userData.ct = city.trim().replace(/\s+/g, '').toLowerCase();
+                                    if (st) userData.st = st.trim().replace(/\s+/g, '').toLowerCase();
+                                    fbq('init', '1213918257582888', userData);
+                                    fbq('track', 'Purchase', {value: 4900, currency: 'DZD'});
+                                }
+                            } catch (pixelError) { console.error('Facebook Pixel Error:', pixelError); }
+                            formContainer.innerHTML = `
+                                <div class="text-center p-8 flex flex-col items-center justify-center h-full">
+                                    <svg class="w-16 h-16 text-green-500 mx-auto mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>
+                                    <h2 class="text-3xl font-bold text-green-600 mb-4">تهانينا! لقد اتخذت القرار الصحيح.</h2>
+                                    <p class="text-lg text-slate-700">تم استلام طلبك بنجاح. سنتصل بك خلال الساعات القادمة لتأكيد الطلب. الرجاء إبقاء هاتفك قيد التشغيل واستعد لبدء رحلة التغيير!</p>
+                                </div>`;
                         })
                         .catch(error => {
-                            console.error('Error!', error.message);
-                            errorElement.textContent = 'حدث خطأ ما. الرجاء إعادة المحاولة، فرم آخر طلب ناجح كان منذ دقيقة واحدة فقط!';
+                            // This will only catch actual network errors, not CORS issues.
+                            console.error('Network Error!', error.message);
+                            errorElement.textContent = 'حدث خطأ في الشبكة. الرجاء التأكد من اتصالك بالإنترنت والمحاولة مرة أخرى.';
                             submitButton.disabled = false;
                             submitButton.innerHTML = 'أطلب دورتي الآن وأبدأ التغيير!';
                             checkbox.checked = true;
@@ -2116,4 +2116,3 @@ Béni Abbès	DZA52	Ouled Khoudir	DZA525203`;
     </script>
 </body>
 </html>
-
