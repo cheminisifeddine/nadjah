@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عرض خاص - دورتك لاجتياز IELTS من المحاولة الأولى</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .font-cairo-black {
+            font-family: 'Cairo', sans-serif;
+            font-weight: 900;
+        }
+        .countdown-box {
+            background: #111827;
+        }
+        .animate-bounce-slow {
+            animation: bounce-slow 2s infinite;
+        }
+        @keyframes bounce-slow {
+            0%, 100% {
+                transform: translateY(-5%);
+                animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+            }
+            50% {
+                transform: translateY(0);
+                animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+            }
+        }
+    </style>
+</head>
+<body class="bg-slate-100">
+
+    <div class="container mx-auto max-w-3xl bg-white shadow-lg">
+
+        <!-- HEADER -->
+        <header class="p-4 bg-white border-b-2 border-slate-200">
+             <img src="https://lh3.googleusercontent.com/P0b31L29-pHm_qqMwAREuImuNJ4CRs4c4k8DmllT7aczi23RYAQXjgRKTJdVVUXZeDTuvRoX25XdPBaZbDofW-6AgPradJ7qBIs" alt="Logo" class="h-12 w-auto mx-auto">
+        </header>
+
+        <!-- URGENCY BAR -->
+        <div class="bg-red-600 text-white text-center py-3 px-4">
+            <h2 class="text-xl font-bold">!العرض ينتهي اليوم</h2>
+            <div id="countdown" class="flex justify-center gap-2 sm:gap-4 mt-2 text-center">
+                <div class="countdown-box p-2 rounded-lg">
+                    <span id="hours" class="font-cairo-black text-2xl">00</span>
+                    <span class="text-xs block">ساعة</span>
+                </div>
+                <div class="countdown-box p-2 rounded-lg">
+                    <span id="minutes" class="font-cairo-black text-2xl">00</span>
+                    <span class="text-xs block">دقيقة</span>
+                </div>
+                <div class="countdown-box p-2 rounded-lg">
+                    <span id="seconds" class="font-cairo-black text-2xl">00</span>
+                    <span class="text-xs block">ثانية</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- HERO SECTION -->
+        <section class="p-6 md:p-10 text-center">
+            <h1 class="text-3xl md:text-5xl font-cairo-black text-gray-900 leading-tight mb-4">
+                راك حاصل في IELTS؟ وتعاود وتخسر في دراهمك؟
+            </h1>
+            <p class="text-lg md:text-xl text-gray-700 mb-6">
+                الحل راهو هنا. الكورس هذا مصمم خصيصاً للجزائريين باش تنجح من المرة الأولى وتجيب السكور اللي راك حابو للهجرة، القراية، ولا الخدمة.
+            </p>
+            <img src="https://lh3.googleusercontent.com/pw/AP1GczOkA30KF1SuhXCheJ7fzk-WkcEwTXAnb2_7jygPiTC1Xu1zeCkK5OwSDzbDYof3fAImcvbXzSfA_Yh5NqwCKWj_8vqbGKbWicjoHBDRqipUMNQ0CVEzAvBqOYrsOlibp7az53N84BGb0vq8zPO0cF-A=w1024-h558-s-no-gm?authuser=0" alt="IELTS Certificate and Passport for Visa" class="rounded-xl shadow-lg w-full mb-6" onerror="this.onerror=null;this.src='https://placehold.co/800x500/3b82f6/ffffff?text=Your+Future';">
+            <a href="#form" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-4 px-8 rounded-xl text-2xl transition-transform transform hover:scale-105 shadow-lg flex items-center justify-center gap-2 animate-bounce-slow">
+                <span>أطلب الدورة الآن</span>
+                <svg xmlns="http://www.w.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+            </a>
+        </section>
+
+        <!-- BENEFITS SECTION -->
+        <section class="p-6 md:p-10 bg-slate-50">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                <div class="bg-white p-4 rounded-lg shadow">
+                    <h3 class="font-bold text-emerald-600">🎓 نجاح مضمون</h3>
+                    <p class="text-sm text-gray-600">أسرار وتقنيات تضمن لك علامة +6.0 بسهولة.</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow">
+                     <h3 class="font-bold text-emerald-600">💼 مستقبل أفضل</h3>
+                     <p class="text-sm text-gray-600">افتح أبواب الهجرة والدراسة والعمل في الخارج.</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow">
+                     <h3 class="font-bold text-emerald-600">📦 توصيل للدار</h3>
+                     <p class="text-sm text-gray-600">استلم طرد الدورة وادفع عند الاستلام.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS -->
+        <section class="p-6 md:p-10">
+            <h2 class="text-2xl md:text-3xl font-cairo-black text-center text-gray-900 mb-6">ناس كيما نتا جربو ونجحو... شوف واش قالو:</h2>
+            <div class="space-y-6">
+                <!-- Testimonial 1 -->
+                <div class="bg-slate-50 p-5 rounded-lg shadow border border-slate-200">
+                    <div class="flex items-center mb-2">
+                        <img class="w-12 h-12 rounded-full ml-3" src="https://placehold.co/96x96/E2E8F0/4A5568?text=KA" alt="Karim A.">
+                        <div>
+                            <p class="font-bold text-gray-800">كريم. أ - مهندس من العاصمة</p>
+                            <div class="flex text-yellow-400">★★★★★</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">"والله يا خويا كنت حاصل، كل مرة نعاود الإمتحان ونخسر دراهم باطل. مع هذا الكورس من أول مرة جبت 6.5 وتهنيت. الشرح تاع الأستاذ بالدارجة عاوني بزاف. ربي يحفظكم."</p>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="bg-slate-50 p-5 rounded-lg shadow border border-slate-200">
+                    <div class="flex items-center mb-2">
+                        <img class="w-12 h-12 rounded-full ml-3" src="https://placehold.co/96x96/E2E8F0/4A5568?text=FN" alt="Fatima N.">
+                        <div>
+                            <p class="font-bold text-gray-800">فاطمة. ن - طبيبة من وهران</p>
+                            <div class="flex text-yellow-400">★★★★★</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">"كنت لازم نجيب 7.0 باش ندير التخصص. جربت كلش وحدي ماقدرتش. هاد لا فورماسيون هي الصح، وراتلي الأخطاء اللي كنت نديرهم في Writing و Speaking. الحمد لله نجحت."</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- OFFER SECTION -->
+        <section class="p-6 md:p-10 text-center">
+            <h2 class="text-3xl font-cairo-black text-gray-900 mb-6">عرض خاص لن تجده في مكان آخر!</h2>
+            <div class="bg-slate-100 border-4 border-dashed border-yellow-400 p-6 rounded-2xl">
+                <p class="text-2xl font-bold text-gray-500 line-through">8900 د.ج</p>
+                <p class="text-6xl font-cairo-black text-emerald-600 my-2">4900 د.ج</p>
+                <p class="font-bold text-gray-700 mb-6">فقط! (شامل التوصيل والدفع عند الاستلام)</p>
+                
+                <div class="bg-emerald-50 p-4 rounded-lg text-right">
+                    <h4 class="font-bold text-lg mb-2 text-emerald-800">ستحصل على 38 ساعة من الفيديوات التعليمية بالإضافة إلى:</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center"><span class="text-emerald-500 ml-3">🎁</span> شهادة إتمام معتمدة من أكاديمية النجاح</li>
+                        <li class="flex items-center"><span class="text-emerald-500 ml-3">🎁</span> وصول كامل للمنصة عبر الهاتف والتلفاز</li>
+                        <li class="flex items-center"><span class="text-emerald-500 ml-3">🎁</span> شرح مفصل لجميع المهارات: القراءة، الكتابة، الاستماع، والمحادثة</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- FORM SECTION -->
+        <section id="form" class="p-6 md:p-10 bg-gray-800 text-white">
+            <div class="text-center">
+                <h2 class="text-3xl font-cairo-black mb-2">املأ الاستمارة الآن لتأكيد طلبيتك</h2>
+                <p class="mb-6 text-slate-300">سيقوم فريقنا بالاتصال بك. الدفع لا يكون إلا بعد استلام وفحص الطرد.</p>
+            </div>
+             <form id="ielts-form" class="space-y-4 max-w-lg mx-auto text-right">
+                <div class="text-center mb-4">
+                    <p class="text-xl font-bold text-gray-400 line-through">8900 د.ج</p>
+                    <p class="text-5xl font-cairo-black text-yellow-400">4900 د.ج</p>
+                </div>
+                <div>
+                    <label for="name" class="block text-sm font-bold mb-1">الاسم و اللقب</label>
+                    <input type="text" name="name" id="name" required class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 transition duration-300" placeholder="اكتب اسمك هنا">
+                </div>
+                <div>
+                    <label for="phone" class="block text-sm font-bold mb-1">رقم الهاتف</label>
+                    <input type="tel" name="phone" id="phone" required class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 transition duration-300" placeholder="سنتصل بك على هذا الرقم للتأكيد">
+                </div>
+                <div>
+                    <label for="wilaya" class="block text-sm font-bold mb-1">الولاية</label>
+                    <select id="wilaya" name="wilaya" required class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 transition duration-300">
+                        <option value="" disabled selected>اختر ولايتك...</option>
+                        <option value="1">01 - أدرار</option><option value="2">02 - الشلف</option><option value="3">03 - الأغواط</option><option value="4">04 - أم البواقي</option><option value="5">05 - باتنة</option><option value="6">06 - بجاية</option><option value="7">07 - بسكرة</option><option value="8">08 - بشار</option><option value="9">09 - البليدة</option><option value="10">10 - البويرة</option><option value="11">11 - تمنراست</option><option value="12">12 - تبسة</option><option value="13">13 - تلمسان</option><option value="14">14 - تيارت</option><option value="15">15 - تيزي وزو</option><option value="16">16 - الجزائر</option><option value="17">17 - الجلفة</option><option value="18">18 - جيجل</option><option value="19">19 - سطيف</option><option value="20">20 - سعيدة</option><option value="21">21 - سكيكدة</option><option value="22">22 - سيدي بلعباس</option><option value="23">23 - عنابة</option><option value="24">24 - قالمة</option><option value="25">25 - قسنطينة</option><option value="26">26 - المدية</option><option value="27">27 - مستغانم</option><option value="28">28 - المسيلة</option><option value="29">29 - معسكر</option><option value="30">30 - ورقلة</option><option value="31">31 - وهران</option><option value="32">32 - البيض</option><option value="33">33 - إليزي</option><option value="34">34 - برج بوعريريج</option><option value="35">35 - بومرداس</option><option value="36">36 - الطارف</option><option value="37">37 - تندوف</option><option value="38">38 - تيسمسيلت</option><option value="39">39 - الوادي</option><option value="40">40 - خنشلة</option><option value="41">41 - سوق أهراس</option><option value="42">42 - تيبازة</option><option value="43">43 - ميلة</option><option value="44">44 - عين الدفلى</option><option value="45">45 - النعامة</option><option value="46">46 - عين تموشنت</option><option value="47">47 - غرداية</option><option value="48">48 - غليزان</option><option value="49">49 - تيميمون</option><option value="50">50 - برج باجي مختار</option><option value="51">51 - أولاد جلال</option><option value="52">52 - بني عباس</option><option value="53">53 - عين صالح</option><option value="54">54 - عين قزام</option><option value="55">55 - تقرت</option><option value="56">56 - جانت</option><option value="57">57 - المغير</option><option value="58">58 - المنيعة</option>
+                    </select>
+                </div>
+                 <div>
+                    <label for="address" class="block text-sm font-bold mb-1">العنوان الكامل</label>
+                    <input type="text" name="address" id="address" required class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 transition duration-300" placeholder="الحي، الشارع، البلدية... لتسهيل التوصيل">
+                </div>
+                <div>
+                    <button type="submit" id="submit-button" class="w-full bg-yellow-400 hover:bg-yellow-500 text-yellow-900 font-bold py-4 px-6 rounded-lg text-xl transition-transform transform hover:scale-105 shadow-lg">
+                        أطلب الآن وادفع عند الاستلام
+                    </button>
+                </div>
+            </form>
+            <div class="mt-4 flex justify-center items-center space-x-4 space-x-reverse text-xs text-slate-300">
+                <div class="flex items-center">
+                    <svg class="w-4 h-4 text-emerald-400 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                    <span>معلوماتك آمنة</span>
+                </div>
+                <div class="flex items-center">
+                    <svg class="w-4 h-4 text-emerald-400 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <span>ضمان رضا تام</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="text-center p-6 text-sm text-gray-500">
+             <p>&copy; 2025 | أكاديمية النجاح. جميع الحقوق محفوظة.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        function startCountdown() {
+            const countdownElement = document.getElementById('countdown');
+            if (!countdownElement) return;
+
+            const hoursEl = document.getElementById('hours');
+            const minutesEl = document.getElementById('minutes');
+            const secondsEl = document.getElementById('seconds');
+
+            let endTime = localStorage.getItem('ieltsOfferEndTime');
+            if (!endTime || new Date().getTime() > parseInt(endTime)) {
+                let now = new Date();
+                let endOfDay = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 23, 59, 59, 999);
+                endTime = endOfDay.getTime();
+                localStorage.setItem('ieltsOfferEndTime', endTime);
+            }
+
+            const interval = setInterval(() => {
+                const now = new Date().getTime();
+                const distance = endTime - now;
+
+                if (distance < 0) {
+                    clearInterval(interval);
+                    countdownElement.innerHTML = "<p class='text-xl font-bold'>العرض انتهى!</p>";
+                    localStorage.removeItem('ieltsOfferEndTime');
+                    return;
+                }
+
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                hoursEl.textContent = hours.toString().padStart(2, '0');
+                minutesEl.textContent = minutes.toString().padStart(2, '0');
+                secondsEl.textContent = seconds.toString().padStart(2, '0');
+            }, 1000);
+        }
+
+        const form = document.getElementById('ielts-form');
+        const submitButton = document.getElementById('submit-button');
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzVFvC4B5c-2SHlXWgK-Qyc3eIKrf72Z9y9wQMOiX-Zhm7P8MqCgmydl_MY3pZKKtDK/exec';
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            submitButton.disabled = true;
+            submitButton.textContent = '...جاري الإرسال';
+
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    window.location.href = 'ielts-thank-you.html';
+                })
+                .catch(error => {
+                    submitButton.disabled = false;
+                    submitButton.textContent = 'حدث خطأ، حاول مرة أخرى';
+                    submitButton.classList.remove('bg-yellow-400', 'hover:bg-yellow-500');
+                    submitButton.classList.add('bg-red-500');
+                    console.error('Error!', error.message);
+                });
+        });
+
+        document.addEventListener('DOMContentLoaded', startCountdown);
+    </script>
+
+</body>
+</html>
