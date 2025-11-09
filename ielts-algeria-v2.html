@@ -369,7 +369,32 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
+
+            async function sha256(str) {
+                const textAsBuffer = new TextEncoder().encode(str);
+                const hashBuffer = await crypto.subtle.digest('SHA-256', textAsBuffer);
+                const hashArray = Array.from(new Uint8Array(hashBuffer));
+                const hash = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+                return hash;
+            }
             
+            // TikTok Pixel ViewContent Event
+            try {
+                if (typeof ttq === 'object' && ttq !== null) {
+                    ttq.track('ViewContent', {
+                        contents: [{
+                            content_id: 'IELTS-COURSE-ALGERIA-V2',
+                            content_type: 'product',
+                            content_name: 'الدورة رقم #1 في الجزائر | إضمن نجاحك في امتحان IELTS'
+                        }],
+                        value: 4900,
+                        currency: 'DZD'
+                    });
+                }
+            } catch (pixelError) {
+                console.error('TikTok Pixel ViewContent Error:', pixelError);
+            }
+
             const courseContent = [
                 { title: 'الوحدة 1: مقدمة شاملة وتفاصيل الامتحان', lectures: ['أنواع الكتابة الاكاديمية', 'كيفية تحليل السؤال بشكل صحيح', 'معايير التصحيح وتجنب الاخطاء', 'مراجعة مع أمثلة مهمة جدا'] },
                 { title: 'الوحدة 2: إتقان الكتابة (Task 2 - Essay)', lectures: ['كيف نكتب المقدمة (Introduction)', 'كيفية تطوير الفكرة (Body Paragraphs)', 'مقالات الرأي (Argument + Opinion)', 'مقالات المشاكل والحلول (Problem & Solution)', 'تصحيح نماذج ورفع الأداء'] },
@@ -2149,13 +2174,13 @@ Béni Abbès	DZA52	Ouled Khoudir	DZA525203`;
                     const formData = new FormData(form);
 
                     fetch(scriptURL, { method: 'POST', body: formData })
-                        .then(response => {
+                        .then(async (response) => {
                             if (response.ok) {
+                                const phoneInput = document.getElementById('phone');
+                                const userPhone = phoneInput ? phoneInput.value.trim() : '';
+                                
                                 // Facebook Pixel Purchase Event
                                 try {
-                                    const phoneInput = document.getElementById('phone');
-                                    const userPhone = phoneInput ? phoneInput.value : '';
-
                                     if (typeof fbq === 'function') {
                                         // Re-init with user data for Advanced Matching
                                         if (userPhone) {
@@ -2174,9 +2199,24 @@ Béni Abbès	DZA52	Ouled Khoudir	DZA525203`;
                                 // TikTok Pixel Purchase Event
                                 try {
                                     if (typeof ttq === 'object' && ttq !== null) {
-                                        ttq.track('CompletePayment', {
-                                            value: 4900,
-                                            currency: 'DZD'
+                                        if(userPhone) {
+                                            const hashedPhone = await sha256(userPhone);
+                                            ttq.identify({
+                                                "phone_number": hashedPhone
+                                            });
+                                        }
+                                        
+                                        ttq.track('Purchase', {
+                                            "contents": [
+                                                {
+                                                    "content_id": "IELTS-COURSE-ALGERIA-V2",
+                                                    "content_type": "product",
+                                                    "content_name": "الدورة رقم #1 في الجزائر | إضمن نجاحك في امتحان IELTS",
+                                                    "price": 4900
+                                                }
+                                            ],
+                                            "value": 4900,
+                                            "currency": "DZD"
                                         });
                                     }
                                 } catch (pixelError) {
