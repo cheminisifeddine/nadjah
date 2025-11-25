@@ -2026,7 +2026,7 @@ Béni Abbès	DZA52	Ouled Khoudir	DZA525203`;
                         : `<div class="w-12 h-12 rounded-full ml-4 bg-slate-100 text-emerald-600 flex items-center justify-center font-bold text-lg border-2 border-white shadow-sm">${testimonial.name.split('.').map(n=>n[0]).join('')}</div>`;
                     
                     const resultHtml = testimonial.result
-                        ? `<p class="font-bold text-sm text-emerald-600">${testimonial.result}</p>`
+                        ? `<p class="font-bold text-base text-emerald-600">${testimonial.result}</p>`
                         : '';
 
                     return `
@@ -2174,68 +2174,66 @@ Béni Abbès	DZA52	Ouled Khoudir	DZA525203`;
                     
                     const formData = new FormData(form);
 
-                    fetch(scriptURL, { method: 'POST', body: formData })
-                        .then(async (response) => {
-                            if (response.ok) {
-                                const phoneInput = document.getElementById('phone');
-                                const userPhone = phoneInput ? phoneInput.value.trim() : '';
-                                
-                                // Facebook Pixel Purchase Event
-                                try {
-                                    if (typeof fbq === 'function') {
-                                        // Re-init with user data for Advanced Matching
-                                        if (userPhone) {
-                                            fbq('init', '2191072564678210', {
-                                                ph: userPhone,
-                                            });
-                                        }
-                                        // Track the Purchase event
-                                        fbq('track', 'Purchase', {value: 5900, currency: 'DZD'});
-                                    }
-                                } catch (pixelError) {
-                                    console.error('Facebook Pixel Error:', pixelError);
-                                }
-                                // End Facebook Pixel
-
-                                // TikTok Pixel Purchase Event
-                                try {
-                                    if (typeof ttq === 'object' && ttq !== null) {
-                                        if(userPhone) {
-                                            const hashedPhone = await sha256(userPhone);
-                                            ttq.identify({
-                                                "phone_number": hashedPhone
-                                            });
-                                        }
-                                        
-                                        ttq.track('Purchase', {
-                                            "contents": [
-                                                {
-                                                    "content_id": "IELTS-COURSE-ALGERIA-V2",
-                                                    "content_type": "product",
-                                                    "content_name": "الدورة رقم #1 في الجزائر | إضمن نجاحك في امتحان IELTS",
-                                                    "price": 5900
-                                                }
-                                            ],
-                                            "value": 5900,
-                                            "currency": "DZD"
+                    // Changed to mode: 'no-cors' to prevent CORS errors with Google Apps Script
+                    fetch(scriptURL, { method: 'POST', body: formData, mode: 'no-cors' })
+                        .then(async () => {
+                            // In no-cors mode, the response is opaque. We assume success if the fetch promise resolves.
+                            const phoneInput = document.getElementById('phone');
+                            const userPhone = phoneInput ? phoneInput.value.trim() : '';
+                            
+                            // Facebook Pixel Purchase Event
+                            try {
+                                if (typeof fbq === 'function') {
+                                    // Re-init with user data for Advanced Matching
+                                    if (userPhone) {
+                                        fbq('init', '2191072564678210', {
+                                            ph: userPhone,
                                         });
                                     }
-                                } catch (pixelError) {
-                                    console.error('TikTok Pixel Error:', pixelError);
+                                    // Track the Purchase event
+                                    fbq('track', 'Purchase', {value: 5900, currency: 'DZD'});
                                 }
-                                // End TikTok Pixel
-                                
-                                formContainer.innerHTML = `
-                                    <div class="text-center p-8 flex flex-col items-center justify-center h-full">
-                                        <svg class="w-16 h-16 text-green-500 mx-auto mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>
-                                        <h2 class="text-3xl font-bold text-green-600 mb-4">شكراً لك! تم استلام طلبك بنجاح</h2>
-                                        <p class="text-lg text-slate-700">سنتصل بك في أقرب وقت من أحد أرقامنا لتأكيد طلبك. الرجاء إبقاء هاتفك قيد التشغيل.</p>
-                                        <p class="text-sm text-slate-500 mt-4">بمجرد التأكيد، سيتم شحن الطرد الخاص بك ويصلك خلال 1-4 أيام عمل. التوصيل مجاني والدفع عند الاستلام.</p>
-                                    </div>
-                                `;
-                            } else {
-                                throw new Error('Network response was not ok.');
+                            } catch (pixelError) {
+                                console.error('Facebook Pixel Error:', pixelError);
                             }
+                            // End Facebook Pixel
+
+                            // TikTok Pixel Purchase Event
+                            try {
+                                if (typeof ttq === 'object' && ttq !== null) {
+                                    if(userPhone) {
+                                        const hashedPhone = await sha256(userPhone);
+                                        ttq.identify({
+                                            "phone_number": hashedPhone
+                                        });
+                                    }
+                                    
+                                    ttq.track('Purchase', {
+                                        "contents": [
+                                            {
+                                                "content_id": "IELTS-COURSE-ALGERIA-V2",
+                                                "content_type": "product",
+                                                "content_name": "الدورة رقم #1 في الجزائر | إضمن نجاحك في امتحان IELTS",
+                                                "price": 5900
+                                            }
+                                        ],
+                                        "value": 5900,
+                                        "currency": "DZD"
+                                    });
+                                }
+                            } catch (pixelError) {
+                                console.error('TikTok Pixel Error:', pixelError);
+                            }
+                            // End TikTok Pixel
+                            
+                            formContainer.innerHTML = `
+                                <div class="text-center p-8 flex flex-col items-center justify-center h-full">
+                                    <svg class="w-16 h-16 text-green-500 mx-auto mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>
+                                    <h2 class="text-3xl font-bold text-green-600 mb-4">شكراً لك! تم استلام طلبك بنجاح</h2>
+                                    <p class="text-lg text-slate-700">سنتصل بك في أقرب وقت من أحد أرقامنا لتأكيد طلبك. الرجاء إبقاء هاتفك قيد التشغيل.</p>
+                                    <p class="text-sm text-slate-500 mt-4">بمجرد التأكيد، سيتم شحن الطرد الخاص بك ويصلك خلال 1-4 أيام عمل. التوصيل مجاني والدفع عند الاستلام.</p>
+                                </div>
+                            `;
                         })
                         .catch(error => {
                             console.error('Error!', error.message);
