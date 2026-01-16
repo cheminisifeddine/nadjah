@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الأكاديمية الشاملة لتصميم الجرافيك والذكاء الاصطناعي | احترف التصميم وابدأ الفريلانس</title>
+    <meta name="description" content="دورتين كاملتين بأكثر من 37 ساعة تدريب عملي في Illustrator + Photoshop + After Effects + الذكاء الاصطناعي. الدفع عند الاستلام. توصيل مجاني لـ 58 ولاية.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary-color: #059669; --secondary-color: #f59e0b; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Cairo', sans-serif; background-color: #f8fafc; color: #1e293b; }
+        .font-cairo-black { font-weight: 900; }
+        .hero-gradient { background: radial-gradient(circle at 50% 0%, #effaf5, #f8fafc 80%); }
+        .form-summary-gradient { background: linear-gradient(135deg, #065f46 0%, #047857 100%); }
+        .accordion-content { display: grid; grid-template-rows: 0fr; opacity: 0; transition: grid-template-rows 0.5s ease, opacity 0.3s ease; }
+        .accordion-item.open .accordion-content { grid-template-rows: 1fr; opacity: 1; }
+        .accordion-trigger svg { transition: transform 0.3s ease; }
+        .accordion-item.open .accordion-trigger svg { transform: rotate(180deg); }
+        .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        .value-stack-item { border-right: 4px solid #059669; }
+        .testimonial-card { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05); }
+        .submit-button:disabled { background-color: #9ca3af; cursor: not-allowed; }
+        .offer-box { background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); border: 3px solid #059669; }
+        .price-slash { text-decoration: line-through; text-decoration-color: #ef4444; }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <!-- Header -->
+    <header class="bg-white/90 backdrop-blur-lg shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-3">
+                <div class="flex items-center gap-3">
+                    <img src="https://lh3.googleusercontent.com/P0b31L29-pHm_qqMwAREuImuNJ4CRs4c4k8DmllT7aczi23RYAQXjgRKTJdVVUXZeDTuvRoX25XdPBaZbDofW-6AgPradJ7qBIs" alt="Nadjah Academy Logo" class="h-10 sm:h-12 w-auto" />
+                </div>
+                <nav class="hidden lg:flex items-center gap-6 text-sm font-bold text-slate-600">
+                    <a href="#solution" class="hover:text-emerald-600 transition-colors">ماذا ستتعلم؟</a>
+                    <a href="#instructors" class="hover:text-emerald-600 transition-colors">المدربون</a>
+                    <a href="#testimonials" class="hover:text-emerald-600 transition-colors">آراء المتدربين</a>
+                </nav>
+                <a href="#form" class="bg-amber-500 hover:bg-amber-400 text-amber-950 font-bold py-2.5 px-6 rounded-lg text-sm sm:text-base transition-all transform hover:scale-105 shadow-lg">
+                    <span>🚀 اطلب الآن</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero-gradient pt-12 pb-16 md:pt-20 md:pb-24">
+            <div class="container mx-auto px-4">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="text-center md:text-right fade-in">
+                        <span class="inline-block bg-emerald-100 text-emerald-800 text-sm font-bold px-4 py-1.5 rounded-full mb-4">🔥 عرض حصري لفترة محدودة - وفّر أكثر من 13,000 دج</span>
+                        <h1 class="text-3xl lg:text-5xl font-cairo-black text-slate-900 leading-tight mb-5">
+                            أتقن <span class="text-emerald-700">التصميم الجرافيكي + الذكاء الاصطناعي</span> وابدأ تحقيق دخل حقيقي من مهارة يطلبها السوق في 2025
+                        </h1>
+                        <p class="text-lg lg:text-xl text-slate-600 mb-6">
+                            دورتين كاملتين بأكثر من <strong>37 ساعة تدريب عملي</strong>... بسعر دورة واحدة فقط!
+                        </p>
+                        <ul class="text-right space-y-3 mb-8 max-w-lg mx-auto md:mx-0">
+                            <li class="flex items-center gap-3 text-slate-700"><span class="text-emerald-500 text-xl">✅</span> 37+ ساعة محتوى تطبيقي من الصفر للاحتراف</li>
+                            <li class="flex items-center gap-3 text-slate-700"><span class="text-emerald-500 text-xl">✅</span> تعلّم Illustrator + Photoshop + After Effects + أدوات AI</li>
+                            <li class="flex items-center gap-3 text-slate-700"><span class="text-emerald-500 text-xl">✅</span> شهادتين معتمدتين + 41 ملف ومشروع جاهز للتحميل</li>
+                            <li class="flex items-center gap-3 text-slate-700"><span class="text-emerald-500 text-xl">✅</span> قسم خاص: كيف تبدأ الفريلانس وتبني بورتفوليو احترافي</li>
+                        </ul>
+                        <div class="flex flex-col items-center md:items-start gap-4">
+                            <a href="#form" class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-4 px-10 rounded-xl text-lg transition-all transform hover:scale-105 shadow-xl flex items-center justify-center gap-3">
+                                <span>🚀 اطلب الآن - ادفع عند الاستلام</span>
+                            </a>
+                            <p class="text-sm text-slate-500 font-semibold">التوصيل مجاني لجميع الولايات الـ 58</p>
+                        </div>
+                        <div class="flex flex-wrap justify-center md:justify-start gap-4 mt-6 text-sm text-slate-600">
+                            <span class="flex items-center gap-2 bg-white px-3 py-1.5 rounded-full shadow-sm"><span class="text-green-500">✓</span> الدفع عند الاستلام</span>
+                            <span class="flex items-center gap-2 bg-white px-3 py-1.5 rounded-full shadow-sm"><span class="text-green-500">✓</span> توصيل مجاني</span>
+                            <span class="flex items-center gap-2 bg-white px-3 py-1.5 rounded-full shadow-sm"><span class="text-green-500">✓</span> أكثر من 5000 متدرب سابق</span>
+                        </div>
+                    </div>
+                    <div class="flex justify-center fade-in">
+                        <div class="bg-white rounded-2xl shadow-2xl p-6 max-w-md">
+                            <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?w=600&h=400&fit=crop" alt="تصميم جرافيك احترافي" class="rounded-xl w-full object-cover mb-4" />
+                            <div class="text-center">
+                                <p class="text-slate-500 text-sm mb-1">القيمة الحقيقية</p>
+                                <p class="text-2xl font-bold text-slate-400 price-slash">18,000 دج</p>
+                                <p class="text-4xl font-cairo-black text-emerald-600">4,900 دج فقط</p>
+                                <p class="text-amber-600 font-bold mt-2">💰 وفّر 13,100 دج (خصم 73%)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOCIAL PROOF BAR -->
+        <section class="bg-slate-100 py-6 fade-in">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-4 text-center">
+                    <p class="text-lg font-bold text-slate-800">يثق بنا أكثر من 5000 متدرب لتطوير مهاراتهم</p>
+                    <div class="flex items-center">
+                        <span class="text-amber-400 text-2xl">★★★★★</span>
+                        <span class="mr-2 font-bold text-slate-700">4.9/5</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROBLEM SECTION -->
+        <section id="problem" class="bg-white py-16 md:py-24">
+            <div class="container mx-auto px-4 fade-in">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h2 class="text-3xl md:text-4xl font-cairo-black text-slate-900 mb-6">هل تشعر أن الشهادة الجامعية لم تعد تكفي؟ 🤔</h2>
+                    <p class="text-xl text-slate-600 mb-12">إذا كنت تعاني من أي من هذه المشاكل... فأنت لست وحدك:</p>
+                </div>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <div class="bg-red-50 border border-red-200 rounded-xl p-6 text-center">
+                        <div class="text-4xl mb-4">😔</div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">تخرجت ولم تجد وظيفة</h3>
+                        <p class="text-slate-600">سوق العمل قاسي والشهادة وحدها لم تعد تفتح الأبواب كما كان في الماضي.</p>
+                    </div>
+                    <div class="bg-red-50 border border-red-200 rounded-xl p-6 text-center">
+                        <div class="text-4xl mb-4">💸</div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">راتبك لا يكفي</h3>
+                        <p class="text-slate-600">تعمل بوظيفة براتب ضعيف وتبحث عن مصدر دخل إضافي أو تغيير مسارك المهني بالكامل.</p>
+                    </div>
+                    <div class="bg-red-50 border border-red-200 rounded-xl p-6 text-center">
+                        <div class="text-4xl mb-4">😵</div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">ضائع ولا تعرف من أين تبدأ</h3>
+                        <p class="text-slate-600">جربت كورسات مجانية على يوتيوب لكنها مشتتة وغير منظمة ولم تصل لنتيجة.</p>
+                    </div>
+                    <div class="bg-red-50 border border-red-200 rounded-xl p-6 text-center">
+                        <div class="text-4xl mb-4">🤖</div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">خائف من الذكاء الاصطناعي</h3>
+                        <p class="text-slate-600">ترى AI يتطور بسرعة وتخاف أن يأخذ مكانك إذا لم تتعلم كيف تستخدمه.</p>
+                    </div>
+                    <div class="bg-red-50 border border-red-200 rounded-xl p-6 text-center">
+                        <div class="text-4xl mb-4">🎯</div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">تريد العمل الحر</h3>
+                        <p class="text-slate-600">تحلم بالعمل من المنزل وكسب بالدولار من Upwork أو Fiverr لكن لا تملك المهارة.</p>
+                    </div>
+                    <div class="bg-red-50 border border-red-200 rounded-xl p-6 text-center">
+                        <div class="text-4xl mb-4">⚠️</div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">خسرت فلوسك على كورسات فاشلة</h3>
+                        <p class="text-slate-600">اشتريت كورسات من قبل ولم تستفد منها شيء... وتخاف تكرر نفس الخطأ.</p>
+                    </div>
+                </div>
+                <div class="max-w-3xl mx-auto mt-12 text-center">
+                    <div class="bg-amber-50 border-2 border-amber-300 rounded-xl p-6">
+                        <p class="text-xl font-bold text-slate-800 mb-2">⚡ الحقيقة المُرة:</p>
+                        <p class="text-lg text-slate-700">"المصمم التقليدي الذي يعرف فوتوشوب فقط... <span class="text-red-600 font-bold">لم يعد مطلوباً في 2025</span>. الشركات والعملاء يبحثون عن مصمم يجيد أدوات متعددة ويستخدم الذكاء الاصطناعي."</p>
+                        <p class="text-lg text-emerald-700 font-bold mt-4">الذكاء الاصطناعي لن ينتظرك... السؤال: هل ستركب الموجة أم ستغرق؟ 🌊</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOLUTION SECTION -->
+        <section id="solution" class="py-16 md:py-24 bg-slate-50">
+            <div class="container mx-auto px-4 fade-in">
+                <div class="max-w-4xl mx-auto text-center mb-12">
+                    <span class="inline-block bg-emerald-100 text-emerald-800 text-sm font-bold px-4 py-1.5 rounded-full mb-4">🎯 الحل الشامل</span>
+                    <h2 class="text-3xl md:text-4xl font-cairo-black text-slate-900 mb-4">نقدم لك: الأكاديمية الشاملة لتصميم الجرافيك والذكاء الاصطناعي</h2>
+                    <p class="text-xl text-slate-600">لأول مرة، جمعنا لك <strong>دورتين احترافيتين</strong> في حزمة واحدة بسعر لا يُصدق!</p>
+                </div>
+
+                <!-- Module 1 -->
+                <div class="max-w-5xl mx-auto mb-12">
+                    <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+                        <div class="bg-emerald-600 text-white p-6">
+                            <div class="flex items-center justify-between flex-wrap gap-4">
+                                <div>
+                                    <span class="bg-white/20 px-3 py-1 rounded-full text-sm font-bold">الدورة الأولى</span>
+                                    <h3 class="text-2xl font-cairo-black mt-2">الكورس الشامل لتعلم الاليستريتور من الصفر</h3>
+                                    <p class="text-emerald-100 mt-1">مع المدربة: ديما إسماعيل - مهندسة معمارية ومصممة جرافيك</p>
+                                </div>
+                                <div class="text-center bg-white/10 px-4 py-2 rounded-lg">
+                                    <p class="text-3xl font-bold">27</p>
+                                    <p class="text-sm">ساعة تدريبية</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center gap-2 mb-4">
+                                <span class="text-amber-400 text-xl">★★★★★</span>
+                                <span class="font-bold text-slate-700">5.0/5</span>
+                                <span class="text-slate-500">| 6 أقسام | 57 درس</span>
+                            </div>
+                            <div class="grid sm:grid-cols-2 gap-4">
+                                <div class="flex items-start gap-2"><span class="text-emerald-500">✓</span><span>إتقان واجهة Adobe Illustrator بالكامل</span></div>
+                                <div class="flex items-start gap-2"><span class="text-emerald-500">✓</span><span>أدوات الرسم الاحترافية (Pen Tool, Shape Builder)</span></div>
+                                <div class="flex items-start gap-2"><span class="text-emerald-500">✓</span><span>الألوان والتدرجات والأنماط</span></div>
+                                <div class="flex items-start gap-2"><span class="text-emerald-500">✓</span><span>الخطوط والتأثيرات النصية</span></div>
+                                <div class="flex items-start gap-2"><span class="text-emerald-500">✓</span><span>التأثيرات ثلاثية الأبعاد والمنظور</span></div>
+                                <div class="flex items-start gap-2"><span class="text-emerald-500">✓</span><span>تصميم الشعارات والبوسترات والإعلانات</span></div>
+                                <div class="flex items-start gap-2"><span class="text-emerald-500">✓</span><span>تجهيز الملفات للطباعة والنشر الرقمي</span></div>
+                                <div class="flex items-start gap-2"><span class="text-emerald-500">✓</span><span>مشاريع حقيقية: شعارات، بوسترات، هويات</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Module 2 -->
+                <div class="max-w-5xl mx-auto mb-12">
+                    <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+                        <div class="bg-purple-600 text-white p-6">
+                            <div class="flex items-center justify-between flex-wrap gap-4">
+                                <div>
+                                    <span class="bg-white/20 px-3 py-1 rounded-full text-sm font-bold">الدورة الثانية</span>
+                                    <h3 class="text-2xl font-cairo-black mt-2">دورة المصمم الحديث - احترف تصميم الجرافيك والذكاء الاصطناعي</h3>
+                                    <p class="text-purple-100 mt-1">مع المدرب: محمود محي - 8+ سنوات خبرة</p>
+                                </div>
+                                <div class="text-center bg-white/10 px-4 py-2 rounded-lg">
+                                    <p class="text-3xl font-bold">10.5</p>
+                                    <p class="text-sm">ساعة مكثفة</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center gap-2 mb-4">
+                                <span class="text-amber-400 text-xl">★★★★★</span>
+                                <span class="font-bold text-slate-700">4.9/5</span>
+                                <span class="text-slate-500">| 7 أقسام | 51 درس</span>
+                            </div>
+                            <div class="grid sm:grid-cols-2 gap-4">
+                                <div class="flex items-start gap-2"><span class="text-purple-500">✓</span><span>أسس التصميم (التكوين، الظل، الألوان، الخطوط)</span></div>
+                                <div class="flex items-start gap-2"><span class="text-purple-500">✓</span><span>Adobe Photoshop (5 أجزاء شاملة)</span></div>
+                                <div class="flex items-start gap-2"><span class="text-purple-500">✓</span><span>Adobe After Effects (موشن جرافيك)</span></div>
+                                <div class="flex items-start gap-2 bg-amber-50 p-2 rounded-lg border border-amber-200"><span class="text-amber-500">⭐</span><span class="font-bold">الذكاء الاصطناعي في التصميم (الميزة الحصرية!)</span></div>
+                                <div class="flex items-start gap-2"><span class="text-purple-500">✓</span><span>مشروع براندينج متكامل من الفكرة للتنفيذ</span></div>
+                                <div class="flex items-start gap-2 bg-emerald-50 p-2 rounded-lg border border-emerald-200"><span class="text-emerald-500">⭐</span><span class="font-bold">قسم العمل الحر وبناء البورتفوليو</span></div>
+                            </div>
+                            <div class="mt-6 bg-slate-50 rounded-lg p-4">
+                                <p class="font-bold text-slate-800 mb-2">🏆 عمل المدرب مع علامات تجارية عالمية:</p>
+                                <p class="text-slate-600">Canon | البنك الأهلي السعودي (SNB) | Nadec</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Value Stack -->
+                <div class="max-w-3xl mx-auto">
+                    <div class="bg-white rounded-2xl shadow-xl p-8">
+                        <h3 class="text-2xl font-cairo-black text-center text-slate-900 mb-6">📦 ما الذي ستحصل عليه:</h3>
+                        <div class="space-y-4">
+                            <div class="value-stack-item bg-slate-50 p-4 rounded-lg flex justify-between items-center">
+                                <span class="font-bold">✅ كورس الاليستريتور الشامل (27 ساعة)</span>
+                                <span class="text-slate-500 price-slash">12,000 دج</span>
+                            </div>
+                            <div class="value-stack-item bg-slate-50 p-4 rounded-lg flex justify-between items-center">
+                                <span class="font-bold">✅ كورس المصمم الحديث + AI (10.5 ساعة)</span>
+                                <span class="text-slate-500 price-slash">8,000 دج</span>
+                            </div>
+                            <div class="value-stack-item bg-slate-50 p-4 rounded-lg flex justify-between items-center">
+                                <span class="font-bold">✅ 41 ملف وقالب قابل للتحميل</span>
+                                <span class="text-slate-500 price-slash">3,000 دج</span>
+                            </div>
+                            <div class="value-stack-item bg-slate-50 p-4 rounded-lg flex justify-between items-center">
+                                <span class="font-bold">✅ قسم الفريلانس والبورتفوليو</span>
+                                <span class="text-slate-500 price-slash">2,000 دج</span>
+                            </div>
+                            <div class="value-stack-item bg-slate-50 p-4 rounded-lg flex justify-between items-center">
+                                <span class="font-bold">✅ شهادتين إتمام معتمدتين</span>
+                                <span class="text-slate-500 price-slash">1,000 دج</span>
+                            </div>
+                        </div>
+                        <div class="mt-6 text-center border-t-2 border-dashed border-slate-300 pt-6">
+                            <p class="text-xl text-slate-500">القيمة الإجمالية: <span class="price-slash font-bold">26,000 دج</span></p>
+                            <p class="text-4xl font-cairo-black text-emerald-600 mt-2">🔥 سعرك اليوم: 4,900 دج فقط!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHY DIFFERENT SECTION -->
+        <section id="instructors" class="bg-white py-16 md:py-24">
+            <div class="container mx-auto px-4 fade-in">
+                <div class="max-w-4xl mx-auto text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-cairo-black text-slate-900 mb-4">لماذا هذه الأكاديمية مختلفة؟</h2>
+                    <p class="text-xl text-slate-600">ليست مجرد كورسات عادية... هذا استثمار حقيقي في مستقبلك</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <div class="bg-emerald-50 border border-emerald-200 rounded-xl p-6">
+                        <div class="text-4xl mb-4">📚</div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">37+ ساعة تدريب</h3>
+                        <p class="text-slate-600">بينما معظم الكورسات في السوق لا تتجاوز 5 ساعات! هذا ليس كورس سريع سطحي... هذه أكاديمية متكاملة.</p>
+                    </div>
+                    <div class="bg-emerald-50 border border-emerald-200 rounded-xl p-6">
+                        <div class="text-4xl mb-4">👨‍🏫</div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">مدربون محترفون</h3>
+                        <p class="text-slate-600">لست تتعلم من هاوي... تتعلم من محترفين درّبوا أكثر من 8000 طالب وعملوا مع Canon والبنك الأهلي السعودي.</p>
+                    </div>
+                    <div class="bg-emerald-50 border border-emerald-200 rounded-xl p-6">
+                        <div class="text-4xl mb-4">🤖</div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">يشمل الذكاء الاصطناعي</h3>
+                        <p class="text-slate-600">95% من الكورسات العربية لا تتحدث عن AI. هذا الكورس صُمم لسوق 2025-2026.</p>
+                    </div>
+                    <div class="bg-emerald-50 border border-emerald-200 rounded-xl p-6">
+                        <div class="text-4xl mb-4">💼</div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">تطبيق عملي 100%</h3>
+                        <p class="text-slate-600">ليس نظري ممل... تطبيقات عملية حقيقية في كل درس. ستنفذ مشاريع: شعارات، بوسترات، براندينج كامل.</p>
+                    </div>
+                    <div class="bg-emerald-50 border border-emerald-200 rounded-xl p-6">
+                        <div class="text-4xl mb-4">🎯</div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">موجه للفريلانس</h3>
+                        <p class="text-slate-600">لا يتركك تائهاً بعد التعلم... يعلمك كيف تبني بورتفوليو وتبدأ تكسب من مهارتك فوراً.</p>
+                    </div>
+                    <div class="bg-emerald-50 border border-emerald-200 rounded-xl p-6">
+                        <div class="text-4xl mb-4">🌐</div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">وصول مدى الحياة</h3>
+                        <p class="text-slate-600">ادفع مرة واحدة وتملك الكورسات للأبد. لا اشتراكات شهرية. تعلّم في أي وقت من أي جهاز.</p>
+                    </div>
+                </div>
+
+                <!-- Testimonials Preview -->
+                <div class="max-w-4xl mx-auto mt-16">
+                    <h3 class="text-2xl font-bold text-center text-slate-800 mb-8">💬 ماذا قال المتدربون السابقون؟</h3>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm">
+                            <p class="text-amber-400 text-xl mb-2">★★★★★</p>
+                            <p class="text-slate-600 italic mb-4">"أفضل كورس في التصميم الجرافيك. الشرح واضح ومنظم، والمحتوى شامل من الألف للياء."</p>
+                            <p class="font-bold text-slate-800">- خالد</p>
+                        </div>
+                        <div class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm">
+                            <p class="text-amber-400 text-xl mb-2">★★★★★</p>
+                            <p class="text-slate-600 italic mb-4">"الكورس ما شاء الله كويس جدا لأي حد عاوز يتحط على التراك الصح في مجال التصميم."</p>
+                            <p class="font-bold text-slate-800">- أحمد</p>
+                        </div>
+                        <div class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm">
+                            <p class="text-amber-400 text-xl mb-2">★★★★★</p>
+                            <p class="text-slate-600 italic mb-4">"الشرح شامل وواضح، متسلسل يبدأ من الأساسيات حتى الاحتراف. استفدت جداً من قسم الفريلانس."</p>
+                            <p class="font-bold text-slate-800">- لينا</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CAREER OUTCOMES SECTION -->
+        <section class="py-16 md:py-24 bg-gradient-to-br from-emerald-50 to-slate-50">
+            <div class="container mx-auto px-4 fade-in">
+                <div class="max-w-4xl mx-auto text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-cairo-black text-slate-900 mb-4">بعد هذه الأكاديمية... ماذا يمكنك أن تفعل؟ 💪</h2>
+                    <p class="text-xl text-slate-600">لا تتعلم أدوات فقط... تعلّم كيف تُدفع!</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <div class="bg-white rounded-2xl shadow-lg p-8 text-center border-t-4 border-emerald-500">
+                        <div class="text-5xl mb-4">💻</div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-4">مسار الفريلانس</h3>
+                        <ul class="text-right space-y-3 text-slate-600">
+                            <li>✓ افتح حساب على Upwork, Fiverr, مستقل</li>
+                            <li>✓ سعر الشعار: $50-200 (7,000 - 27,000 دج)</li>
+                            <li>✓ سعر الهوية البصرية: $300-1000+</li>
+                            <li class="text-emerald-600 font-bold">الأكاديمية تدفع ثمنها من أول مشروع أو اثنين!</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-lg p-8 text-center border-t-4 border-purple-500">
+                        <div class="text-5xl mb-4">🏢</div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-4">مسار التوظيف</h3>
+                        <ul class="text-right space-y-3 text-slate-600">
+                            <li>✓ قدّم على وظائف مصمم جرافيك</li>
+                            <li>✓ أضف شهادتين إلى سيرتك الذاتية</li>
+                            <li>✓ أرفق بورتفوليو مشاريع حقيقية</li>
+                            <li class="text-purple-600 font-bold">تميّز عن المنافسين بمهارات AI!</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-lg p-8 text-center border-t-4 border-amber-500">
+                        <div class="text-5xl mb-4">🚀</div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-4">مسار ريادة الأعمال</h3>
+                        <ul class="text-right space-y-3 text-slate-600">
+                            <li>✓ صمم لمشروعك الخاص</li>
+                            <li>✓ وفّر آلاف الدنانير على التصميم</li>
+                            <li>✓ أنشئ هويتك وإعلاناتك بنفسك</li>
+                            <li class="text-amber-600 font-bold">كن مستقلاً ولا تحتاج أحداً!</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="max-w-3xl mx-auto mt-12 text-center">
+                    <div class="bg-white rounded-xl border-2 border-emerald-300 p-6">
+                        <p class="text-xl text-slate-700">⏰ السوق يحتاج مصممين الآن... والفجوة بين العرض والطلب لصالحك.</p>
+                        <p class="text-lg text-slate-600 mt-2">لكن كل يوم، مصممون جدد يدخلون. <span class="font-bold text-emerald-600">هل ستكون منهم أم ستبقى تشاهد من بعيد؟</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- OFFER BOX SECTION -->
+        <section id="offer" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4 fade-in">
+                <div class="max-w-3xl mx-auto offer-box rounded-2xl p-8 md:p-12">
+                    <div class="text-center mb-8">
+                        <span class="inline-block bg-red-500 text-white text-sm font-bold px-4 py-1.5 rounded-full mb-4 animate-pulse">⚠️ عرض محدود</span>
+                        <h2 class="text-3xl md:text-4xl font-cairo-black text-slate-900">🎁 العرض الخاص - لفترة محدودة</h2>
+                    </div>
+
+                    <div class="space-y-4 mb-8">
+                        <div class="bg-white rounded-lg p-4 flex justify-between items-center shadow-sm">
+                            <span class="font-bold text-slate-800">✅ الكورس الشامل للاليستريتور (27 ساعة)</span>
+                            <span class="text-slate-400 price-slash">12,000 دج</span>
+                        </div>
+                        <div class="bg-white rounded-lg p-4 flex justify-between items-center shadow-sm">
+                            <span class="font-bold text-slate-800">✅ كورس المصمم الحديث + AI (10.5 ساعة)</span>
+                            <span class="text-slate-400 price-slash">8,000 دج</span>
+                        </div>
+                        <div class="bg-white rounded-lg p-4 flex justify-between items-center shadow-sm">
+                            <span class="font-bold text-slate-800">✅ 41 ملف وقالب للتحميل</span>
+                            <span class="text-slate-400 price-slash">3,000 دج</span>
+                        </div>
+                        <div class="bg-white rounded-lg p-4 flex justify-between items-center shadow-sm">
+                            <span class="font-bold text-slate-800">✅ قسم الفريلانس وبناء البورتفوليو</span>
+                            <span class="text-slate-400 price-slash">2,000 دج</span>
+                        </div>
+                        <div class="bg-white rounded-lg p-4 flex justify-between items-center shadow-sm">
+                            <span class="font-bold text-slate-800">✅ شهادتين إتمام</span>
+                            <span class="text-slate-400 price-slash">1,000 دج</span>
+                        </div>
+                        <div class="bg-white rounded-lg p-4 flex justify-between items-center shadow-sm">
+                            <span class="font-bold text-slate-800">✅ وصول مدى الحياة - لا اشتراكات شهرية</span>
+                            <span class="text-emerald-600">✓</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl p-6 text-center mb-8 shadow-lg">
+                        <p class="text-xl text-slate-500 mb-2">القيمة الحقيقية: <span class="price-slash font-bold">18,000 دج</span></p>
+                        <p class="text-5xl font-cairo-black text-emerald-600 mb-2">4,900 دج فقط</p>
+                        <p class="text-lg text-amber-600 font-bold">💰 وفّر: 13,100 دج (خصم 73%)</p>
+                    </div>
+
+                    <div class="grid sm:grid-cols-3 gap-4 mb-8">
+                        <div class="bg-white rounded-lg p-4 text-center shadow-sm">
+                            <span class="text-3xl">🚚</span>
+                            <p class="font-bold text-slate-800 mt-2">توصيل مجاني</p>
+                            <p class="text-sm text-slate-500">لجميع الـ 58 ولاية</p>
+                        </div>
+                        <div class="bg-white rounded-lg p-4 text-center shadow-sm">
+                            <span class="text-3xl">💵</span>
+                            <p class="font-bold text-slate-800 mt-2">الدفع عند الاستلام</p>
+                            <p class="text-sm text-slate-500">لا تدفع أي شيء الآن</p>
+                        </div>
+                        <div class="bg-white rounded-lg p-4 text-center shadow-sm">
+                            <span class="text-3xl">📦</span>
+                            <p class="font-bold text-slate-800 mt-2">استلم ثم ادفع</p>
+                            <p class="text-sm text-slate-500">بدون أي مخاطرة</p>
+                        </div>
+                    </div>
+
+                    <a href="#form" class="block w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-5 px-10 rounded-xl text-xl transition-all transform hover:scale-105 shadow-xl text-center">
+                        🚀 اطلب الآن - ادفع عند الاستلام فقط
+                    </a>
+                    <p class="text-center text-slate-500 mt-4 text-sm">✓ لا بطاقة بنكية ✓ لا CCP مسبق ✓ ادفع للمندوب عند باب بيتك</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ SECTION -->
+        <section id="faq" class="py-16 md:py-24 bg-slate-50">
+            <div class="container mx-auto px-4 fade-in">
+                <div class="max-w-3xl mx-auto text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-cairo-black text-slate-900 mb-4">أسئلة شائعة</h2>
+                    <p class="text-lg text-slate-600">كل ما تحتاج معرفته قبل الطلب</p>
+                </div>
+                <div id="faq-accordion" class="max-w-4xl mx-auto space-y-3">
+                    <!-- FAQ items injected by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- FORM SECTION -->
+        <section id="form" class="bg-slate-100 py-16 md:py-24">
+            <div class="container mx-auto px-4 fade-in">
+                <div class="max-w-5xl mx-auto bg-slate-200 rounded-2xl shadow-2xl overflow-hidden p-2">
+                    <div class="grid md:grid-cols-2 gap-0">
+                        <!-- Summary Side -->
+                        <div class="form-summary-gradient text-white p-8 md:p-10 rounded-2xl flex flex-col justify-center order-last md:order-first">
+                            <h3 class="text-2xl font-cairo-black mb-4">📦 ما ستحصل عليه:</h3>
+                            <ul class="space-y-3 mb-6">
+                                <li class="flex items-start gap-3"><span class="text-amber-300 text-xl">✓</span><span>37+ ساعة تدريب احترافي</span></li>
+                                <li class="flex items-start gap-3"><span class="text-amber-300 text-xl">✓</span><span>Illustrator + Photoshop + After Effects + AI</span></li>
+                                <li class="flex items-start gap-3"><span class="text-amber-300 text-xl">✓</span><span>41 ملف وقالب جاهز للتحميل</span></li>
+                                <li class="flex items-start gap-3"><span class="text-amber-300 text-xl">✓</span><span>قسم الفريلانس وبناء البورتفوليو</span></li>
+                                <li class="flex items-start gap-3"><span class="text-amber-300 text-xl">✓</span><span>شهادتين إتمام معتمدتين</span></li>
+                                <li class="flex items-start gap-3"><span class="text-amber-300 text-xl">✓</span><span>وصول مدى الحياة على جميع الأجهزة</span></li>
+                                <li class="flex items-start gap-3"><span class="text-amber-300 text-xl">✓</span><span class="font-bold border-b border-amber-300">توصيل مجاني لـ 58 ولاية</span></li>
+                            </ul>
+                            <div class="mt-auto bg-black/20 p-4 rounded-lg text-center border border-emerald-300/50">
+                                <p class="font-bold text-amber-300 text-lg">💵 الدفع عند الاستلام</p>
+                                <p class="text-sm text-slate-200">لا تدفع أي شيء الآن. استلم، تأكد، ثم ادفع.</p>
+                            </div>
+                        </div>
+
+                        <!-- Form Side -->
+                        <div id="form-container" class="p-8 md:p-10 bg-white rounded-2xl">
+                            <div class="text-center">
+                                <h2 class="text-2xl md:text-3xl font-cairo-black text-slate-900 mb-2">🚀 اطلب الآن وابدأ التعلم!</h2>
+                                <p class="text-slate-600 mb-4">املأ بياناتك وسنتصل بك خلال 24 ساعة لتأكيد طلبك</p>
+                                <div class="bg-emerald-50 border border-emerald-200 rounded-lg px-4 py-3 mb-6">
+                                    <p class="text-slate-400 price-slash text-lg">18,000 دج</p>
+                                    <p class="text-4xl font-cairo-black text-emerald-600">4,900 دج فقط</p>
+                                    <p class="text-amber-600 font-bold">وفّر 13,100 دج + توصيل مجاني!</p>
+                                </div>
+                            </div>
+                            <form id="enrollment-form" class="space-y-4 text-right">
+                                <div>
+                                    <label for="name" class="block text-sm font-bold text-slate-700 mb-1">الاسم الكامل</label>
+                                    <input type="text" name="name" id="name" required class="w-full px-4 py-3 bg-white border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500" placeholder="مثال: أحمد بن علي" />
+                                </div>
+                                <div>
+                                    <label for="phone" class="block text-sm font-bold text-slate-700 mb-1">رقم الهاتف</label>
+                                    <input type="tel" name="phone" id="phone" required class="w-full px-4 py-3 bg-white border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500" placeholder="0555123456" />
+                                    <p class="text-xs text-slate-500 mt-1">⚠️ تأكد من إدخال رقم صحيح. سنتصل بك للتأكيد.</p>
+                                </div>
+                                <div>
+                                    <label for="wilaya" class="block text-sm font-bold text-slate-700 mb-1">الولاية</label>
+                                    <select id="wilaya" name="wilaya" required class="w-full px-4 py-3 bg-white border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"></select>
+                                </div>
+                                <div id="city-container" class="hidden">
+                                    <label for="city" class="block text-sm font-bold text-slate-700 mb-1">البلدية</label>
+                                    <select id="city" name="city" required class="w-full px-4 py-3 bg-white border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500" disabled></select>
+                                </div>
+                                <div>
+                                    <label for="address" class="block text-sm font-bold text-slate-700 mb-1">العنوان الكامل</label>
+                                    <input type="text" name="address" id="address" required class="w-full px-4 py-3 bg-white border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500" placeholder="الحي، الشارع، رقم البناية..." />
+                                </div>
+                                <div>
+                                    <button type="submit" class="submit-button w-full font-bold py-4 px-6 rounded-lg text-xl transition-all transform hover:scale-105 shadow-lg bg-emerald-600 hover:bg-emerald-700 text-white">
+                                        تأكيد الطلب - الدفع عند الاستلام 🚀
+                                    </button>
+                                    <p id="form-error-message" class="text-red-500 text-sm mt-2 text-center"></p>
+                                </div>
+                                <p class="text-xs text-slate-500 text-center">بالضغط على "تأكيد الطلب"، ستتواصل معك خدمة العملاء لتأكيد الطلب.<br>التوصيل مجاني والدفع عند الاستلام.</p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FINAL CTA -->
+        <section class="py-16 md:py-24 bg-slate-900 text-white">
+            <div class="container mx-auto px-4 text-center fade-in">
+                <h2 class="text-3xl md:text-4xl font-cairo-black mb-6">القرار الآن بين يديك... 🎯</h2>
+                <p class="text-xl text-slate-300 max-w-3xl mx-auto mb-8">يمكنك إغلاق هذه الصفحة والعودة لنفس الروتين... أو يمكنك اتخاذ خطوة واحدة تغير مسارك المهني للأبد.</p>
+                <div class="flex flex-wrap justify-center gap-4 mb-8 text-lg">
+                    <span class="bg-slate-800 px-4 py-2 rounded-lg">✅ 37+ ساعة تدريب</span>
+                    <span class="bg-slate-800 px-4 py-2 rounded-lg">✅ Illustrator + Photoshop + After Effects + AI</span>
+                    <span class="bg-slate-800 px-4 py-2 rounded-lg">✅ قسم فريلانس</span>
+                </div>
+                <p class="text-3xl font-cairo-black text-emerald-400 mb-6">4,900 دج فقط <span class="text-slate-400 price-slash text-xl">18,000 دج</span></p>
+                <a href="#form" class="inline-block bg-amber-500 hover:bg-amber-400 text-amber-950 font-bold py-4 px-12 rounded-xl text-xl transition-all transform hover:scale-105 shadow-xl">
+                    نعم! أريد الانضمام للأكاديمية الآن 🚀
+                </a>
+                <p class="text-slate-400 mt-6">🔒 طلبك آمن. ادفع فقط عند استلام المنتج على باب بيتك.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-300 py-12">
+        <div class="container mx-auto px-4 text-center">
+            <img src="https://lh3.googleusercontent.com/P0b31L29-pHm_qqMwAREuImuNJ4CRs4c4k8DmllT7aczi23RYAQXjgRKTJdVVUXZeDTuvRoX25XdPBaZbDofW-6AgPradJ7qBIs" alt="Logo" class="h-10 mx-auto mb-4" />
+            <p class="max-w-2xl mx-auto mb-4 text-slate-400">مهمتنا مساعدة الشباب الجزائري على اكتساب مهارات التصميم الحديثة والانطلاق في سوق العمل الحر.</p>
+            <p class="font-bold">&copy; 2025 | جميع الحقوق محفوظة</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
