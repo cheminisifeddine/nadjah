@@ -291,7 +291,7 @@
                  <div class="max-w-5xl mx-auto bg-slate-200 rounded-2xl shadow-2xl overflow-hidden p-2">
                     <div class="grid md:grid-cols-2 gap-0">
                         <div class="form-summary-gradient text-white p-8 md:p-10 rounded-2xl flex flex-col justify-center order-last md:order-first">
-                            <h3 class="text-3xl font-cairo-black mb-4">هذا ما ستحصل عليه فوراً بعد طلبك:</h3>
+                            <h3 class="text-3xl font-cairo-black mb-4">هذا ما ستحصل عليه بعد طلبك:</h3>
                             <ul class="space-y-3 mb-6 text-lg">
                                 <li class="flex items-start gap-3"><svg class="w-6 h-6 text-amber-300 flex-shrink-0 mt-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg> <span>وصول مدى الحياة للمنصة الإلكترونية</span></li>
                                 <li class="flex items-start gap-3"><svg class="w-6 h-6 text-amber-300 flex-shrink-0 mt-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg> <span>قرص DVD للدراسة بدون انترنت يصلك للبيت</span></li>
@@ -308,13 +308,21 @@
                         <div id="form-container" class="p-8 md:p-10 bg-white rounded-2xl">
                             <div class="text-center">
                                 <h2 class="text-3xl md:text-4xl font-cairo-black text-slate-900 mb-2">استثمر في مستقبلك اليوم!</h2>
-                                <p class="text-lg text-slate-600 mb-4">العرض الخاص ينتهي قريباً. املأ الاستمارة وسنتصل بك للتأكيد.</p>
-                                <div id="countdown" class="flex justify-center gap-2 sm:gap-4 text-center mb-4"></div>
-                                <p class="text-center text-red-600 font-bold mb-3">بسبب الإقبال الكبير، تبقى 17 مقعداً فقط بسعر العرض!</p>
+                                <p class="text-lg text-slate-600 mb-6">املأ الاستمارة وسنتصل بك للتأكيد.</p>
+                                
+                                <div class="inline-block bg-amber-100 border border-amber-300 rounded-lg px-4 py-2 mb-6 transform rotate-1 hover:rotate-0 transition-transform duration-300">
+                                    <p class="text-amber-800 font-bold text-lg flex items-center justify-center gap-2">
+                                        <span>🎉</span>
+                                        تخفيضات السنة الجديدة 2025
+                                        <span>🎉</span>
+                                    </p>
+                                </div>
+
                                 <div class="bg-slate-50 p-4 rounded-2xl shadow-inner border border-slate-200">
+                                    <div class="absolute top-0 right-0 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">عرض محدود</div>
                                     <p class="text-2xl font-bold text-slate-400 line-through">11900 DZD</p>
-                                    <p class="text-6xl font-cairo-black text-emerald-600">5900 DZD فقط</p>
-                                    <p class="font-bold text-green-600 mt-2">وفر 6000 دج + توصيل مجاني لـ 58 ولاية!</p>
+                                    <p class="text-6xl font-cairo-black text-emerald-600">4900 DZD فقط</p>
+                                    <p class="font-bold text-green-600 mt-2">وفر 7000 دج + توصيل مجاني لـ 58 ولاية!</p>
                                 </div>
                             </div>
                             <form id="enrollment-form" class="space-y-4 text-right mt-6">
@@ -343,14 +351,8 @@
                                     <label for="address" class="block text-sm font-bold text-slate-700 mb-1">العنوان الكامل</label>
                                     <input type="text" name="address" id="address" required class="w-full px-4 py-3 bg-white border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition duration-300" placeholder="الحي، الشارع، البلدية... لتسهيل التوصيل" />
                                 </div>
-                                <div class="pt-2">
-                                    <label class="flex items-center space-x-3 rtl:space-x-reverse cursor-pointer">
-                                        <input type="checkbox" id="seriousness-checkbox" required class="form-checkbox h-5 w-5 text-emerald-600 border-slate-300 rounded focus:ring-emerald-500">
-                                        <span class="text-sm text-slate-700 font-semibold">أنا جاد بخصوص طلبي وأؤكد أنني سأرد على مكالمة التأكيد.</span>
-                                    </label>
-                                </div>
                                 <div>
-                                    <button type="submit" class="submit-button w-full font-bold py-4 px-6 rounded-lg text-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-amber-500/50 bg-amber-500 hover:bg-amber-400 text-amber-950" disabled>
+                                    <button type="submit" class="submit-button w-full font-bold py-4 px-6 rounded-lg text-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-amber-500/50 bg-amber-500 hover:bg-amber-400 text-amber-950">
                                         سجل الآن – وسيتم الاتصال بك خلال دقائق
                                     </button>
                                     <p id="form-error-message" class="text-red-500 text-sm mt-2 text-center"></p>
@@ -397,7 +399,7 @@
                             content_type: 'product',
                             content_name: 'الدورة رقم #1 في الجزائر | إضمن نجاحك في امتحان IELTS'
                         }],
-                        value: 5900,
+                        value: 4900,
                         currency: 'DZD'
                     });
                 }
@@ -1870,7 +1872,7 @@ Aïn Témouchent	DZA46	Sidi Ouriache	DZA464625
 Aïn Témouchent	DZA46	Sidi Safi	DZA464626
 Aïn Témouchent	DZA46	Tamzoura	DZA464627
 Aïn Témouchent	DZA46	Terga	DZA464628
-Ghardaïa	DZA47	Berriane	DZA474701
+Ghardaïa	DZA47	Berrihane	DZA474701
 Ghardaïa	DZA47	Bounoura	DZA474702
 Ghardaïa	DZA47	Dhayet Bendhahoua	DZA474703
 Ghardaïa	DZA47	El Atteuf	DZA474704
@@ -2164,13 +2166,8 @@ Béni Abbès	DZA52	Ouled Khoudir	DZA525203`;
                 if (!form) return;
 
                 const submitButton = form.querySelector('button[type="submit"]');
-                const checkbox = document.getElementById('seriousness-checkbox');
                 const errorElement = document.getElementById('form-error-message');
                 const formContainer = document.getElementById('form-container');
-
-                checkbox.addEventListener('change', () => {
-                    submitButton.disabled = !checkbox.checked;
-                });
 
                 form.addEventListener('submit', (e) => {
                     e.preventDefault();
@@ -2200,7 +2197,7 @@ Béni Abbès	DZA52	Ouled Khoudir	DZA525203`;
                                         });
                                     }
                                     // Track the Purchase event
-                                    fbq('track', 'Purchase', {value: 5900, currency: 'DZD'});
+                                    fbq('track', 'Purchase', {value: 4900, currency: 'DZD'});
                                 }
                             } catch (pixelError) {
                                 console.error('Facebook Pixel Error:', pixelError);
@@ -2223,10 +2220,10 @@ Béni Abbès	DZA52	Ouled Khoudir	DZA525203`;
                                                 "content_id": "IELTS-COURSE-ALGERIA-V2",
                                                 "content_type": "product",
                                                 "content_name": "الدورة رقم #1 في الجزائر | إضمن نجاحك في امتحان IELTS",
-                                                "price": 5900
+                                                "price": 4900
                                             }
                                         ],
-                                        "value": 5900,
+                                        "value": 4900,
                                         "currency": "DZD"
                                     });
                                 }
@@ -2249,45 +2246,8 @@ Béni Abbès	DZA52	Ouled Khoudir	DZA525203`;
                             errorElement.textContent = 'حدث خطأ، يرجى المحاولة مرة أخرى أو الاتصال بنا مباشرة.';
                             submitButton.disabled = false;
                             submitButton.innerHTML = 'سجل الآن – وسيتم الاتصال بك خلال دقائق';
-                            checkbox.checked = true; // Re-enable button logic
                         });
                 });
-            }
-
-            function startCountdown(containerId) {
-                const countdownContainer = document.getElementById(containerId);
-                if (!countdownContainer) return;
-                
-                let endTime = localStorage.getItem('countdownEndTime_ielts');
-                if (!endTime || new Date().getTime() > endTime) {
-                    endTime = new Date().getTime() + 48 * 60 * 60 * 1000; // 48 hours from now
-                    localStorage.setItem('countdownEndTime_ielts', endTime);
-                }
-
-                function updateTimer() {
-                    const now = new Date().getTime();
-                    const distance = endTime - now;
-
-                    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                    if (distance < 0) {
-                        countdownContainer.innerHTML = "<p class='text-red-600 font-bold'>انتهى العرض!</p>";
-                        localStorage.removeItem('countdownEndTime_ielts');
-                        clearInterval(interval);
-                        return;
-                    }
-
-                    countdownContainer.innerHTML = `
-                        <div class="bg-slate-200 p-2 rounded-lg w-16 sm:w-20"><div class="text-2xl sm:text-3xl font-bold text-emerald-600">${String(hours).padStart(2, '0')}</div><div class="text-xs text-slate-500">ساعة</div></div>
-                        <div class="bg-slate-200 p-2 rounded-lg w-16 sm:w-20"><div class="text-2xl sm:text-3xl font-bold text-emerald-600">${String(minutes).padStart(2, '0')}</div><div class="text-xs text-slate-500">دقيقة</div></div>
-                        <div class="bg-slate-200 p-2 rounded-lg w-16 sm:w-20"><div class="text-2xl sm:text-3xl font-bold text-emerald-600">${String(seconds).padStart(2, '0')}</div><div class="text-xs text-slate-500">ثانية</div></div>
-                    `;
-                }
-
-                updateTimer();
-                const interval = setInterval(updateTimer, 1000);
             }
 
             function setupScrollAnimations() {
@@ -2312,7 +2272,6 @@ Béni Abbès	DZA52	Ouled Khoudir	DZA525203`;
             populateWilayas('wilaya', locationData);
             setupCityDropdown(locationData);
             setupForm('enrollment-form');
-            startCountdown('countdown');
             setupScrollAnimations();
         });
     </script>
