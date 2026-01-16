@@ -749,125 +749,73 @@
         </div>
     </footer>
 
+    <script src="locations.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const faqData = [
-                { question: 'واش راح يوصلني في الطرد؟', answer: 'راح تلقى كود تفعيل - تدخل بيه للمنصة تاعنا وتشوف الـ 37+ ساعة فيديو كاملة من تليفونك ولا الكمبيوتر، وقت ما تحب وفين ما تحب. والدخول مدى الحياة - يعني ماشي بمدة محدودة. زيادة على هذا، راح تلقى معاه DVD فيه نفس الدروس كادو باش تقدر تراجع حتى كي مايكونش عندك أنترنت!' },
-                { question: 'هل الدفع فعلاً عند الاستلام؟', answer: 'نعم 100%. لا نطلب منك أي دفع مسبق. المندوب يصل لبيتك، تستلم المنتج، تتأكد منه، ثم تدفع له 4,900 دج. بهذه البساطة. لا بطاقة بنكية ولا CCP مسبق.' },
-                { question: 'هل التوصيل مجاني حقاً؟', answer: 'نعم، التوصيل مجاني تماماً لجميع الولايات الـ 58. لا توجد أي رسوم إضافية. السعر النهائي هو 4,900 دج فقط.' },
-                { question: 'هل أحتاج خبرة سابقة في التصميم؟', answer: 'لا أبداً! الكورسات تبدأ معك من الصفر المطلق. حتى لو لم تفتح برنامج تصميم في حياتك، ستتعلم خطوة بخطوة من الأساسيات حتى الاحتراف.' },
-                { question: 'هل أحتاج كمبيوتر قوي؟', answer: 'تحتاج كمبيوتر بمواصفات متوسطة يشغّل برامج Adobe (Illustrator, Photoshop, After Effects). لا تحتاج جهاز خارق. معظم الأجهزة الحديثة تعمل بشكل جيد.' },
-                { question: 'متى سيصلني الطلب؟', answer: 'عادةً خلال 2-5 أيام عمل حسب ولايتك. سنتصل بك لتأكيد الطلب ونعطيك تفاصيل التوصيل.' },
-                { question: 'هل الكورسات بالعربي؟', answer: 'نعم، 100% بالعربي مع شروحات واضحة ومبسطة. الكورسات مناسبة للجزائريين وجميع العرب.' },
-                { question: 'لماذا هذا السعر منخفض جداً؟', answer: 'لأننا نريد أن نوصل هذه المهارات لأكبر عدد من الشباب الجزائري. هدفنا بناء جيل من المصممين المحترفين، وليس فقط الربح. هذا العرض لفترة محدودة وقد يرتفع السعر في أي وقت.' },
-                { question: 'هل سأحصل على شهادة؟', answer: 'نعم، ستحصل على شهادتين إتمام يمكنك إضافتهما لسيرتك الذاتية وحساباتك على LinkedIn ومنصات العمل الحر مثل Upwork وFiverr ومستقل.' },
-                { question: 'ماذا لو كان عندي سؤال أثناء التعلم؟', answer: 'الكورسات مصممة بشكل شامل ومفصل يغطي كل ما تحتاجه. كما يمكنك إعادة مشاهدة أي درس في أي وقت. لديك وصول مدى الحياة.' }
+                { question: 'واش راح يوصلني في الطرد؟', answer: 'راح تلقى كود تفعيل - تدخل بيه للمنصة تاعنا وتشوف الـ 37+ ساعة فيديو كاملة من تليفونك ولا الكمبيوتر، وقت ما تحب وفين ما تحب. والدخول مدى الحياة - يعني ماشي بمدة محدودة. زيادة على هذا، راح تلقى معاه DVD فيه نفس الدروس كادو!' },
+                { question: 'هل الدفع فعلاً عند الاستلام؟', answer: 'نعم 100%. لا نطلب منك أي دفع مسبق. المندوب يصل لبيتك، تستلم المنتج، تتأكد منه، ثم تدفع له 4,900 دج. بهذه البساطة.' },
+                { question: 'هل التوصيل مجاني حقاً؟', answer: 'نعم، التوصيل مجاني تماماً لجميع الولايات الـ 58. السعر النهائي هو 4,900 دج فقط.' },
+                { question: 'هل أحتاج خبرة سابقة؟', answer: 'لا أبداً! الكورسات تبدأ معك من الصفر. ستتعلم خطوة بخطوة من الأساسيات حتى الاحتراف.' },
+                { question: 'متى سيصلني الطلب؟', answer: 'عادةً خلال 2-5 أيام عمل حسب ولايتك. سنتصل بك لتأكيد الطلب.' },
+                { question: 'هل الكورسات بالعربي؟', answer: 'نعم، 100% بالعربي مع شروحات واضحة ومبسطة.' },
+                { question: 'هل سأحصل على شهادة؟', answer: 'نعم، ستحصل على شهادتين إتمام معتمدتين.' }
             ];
-            const locationsCSV = `State	State Code	City	City Code
-Adrar	DZA01	Adrar	DZA010101
-Chlef	DZA02	Chlef	DZA020211
-Laghouat	DZA03	Laghouat	DZA030301
-Oum El Bouaghi	DZA04	Oum el Bouaghi	DZA040401
-Batna	DZA05	Batna	DZA050501
-Béjaïa	DZA06	Béjaïa	DZA060601
-Biskra	DZA07	Biskra	DZA070704
-Béchar	DZA08	Béchar	DZA080801
-Blida	DZA09	Blida	DZA090901
-Bouira	DZA10	Bouira	DZA101016
-Tamanrasset	DZA11	Tamanrasset	DZA111101
-Tébessa	DZA12	Tébessa	DZA121201
-Tlemcen	DZA13	Tlemcen	DZA131301
-Tiaret	DZA14	Tiaret	DZA141439
-Tizi Ouzou	DZA15	Tizi Ouzou	DZA151501
-Alger	DZA16	Alger Centre	DZA161601
-Alger	DZA16	Bab El Oued	DZA161605
-Alger	DZA16	El Harrach	DZA161613
-Alger	DZA16	Kouba	DZA161618
-Alger	DZA16	Dar El Beïda	DZA161620
-Alger	DZA16	Bordj El Kiffan	DZA161630
-Alger	DZA16	Cheraga	DZA161650
-Alger	DZA16	Draria	DZA161653
-Djelfa	DZA17	Djelfa	DZA171714
-Jijel	DZA18	Jijel	DZA181801
-Sétif	DZA19	Sétif	DZA191955
-Saïda	DZA20	Saïda	DZA202011
-Skikda	DZA21	Skikda	DZA212135
-Sidi Bel Abbès	DZA22	Sidi Bel Abbes	DZA222236
-Annaba	DZA23	Annaba	DZA232301
-Guelma	DZA24	Guelma	DZA242419
-Constantine	DZA25	Constantine	DZA252504
-Médéa	DZA26	Médéa	DZA262633
-Mostaganem	DZA27	Mostaganem	DZA272718
-M'Sila	DZA28	M'Sila	DZA282828
-Mascara	DZA29	Mascara	DZA292928
-Ouargla	DZA30	Ouargla	DZA303013
-Oran	DZA31	Oran	DZA313101
-El Bayadh	DZA32	El Bayadh	DZA323201
-Illizi	DZA33	Illizi	DZA333301
-Bordj Bou Arreridj	DZA34	Bordj Bou Arreridj	DZA343406
-Boumerdès	DZA35	Boumerdes	DZA353501
-El Tarf	DZA36	El Tarf	DZA363617
-Tindouf	DZA37	Tindouf	DZA373702
-Tissemsilt	DZA38	Tissemsilt	DZA383821
-El Oued	DZA39	El Oued	DZA393901
-Khenchela	DZA40	Khenchela	DZA404013
-Souk Ahras	DZA41	Souk Ahras	DZA414101
-Tipaza	DZA42	Tipaza	DZA424201
-Mila	DZA43	Mila	DZA434316
-Aïn Defla	DZA44	Aïn Defla	DZA444401
-Naâma	DZA45	Naâma	DZA454501
-Aïn Témouchent	DZA46	Aïn Témouchent	DZA464604
-Ghardaïa	DZA47	Ghardaïa	DZA474707
-Relizane	DZA48	Relizane	DZA484830
-Timimoun	DZA49	Timimoun	DZA494909
-Bordj Badji Mokhtar	DZA50	Bordj Badji Mokhtar	DZA505025
-Ouled Djellal	DZA51	Ouled Djellal	DZA515126
-Béni Abbès	DZA52	Béni Abbès	DZA525201
-In Salah	DZA53	In Salah	DZA535301
-In Guezzam	DZA54	In Guezzam	DZA545401
-Touggourt	DZA55	Touggourt	DZA555501
-Djanet	DZA56	Djanet	DZA565601
-El M'Ghair	DZA57	El M'Ghair	DZA575701
-El Meniaa	DZA58	El Meniaa	DZA585801`;
-            function parseLocations(csv) {
-                const lines = csv.trim().split('\n').slice(1);
-                const locationsMap = new Map();
-                lines.forEach(line => { const [state, stateCode, city] = line.split('\t').map(s => s.trim()); if (!locationsMap.has(state)) { locationsMap.set(state, { stateCode, cities: [] }); } locationsMap.get(state).cities.push(city); });
-                return Array.from(locationsMap.entries()).map(([stateName, data]) => ({ state: stateName, stateCode: data.stateCode, cities: data.cities })).sort((a, b) => parseInt(a.stateCode.replace('DZA', ''), 10) - parseInt(b.stateCode.replace('DZA', ''), 10));
-            }
-            const locationData = parseLocations(locationsCSV);
-            function setupFaqAccordion(containerId, data) {
-                const container = document.getElementById(containerId); if (!container) return;
-                container.innerHTML = data.map(item => `<div class="accordion-item bg-white rounded-lg shadow-sm border border-slate-200 fade-in visible"><button class="accordion-trigger flex justify-between items-center w-full p-5 text-right" aria-expanded="false"><span class="text-lg font-bold text-slate-800">${item.question}</span><span class="ml-6 flex-shrink-0"><svg class="h-6 w-6 text-emerald-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg></span></button><div class="accordion-content"><div class="overflow-hidden"><div class="px-5 pb-5 text-slate-600"><p>${item.answer}</p></div></div></div></div>`).join('');
-                container.querySelectorAll('.accordion-item').forEach(item => { item.querySelector('.accordion-trigger').addEventListener('click', () => { const wasOpen = item.classList.contains('open'); container.querySelectorAll('.accordion-item').forEach(i => { i.classList.remove('open'); i.querySelector('.accordion-trigger').setAttribute('aria-expanded', 'false'); }); if (!wasOpen) { item.classList.add('open'); item.querySelector('.accordion-trigger').setAttribute('aria-expanded', 'true'); } }); });
-            }
-            function populateWilayas(selectId, data) {
-                const select = document.getElementById(selectId); if (!select) return;
-                let options = '<option value="" disabled selected>اختر ولايتك...</option>';
-                data.forEach(s => { const num = parseInt(s.stateCode.replace('DZA', ''), 10); options += `<option value="${String(num).padStart(2, '0')} - ${s.state}" data-state-name="${s.state}">${String(num).padStart(2, '0')} - ${s.state}</option>`; });
-                select.innerHTML = options;
-            }
-            function setupCityDropdown(data) {
-                const wilayaSelect = document.getElementById('wilaya'), citySelect = document.getElementById('city'), cityContainer = document.getElementById('city-container');
-                if (!wilayaSelect || !citySelect || !cityContainer) return;
-                wilayaSelect.addEventListener('change', () => { const stateName = wilayaSelect.options[wilayaSelect.selectedIndex].getAttribute('data-state-name'); citySelect.innerHTML = '<option value="" disabled selected>اختر بلديتك...</option>'; if (stateName) { const stateData = data.find(s => s.state === stateName); if (stateData) { stateData.cities.forEach(city => { citySelect.innerHTML += `<option value="${city}">${city}</option>`; }); citySelect.disabled = false; cityContainer.classList.remove('hidden'); } } else { citySelect.disabled = true; cityContainer.classList.add('hidden'); } });
-            }
-            function setupForm(formId) {
-                const form = document.getElementById(formId); if (!form) return;
-                const submitButton = form.querySelector('button[type="submit"]'), errorElement = document.getElementById('form-error-message'), formContainer = document.getElementById('form-container');
-                form.addEventListener('submit', (e) => {
-                    e.preventDefault(); submitButton.disabled = true; submitButton.innerHTML = '...جاري إرسال الطلب'; errorElement.textContent = '';
-                    fetch('https://script.google.com/macros/s/AKfycbzvjQ9Yjm-oIrKqz1Ii1-XiCvNATamySYDrSEk1Pc0XEcdCBSXVmcVzgD-YoykESeS35w/exec', { method: 'POST', body: new FormData(form), mode: 'no-cors' })
-                        .then(() => { formContainer.innerHTML = `<div class="text-center p-8 flex flex-col items-center justify-center h-full"><svg class="w-20 h-20 text-green-500 mx-auto mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg><h2 class="text-3xl font-bold text-green-600 mb-4">🎉 تم استلام طلبك بنجاح!</h2><p class="text-lg text-slate-700 mb-2">سنتصل بك في أقرب وقت لتأكيد طلبك.</p><p class="text-slate-600">الرجاء إبقاء هاتفك قيد التشغيل.</p><div class="mt-6 bg-emerald-50 border border-emerald-200 rounded-lg p-4"><p class="font-bold text-emerald-700">📦 التوصيل خلال 2-5 أيام عمل</p><p class="text-sm text-slate-600">التوصيل مجاني | الدفع عند الاستلام</p></div></div>`; })
-                        .catch(() => { errorElement.textContent = 'حدث خطأ، يرجى المحاولة مرة أخرى.'; submitButton.disabled = false; submitButton.innerHTML = 'تأكيد الطلب - الدفع عند الاستلام 🚀'; });
+            // FAQ Setup
+            const faqContainer = document.getElementById('faq-accordion');
+            if (faqContainer) {
+                faqContainer.innerHTML = faqData.map(item => `<div class="accordion-item bg-white rounded-lg shadow-sm border border-slate-200"><button class="accordion-trigger flex justify-between items-center w-full p-5 text-right" aria-expanded="false"><span class="text-lg font-bold text-slate-800">${item.question}</span><span class="ml-6"><svg class="h-6 w-6 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></span></button><div class="accordion-content"><div class="px-5 pb-5 text-slate-600">${item.answer}</div></div></div>`).join('');
+                faqContainer.querySelectorAll('.accordion-item').forEach(item => {
+                    item.querySelector('.accordion-trigger').addEventListener('click', () => {
+                        const wasOpen = item.classList.contains('open');
+                        faqContainer.querySelectorAll('.accordion-item').forEach(i => i.classList.remove('open'));
+                        if (!wasOpen) item.classList.add('open');
+                    });
                 });
             }
-            function setupScrollAnimations() { const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } }); }, { threshold: 0.1 }); document.querySelectorAll('.fade-in').forEach(el => observer.observe(el)); }
-            setupFaqAccordion('faq-accordion', faqData);
-            populateWilayas('wilaya', locationData);
-            setupCityDropdown(locationData);
-            setupForm('enrollment-form');
-            setupScrollAnimations();
+            // Wilayas Setup
+            const wilayaSelect = document.getElementById('wilaya');
+            const citySelect = document.getElementById('city');
+            const cityContainer = document.getElementById('city-container');
+            if (wilayaSelect && typeof LOCATIONS_DATA !== 'undefined') {
+                let opts = '<option value="" disabled selected>اختر ولايتك...</option>';
+                LOCATIONS_DATA.forEach((loc, i) => { opts += `<option value="${String(i + 1).padStart(2, '0')} - ${loc.w}" data-idx="${i}">${String(i + 1).padStart(2, '0')} - ${loc.w}</option>`; });
+                wilayaSelect.innerHTML = opts;
+                wilayaSelect.addEventListener('change', () => {
+                    const idx = wilayaSelect.options[wilayaSelect.selectedIndex].getAttribute('data-idx');
+                    citySelect.innerHTML = '<option value="" disabled selected>اختر بلديتك...</option>';
+                    if (idx !== null && LOCATIONS_DATA[idx]) {
+                        LOCATIONS_DATA[idx].c.forEach(c => { citySelect.innerHTML += `<option value="${c}">${c}</option>`; });
+                        citySelect.disabled = false;
+                        cityContainer.classList.remove('hidden');
+                    }
+                });
+            }
+            // Form Submit
+            const form = document.getElementById('enrollment-form');
+            if (form) {
+                form.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const btn = form.querySelector('button[type="submit"]');
+                    const err = document.getElementById('form-error-message');
+                    const formContainer = document.getElementById('form-container');
+                    btn.disabled = true; btn.innerHTML = '...جاري إرسال الطلب'; err.textContent = '';
+                    const data = new URLSearchParams();
+                    data.append('name', document.getElementById('name').value);
+                    data.append('phone', document.getElementById('phone').value);
+                    data.append('wilaya', document.getElementById('wilaya').value);
+                    data.append('city', document.getElementById('city').value);
+                    data.append('address', document.getElementById('address').value);
+                    fetch('https://script.google.com/macros/s/AKfycbzvjQ9Yjm-oIrKqz1Ii1-XiCvNATamySYDrSEk1Pc0XEcdCBSXVmcVzgD-YoykESeS35w/exec', {
+                        method: 'POST', body: data, mode: 'no-cors'
+                    }).then(() => {
+                        formContainer.innerHTML = '<div class="text-center p-8"><svg class="w-20 h-20 text-green-500 mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg><h2 class="text-3xl font-bold text-green-600 mb-4">🎉 تم استلام طلبك بنجاح!</h2><p class="text-lg text-slate-700 mb-2">سنتصل بك في أقرب وقت لتأكيد طلبك.</p><div class="mt-6 bg-emerald-50 border border-emerald-200 rounded-lg p-4"><p class="font-bold text-emerald-700">📦 التوصيل خلال 2-5 أيام عمل</p></div></div>';
+                    }).catch(() => { err.textContent = 'حدث خطأ، يرجى المحاولة مرة أخرى.'; btn.disabled = false; btn.innerHTML = 'تأكيد الطلب 🚀'; });
+                });
+            }
+            // Scroll animations
+            const obs = new IntersectionObserver(e => e.forEach(el => { if (el.isIntersecting) { el.target.classList.add('visible'); obs.unobserve(el.target); } }), { threshold: 0.1 });
+            document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
         });
     </script>
 </body>
