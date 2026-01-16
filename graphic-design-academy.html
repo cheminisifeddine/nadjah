@@ -50,6 +50,12 @@
         :root {
             --primary-color: #059669;
             --secondary-color: #f59e0b;
+            --gradient-start: #059669;
+            --gradient-end: #10b981;
+        }
+
+        * {
+            box-sizing: border-box;
         }
 
         html {
@@ -58,27 +64,125 @@
 
         body {
             font-family: 'Cairo', sans-serif;
-            background-color: #f8fafc;
+            background: linear-gradient(180deg, #f8fafc 0%, #ecfdf5 50%, #f8fafc 100%);
             color: #1e293b;
+            overflow-x: hidden;
         }
 
         .font-cairo-black {
             font-weight: 900;
         }
 
+        /* Premium Hero Gradient */
         .hero-gradient {
-            background: radial-gradient(circle at 50% 0%, #effaf5, #f8fafc 80%);
+            background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 30%, #f0fdf4 60%, #fef3c7 100%);
+            position: relative;
+            overflow: hidden;
         }
 
+        .hero-gradient::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(16, 185, 129, 0.1) 0%, transparent 70%);
+            animation: pulse-slow 8s ease-in-out infinite;
+        }
+
+        /* Floating Animation */
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        @keyframes pulse-slow {
+
+            0%,
+            100% {
+                opacity: 0.5;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1.1);
+            }
+        }
+
+        @keyframes shimmer {
+            0% {
+                background-position: -200% center;
+            }
+
+            100% {
+                background-position: 200% center;
+            }
+        }
+
+        @keyframes bounce-subtle {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-5px);
+            }
+        }
+
+        @keyframes glow {
+
+            0%,
+            100% {
+                box-shadow: 0 0 20px rgba(5, 150, 105, 0.3);
+            }
+
+            50% {
+                box-shadow: 0 0 40px rgba(5, 150, 105, 0.6), 0 0 60px rgba(5, 150, 105, 0.3);
+            }
+        }
+
+        /* Glassmorphism Effect */
+        .glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        /* Premium Form Gradient */
         .form-summary-gradient {
-            background: linear-gradient(135deg, #065f46 0%, #047857 100%);
+            background: linear-gradient(135deg, #064e3b 0%, #047857 50%, #059669 100%);
+            position: relative;
+            overflow: hidden;
         }
 
+        .form-summary-gradient::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        /* Accordion */
         .accordion-content {
             display: grid;
             grid-template-rows: 0fr;
             opacity: 0;
-            transition: grid-template-rows 0.5s ease, opacity 0.3s ease;
+            transition: grid-template-rows 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
         }
 
         .accordion-item.open .accordion-content {
@@ -87,17 +191,18 @@
         }
 
         .accordion-trigger svg {
-            transition: transform 0.3s ease;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .accordion-item.open .accordion-trigger svg {
             transform: rotate(180deg);
         }
 
+        /* Fade In Animation */
         .fade-in {
             opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .fade-in.visible {
@@ -105,27 +210,171 @@
             transform: translateY(0);
         }
 
+        /* Value Stack */
         .value-stack-item {
-            border-right: 4px solid #059669;
+            border-right: 4px solid transparent;
+            background: linear-gradient(white, white) padding-box,
+                linear-gradient(135deg, #059669, #10b981) border-box;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
+        .value-stack-item:hover {
+            transform: translateX(-5px);
+            box-shadow: 0 10px 30px rgba(5, 150, 105, 0.15);
+        }
+
+        /* Testimonial Card */
         .testimonial-card {
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px -15px rgba(0, 0, 0, 0.15);
+        }
+
+        /* CTA Buttons */
+        .cta-button {
+            background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(5, 150, 105, 0.4);
+        }
+
+        /* Pulsing CTA */
+        .pulse-cta {
+            animation: glow 2s ease-in-out infinite;
+        }
+
+        /* Submit Button */
+        .submit-button {
+            background: linear-gradient(135deg, #059669 0%, #047857 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .submit-button:not(:disabled):hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(5, 150, 105, 0.4);
         }
 
         .submit-button:disabled {
-            background-color: #9ca3af;
+            background: linear-gradient(135deg, #9ca3af 0%, #6b7280 100%);
             cursor: not-allowed;
         }
 
+        /* Offer Box */
         .offer-box {
-            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
-            border: 3px solid #059669;
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 50%, #fef3c7 100%);
+            border: 3px solid transparent;
+            background-clip: padding-box;
+            position: relative;
         }
 
+        .offer-box::before {
+            content: '';
+            position: absolute;
+            inset: -3px;
+            background: linear-gradient(135deg, #059669, #fbbf24);
+            border-radius: inherit;
+            z-index: -1;
+        }
+
+        /* Price Slash */
         .price-slash {
             text-decoration: line-through;
             text-decoration-color: #ef4444;
+            text-decoration-thickness: 3px;
+        }
+
+        /* Floating Badge */
+        .floating-badge {
+            animation: bounce-subtle 2s ease-in-out infinite;
+        }
+
+        /* Premium Cards */
+        .premium-card {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .premium-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #059669, #10b981, #34d399);
+        }
+
+        .premium-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Shimmer Effect for Price */
+        .shimmer-price {
+            background: linear-gradient(90deg, #059669 0%, #10b981 25%, #34d399 50%, #10b981 75%, #059669 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shimmer 3s linear infinite;
+        }
+
+        /* Trust Badge */
+        .trust-badge {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(5, 150, 105, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .trust-badge:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Countdown Timer Style */
+        .urgency-bar {
+            background: linear-gradient(90deg, #dc2626, #ef4444, #f87171);
+            animation: pulse-slow 2s ease-in-out infinite;
+        }
+
+        /* Mobile Optimization */
+        @media (max-width: 768px) {
+
+            .premium-card:hover,
+            .testimonial-card:hover,
+            .value-stack-item:hover {
+                transform: none;
+            }
         }
     </style>
 </head>
@@ -160,8 +409,8 @@
                 <div class="grid md:grid-cols-2 gap-12 items-center">
                     <div class="text-center md:text-right fade-in">
                         <span
-                            class="inline-block bg-emerald-100 text-emerald-800 text-sm font-bold px-4 py-1.5 rounded-full mb-4">🔥
-                            عرض حصري لفترة محدودة - وفّر أكثر من 14,000 دج</span>
+                            class="inline-block floating-badge bg-emerald-100 text-emerald-800 text-sm font-bold px-4 py-1.5 rounded-full mb-4">🔥
+                            عرض حصري لفترة محدودة - وفّر أكثر من 13,000 دج</span>
                         <h1 class="text-3xl lg:text-5xl font-cairo-black text-slate-900 leading-tight mb-5">
                             أتقن <span class="text-emerald-700">التصميم الجرافيكي + الذكاء الاصطناعي</span> وابدأ تحقيق
                             مهارة يطلبها السوق في 2026
@@ -185,17 +434,17 @@
                         </ul>
                         <div class="flex flex-col items-center md:items-start gap-4">
                             <a href="#form"
-                                class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-4 px-10 rounded-xl text-lg transition-all transform hover:scale-105 shadow-xl flex items-center justify-center gap-3">
+                                class="cta-button pulse-cta w-full sm:w-auto text-white font-bold py-4 px-10 rounded-xl text-lg transition-all transform shadow-xl flex items-center justify-center gap-3">
                                 <span>🚀 اطلب الآن - ادفع عند الاستلام</span>
                             </a>
                             <p class="text-sm text-slate-500 font-semibold">التوصيل مجاني لجميع الولايات الـ 58</p>
                         </div>
                         <div class="flex flex-wrap justify-center md:justify-start gap-4 mt-6 text-sm text-slate-600">
-                            <span class="flex items-center gap-2 bg-white px-3 py-1.5 rounded-full shadow-sm"><span
+                            <span class="flex items-center gap-2 trust-badge px-3 py-1.5 rounded-full shadow-sm"><span
                                     class="text-green-500">✓</span> الدفع عند الاستلام</span>
-                            <span class="flex items-center gap-2 bg-white px-3 py-1.5 rounded-full shadow-sm"><span
+                            <span class="flex items-center gap-2 trust-badge px-3 py-1.5 rounded-full shadow-sm"><span
                                     class="text-green-500">✓</span> توصيل مجاني</span>
-                            <span class="flex items-center gap-2 bg-white px-3 py-1.5 rounded-full shadow-sm"><span
+                            <span class="flex items-center gap-2 trust-badge px-3 py-1.5 rounded-full shadow-sm"><span
                                     class="text-green-500">✓</span> أكثر من 5000 متدرب سابق</span>
                         </div>
                     </div>
@@ -206,8 +455,8 @@
                             <div class="text-center">
                                 <p class="text-slate-500 text-sm mb-1">القيمة الحقيقية</p>
                                 <p class="text-2xl font-bold text-slate-400 price-slash">18,000 دج</p>
-                                <p class="text-4xl font-cairo-black text-emerald-600">3,900 دج فقط</p>
-                                <p class="text-amber-600 font-bold mt-2">💰 وفّر 14,100 دج (خصم 78%)</p>
+                                <p class="text-4xl font-cairo-black text-emerald-600">4,900 دج فقط</p>
+                                <p class="text-amber-600 font-bold mt-2">💰 وفّر 13,100 دج (خصم 73%)</p>
                             </div>
                         </div>
                     </div>
@@ -427,7 +676,7 @@
                         <div class="mt-6 text-center border-t-2 border-dashed border-slate-300 pt-6">
                             <p class="text-xl text-slate-500">القيمة الإجمالية: <span
                                     class="price-slash font-bold">26,000 دج</span></p>
-                            <p class="text-4xl font-cairo-black text-emerald-600 mt-2">🔥 سعرك اليوم: 3,900 دج فقط!</p>
+                            <p class="text-4xl font-cairo-black text-emerald-600 mt-2">🔥 سعرك اليوم: 4,900 دج فقط!</p>
                         </div>
                     </div>
                 </div>
@@ -601,8 +850,8 @@
                     <div class="bg-white rounded-xl p-6 text-center mb-8 shadow-lg">
                         <p class="text-xl text-slate-500 mb-2">القيمة الحقيقية: <span
                                 class="price-slash font-bold">18,000 دج</span></p>
-                        <p class="text-5xl font-cairo-black text-emerald-600 mb-2">3,900 دج فقط</p>
-                        <p class="text-lg text-amber-600 font-bold">💰 وفّر: 14,100 دج (خصم 78%)</p>
+                        <p class="text-5xl font-cairo-black text-emerald-600 mb-2">4,900 دج فقط</p>
+                        <p class="text-lg text-amber-600 font-bold">💰 وفّر: 13,100 دج (خصم 73%)</p>
                     </div>
 
                     <div class="grid sm:grid-cols-3 gap-4 mb-8">
@@ -692,8 +941,8 @@
                                 <p class="text-slate-600 mb-4">املأ بياناتك وسنتصل بك خلال 24 ساعة لتأكيد طلبك</p>
                                 <div class="bg-emerald-50 border border-emerald-200 rounded-lg px-4 py-3 mb-6">
                                     <p class="text-slate-400 price-slash text-lg">18,000 دج</p>
-                                    <p class="text-4xl font-cairo-black text-emerald-600">3,900 دج فقط</p>
-                                    <p class="text-amber-600 font-bold">وفّر 14,100 دج + توصيل مجاني!</p>
+                                    <p class="text-4xl font-cairo-black text-emerald-600">4,900 دج فقط</p>
+                                    <p class="text-amber-600 font-bold">وفّر 13,100 دج + توصيل مجاني!</p>
                                 </div>
                             </div>
                             <form id="enrollment-form" class="space-y-4 text-right">
@@ -761,7 +1010,7 @@
                         AI</span>
                     <span class="bg-slate-800 px-4 py-2 rounded-lg">✅ قسم فريلانس</span>
                 </div>
-                <p class="text-3xl font-cairo-black text-emerald-400 mb-6">3,900 دج فقط <span
+                <p class="text-3xl font-cairo-black text-emerald-400 mb-6">4,900 دج فقط <span
                         class="text-slate-400 price-slash text-xl">18,000 دج</span></p>
                 <a href="#form"
                     class="inline-block bg-amber-500 hover:bg-amber-400 text-amber-950 font-bold py-4 px-12 rounded-xl text-xl transition-all transform hover:scale-105 shadow-xl">
@@ -788,8 +1037,8 @@
         document.addEventListener('DOMContentLoaded', function () {
             const faqData = [
                 { question: 'واش راح يوصلني في الطرد؟', answer: 'راح تلقى كود تفعيل - تدخل بيه للمنصة تاعنا وتشوف الـ 37+ ساعة فيديو كاملة من تليفونك ولا الكمبيوتر، وقت ما تحب وفين ما تحب. والدخول مدى الحياة - يعني ماشي بمدة محدودة. زيادة على هذا، راح تلقى معاه DVD فيه نفس الدروس كادو!' },
-                { question: 'هل الدفع فعلاً عند الاستلام؟', answer: 'نعم 100%. لا نطلب منك أي دفع مسبق. المندوب يصل لبيتك، تستلم المنتج، تتأكد منه، ثم تدفع له 3,900 دج. بهذه البساطة.' },
-                { question: 'هل التوصيل مجاني حقاً؟', answer: 'نعم، التوصيل مجاني تماماً لجميع الولايات الـ 58. السعر النهائي هو 3,900 دج فقط.' },
+                { question: 'هل الدفع فعلاً عند الاستلام؟', answer: 'نعم 100%. لا نطلب منك أي دفع مسبق. المندوب يصل لبيتك، تستلم المنتج، تتأكد منه، ثم تدفع له 4,900 دج. بهذه البساطة.' },
+                { question: 'هل التوصيل مجاني حقاً؟', answer: 'نعم، التوصيل مجاني تماماً لجميع الولايات الـ 58. السعر النهائي هو 4,900 دج فقط.' },
                 { question: 'هل أحتاج خبرة سابقة؟', answer: 'لا أبداً! الكورسات تبدأ معك من الصفر. ستتعلم خطوة بخطوة من الأساسيات حتى الاحتراف.' },
                 { question: 'متى سيصلني الطلب؟', answer: 'عادةً خلال 2-5 أيام عمل حسب ولايتك. سنتصل بك لتأكيد الطلب.' },
                 { question: 'هل الكورسات بالعربي؟', answer: 'نعم، 100% بالعربي مع شروحات واضحة ومبسطة.' },
