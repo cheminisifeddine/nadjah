@@ -16,8 +16,8 @@
     <!-- Swiper CSS (v11) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-    <!-- Babel Standalone -->
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- Babel Standalone (Pinned Version) -->
+    <script src="https://unpkg.com/@babel/standalone@7.23.6/babel.min.js"></script>
 
     <style>
       :root {
@@ -43,8 +43,8 @@
       "imports": {
         "react": "https://esm.sh/react@18.2.0",
         "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
-        "lucide-react": "https://esm.sh/lucide-react@0.263.1",
-        "swiper/react": "https://esm.sh/swiper@11.0.5/react",
+        "lucide-react": "https://esm.sh/lucide-react@0.344.0?deps=react@18.2.0",
+        "swiper/react": "https://esm.sh/swiper@11.0.5/react?deps=react@18.2.0",
         "swiper/modules": "https://esm.sh/swiper@11.0.5/modules"
       }
     }
@@ -53,8 +53,8 @@
   <body>
     <div id="root"></div>
 
-    <script type="text/babel" data-type="module">
-      import React, { useState } from 'react';
+    <script type="text/babel" data-type="module" data-presets="react">
+      import React from 'react';
       import { createRoot } from 'react-dom/client';
       import { 
         ArrowLeft, CheckCircle, ShieldCheck, Clock, AlertCircle, 
@@ -63,6 +63,8 @@
       } from 'lucide-react';
       import { Swiper, SwiperSlide } from 'swiper/react';
       import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+
+      const { useState } = React;
 
       // --- CONSTANTS ---
       const GUMROAD_URL = "https://paacademy.gumroad.com/l/otoqxe?wanted=true";
