@@ -78,7 +78,8 @@
         return locations.map((entry, index) => ({
             state: entry.w,
             stateCode: String(index + 1).padStart(2, '0'),
-            // French collation preserves expected order for accented Latin-script wilaya/city names.
+            // Algeria place names here are official French/Latin transliterations with accents (é/ï/â),
+            // so 'fr' collation keeps a more natural alphabetical order than default code-point sorting.
             cities: [...entry.c].sort((a, b) => a.localeCompare(b, 'fr'))
         }));
     }
@@ -185,7 +186,7 @@
             if (error) error.textContent = '';
 
             if (phone && phoneConfirm && phone.value.trim() !== phoneConfirm.value.trim()) {
-                if (error) error.textContent = 'رقما الهاتف غير متطابقين. الرجاء إعادة المحاولة.';
+                if (error) error.textContent = 'رقم الهاتف وتأكيد رقم الهاتف غير متطابقين. الرجاء إعادة المحاولة.';
                 phoneConfirm.focus();
                 return;
             }

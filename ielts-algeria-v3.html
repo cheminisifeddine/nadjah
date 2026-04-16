@@ -555,7 +555,10 @@
                     </div>
                     `}).join('');
 
-                if (typeof Swiper !== 'function') return;
+                if (typeof Swiper !== 'function') {
+                    console.warn('Swiper library not loaded; testimonials slider will remain static.');
+                    return;
+                }
                 new Swiper('.testimonials-slider', {
                     loop: true,
                     slidesPerView: 1,
