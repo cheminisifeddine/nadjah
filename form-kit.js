@@ -3,7 +3,8 @@
 
     /**
      * Algeria wilaya + city dataset.
-     * Shape: [{ w: "Wilaya", c: ["City 1", ...] }]
+     * @typedef {{ w: string, c: string[] }} LocationEntry
+     * @type {LocationEntry[]}
      */
     const LOCATIONS_DATA = [
     { "w": "Adrar", "c": ["Adrar", "Tamest", "Reggane", "In Zghmir", "Tit", "Tsabit", "Zaouiet Kounta", "Aoulef", "Tamekten", "Tamantit", "Fenoughil", "Sali", "Akabli", "Ouled Ahmed Tammi", "Bouda", "Sebaa"] },
@@ -57,7 +58,7 @@
     { "w": "Timimoun", "c": ["Charouine", "Ksar Kaddour", "Timimoun", "Ouled Saïd", "Tinerkouk", "Deldoul", "Metarfa", "Aougrout", "Talmine", "Ouled Aïssa"] },
     { "w": "Bordj Badji Mokhtar", "c": ["Bordj Badji Mokhtar", "Timiaouine"] },
     { "w": "Ouled Djellal", "c": ["Besbes", "Doucen", "Ech Chaïba", "Ouled Djellal", "Ras El Miaad", "Sidi Khaled"] },
-    { "w": "Béni Abbès", "c": ["Ouled Khoudir", "Béni Abbès"] },
+    { "w": "Béni Abbès", "c": ["Béni Abbès", "Ouled Khoudir"] },
     { "w": "In Salah", "c": ["In Salah"] },
     { "w": "In Guezzam", "c": ["In Guezzam"] },
     { "w": "Touggourt", "c": ["Touggourt", "Temacine"] },
@@ -77,6 +78,7 @@
         return locations.map((entry, index) => ({
             state: entry.w,
             stateCode: String(index + 1).padStart(2, '0'),
+            // French collation preserves expected order for accented Latin-script wilaya/city names.
             cities: [...entry.c].sort((a, b) => a.localeCompare(b, 'fr'))
         }));
     }
@@ -170,6 +172,7 @@
         const syncSubmitState = () => {
             const canSubmit = !!checkbox?.checked;
             submit.disabled = !canSubmit;
+            submit.setAttribute('aria-disabled', String(!canSubmit));
         };
 
         if (checkbox) {
