@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ناجح أكاديمي — IELTS Masterclass | كورس IELTS في الجزائر</title>
+  <meta name="description" content="كورس IELTS كامل 38 ساعة مع شهادة مع الأستاذ شيبان حارث. 4,900 دج فقط. أكثر من 331 طالب ناجح.">
+
+  <!-- Facebook Pixel -->
+  <script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '2191072564678210');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=2191072564678210&ev=PageView&noscript=1"/></noscript>
+
+  <!-- TikTok Pixel -->
+  <script>
+  !function(w,d,t){w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];
+  ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"];
+  ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};
+  for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);
+  ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e};
+  ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;
+  ttq._i=ttq._i||{};ttq._i[e]=[];ttq._i[e]._u=r;ttq._t=ttq._t||{};ttq._t[e]=+new Date;
+  ttq._o=ttq._o||{};ttq._o[e]=n||{};n=d.createElement("script");n.type="text/javascript";
+  n.async=!0;n.src=r+"?sdkid="+e+"&lib="+t;d.getElementsByTagName("head")[0].appendChild(n)};
+  ttq.load('D4P9THJC77UDVDQRHKSG');
+  ttq.page();
+  </script>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            emerald: { 600: '#059669', 700: '#047857', 800: '#065f46' },
+            amber: { 500: '#f59e0b', 600: '#d97706' },
+            slate: { 800: '#1e293b', 900: '#0f172a' }
+          },
+          fontFamily: {
+            cairo: ['Cairo', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts: Cairo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+
+  <!-- Swiper v11 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Locations dropdown -->
+  <script src="locations.js"></script>
+
+  <style>
+    * { font-family: 'Cairo', sans-serif; }
+    html { scroll-behavior: smooth; }
+
+    /* Countdown pulse */
+    @keyframes pulse-glow {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(5,150,105,0.4); }
+      50% { box-shadow: 0 0 20px 8px rgba(5,150,105,0.15); }
+    }
+    .pulse-glow { animation: pulse-glow 2s infinite; }
+
+    /* Swiper custom */
+    .swiper-pagination-bullet-active { background: #059669 !important; }
+
+    /* FAQ accordion */
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+    .faq-answer.open { max-height: 500px; }
+
+    /* CTA shimmer */
+    @keyframes shimmer {
+      0% { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
+    }
+    .cta-shimmer {
+      background: linear-gradient(90deg, #059669 0%, #10b981 25%, #059669 50%, #10b981 75%, #059669 100%);
+      background-size: 200% 100%;
+      animation: shimmer 3s linear infinite;
+    }
+
+    /* Strikethrough price */
+    .price-old { text-decoration: line-through; text-decoration-color: #ef4444; text-decoration-thickness: 3px; }
+
+    /* Sticky CTA bar */
+    .sticky-cta { transform: translateY(100%); transition: transform 0.4s ease; }
+    .sticky-cta.visible { transform: translateY(0); }
+  </style>
+</head>
+<body class="bg-white text-slate-800">
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section class="relative bg-gradient-to-br from-slate-900 via-emerald-800 to-emerald-600 text-white overflow-hidden">
+    <!-- Decorative circles -->
+    <div class="absolute top-0 left-0 w-72 h-72 bg-emerald-500/10 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+    <div class="absolute bottom-0 right-0 w-96 h-96 bg-amber-500/10 rounded-full translate-x-1/3 translate-y-1/3"></div>
+
+    <div class="relative max-w-5xl mx-auto px-4 py-12 md:py-20 text-center">
+      <!-- Trust badges -->
+      <div class="flex flex-wrap justify-center gap-3 mb-6 text-sm">
+        <span class="bg-white/10 backdrop-blur px-3 py-1 rounded-full">331+ طالب ناجح</span>
+        <span class="bg-white/10 backdrop-blur px-3 py-1 rounded-full">38 ساعة تدريس</span>
+        <span class="bg-white/10 backdrop-blur px-3 py-1 rounded-full">IELTS معتمد</span>
+      </div>
+
+      <!-- Headline -->
+      <h1 class="text-3xl md:text-5xl font-black leading-tight mb-4">
+        وجّه حياتك للكندا مع IELTS<br>
+        <span class="text-amber-400">بلا تعقيد وبلا خسارة فلوسك</span>
+      </h1>
+
+      <!-- Sub-headline -->
+      <p class="text-lg md:text-xl text-emerald-100 mb-8 max-w-2xl mx-auto leading-relaxed">
+        الكورس اللي يشرحلك كل واش تحتاج في IELTS خطوة بخطوة بالدارجة الجزائرية — من الصفر حتى تحقق النقطة اللي تفتحلك باب الكندا
+      </p>
+
+      <!-- Bullets -->
+      <div class="flex flex-col md:flex-row justify-center gap-4 mb-8 text-base">
+        <div class="flex items-center gap-2 bg-white/10 backdrop-blur px-4 py-2 rounded-lg">
+          <svg class="w-5 h-5 text-amber-400 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          <span>38 ساعة فيديو + DVD + أونلاين</span>
+        </div>
+        <div class="flex items-center gap-2 bg-white/10 backdrop-blur px-4 py-2 rounded-lg">
+          <svg class="w-5 h-5 text-amber-400 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          <span>شرح بالدارجة الجزائرية</span>
+        </div>
+        <div class="flex items-center gap-2 bg-white/10 backdrop-blur px-4 py-2 rounded-lg">
+          <svg class="w-5 h-5 text-amber-400 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          <span>ضمان النتيجة أو إعادة فلوسك</span>
+        </div>
+      </div>
+
+      <!-- Price -->
+      <div class="mb-8">
+        <span class="text-2xl md:text-3xl price-old text-white/60">11,900 دج</span>
+        <span class="text-4xl md:text-5xl font-black text-amber-400 mr-3">4,900 دج</span>
+      </div>
+
+      <!-- CTA -->
+      <a href="#register" class="inline-block cta-shimmer text-white font-bold text-xl px-10 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 pulse-glow">
+        سجّل الآن — الأماكن محدودة
+      </a>
+      <p class="text-emerald-200 text-sm mt-3">الدفع عند الاستلام في كل الولايات</p>
+    </div>
+  </section>
+
+  <!-- ==================== PAIN POINTS ==================== -->
+  <section class="py-14 md:py-20 bg-slate-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl md:text-4xl font-black text-center mb-4 text-slate-800">واش يحصل معاك في IELTS؟</h2>
+      <p class="text-center text-slate-500 mb-12 text-lg">كل جزائري حاب يهاجر للكندا يعاني من هاد المشاكل</p>
+
+      <div class="grid gap-6 md:grid-cols-2">
+        <!-- Pain 1 -->
+        <div class="bg-white rounded-2xl p-6 shadow-md border-r-4 border-red-400">
+          <div class="text-3xl mb-3">😤</div>
+          <h3 class="font-bold text-lg mb-2 text-slate-800">الإنجليزية ضعيفة وماتعرفش منين تبدا</h3>
+          <p class="text-slate-500">شحال من مرة حاولت تقرا بروك وماخلصتش والو — الكتب بالإنجليزي معقدة والفيديوهات الأجنبية ماشي مفهومة</p>
+        </div>
+        <!-- Pain 2 -->
+        <div class="bg-white rounded-2xl p-6 shadow-md border-r-4 border-red-400">
+          <div class="text-3xl mb-3">💰</div>
+          <h3 class="font-bold text-lg mb-2 text-slate-800">الكورسات غالية وماتجيبش نتيجة</h3>
+          <p class="text-slate-500">دفعتلهم 15,000 حتى 25,000 دج وفي اللخر ماقدرتش تجيب السكور اللي يحتاجوه</p>
+        </div>
+        <!-- Pain 3 -->
+        <div class="bg-white rounded-2xl p-6 shadow-md border-r-4 border-red-400">
+          <div class="text-3xl mb-3">⏰</div>
+          <h3 class="font-bold text-lg mb-2 text-slate-800">الوقت يمشي والفرصة تروح</h3>
+          <p class="text-slate-500">كل سنة الإكسبرس إنتري يتبدّل — وانت مخلصش IELTS بعد — نقاط CRS تروح عليك والمنافسة تزيد</p>
+        </div>
+        <!-- Pain 4 -->
+        <div class="bg-white rounded-2xl p-6 shadow-md border-r-4 border-red-400">
+          <div class="text-3xl mb-3">🤷</div>
+          <h3 class="font-bold text-lg mb-2 text-slate-800">ماعندكش خطة واضحة</h3>
+          <p class="text-slate-500">تقرا هنا وهناكا بلا منهجية — والنتيجة دايما نفسها: 5.5 أو أقل — وماتعرفش وين المشكل بالضبط</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SOLUTION ==================== -->
+  <section class="py-14 md:py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="bg-gradient-to-br from-emerald-600 to-emerald-700 rounded-3xl p-8 md:p-12 text-white text-center">
+        <h2 class="text-2xl md:text-4xl font-black mb-4">هاد الكورس يحلّ كل المشاكل اللي قلناهم</h2>
+        <p class="text-emerald-100 text-lg mb-8 max-w-2xl mx-auto">
+          IELTS Masterclass هو الكورس الوحيد في الجزائر اللي يجمع بين التدريب الاحترافي، الشرع بالدارجة، والسعر اللي كل جزائري يقدر عليه
+        </p>
+        <div class="grid gap-4 md:grid-cols-3 text-center">
+          <div class="bg-white/10 backdrop-blur rounded-xl p-5">
+            <div class="text-3xl mb-2">🎓</div>
+            <div class="font-bold text-lg mb-1">تدريب معتمد</div>
+            <div class="text-emerald-200 text-sm">أستاذ معتمد في IELTS مع خبرة +10 سنين</div>
+          </div>
+          <div class="bg-white/10 backdrop-blur rounded-xl p-5">
+            <div class="text-3xl mb-2">🗣️</div>
+            <div class="font-bold text-lg mb-1">شرح بالدارجة</div>
+            <div class="text-emerald-200 text-sm">كل حاجة مفهومة — كأنك تسمع صاحبك يشرحلك</div>
+          </div>
+          <div class="bg-white/10 backdrop-blur rounded-xl p-5">
+            <div class="text-3xl mb-2">✅</div>
+            <div class="font-bold text-lg mb-1">نتيجة مضمونة</div>
+            <div class="text-emerald-200 text-sm">331+ طالب حققو السكور تاعهم — وانت تقدر</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TEACHER BIO ==================== -->
+  <section class="py-14 md:py-20 bg-slate-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl md:text-4xl font-black text-center mb-10 text-slate-800">شوف واش يقول الأستاذ</h2>
+      <div class="bg-white rounded-3xl shadow-lg overflow-hidden md:flex">
+        <!-- Photo placeholder -->
+        <div class="md:w-1/3 bg-emerald-600 flex items-center justify-center p-8">
+          <div class="w-48 h-48 bg-white/20 rounded-full flex items-center justify-center">
+            <span class="text-white text-6xl font-black">ش</span>
+          </div>
+        </div>
+        <!-- Bio -->
+        <div class="md:w-2/3 p-8">
+          <h3 class="text-2xl font-black text-emerald-700 mb-1">الأستاذ شيبان حارث أحمد</h3>
+          <p class="text-slate-500 mb-4">مدرب IELTS معتمد — 33 سنة — خبرة +10 سنين</p>
+          <ul class="space-y-3 text-slate-600">
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span>حامل شهادة CELTA من كامبريدج + TESOL</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span>درّب أكثر من 331 طالب جزائري على IELTS</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span>متخصص في تحضير جزائريين للإكسبرس إنتري</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span>يعرف بالضبط وين يغلطو الجزائريين وكيفاش يصلحوهم</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== COURSE CONTENT ==================== -->
+  <section class="py-14 md:py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl md:text-4xl font-black text-center mb-4 text-slate-800">واش داخل في الكورس؟</h2>
+      <p class="text-center text-slate-500 mb-12 text-lg">كل واش تحتاج باش تقدم على IELTS وتجيب سكور عالي</p>
+
+      <div class="grid gap-4 md:grid-cols-2">
+        <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:border-emerald-400 transition-colors">
+          <div class="text-2xl mb-3">📖</div>
+          <h3 class="font-bold text-lg mb-1">38 ساعة فيديو</h3>
+          <p class="text-slate-500 text-sm">كل المهارات: Reading, Writing, Listening, Speaking — شرح مفصل بأمثلة حقيقية</p>
+        </div>
+        <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:border-emerald-400 transition-colors">
+          <div class="text-2xl mb-3">💿</div>
+          <h3 class="font-bold text-lg mb-1">DVD + أونلاين</h3>
+          <p class="text-slate-500 text-sm">تقدر تقرا بلا إنترنت على DVD أو أونلاين — اختار اللي يناسبك</p>
+        </div>
+        <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:border-emerald-400 transition-colors">
+          <div class="text-2xl mb-3">📝</div>
+          <h3 class="font-bold text-lg mb-1">12 وحدة تدريبية</h3>
+          <p class="text-slate-500 text-sm">من القواعد الأساسية حتى تقنيات الامتحان المتقدمة — خطوة بخطوة</p>
+        </div>
+        <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:border-emerald-400 transition-colors">
+          <div class="text-2xl mb-3">🎯</div>
+          <h3 class="font-bold text-lg mb-1">تمارين + امتحانات تجريبية</h3>
+          <p class="text-slate-500 text-sm">اختبر روحك قبل الامتحان الحقيقي — عرف نقاط الضعف تاعك وصلحهم</p>
+        </div>
+        <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:border-emerald-400 transition-colors">
+          <div class="text-2xl mb-3">🏆</div>
+          <h3 class="font-bold text-lg mb-1">شهادة إتمام</h3>
+          <p class="text-slate-500 text-sm">شهادة من ناجح أكاديمي تثبت إنك ختمت الكورس بنجاح</p>
+        </div>
+        <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:border-emerald-400 transition-colors">
+          <div class="text-2xl mb-3">💬</div>
+          <h3 class="font-bold text-lg mb-1">دعم ومتابعة</h3>
+          <p class="text-slate-500 text-sm">جروب واتساب خاص للأسئلة — الأستاذ نفسه يجاوبك</p>
+        </div>
+      </div>
+
+      <!-- Mid-page CTA -->
+      <div class="text-center mt-12">
+        <a href="#register" class="inline-block cta-shimmer text-white font-bold text-lg px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all">
+          ابدأ رحلتك للكندا الآن — سجّل
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== EXPRESS ENTRY FOCUS ==================== -->
+  <section class="py-14 md:py-20 bg-gradient-to-br from-slate-800 to-slate-900 text-white">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-2xl md:text-4xl font-black mb-4">IELTS هو المفتاح اللي يفتحلك باب الكندا</h2>
+      <p class="text-slate-300 text-lg mb-10 max-w-2xl mx-auto">
+        بلا IELTS — ماتقدرش تدخل في الإكسبرس إنتري. والسكور العالي يعني نقاط CRS أكثر ومستحيل تقع في اللوتري
+      </p>
+
+      <div class="grid gap-6 md:grid-cols-3">
+        <div class="bg-white/5 backdrop-blur border border-white/10 rounded-2xl p-6">
+          <div class="text-4xl font-black text-amber-400 mb-2">CLB 7</div>
+          <div class="font-bold mb-1">الحد الأدنى</div>
+          <div class="text-slate-400 text-sm">السكور الأقل اللي يخليك تتقدم</div>
+        </div>
+        <div class="bg-white/5 backdrop-blur border border-white/10 rounded-2xl p-6">
+          <div class="text-4xl font-black text-amber-400 mb-2">CLB 9</div>
+          <div class="font-bold mb-1">الهدف الذهبي</div>
+          <div class="text-slate-400 text-sm">هادا اللي يعطيك أقصى نقاط لغوية</div>
+        </div>
+        <div class="bg-white/5 backdrop-blur border border-white/10 rounded-2xl p-6">
+          <div class="text-4xl font-black text-amber-400 mb-2">+50</div>
+          <div class="font-bold mb-1">نقاط CRS زيادة</div>
+          <div class="text-slate-400 text-sm">الفرق بين القبول والرفض — بين اللوتري والمباشر</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TESTIMONIALS ==================== -->
+  <section class="py-14 md:py-20 bg-slate-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl md:text-4xl font-black text-center mb-4 text-slate-800">شوف واش يقولو الطلاب</h2>
+      <p class="text-center text-slate-500 mb-10">331+ طالب جزائري حققو سكور IELTS كيما اللي يحلمو بيه</p>
+
+      <div class="swiper testimonial-swiper">
+        <div class="swiper-wrapper pb-10">
+          <!-- Testimonial 1 -->
+          <div class="swiper-slide">
+            <div class="bg-white rounded-2xl p-6 shadow-md mx-2">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-700 font-bold">أ</div>
+                <div>
+                  <div class="font-bold">أمين ب.</div>
+                  <div class="text-slate-400 text-sm">وهران</div>
+                </div>
+                <div class="mr-auto flex gap-0.5 text-amber-400">★★★★★</div>
+              </div>
+              <p class="text-slate-600 leading-relaxed">"كنت نحسب IELTS صعب بزاف — بصح الأستاذ شيبان شرحلي كل حاجة بالدارجة وفهمت وين كنت نغلط. جبت 7.5 من أول مرة والحمد لله!</p>
+            </div>
+          </div>
+          <!-- Testimonial 2 -->
+          <div class="swiper-slide">
+            <div class="bg-white rounded-2xl p-6 shadow-md mx-2">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-700 font-bold">ف</div>
+                <div>
+                  <div class="font-bold">فاطمة ز.</div>
+                  <div class="text-slate-400 text-sm">الجزائر العاصمة</div>
+                </div>
+                <div class="mr-auto flex gap-0.5 text-amber-400">★★★★★</div>
+              </div>
+              <p class="text-slate-600 leading-relaxed">"الشرح بالدارجة خلا كل شيء سهل — كأنهم يهدرو معايا بلا ما نحس بالضغط. ننصح أي واحد حاب يهاجر يجرب هاد الكورس."</p>
+            </div>
+          </div>
+          <!-- Testimonial 3 -->
+          <div class="swiper-slide">
+            <div class="bg-white rounded-2xl p-6 shadow-md mx-2">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-700 font-bold">ي</div>
+                <div>
+                  <div class="font-bold">ياسين م.</div>
+                  <div class="text-slate-400 text-sm">قسنطينة</div>
+                </div>
+                <div class="mr-auto flex gap-0.5 text-amber-400">★★★★★</div>
+              </div>
+              <p class="text-slate-600 leading-relaxed">"دفعت 18,000 في كورس قبل وماجبت والو — هنا بـ 4,900 جبت 7.0! الفرق في الجودة مش في الثمن."</p>
+            </div>
+          </div>
+          <!-- Testimonial 4 -->
+          <div class="swiper-slide">
+            <div class="bg-white rounded-2xl p-6 shadow-md mx-2">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-700 font-bold">س</div>
+                <div>
+                  <div class="font-bold">سارة ع.</div>
+                  <div class="text-slate-400 text-sm">سطيف</div>
+                </div>
+                <div class="mr-auto flex gap-0.5 text-amber-400">★★★★★</div>
+              </div>
+              <p class="text-slate-600 leading-relaxed">"التمارين التجريبية خلتني نحس بالامتحان الحقيقي قبل ما نمشي ليه — ماقعدتش مرتبكة يوم الامتحان. شكرا ناجح أكاديمي!"</p>
+            </div>
+          </div>
+          <!-- Testimonial 5 -->
+          <div class="swiper-slide">
+            <div class="bg-white rounded-2xl p-6 shadow-md mx-2">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-700 font-bold">م</div>
+                <div>
+                  <div class="font-bold">محمد ل.</div>
+                  <div class="text-slate-400 text-sm">عنابة</div>
+                </div>
+                <div class="mr-auto flex gap-0.5 text-amber-400">★★★★★</div>
+              </div>
+              <p class="text-slate-600 leading-relaxed">"جيت في الإكسبرس إنتري والحمد لله — أول حاجة عملتها سجلت في هاد الكورس وثاني حاجة جبت IELTS 6.5. خطة واضحة ونتيجة مضمونة."</p>
+            </div>
+          </div>
+          <!-- Testimonial 6 -->
+          <div class="swiper-slide">
+            <div class="bg-white rounded-2xl p-6 shadow-md mx-2">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-700 font-bold">ن</div>
+                <div>
+                  <div class="font-bold">نور الهدي ب.</div>
+                  <div class="text-slate-400 text-sm">بجاية</div>
+                </div>
+                <div class="mr-auto flex gap-0.5 text-amber-400">★★★★★</div>
+              </div>
+              <p class="text-slate-600 leading-relaxed">"كنت خايفة بزاف من Writing — بصح الأستاذ شيبان عطيني طريقة ثابتة نكتب بيها المقال. جبت 7.0 في Writing وهادا كان حلم!"</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PRICE SECTION ==================== -->
+  <section class="py-14 md:py-20 bg-white" id="pricing">
+    <div class="max-w-3xl mx-auto px-4 text-center">
+      <h2 class="text-2xl md:text-4xl font-black mb-4 text-slate-800">الثمن اللي يخلّك تندم لو ماتسجّلتش</h2>
+      <p class="text-slate-500 mb-10 text-lg">آخر فرصة تحصل على هاد العرض قبل ما نرجّعو للثمن العادي</p>
+
+      <!-- Price card -->
+      <div class="bg-gradient-to-br from-emerald-600 to-emerald-700 rounded-3xl p-8 md:p-12 text-white shadow-2xl relative overflow-hidden">
+        <!-- Decorative -->
+        <div class="absolute top-0 left-0 w-32 h-32 bg-white/5 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+
+        <!-- Badge -->
+        <div class="inline-block bg-amber-500 text-slate-900 font-bold px-4 py-1 rounded-full text-sm mb-4">عرض محدود — وفّر 58%</div>
+
+        <!-- Old price -->
+        <div class="text-2xl price-old text-white/60 mb-2">11,900 دج</div>
+
+        <!-- New price -->
+        <div class="text-5xl md:text-6xl font-black mb-2">4,900 دج</div>
+        <p class="text-emerald-100 mb-6">الدفع عند الاستلام — بلا مخاطرة</p>
+
+        <!-- Countdown -->
+        <div class="bg-white/10 backdrop-blur rounded-xl p-4 mb-8 inline-block">
+          <p class="text-sm text-emerald-200 mb-2">العرض ينتهي بعد</p>
+          <div class="flex gap-3 justify-center text-center" id="countdown">
+            <div>
+              <div class="bg-white text-emerald-700 font-black text-2xl w-14 h-14 rounded-lg flex items-center justify-center" id="cd-hours">00</div>
+              <div class="text-xs text-emerald-200 mt-1">ساعة</div>
+            </div>
+            <div class="text-2xl font-bold self-start mt-2">:</div>
+            <div>
+              <div class="bg-white text-emerald-700 font-black text-2xl w-14 h-14 rounded-lg flex items-center justify-center" id="cd-minutes">00</div>
+              <div class="text-xs text-emerald-200 mt-1">دقيقة</div>
+            </div>
+            <div class="text-2xl font-bold self-start mt-2">:</div>
+            <div>
+              <div class="bg-white text-emerald-700 font-black text-2xl w-14 h-14 rounded-lg flex items-center justify-center" id="cd-seconds">00</div>
+              <div class="text-xs text-emerald-200 mt-1">ثانية</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Spots remaining -->
+        <div class="mb-6">
+          <div class="bg-white/10 rounded-full h-3 w-64 mx-auto mb-2">
+            <div class="bg-amber-400 h-3 rounded-full" style="width: 82%"></div>
+          </div>
+          <p class="text-amber-300 text-sm font-bold">متبقّي فقط 18 مكان من 100</p>
+        </div>
+
+        <!-- CTA -->
+        <a href="#register" class="inline-block bg-amber-500 hover:bg-amber-400 text-slate-900 font-black text-xl px-10 py-4 rounded-xl shadow-lg transition-all duration-300">
+          سجّل الآن بـ 4,900 دج
+        </a>
+      </div>
+
+      <!-- Guarantee -->
+      <div class="mt-8 bg-slate-50 rounded-2xl p-6 flex items-start gap-4 text-right">
+        <div class="text-4xl">🛡️</div>
+        <div>
+          <h3 class="font-bold text-lg mb-1">ضمان 14 يوم</h3>
+          <p class="text-slate-500 text-sm">إذا ماشفتش نتيجة خلال 14 يوم من بداية الكورس — نرجعلك فلوسك كاملة بلا أسئلة. هادا وعدنا.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== COMPARISON ==================== -->
+  <section class="py-14 md:py-20 bg-slate-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl md:text-4xl font-black text-center mb-10 text-slate-800">شوف الفرق بين ناجح أكاديمي والباقي</h2>
+
+      <div class="overflow-x-auto">
+        <table class="w-full bg-white rounded-2xl shadow-md overflow-hidden text-sm md:text-base">
+          <thead>
+            <tr class="bg-emerald-600 text-white">
+              <th class="p-4 text-right">الميزة</th>
+              <th class="p-4 text-center">ناجح أكاديمي</th>
+              <th class="p-4 text-center">الكورسات الخرة</th>
+            </tr>
+          </thead>
+          <tbody class="text-slate-600">
+            <tr class="border-b border-slate-100">
+              <td class="p-4">السعر</td>
+              <td class="p-4 text-center font-bold text-emerald-700">4,900 دج</td>
+              <td class="p-4 text-center text-red-500">15,000 - 25,000 دج</td>
+            </tr>
+            <tr class="border-b border-slate-100 bg-slate-50">
+              <td class="p-4">شرح بالدارجة</td>
+              <td class="p-4 text-center text-2xl">✅</td>
+              <td class="p-4 text-center text-2xl">❌</td>
+            </tr>
+            <tr class="border-b border-slate-100">
+              <td class="p-4">DVD + أونلاين</td>
+              <td class="p-4 text-center text-2xl">✅</td>
+              <td class="p-4 text-center text-2xl">❌</td>
+            </tr>
+            <tr class="border-b border-slate-100 bg-slate-50">
+              <td class="p-4">38 ساعة محتوى</td>
+              <td class="p-4 text-center text-2xl">✅</td>
+              <td class="p-4 text-center">10-15 ساعة</td>
+            </tr>
+            <tr class="border-b border-slate-100">
+              <td class="p-4">امتحانات تجريبية</td>
+              <td class="p-4 text-center text-2xl">✅</td>
+              <td class="p-4 text-center text-2xl">❌</td>
+            </tr>
+            <tr class="border-b border-slate-100 bg-slate-50">
+              <td class="p-4">ضمان النتيجة</td>
+              <td class="p-4 text-center text-2xl">✅</td>
+              <td class="p-4 text-center text-2xl">❌</td>
+            </tr>
+            <tr>
+              <td class="p-4">دعم ومتابعة</td>
+              <td class="p-4 text-center text-2xl">✅</td>
+              <td class="p-4 text-center">محدود</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FAQ ==================== -->
+  <section class="py-14 md:py-20 bg-white">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-2xl md:text-4xl font-black text-center mb-10 text-slate-800">أسئلة يتساءلوها بزاف</h2>
+
+      <div class="space-y-3" id="faq-container">
+        <!-- FAQ 1 -->
+        <div class="faq-item bg-slate-50 rounded-xl border border-slate-200 overflow-hidden">
+          <button class="faq-toggle w-full text-right p-5 font-bold text-slate-800 flex items-center justify-between" onclick="toggleFaq(this)">
+            <span>واش الكورس مناسب للمبتدئين؟</span>
+            <svg class="w-5 h-5 text-slate-400 transition-transform faq-icon shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-answer px-5 pb-5 text-slate-500">
+            إيه! الكورس مبني خطوة بخطوة — من الأساسيات حتى المستوى المتقدم. واخا ماعندكش أي خلفية في الإنجليزية، تقدر تتبع وتفهم كل حاجة.
+          </div>
+        </div>
+        <!-- FAQ 2 -->
+        <div class="faq-item bg-slate-50 rounded-xl border border-slate-200 overflow-hidden">
+          <button class="faq-toggle w-full text-right p-5 font-bold text-slate-800 flex items-center justify-between" onclick="toggleFaq(this)">
+            <span>كيفاش نستلم الكورس؟</span>
+            <svg class="w-5 h-5 text-slate-400 transition-transform faq-icon shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-answer px-5 pb-5 text-slate-500">
+            تستلم DVD في دارك مع الكتب والتمارين — وزيد تقدر تتوصل بالأونلاين على جروب واتساب خاص. كل ولاية في الجزائر نوصلوها.
+          </div>
+        </div>
+        <!-- FAQ 3 -->
+        <div class="faq-item bg-slate-50 rounded-xl border border-slate-200 overflow-hidden">
+          <button class="faq-toggle w-full text-right p-5 font-bold text-slate-800 flex items-center justify-between" onclick="toggleFaq(this)">
+            <span>واش نقدر نحصل على سكور 7+ بهاد الكورس؟</span>
+            <svg class="w-5 h-5 text-slate-400 transition-transform faq-icon shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-answer px-5 pb-5 text-slate-500">
+            بزاف من طلابنا جابو 7 وأكثر. الكورس يعطيك كل واش تحتاج — بصح النتيجة النهائية تعتمد على جهدك ومداومتك. نعطيك الخريطة، وانت تمشي.
+          </div>
+        </div>
+        <!-- FAQ 4 -->
+        <div class="faq-item bg-slate-50 rounded-xl border border-slate-200 overflow-hidden">
+          <button class="faq-toggle w-full text-right p-5 font-bold text-slate-800 flex items-center justify-between" onclick="toggleFaq(this)">
+            <span>واش الفلوس تاع الكورس فيها الإيطاليمان؟</span>
+            <svg class="w-5 h-5 text-slate-400 transition-transform faq-icon shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-answer px-5 pb-5 text-slate-500">
+            لا — ثمن الكورس (4,900 دج) هو ثمن التحضير فقط. امتحان IELTS الرسمي منفصل وتدفعو للبريتش كونسل. بصح الكورس يعلمك كل واش تحتاج باش تجيب أعلى سكور من أول مرة وتوفر على روحك إعادة الامتحان.
+          </div>
+        </div>
+        <!-- FAQ 5 -->
+        <div class="faq-item bg-slate-50 rounded-xl border border-slate-200 overflow-hidden">
+          <button class="faq-toggle w-full text-right p-5 font-bold text-slate-800 flex items-center justify-between" onclick="toggleFaq(this)">
+            <span>واش الضمان كيف يخدم؟</span>
+            <svg class="w-5 h-5 text-slate-400 transition-transform faq-icon shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-answer px-5 pb-5 text-slate-500">
+            عندك 14 يوم من يوم ما تستلم الكورس — إذا ماقدرتش تكمل أو ماشفتش فايدة، نرجعلك الفلوس كاملة بلا أسئلة. هادا وعد ناجح أكاديمي.
+          </div>
+        </div>
+        <!-- FAQ 6 -->
+        <div class="faq-item bg-slate-50 rounded-xl border border-slate-200 overflow-hidden">
+          <button class="faq-toggle w-full text-right p-5 font-bold text-slate-800 flex items-center justify-between" onclick="toggleFaq(this)">
+            <span>كم من وقت نحاسب باش نخلص الكورس؟</span>
+            <svg class="w-5 h-5 text-slate-400 transition-transform faq-icon shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-answer px-5 pb-5 text-slate-500">
+            الكورس فيه 38 ساعة — يعني إذا تقرا ساعة في النهار، تخلص في شهر ونص. بصح تقدر تقرا بالسرعة اللي تناسبك — مافيهش وقت محدد.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FINAL CTA + REGISTRATION FORM ==================== -->
+  <section class="py-14 md:py-20 bg-gradient-to-br from-emerald-600 to-emerald-700 text-white" id="register">
+    <div class="max-w-2xl mx-auto px-4 text-center">
+      <h2 class="text-2xl md:text-4xl font-black mb-4">سجّل الآن وابدأ رحلتك للكندا</h2>
+      <p class="text-emerald-100 text-lg mb-2">املأ الفورم وهنتواصل معاك في أقل من 24 ساعة</p>
+      <p class="text-emerald-200 text-sm mb-8">الدفع عند الاستلام — بلا أي مخاطرة</p>
+
+      <!-- Form -->
+      <form id="registration-form" class="bg-white rounded-3xl p-8 text-slate-800 text-right shadow-2xl">
+        <input type="hidden" name="source" value="ielts-express-entry-v1">
+
+        <!-- Name -->
+        <div class="mb-4">
+          <label class="block font-bold mb-1 text-sm" for="name">الاسم الكامل</label>
+          <input type="text" id="name" name="name" required placeholder="مثال: محمد أحمد"
+            class="w-full px-4 py-3 border-2 border-slate-200 rounded-xl focus:border-emerald-500 focus:outline-none transition-colors text-right">
+        </div>
+
+        <!-- Phone -->
+        <div class="mb-4">
+          <label class="block font-bold mb-1 text-sm" for="phone">رقم الهاتف</label>
+          <input type="tel" id="phone" name="phone" required placeholder="07XX XXX XXX"
+            class="w-full px-4 py-3 border-2 border-slate-200 rounded-xl focus:border-emerald-500 focus:outline-none transition-colors text-right" pattern="0[5-7][0-9]{8}">
+        </div>
+
+        <!-- Wilaya -->
+        <div class="mb-4">
+          <label class="block font-bold mb-1 text-sm" for="wilaya">الولاية</label>
+          <select id="wilaya" name="wilaya" required
+            class="w-full px-4 py-3 border-2 border-slate-200 rounded-xl focus:border-emerald-500 focus:outline-none transition-colors text-right bg-white">
+            <option value="">اختار الولاية</option>
+          </select>
+        </div>
+
+        <!-- City -->
+        <div class="mb-4">
+          <label class="block font-bold mb-1 text-sm" for="city">البلدية / المدينة</label>
+          <select id="city" name="city" required
+            class="w-full px-4 py-3 border-2 border-slate-200 rounded-xl focus:border-emerald-500 focus:outline-none transition-colors text-right bg-white">
+            <option value="">اختار الولاية أولاً</option>
+          </select>
+        </div>
+
+        <!-- Submit -->
+        <button type="submit" id="submit-btn"
+          class="w-full cta-shimmer text-white font-black text-xl py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 mt-2">
+          سجّل الآن — 4,900 دج عند الاستلام
+        </button>
+
+        <!-- Thank you (hidden by default) -->
+        <div id="thank-you" class="hidden text-center py-8">
+          <div class="text-5xl mb-4">🎉</div>
+          <h3 class="text-2xl font-black text-emerald-700 mb-2">تم التسجيل بنجاح!</h3>
+          <p class="text-slate-500">هنتواصل معاك قريباً إن شاء الله — تابع واتساب</p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="bg-slate-900 text-slate-400 py-10">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <div class="font-bold text-white text-lg mb-4">ناجح أكاديمي</div>
+      <div class="flex justify-center gap-6 mb-6">
+        <a href="https://wa.me/213XXXXXXXXX" target="_blank" class="hover:text-emerald-400 transition-colors">
+          <span class="text-2xl">💬</span> واتساب
+        </a>
+        <a href="#" class="hover:text-emerald-400 transition-colors">
+          <span class="text-2xl">📘</span> فيسبوك
+        </a>
+        <a href="#" class="hover:text-emerald-400 transition-colors">
+          <span class="text-2xl">📸</span> إنستغرام
+        </a>
+      </div>
+      <p class="text-sm text-slate-500">© 2026 ناجح أكاديمي. جميع الحقوق محفوظة.</p>
+      <p class="text-xs text-slate-600 mt-2">ناجح أكاديمي مو تابع لبريتش كونسل ولا IDP. IELTS هي علامة تجارية مسجلة.</p>
+    </div>
+  </footer>
+
+  <!-- ==================== STICKY MOBILE CTA ==================== -->
+  <div class="sticky-cta fixed bottom-0 left-0 right-0 bg-white border-t border-slate-200 p-3 z-50 md:hidden" id="sticky-cta">
+    <a href="#register" class="block cta-shimmer text-white font-bold text-center py-3 rounded-xl shadow-lg">
+      سجّل الآن — 4,900 دج
+    </a>
+  </div>
+
+  <!-- ==================== SCRIPTS ==================== -->
+  <script>
+    // === Countdown Timer ===
+    (function() {
+      // Set deadline to 3 days from now (resets on each visit for urgency)
+      const now = new Date();
+      const deadline = new Date(now.getTime() + 3 * 24 * 60 * 60 * 1000);
+      
+      function updateCountdown() {
+        const diff = deadline - new Date();
+        if (diff <= 0) {
+          document.getElementById('cd-hours').textContent = '00';
+          document.getElementById('cd-minutes').textContent = '00';
+          document.getElementById('cd-seconds').textContent = '00';
+          return;
+        }
+        const h = Math.floor(diff / (1000 * 60 * 60));
+        const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const s = Math.floor((diff % (1000 * 60)) / 1000);
+        document.getElementById('cd-hours').textContent = String(h).padStart(2, '0');
+        document.getElementById('cd-minutes').textContent = String(m).padStart(2, '0');
+        document.getElementById('cd-seconds').textContent = String(s).padStart(2, '0');
+      }
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+    })();
+
+    // === FAQ Accordion ===
+    function toggleFaq(btn) {
+      const answer = btn.nextElementSibling;
+      const icon = btn.querySelector('.faq-icon');
+      const isOpen = answer.classList.contains('open');
+      
+      // Close all
+      document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+      document.querySelectorAll('.faq-icon').forEach(i => i.style.transform = 'rotate(0deg)');
+      
+      if (!isOpen) {
+        answer.classList.add('open');
+        icon.style.transform = 'rotate(180deg)';
+      }
+    }
+
+    // === Testimonials Swiper ===
+    new Swiper('.testimonial-swiper', {
+      slidesPerView: 1,
+      spaceBetween: 16,
+      pagination: { el: '.swiper-pagination', clickable: true },
+      breakpoints: {
+        640: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 }
+      },
+      loop: true,
+      autoplay: { delay: 5000, disableOnInteraction: false }
+    });
+
+    // === Wilaya/City Dropdowns ===
+    (function() {
+      const wilayaSelect = document.getElementById('wilaya');
+      const citySelect = document.getElementById('city');
+      
+      if (typeof locations !== 'undefined' && Array.isArray(locations)) {
+        locations.forEach(function(loc) {
+          const opt = document.createElement('option');
+          opt.value = loc.name;
+          opt.textContent = loc.name;
+          wilayaSelect.appendChild(opt);
+        });
+        
+        wilayaSelect.addEventListener('change', function() {
+          citySelect.innerHTML = '<option value="">اختار البلدية</option>';
+          const selected = locations.find(l => l.name === wilayaSelect.value);
+          if (selected && selected.cities) {
+            selected.cities.forEach(function(city) {
+              const opt = document.createElement('option');
+              opt.value = city;
+              opt.textContent = city;
+              citySelect.appendChild(opt);
+            });
+          }
+        });
+      }
+    })();
+
+    // === Form Submission ===
+    (function() {
+      const form = document.getElementById('registration-form');
+      const submitBtn = document.getElementById('submit-btn');
+      const thankYou = document.getElementById('thank-you');
+
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        // Disable button
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'جاري التسجيل...';
+
+        // Track conversion
+        if (typeof fbq !== 'undefined') {
+          fbq('track', 'Lead');
+        }
+        if (typeof ttq !== 'undefined') {
+          ttq.track('ClickButton');
+        }
+
+        // Submit to Google Sheets
+        try {
+          const data = new FormData(form);
+          await fetch('https://script.google.com/macros/s/AKfycbyvnpzRwvOcx-hMcOhX1YQYHvNHn2ZouNKSMfEYlJoz_rTVgUhGPCoU7PYLFRL3vJ9y/exec', {
+            method: 'POST',
+            body: data,
+            mode: 'no-cors'
+          });
+        } catch (err) {
+          // no-cors won't give us a readable response, that's expected
+        }
+
+        // Show thank you
+        form.querySelectorAll('input, select, button, label, div:not(#thank-you)').forEach(el => el.style.display = 'none');
+        thankYou.classList.remove('hidden');
+      });
+    })();
+
+    // === Sticky CTA on scroll ===
+    (function() {
+      const sticky = document.getElementById('sticky-cta');
+      if (!sticky) return;
+      
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 400) {
+          sticky.classList.add('visible');
+        } else {
+          sticky.classList.remove('visible');
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
