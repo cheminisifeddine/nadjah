@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IELTS Masterclass | Express Entry Algeria</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap');
+        :root {
+            --emerald: #059669;
+            --emerald-dark: #047857;
+            --amber: #f59e0b;
+            --amber-dark: #d97706;
+            --slate-50: #f8fafc;
+            --slate-100: #f1f5f9;
+            --slate-200: #e2e8f0;
+            --slate-300: #cbd5e1;
+            --slate-700: #334155;
+            --slate-800: #1e293b;
+            --slate-900: #0f172a;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            color: var(--slate-800);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        section {
+            padding: 80px 0;
+        }
+        .bg-emerald-gradient {
+            background: linear-gradient(135deg, var(--emerald) 0%, var(--emerald-dark) 100%);
+        }
+        .bg-white {
+            background: white;
+        }
+        .rounded-2xl {
+            border-radius: 20px;
+        }
+        .rounded-xl {
+            border-radius: 16px;
+        }
+        .shadow-xl {
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        .shadow-lg {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+        h1, h2, h3, h4 {
+            font-weight: 800;
+            line-height: 1.2;
+        }
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+        }
+        h2 {
+            font-size: 2.8rem;
+            margin-bottom: 2rem;
+            color: var(--slate-900);
+        }
+        h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--slate-900);
+        }
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            color: var(--slate-700);
+        }
+        .btn {
+            display: inline-block;
+            padding: 18px 40px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Cairo', sans-serif;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            color: white;
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(245, 158, 11, 0.3);
+        }
+        .btn-secondary {
+            background: white;
+            color: var(--emerald-dark);
+            border: 2px solid var(--emerald);
+        }
+        .btn-secondary:hover {
+            background: var(--slate-100);
+            transform: translateY(-3px);
+        }
+        .btn-lg {
+            padding: 22px 50px;
+            font-size: 1.3rem;
+        }
+        .hero {
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 40%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(5, 150, 105, 0.1) 0%, rgba(245, 158, 11, 0.05) 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 100%);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+        }
+        .hero-subtitle {
+            font-size: 1.4rem;
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
+        }
+        .stats {
+            display: flex;
+            gap: 30px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        .stat {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            min-width: 200px;
+        }
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: white;
+            display: block;
+        }
+        .stat-label {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1rem;
+        }
+        .problem-card, .solution-card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            margin-bottom: 40px;
+            border-left: 6px solid var(--amber);
+        }
+        .solution-card {
+            border-left-color: var(--emerald);
+        }
+        .price-comparison {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        .price-col {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+        }
+        .price-col.traditional {
+            border: 3px solid #ef4444;
+        }
+        .price-col.masterclass {
+            border: 3px solid var(--emerald);
+            position: relative;
+            overflow: hidden;
+        }
+        .price-col.masterclass::before {
+            content: 'الخيار الذكي';
+            position: absolute;
+            top: 20px;
+            left: -30px;
+            background: var(--emerald);
+            color: white;
+            padding: 8px 40px;
+            transform: rotate(-45deg);
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+        .price-amount {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin: 20px 0;
+        }
+        .price-col.traditional .price-amount {
+            color: #ef4444;
+        }
+        .price-col.masterclass .price-amount {
+            color: var(--emerald);
+        }
+        .testimonial {
+            background: var(--slate-50);
+            padding: 30px;
+            border-radius: 20px;
+            margin: 30px 0;
+            border-right: 4px solid var(--amber);
+        }
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .testimonial-author img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--slate-200);
+            margin-left: 15px;
+        }
+        .rating {
+            color: #f59e0b;
+            margin-bottom: 10px;
+        }
+        .module {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            border-right: 4px solid var(--emerald);
+        }
+        .module-value {
+            background: var(--emerald);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .total-value {
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(135deg, var(--slate-50) 0%, var(--slate-100) 100%);
+            border-radius: 20px;
+            margin: 40px 0;
+        }
+        .total-value .price-amount {
+            font-size: 4rem;
+            color: #ef4444;
+            text-decoration: line-through;
+        }
+        .your-price {
+            font-size: 5rem;
+            font-weight: 900;
+            color: var(--emerald);
+            margin: 20px 0;
+        }
+        .payment-methods {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+        .payment-method {
+            background: white;
+            padding: 15px 25px;
+            border-radius: 10px;
+            font-weight: 700;
+            color: var(--slate-700);
+            border: 2px solid var(--slate-200);
+        }
+        .faq {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            margin: 30px 0;
+            cursor: pointer;
+        }
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-question h4 {
+            margin-bottom: 0;
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        .faq.active .faq-answer {
+            max-height: 1000px;
+            margin-top: 20px;
+        }
+        .form-section {
+            background: white;
+            padding: 50px;
+            border-radius: 30px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+            margin: 80px 0;
+        }
+        .form-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .form-group {
+            margin-bottom: 25px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 700;
+            color: var(--slate-800);
+            font-size: 1.1rem;
+        }
+        .form-control {
+            width: 100%;
+            padding: 18px 20px;
+            font-size: 1.1rem;
+            border: 2px solid var(--slate-200);
+            border-radius: 12px;
+            font-family: 'Cairo', sans-serif;
+            transition: border-color 0.3s ease;
+        }
+        .form-control:focus {
+            outline: none;
+            border-color: var(--emerald);
+        }
+        .form-submit {
+            width: 100%;
+            padding: 22px;
+            font-size: 1.3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--emerald) 0%, var(--emerald-dark) 100%);
+            color: white;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .form-submit:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(5, 150, 105, 0.3);
+        }
+        .form-submit:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+        .success-message {
+            display: none;
+            text-align: center;
+            padding: 40px;
+            background: #d1fae5;
+            border-radius: 20px;
+            margin-top: 30px;
+        }
+        .success-message h3 {
+            color: var(--emerald);
+        }
+        @media (max-width: 768px) {
+            section {
+                padding: 50px 0;
+            }
+            h2 {
+                font-size: 2rem;
+            }
+            h3 {
+                font-size: 1.5rem;
+            }
+            .stats {
+                flex-direction: column;
+            }
+            .stat {
+                min-width: auto;
+            }
+            .form-section {
+                padding: 30px 20px;
+            }
+            .price-comparison {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero bg-emerald-gradient">
+        <div class="container">
+            <div class="hero-content">
+                <h1>
+                    الـ Draw الجاي تاع Express Entry ما يستناكش، و الفيزا ما تجيش بـ 6 ملاين!
+                </h1>
+                <p class="hero-subtitle">
+                    الدورة الوحيدة في الجزائر لي تضمنلك الـ Score لي تسحقو في IELTS Express Entry... بـ 4900 دج فقط.
+                </p>
+                <p class="hero-subtitle">
+                    حان الوقت باش تحبس التخمام و تبدا تخدم على مستقبلك الحقيقي في كندا. هذه الدورة هي أقصر و أذكى طريق باش تجيب نقاط الـ IELTS لي راها حابسة بينك و بين الـ "Invitation to Apply".
+                </p>
+                
+                <div class="stats">
+                    <div class="stat">
+                        <span class="stat-number">+331</span>
+                        <span class="stat-label">طالب مسجل</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">58</span>
+                        <span class="stat-label">ولاية تغطية</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">وصول دائم</span>
+                    </div>
+                </div>
+                
+                <a href="#enrollment" class="btn btn-primary btn-lg">
+                    سجّل الآن و ابدا طريقك لكندا مقابل 4900 دج
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="bg-white">
+        <div class="container">
+            <h2 class="text-center">راك تشوف صحابك و الناس لي تعرفهم دارو دوسيات و راحو لكندا... و أنت مازلت هنا.</h2>
+            
+            <div class="problem-card">
+                <h3>الحقيقة المرة هي أن الفرق بينك و بينهم ماشي دراهم ولا معرفة... الفرق هو IELTS Score.</h3>
+                
+                <p><strong>نظام Express Entry واضح و ما يرحمش:</strong></p>
+                <ul style="list-style-type: none; margin-right: 20px;">
+                    <li style="margin-bottom: 15px; padding-right: 15px; position: relative;">
+                        <i class="fas fa-exclamation-triangle" style="color: #ef4444; margin-left: 8px;"></i>
+                        <strong>الـ Draws كل 15 يوم:</strong> كل أسبوعين، الحكومة الكندية تبعث ITA للناس لي عندها أعلى نقاط CRS. كل draw يفوت عليك و ملفك فارغ هو فرصة ضاعت
+                    </li>
+                    <li style="margin-bottom: 15px; padding-right: 15px; position: relative;">
+                        <i class="fas fa-exclamation-triangle" style="color: #ef4444; margin-left: 8px;"></i>
+                        <strong>IELTS هو بوّاب النقاط:</strong> بلا IELTS، نقاطك في اللغة تساوي صفر. No IELTS = No Score = No ITA = No Canada
+                    </li>
+                    <li style="margin-bottom: 15px; padding-right: 15px; position: relative;">
+                        <i class="fas fa-exclamation-triangle" style="color: #ef4444; margin-left: 8px;"></i>
+                        <strong>الوقت هو عدوك:</strong> كل ما تكبر في العمر، نقاطك تنقص. كل ما تستنى، المنافسة تزيد
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="problem-card">
+                <h3>بصح "التحضير" هو الفخ الحقيقي لي راك طايح فيه...</h3>
+                
+                <p><strong>فخ المدارس الغالية:</strong> تتصل بيهم و تسمع الصدمة: 60,000 دج... 70,000 دج... حتى لـ 8 ملاين سنتيم! هذا سعر تعجيزي لأغلب الجزائريين. أنت لست بحاجة لدفع إيجار مقراتهم ورواتب موظفيهم</p>
+                
+                <p><strong>فخ "نقرا وحدي":</strong> تبدا بحماس، تشوف 10 فيديوهات، تحمل 20 PDF... و بعد سمانة، تتلفلك. تضيع 3 أشهر في التخلاط، تروح تفوت الامتحان بـ 4 ملاين، و تجيب Band 5.5... خسرت دراهمك و خسرت وقتك الثمين</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="bg-white">
+        <div class="container">
+            <h2 class="text-center">IELTS Masterclass by Nadjah Academy</h2>
+            <p class="text-center" style="font-size: 1.3rem; max-width: 800px; margin: 0 auto 50px;">
+                هاذي ماشي مجرد دورة، هذه خارطة طريق مدروسة توصلك من نقطة "أنا تالف" إلى نقطة "أنا جاهز نجيب Band 6.5 و ما فوق".
+            </p>
+            
+            <div class="solution-card">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+                    <div>
+                        <h4><i class="fas fa-road" style="color: var(--emerald); margin-left: 10px;"></i> منهج واضح خطوة بخطوة</h4>
+                        <p>من اليوم الأول، تعرف واش تقرا، كيفاش تقرا، و وقتاش تختبر روحك</p>
+                    </div>
+                    <div>
+                        <h4><i class="fas fa-home" style="color: var(--emerald); margin-left: 10px;"></i> تعلم في وقتك و من دارك</h4>
+                        <p>الدورة مسجلة بالكامل. تقدر تقرا على 3 تاع الصباح ولا 5 تاع العشية. من الصحراء ولا من العاصمة</p>
+                    </div>
+                    <div>
+                        <h4><i class="fas fa-compact-disc" style="color: var(--emerald); margin-left: 10px;"></i> توصيل DVD لباب الدار</h4>
+                        <p>عندك مشكل أنترنت؟ ماشي مشكل. نبعثولك الدورة كاملة في DVD حتى لدارك في 48 ولاية</p>
+                    </div>
+                    <div>
+                        <h4><i class="fas fa-tags" style="color: var(--emerald); margin-left: 10px;"></i> سعر يكسر السوق</h4>
+                        <p>نفس الجودة، نفس التحضير، بتنظيم أفضل، بسعر 4900 دج فقط</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Content -->
+    <section class="bg-white">
+        <div class="container">
+            <h2 class="text-center">هاذي هي "الخلاصة" تاع IELTS... كل ما تحتاجه مقسّم و مبسط ليك.</h2>
+            
+            <div class="module">
+                <h3><i class="fas fa-brain" style="color: var(--emerald); margin-left: 10px;"></i> الوحدة 0: التحضير النفسي و كسر حاجز الخوف</h3>
+                <p>• كيفاش تفهم عقلية امتحان IELTS</p>
+                <p>• التخلص من الخوف و التردد</p>
+                <p>• وضع خطة دراسة شخصية</p>
+                <span class="module-value">قيمة 5,000 دج</span>
+            </div>
+            
+            <div class="module">
+                <h3><i class="fas fa-headphones" style="color: var(--emerald); margin-left: 10px;"></i> الوحدة 1: إتقان Listening</h3>
+                <p>• شرح كل أنواع الأسئلة (Multiple Choice, Map Labeling, Form Completion...)</p>
+                <p>• تقنيات "التنبؤ بالإجابة" قبل ما تسمع التسجيل</p>
+                <p>• تمارين تطبيقية حقيقية من امتحانات سابقة</p>
+                <span class="module-value">قيمة 10,000 دج</span>
+            </div>
+            
+            <div class="module">
+                <h3><i class="fas fa-book-open" style="color: var(--emerald); margin-left: 10px;"></i> الوحدة 2: اختراق Reading</h3>
+                <p>• استراتيجيات Skimming و Scanning باش تربح الوقت</p>
+                <p>• كيفاش تتعامل مع True/False/Not Given لي تخلط أغلب الطلبة</p>
+                <p>• استخراج المعلومات بسرعة من النصوص الأكاديمية</p>
+                <span class="module-value">قيمة 10,000 دج</span>
+            </div>
+            
+            <div class="module">
+                <h3><i class="fas fa-pen-fancy" style="color: var(--emerald); margin-left: 10px;"></i> الوحدة 3: بناء Writing - Task 1 & 2</h3>
+                <p>• Task 1: قوالب جاهزة لوصف المنحنيات، الأعمدة، الجداول، الخرائط و العمليات</p>
+                <p>• Task 2: منهجية "PEEL" لكتابة فقرات متماسكة. قوالب لكل أنواع المقالات</p>
+                <p>• أهم الكلمات و الجمل الأكاديمية لي ترفعلك الـ score</p>
+                <span class="module-value">قيمة 10,000 دج</span>
+            </div>
+            
+            <div class="module">
+                <h3><i class="fas fa-comments" style="color: var(--emerald); margin-left: 10px;"></i> الوحدة 4: السيطرة على Speaking</h3>
+                <p>• كيفاش تجاوب على Part 1, Part 2, Part 3 بكل ثقة</p>
+                <p>• تقنية "A.R.E.A" باش تطور إجاباتك</p>
+                <p>• أكثر الأخطاء الشائعة لي يديروها الجزائريين و كيفاش تتفاداها</p>
+                <span class="module-value">قيمة 10,000 دج</span>
+            </div>
+            
+            <div class="module" style="background: linear-gradient(135deg, var(--emerald) 0%, var(--emerald-dark) 100%); color: white;">
+                <h3><i class="fas fa-gift" style="margin-left: 10px;"></i> BONUS: Mock Tests</h3>
+                <p>امتحانات تجريبية كاملة مع التصحيح و التغذية الراجعة</p>
+                <span class="module-value" style="background: white; color: var(--emerald);">قيمة 5,000 دج إضافية</span>
+            </div>
+            
+            <div class="total-value">
+                <h3>القيمة الإجمالية:</h3>
+                <div class="price-amount">45,000 دج</div>
+                <h3>سعر استثمارك اليوم:</h3>
+                <div class="your-price">4,900 دج فقط!</div>
+                <p>توفير 40,100 دج (91% تخفيض)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="bg-white">
+        <div class="container">
+            <h2 class="text-center">+331 طالب جزائري من 48 ولاية دارو فينا الثقة و بداو رحلتهم.</h2>
+            
+            <div class="testimonial">
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>"كنت حاصل في Writing Task 2، ما نفوتش 5.5. تبعت المنهجية تاع الأستاذ، طبقتها حرفيا، و في الامتحان جبت Band 7.0! الدورة رجعتلي دراهمها أضعاف."</p>
+                <div class="testimonial-author">
+                    <div></div>
+                    <div>
+                        <strong>أمين. ب</strong><br>
+                        مهندس معماري من وهران
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial">
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>"مانيش موظفة و ماعنديش 7 ملايم باش نحطهم في مدرسة. بـ 4900 دج، حسيت روحي قريت خير منهم. جبت 6.5 و راني في مراحل متقدمة في ملف Express Entry."</p>
+                <div class="testimonial-author">
+                    <div></div>
+                    <div>
+                        <strong>فاطمة الزهراء. م</strong><br>
+                        طبيبة من قسنطينة
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial">
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>"الـ DVD لحقني لسطيف في يومين. الدورة منظمة بشكل احترافي. كل شي في بلاصتو. وفرت عليا شهور تاع تخلاط."</p>
+                <div class="testimonial-author">
+                    <div></div>
+                    <div>
+                        <strong>ياسين. ل</strong><br>
+                        طالب جامعي من سطيف
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Price Comparison -->
+    <section class="bg-white">
+        <div class="container">
+            <h2 class="text-center">مقارنة بسيطة تخليك تفهم علاش هذا هو الاختيار الذكي...</h2>
+            
+            <div class="price-comparison">
+                <div class="price-col traditional">
+                    <h3>المدارس التقليدية</h3>
+                    <div class="price-amount">60,000+ دج</div>
+                    <ul style="list-style-type: none; text-align: right; margin-top: 20px;">
+                        <li style="margin-bottom: 10px;"><i class="fas fa-times" style="color: #ef4444; margin-left: 8px;"></i> وقت محدد</li>
+                        <li style="margin-bottom: 10px;"><i class="fas fa-times" style="color: #ef4444; margin-left: 8px;"></i> تنقل إجباري</li>
+                        <li style="margin-bottom: 10px;"><i class="fas fa-times" style="color: #ef4444; margin-left: 8px;"></i> ينتهي بانتهاء الدورة</li>
+                        <li style="margin-bottom: 10px;"><i class="fas fa-times" style="color: #ef4444; margin-left: 8px;"></i> مستحيل إعادة المشاهدة</li>
+                        <li style="margin-bottom: 10px;"><i class="fas fa-times" style="color: #ef4444; margin-left: 8px;"></i> غير مهم</li>
+                    </ul>
+                    <p style="margin-top: 20px; font-weight: 700;">تدفع ثمن الكرسي و الكهرباء</p>
+                </div>
+                
+                <div class="price-col masterclass">
+                    <h3>Nadjah Masterclass</h3>
+                    <div class="price-amount">4,900 دج</div>
+                    <ul style="list-style-type: none; text-align: right; margin-top: 20px;">
+                        <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--emerald); margin-left: 8px;"></i> مفتوح 24/7</li>
+                        <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--emerald); margin-left: 8px;"></i> من أي مكان</li>
+                        <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--emerald); margin-left: 8px;"></i> مدى الحياة</li>
+                        <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--emerald); margin-left: 8px;"></i> ممكن ألف مرة</li>
+                        <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--emerald); margin-left: 8px;"></i> غير ضروري (DVD)</li>
+                    </ul>
+                    <p style="margin-top: 20px; font-weight: 700;">تدفع ثمن المعلومة الصافية</p>
+                </div>
+            </div>
+            
+            <p style="text-align: center; max-width: 800px; margin: 30px auto; font-size: 1.2rem;">
+                <strong>علاش حنا أرخص؟</strong> حنا ما عندناش مقر نخلصو عليه الكراء، ما عندناش فواتير أقسام، و ما عندناش فريق إداري كبير. استثمرنا في شيئين فقط: أستاذ خبير، و منصة توصلك المعلومة بأفضل طريقة.
+            </p>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="bg-white">
+        <div class="container">
+            <h2 class="text-center">أسئلة شائعة</h2>
+            
+            <div class="faq" onclick="toggleFAQ(this)">
+                <div class="faq-question">
+                    <h4>هل هذا حقيقي؟ كيفاش السعر 4900 دج فقط؟</h4>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>نعم حقيقي. نموذجنا الرقمي (Online + DVD) يسمح لنا بتقديم نفس الجودة بدون التكاليف الباهظة للمدارس التقليدية.</p>
+                </div>
+            </div>
+            
+            <div class="faq" onclick="toggleFAQ(this)">
+                <div class="faq-question">
+                    <h4>الأنترنت عندي ضعيفة؟</h4>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>نبعثولك الدورة كاملة في DVD حتى لدارك. ماشي مشكل.</p>
+                </div>
+            </div>
+            
+            <div class="faq" onclick="toggleFAQ(this)">
+                <div class="faq-question">
+                    <h4>كيفاش نخلص؟</h4>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>CCP، BaridiMob، Edahabia، أو الدفع عند الاستلام (الأكثر طلباً).</p>
+                </div>
+            </div>
+            
+            <div class="faq" onclick="toggleFAQ(this)">
+                <div class="faq-question">
+                    <h4>الدورة بأي لغة؟</h4>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>الشرح بالدارجة الجزائرية. محتوى التمارين و الاستراتيجيات بالإنجليزية مثل الامتحان الرسمي.</p>
+                </div>
+            </div>
+            
+            <div class="faq" onclick="toggleFAQ(this)">
+                <div class="faq-question">
+                    <h4>شحال عندي وقت باش نكمل الدورة؟</h4>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>وصول مدى الحياة + الـ DVD يبقى ملكك.</p>
+                </div>
+            </div>
+            
+            <div class="faq" onclick="toggleFAQ(this)">
+                <div class="faq-question">
+                    <h4>و إذا ما جبتش الـ score؟</h4>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>الدورة تمنحك كل الأدوات و الاستراتيجيات. قصص نجاح طلابنا تثبت أن المنهج فعال لمن يلتزم به.</p>
+                </div>
+            </div>
+            
+            <div class="faq" onclick="toggleFAQ(this)">
+                <div class="faq-question">
+                    <h4>نقدر نجيب Band 6.5 أو 7.0؟</h4>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>نعم. طلابنا حققوا هذه النتائج و أفضل.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="bg-emerald-gradient">
+        <div class="container">
+            <div style="text-align: center; color: white; max-width: 900px; margin: 0 auto;">
+                <h2 style="color: white;">مستقبلك في كندا على بعد خطوة واحدة. لا تدعها تضيع.</h2>
+                <p style="font-size: 1.3rem; margin-bottom: 30px;">
+                    نظام Express Entry لن ينتظرك. تواريخ امتحان IELTS القادمة تمتلئ بسرعة. و +331 طالب جزائري بدأوا بالفعل في بناء مستقبلهم بينما أنت مازلت تقرأ.
+                </p>
+                <p style="font-size: 1.3rem; margin-bottom: 40px;">
+                    أنت أمام خيارين:<br>
+                    تغلق هذه الصفحة و تعود لدوامة الانتظار و الحلم<br>
+                    <strong>تستثمر مبلغ بسيط جداً (أقل من سعر حذاء!) في مستقبلك، و تبدأ اليوم</strong>
+                </p>
+                
+                <div style="display: flex; flex-direction: column; gap: 20px; max-width: 500px; margin: 0 auto;">
+                    <a href="#enrollment" class="btn btn-primary btn-lg">
+                        نعم، أريد التسجيل الآن مقابل 4900 دج
+                    </a>
+                    <a href="#enrollment" class="btn btn-secondary btn-lg">
+                        أريد الدفع عند استلام الـ DVD
+                    </a>
+                </div>
+                
+                <div class="payment-methods">
+                    <div class="payment-method">CCP</div>
+                    <div class="payment-method">BaridiMob</div>
+                    <div class="payment-method">EDAHABIA</div>
+                    <div class="payment-method">Cash on Delivery</div>
+                </div>
+                
+                <p style="margin-top: 30px; font-size: 1.1rem;">
+                    <i class="fas fa-shield-alt" style="margin-left: 8px;"></i>
+                    لا يوجد أي خطر. تقدر تطلب درك و تخلص غير كي يوصل المنتج لباب دارك.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enrollment Form -->
+    <section id="enrollment" class="bg-white">
+        <div class="container">
+            <div class="form-section">
+                <div class="form-title">
+                    <h2>احجز مكانك الآن</h2>
+                    <p>املأ الاستمارة لتسجيلك في الدورة. سنتواصل معك خلال 24 ساعة.</p>
+                </div>
+                
+                <form id="enrollment-form">
+                    <div id="form-container">
+                        <div class="form-group">
+                            <label for="name">الاسم الكامل</label>
+                            <input type="text" id="name" name="name" class="form-control" required placeholder="أدخل اسمك الكامل">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">رقم الهاتف</label>
+                            <input type="tel" id="phone" name="phone" class="form-control" required placeholder="مثال: 0770123456">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="wilaya">الولاية</label>
+                            <select id="wilaya" name="wilaya" class="form-control" required>
+                                <option value="">اختر ولايتك...</option>
+                            </select>
+                        </div>
+                        
+                        <div id="city-container" class="form-group" style="opacity: 0.5;">
+                            <label for="city">المدينة/البلدية</label>
+                            <select id="city" name="city" class="form-control" required disabled>
+                                <option value="">اختر مدينتك/بلديتك...</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="address">العنوان الكامل</label>
+                            <input type="text" id="address" name="address" class="form-control" required placeholder="شارع، رقم المنزل، الشقة...">
+                        </div>
+                        
+                        <div id="form-error-message" style="color: #ef4444; text-align: center; margin: 20px 0; display: none;"></div>
+                        
+                        <button type="submit" class="form-submit" id="submit-btn">
+                            🚀 احجز الآن بـ 4900 دج
+                        </button>
+                    </div>
+                </form>
+                
+                <div class="success-message" id="success-message">
+                    <i class="fas fa-check-circle" style="font-size: 5rem; color: var(--emerald); margin-bottom: 20px;"></i>
+                    <h3>شكراً لك! تم استلام طلبك بنجاح</h3>
+                    <p style="font-size: 1.2rem;">سنتصل بك في أقرب وقت من أحد أرقامنا لتأكيد طلبك. الرجاء إبقاء هاتفك قيد التشغيل.</p>
+                    <p style="font-size: 1rem; margin-top: 10px;">بمجرد التأكيد، سيتم شحن الطرد الخاص بك ويصلك خلال 1-4 أيام عمل. التوصيل مجاني والدفع عند الاستلام.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Algeria Locations Data
+        const ALGERIA_LOCATIONS = {
+            "01 - Adrar": ["Adrar","Tamest","Reggane","In Zghmir","Tit","Tsabit","Zaouiet Kounta","Aoulef","Tamekten","Tamantit","Fenoughil","Sali","Akabli","Ouled Ahmed Tammi","Bouda","Sebaa"],
+            "02 - Chlef": ["Abou El Hassan","Aïn Merane","Bénairia","Beni Bouateb","Beni Haoua","Beni Rached","Boukadir","Bouzeghaia","Breira","Chettia","Chlef","Dahra","El Hadjadj","El Karimia","El Marsa","Harchoun","Harenfa","Labiod Medjadja","Moussadek","Oued Fodda","Oued Goussine","Oued Sly","Ouled Abbes","Ouled Ben Abdelkader","Ouled Fares","Oum Drou","Sendjas","Sidi Abderrahmane","Sidi Akkacha","Sobha","Tadjena","Talassa","Taougrite","Ténès","Zeboudja"],
+            "03 - Laghouat": ["Laghouat","Ksar El Hirane","Bennasser Benchohra","Sidi Makhlouf","Hassi Delaa","Hassi R'Mel","Aïn Madhi","Tadjemout","Kheneg","Gueltat Sidi Saad","Aïn Sidi Ali","Beidha","Brida","El Ghicha","Hadj Mechri","Sebgag","Taouiala","Tadjrouna","Aflou","El Assafia","Oued Morra","Oued M'Zi","El Houaita","Sidi Bouzid"],
+            "04 - Oum El Bouaghi": ["Oum el Bouaghi","Aïn Beïda","Aïn M'lila","Behir Chergui","El Amiria","Sigus","El Belala","Aïn Babouche","Berriche","Ouled Hamla","Dhalaa","Aïn Kercha","Hanchir Toumghani","El Djazia","Aïn Diss","Fkirina","Souk Naamane","Zorg","El Fedjoudj Boughrara Saoudi","Ouled Zouaï","Bir Chouhada","Ksar Sbahi","Oued Nini","Meskiana","Aïn Fakroun","Rahia","Aïn Zitoun","Ouled Gacem","El Harmilia"],
+            "05 - Batna": ["Batna","Ghassira","Maafa","Merouana","Seriana","Menaa","El Madher","Tazoult","N'Gaous","Guigba","Inoughissen","Ouyoun El Assafir","Djerma","Bitam","Abdelkader Azil","Arris","Kimmel","Tilatou","Aïn Djasser","Ouled Sellam","Tigherghar","Aïn Yagout","Fesdis","Sefiane","Rahbat","Tighanimine","Lemsane","Ksar Bellezma","Seggana","Ichmoul","Foum Toub","Ben Foudhala El Hakania","Oued El Ma","Talkhamt","Bouzina","Chemora","Oued Chaaba","Taxlent","Gosbat","Ouled Aouf","Boumagueur","Barika","Djezar","T'Kout","Aïn Touta","Hidoussa","Teniet El Abed","Oued Taga","Ouled Fadel","Timgad","Ras El Aioun","Chir","Ouled Si Slimane","Zanat El Beida","M'doukel","Ouled Ammar","El Hassi","Lazrou","Boumia (Batna)","Boulhilat","Larbaâ"],
+            "06 - Béjaïa": ["Béjaïa","Amizour","Ferraoun","Taourirt Ighil","Chellata","Tamokra","Timezrit","Souk El Ténine","M'cisna","Tinabdher","Tichy","Semaoun","Kendira","Tifra","Ighram","Amalou","Ighil Ali","Fenaïa Ilmaten","Toudja","Darguina","Sidi Ayad","Aokas","Ait Djellil","Adekar","Akbou","Seddouk","Tazmalt","Aït R'zine","Chemini","Souk Oufella","Tibane","Tala Hamza","Barbacha","Aït Ksila","Ouzellaguen","Bouhamza","Taskriout","Aït Mellikeche","Sidi Aïch","El Kseur","Melbou","Akfadou","Leflaye","Kherrata","Draâ El Kaïd","Tamridjet","Aït Smail","Boukhelifa","Tizi N'Berber","Aït Maouche","Oued Ghir","Boudjellil"],
+            "07 - Biskra": ["Aïn Naga","Aïn Zaatout","Biskra","Bordj Ben Azzouz","Bouchagroune","Branis","Chetma","Djemorah","El Feidh","El Ghrous","El Hadjeb","El Haouch","El Kantara","El Mizaraa","El Outaya","Foughala","Khenguet Sidi Nadji","Lichana","Lioua","M'Chouneche","Mekhadma","M'Lili","Oumache","Ourlal","Sidi Okba","Tolga","Zeribet El Oued"],
+            "08 - Béchar": ["Béchar","Erg Ferradj","Meridja","Lahmar","Mechraa Houari Boumedienne","Kenadsa","Taghit","Boukais","Mougheul","Abadla","Beni Ounif"],
+            "09 - Blida": ["Blida","Chebli","Bouinan","Oued Alleug","Ouled Yaïch","Chréa","El Affroun","Chiffa","Hammam Melouane","Benkhelil","Soumaa","Mouzaia","Souhane","Meftah","Ouled Slama","Boufarik","Larbaa","Oued Djer","Beni Tamou","Bouarfa","Beni Mered","Bougara","Guerrouaou","Aïn Romana","Djebabra"],
+            "10 - Bouira": ["Aïn Bessem","Hanif","Aghbalou","Aïn El Hadjar","Ahl El Ksar","Aïn Laloui","Ath Mansour","Aomar","Aïn El Turc","Aït Laziz","Bouderbala","Bechloul","Bir Ghbalou","Boukram","Bordj Okhriss","Bouira","Chorfa","Dechmia","Dirrah","Djebahia","El Hakimia","El Hachimia","El Adjiba","El Khabouzia","El Mokrani","El Asnam","Guerrouma","Haizer","Hadjera Zerga","Kadiria","Lakhdaria","M'Chedallah","Mezdour","Maala","Maamora","Oued El Berdi","Ouled Rached","Raouraoua","Ridane","Saharidj","Sour El Ghouzlane","Souk El Khemis","Taguedit","Taghzout","Zbarbar"],
+            "11 - Tamanrasset": ["Tamanrasset","Abalessa","Idles","Tazrouk","In Amguel"],
+            "12 - Tébessa": ["Tébessa","Bir el Ater","Cheria","Stah Guentis","El Aouinet","El Houidjbet","Safsaf El Ouesra","Hammamet","Negrine","Bir Mokkadem","El Kouif","Morsott","El Ogla","Bir Dheb","Ogla Melha","Guorriguer","Bekkaria","Boukhadra","Ouenza","El Ma Labiodh","Oum Ali","Tlidjene","Aïn Zerga","El Meridj","Boulhaf Dir","Bedjene","El Mezeraa","Ferkane"],
+            "13 - Tlemcen": ["Tlemcen","Beni Mester","Aïn Tallout","Remchi","El Fehoul","Sabra","Ghazaouet","Souani","Djebala","El Gor","Oued Lakhdar","Aïn Fezza","Ouled Mimoun","Amieur","Aïn Youcef","Zenata","Beni Snous","Bab El Assa","Dar Yaghmouracene","Fellaoucene","Azails","Sebaa Chioukh","Terny Beni Hdiel","Bensekrane","Aïn Nehala","Hennaya","Maghnia","Hammam Boughrara","Souahlia","MSirda Fouaga","Aïn Fetah","El Aricha","Souk Tlata","Sidi Abdelli","Sebdou","Beni Ouarsous","Sidi Medjahed","Beni Boussaid","Marsa Ben M'Hidi","Nedroma","Sidi Djillali","Beni Bahdel","El Bouihi","Honaïne","Tienet","Ouled Riyah","Bouhlou","Beni Khellad","Aïn Ghoraba","Chetouane","Mansourah","Beni Semiel","Aïn Kebira"],
+            "14 - Tiaret": ["Aïn Bouchekif","Aïn Deheb","Aïn El Hadid","Aïn Kermes","Aïn Dzarit","Bougara","Chehaima","Dahmouni","Djebilet Rosfa","Djillali Ben Amar","Faidja","Frenda","Guertoufa","Hamadia","Ksar Chellala","Madna","Mahdia","Mechraa Safa","Medrissa","Medroussa","Meghila","Mellakou","Nadorah","Naima","Oued Lilli","Rahouia","Rechaiga","Sebaine","Sebt","Serghine","Si Abdelghani","Sidi Abderahmane","Sidi Ali Mellal","Sidi Bakhti","Sidi Hosni","Sougueur","Tagdemt","Takhemaret","Tiaret","Tidda","Tousnina","Zmalet El Emir Abdelkader"],
+            "15 - Tizi Ouzou": ["Tizi Ouzou","Ain El Hammam","Akbil","Freha","Souamaâ","Mechtras","Irdjen","Timizart","Makouda","Draâ El Mizan","Tizi Gheniff","Bounouh","Aït Chafâa","Frikat","Beni Aïssi","Beni Zmenzer","Iferhounène","Azazga","Illoula Oumalou","Yakouren","Larbaâ Nath Irathen","Tizi Rached","Zekri","Ouaguenoun","Aïn Zaouia","M'Kira","Aït Yahia","Aït Mahmoud","Mâatkas","Aït Boumahdi","Abi Youcef","Beni Douala","Illilten","Bouzguen","Aït Aggouacha","Ouadhia","Azeffoun","Tigzirt","Aït Aïssa Mimoun","Boghni","Ifigha","Aït Oumalou","Tirmitine","Akerrou","Yatafen","Ath Zikki","Draâ Ben Khedda","Ouacif","Idjeur","Mekla","Tizi N'Tleta","Aït Yenni","Aghribs","Iflissen","Boudjima","Aït Yahia Moussa","Souk El Thenine","Aït Khellili","Sidi Namane","Iboudraren","Agouni Gueghrane","Mizrana","Imsouhel","Tadmaït","Aït Bouadou","Assi Youcef","Aït Toudert"],
+            "16 - Alger": ["Alger Centre","Sidi M'Hamed","El Madania","Belouizdad","Bab El Oued","Bologhine","Casbah","Oued Koriche","Bir Mourad Raïs","El Biar","Bouzareah","Birkhadem","El Harrach","Baraki","Oued Smar","Bachdjerrah","Hussein Dey","Kouba","Bourouba","Dar El Beïda","Bab Ezzouar","Ben Aknoun","Dely Ibrahim","El Hammamet","Raïs Hamidou","Djasr Kasentina","El Mouradia","Hydra","Mohammadia","Bordj El Kiffan","El Magharia","Beni Messous","Les Eucalyptus","Birtouta","Tessala El Merdja","Ouled Chebel","Sidi Moussa","Aïn Taya","Bordj El Bahri","El Marsa","H'raoua","Rouïba","Reghaïa","Aïn Benian","Staoueli","Zeralda","Mahelma","Rahmania","Souidania","Cheraga","Ouled Fayet","El Achour","Draria","Douera","Baba Hassen","Khraicia","Saoula"],
+            "17 - Djelfa": ["Aïn Chouhada","Aïn El Ibel","Aïn Feka","Aïn Maabed","Aïn Oussara","Amourah","Benhar","Beni Yagoub","Birine","Bouira Lahdab","Charef","Dar Chioukh","Deldoul","Djelfa","Douis","El Guedid","El Idrissia","El Khemis","Faidh El Botma","Guernini","Guettara","Had Sahary","Hassi Bahbah","Hassi El Euch","Hassi Fedoul","Messaad","M'Liliha","Moudjebara","Oum Laadham","Sed Rahal","Selmana","Sidi Baizid","Sidi Ladjel","Tadmit","Zaafrane","Zaccar"],
+            "18 - Jijel": ["Jijel","Eraguene","El Aouana","Ziama Mansouriah","Taher","Emir Abdelkader","Chekfa","Chahna","El Milia","Sidi Maarouf","Settara","El Ancer","Sidi Abdelaziz","Kaous","Ghebala","Bouraoui Belhadef","Djimla","Selma Benziada","Boucif Ouled Askeur","El Kennar Nouchfi","Ouled Yahia Khedrouche","Boudriaa Ben Yadjis","Kheïri Oued Adjoul","Texenna","Djemaa Beni Habibi","Bordj Tahar","Ouled Rabah","Ouadjana"],
+            "19 - Sétif": ["Aïn Abessa","Aïn Arnat","Aïn Azel","Aïn El Kebira","Aïn Lahdjar","Aïn Legradj","Aïn Oulmene","Aïn Roua","Aïn Sebt","Aït Naoual Mezada","Aït Tizi","Aït Wertilan","Amoucha","Babor","Bazer Sakhra","Beidha Bordj","Belaa","Beni Aziz","Beni Chebana","Beni Fouda","Beni Hocine","Beni Mouhli","Bir El Arch","Bir Haddada","Bouandas","Bougaa","Bousselam","Boutaleb","Dehamcha","Djemila","Draa Kebila","El Eulma","El Ouldja","El Ouricia","Guellal","Guelta Zerka","Guenzet","Guidjel","Hamma","Hammam Guergour","Hammam Soukhna","Harbil","Ksar El Abtal","Maaouia","Maoklane","Mezloug","Oued El Barad","Ouled Addouane","Ouled Sabor","Ouled Si Ahmed","Ouled Tebben","Rasfa","Salah Bey","Serdj El Ghoul","Sétif","Tachouda","Talaifacene","Taya","Tella","Tizi N'Bechar"],
+            "20 - Saïda": ["Aïn El Hadjar","Aïn Sekhouna","Aïn Soltane","Doui Thabet","El Hassasna","Hounet","Maamora","Moulay Larbi","Ouled Brahim","Ouled Khaled","Saïda","Sidi Ahmed","Sidi Amar","Sidi Boubekeur","Tircine","Youb"],
+            "21 - Skikda": ["Aïn Bouziane","Aïn Charchar","Aïn Kechra","Aïn Zouit","Azzaba","Bekkouche Lakhdar","Bin El Ouiden","Ben Azzouz","Beni Bechir","Beni Oulbane","Beni Zid","Bouchtata","Cheraia","Collo","Djendel Saadi Mohamed","El Ghedir","El Hadaiek","El Harrouch","El Marsa","Emdjez Edchich","Es Sebt","Filfila","Hamadi Krouma","Kanoua","Kerkera","Kheneg Mayoum","Oued Zehour","Ouldja Boulballout","Ouled Attia","Ouled Hbaba","Oum Toub","Ramdane Djamel","Salah Bouchaour","Sidi Mezghiche","Skikda","Tamalous","Zerdaza","Zitouna"],
+            "22 - Sidi Bel Abbès": ["Aïn Adden","Aïn El Berd","Aïn Kada","Aïn Thrid","Aïn Tindamine","Amarnas","Badredine El Mokrani","Belarbi","Ben Badis","Benachiba Chelia","Bir El Hammam","Boudjebaa El Bordj","Boukhanafis","Chettouane Belaila","Dhaya","El Haçaiba","Hassi Dahou","Hassi Zehana","Lamtar","Makedra","Marhoum","M'Cid","Merine","Mezaourou","Mostefa Ben Brahim","Moulay Slissen","Oued Sebaa","Oued Sefioun","Oued Taourira","Ras El Ma","Redjem Demouche","Sehala Thaoura","Sfisef","Sidi Ali Benyoub","Sidi Ali Boussidi","Sidi Bel Abbes","Sidi Brahim","Sidi Chaib","Sidi Daho des Zairs","Sidi Hamadouche","Sidi Khaled","Sidi Lahcene","Sidi Yacoub","Tabia","Tafissour","Taoudmout","Teghalimet","Telagh","Tenira","Tessala","Tilmouni","Zerouala"],
+            "23 - Annaba": ["Annaba","Berrahal","El Hadjar","Eulma","El Bouni","Oued El Aneb","Cheurfa","Seraïdi","Aïn Berda","Chetaïbi","Sidi Amar","Treat"],
+            "24 - Guelma": ["Aïn Ben Beida","Aïn Larbi","Aïn Makhlouf","Aïn Reggada","Aïn Sandel","Belkheir","Ben Djerrah","Beni Mezline","Bordj Sabath","Bouhachana","Bouhamdane","Bouati Mahmoud","Bouchegouf","Boumahra Ahmed","Dahouara","Djeballah Khemissi","El Fedjoudj","Guellat Bou Sbaa","Guelma","Hammam Debagh","Hammam N'Bail","Héliopolis","Houari Boumédiène","Khezarra","Medjez Amar","Medjez Sfa","Nechmaya","Oued Cheham","Oued Fragha","Oued Zenati","Ras El Agba","Roknia","Sellaoua Announa","Tamlouka"],
+            "25 - Constantine": ["Aïn Abid","Aïn Smara","Beni Hamiden","Constantine","Didouche Mourad","El Khroub","Hamma Bouziane","Ibn Badis","Ibn Ziad","Messaoud Boudjriou","Ouled Rahmoune","Zighoud Youcef"],
+            "26 - Médéa": ["Aïn Boucif","Aïn Ouksir","Aissaouia","Aziz","Baata","Benchicao","Beni Slimane","Berrouaghia","Bir Ben Laabed","Boghar","Bou Aiche","Bouaichoune","Bouchrahil","Boughezoul","Bouskene","Chahbounia","Chellalet El Adhaoura","Cheniguel","Derrag","Deux Bassins","Djouab","Draa Essamar","El Azizia","El Guelb El Kebir","El Hamdania","El Omaria","El Ouinet","Hannacha","Kef Lakhdar","Khams Djouamaa","Ksar Boukhari","Meghraoua","Médéa","Moudjbar","Meftaha","Mezerana","Mihoub","Ouamri","Oued Harbil","Ouled Antar","Ouled Bouachra","Ouled Brahim","Ouled Deide","Ouled Hellal","Ouled Maaref","Oum El Djalil","Ouzera","Rebaia","Saneg","Sedraia","Seghouane","Si Mahdjoub","Sidi Damed","Sidi Errabia","Sidi Naamanez","Sidi Zahar","Sidi Ziane","Souagui","Tablat","Tafraout","Tamesguida","Tizi Mahdi","Tlatet Eddouar","Zoubiria"],
+            "27 - Mostaganem": ["Abdelmalek Ramdane","Achaacha","Aïn Boudinar","Aïn Nouissy","Aïn Sidi Cherif","Aïn Tedles","Blad Touahria","Bouguirat","El Hassaine","Fornaka","Hadjadj","Hassi Mameche","Khadra","Kheireddine","Mansourah","Mesra","Mazagran","Mostaganem","Nekmaria","Oued El Kheir","Ouled Boughalem","Ouled Maallah","Safsaf","Sayada","Sidi Ali","Sidi Belattar","Sidi Lakhdar","Sirat","Souaflia","Sour","Stidia","Tazgait"],
+            "28 - M'Sila": ["Aïn El Hadjel","Aïn El Melh","Aïn Errich","Aïn Fares","Aïn Khadra","Belaiba","Ben Srour","Beni Ilmane","Benzouh","Berhoum","Bir Foda","Bou Saâda","Bouti Sayah","Chellal","Dehahna","Djebel Messaad","El Hamel","El Houamed","Hammam Dhalaa","Khettouti Sed El Djir","Khoubana","Maadid","Maarif","Magra","M'Cif","Medjedel","Mohammed Boudiaf","M'Sila","M'Tarfa","Ouanougha","Ouled Addi Guebala","Ouled Atia","Ouled Derradj","Ouled Madhi","Ouled Mansour","Ouled Sidi Brahim","Ouled Slimane","Oultem","Sidi Aïssa","Sidi Ameur","Sidi Hadjeres","Sidi M'Hamed","Slim","Souamaa","Tamsa","Tarmount","Zarzour"],
+            "29 - Mascara": ["Aïn Fares","Aïn Fekan","Aïn Ferah","Aïn Fras","Alaïmia","Aouf","Beniane","Bou Hanifia","Bou Henni","Chorfa","El Bordj","El Gaada","El Ghomri","El Guettana","El Keurt","El Menaouer","Ferraguig","Froha","Gharrous","Guerdjoum","Ghriss","Hachem","Hacine","Khalouia","Makdha","Mamounia","Maoussa","Mascara","Matemore","Mocta Douz","Mohammadia","Nesmoth","Oggaz","Oued El Abtal","Oued Taria","Ras El Aïn Amirouche","Sedjerara","Sehailia","Sidi Abdeldjebar","Sidi Abdelmoumen","Sidi Kada","Sidi Boussaid","Sig","Tighennif","Tizi","Zahana","Zelmata"],
+            "30 - Ouargla": ["Aïn Beida","Hassi Ben Abdellah","Hassi Messaoud","N'Goussa","Ouargla","Rouissat","Sidi Khouiled"],
+            "31 - Oran": ["Oran","Gdyel","Bir El Djir","Hassi Bounif","Es Senia","Arzew","Bethioua","Marsat El Hadjadj","Aïn El Turk","El Ançor","Oued Tlelat","Tafraoui","Sidi Chami","Boufatis","Mers El Kébir","Bou Sfer","El Kerma","El Braya","Hassi Ben Okba","Ben Freha","Hassi Mefsoukh","Sidi Benyebka","Misserghin","Boutlelis","Aïn El Kerma","Aïn El Bia"],
+            "32 - El Bayadh": ["El Bayadh","Rogassa","Stitten","Brezina","Ghassoul","Boualem","El Abiodh Sidi Cheikh","Aïn El Orak","Arbaouat","Bougtoub","El Kheiter","Kef El Ahmar","Boussemghoun","Chellala","Kraakda","El Bnoud","Cheguig","Sidi Ameur","El Mehara","Tousmouline","Sidi Slimane","Sidi Tifour"],
+            "33 - Illizi": ["Illizi","Debdeb","Bordj Omar Driss","In Amenas"],
+            "34 - Bordj Bou Arreridj": ["Aïn Taghrout","Aïn Tesra","Belimour","Ben Daoud","Bir Kasdali","Bordj Bou Arreridj","Bordj Ghédir","Bordj Zemoura","Colla","Djaafra","El Ach","El Achir","El Anseur","El Hamadia","El Main","El M'hir","Ghilassa","Haraza","Hasnaoua","Khelil","Ksour","Mansoura","Medjana","Ouled Brahem","Ouled Dahmane","Ouled Sidi Brahim","Rabta","Ras El Oued","Sidi Embarek","Tefreg","Taglait","Teniet En Nasr","Tassameurt","Tixter"],
+            "35 - Boumerdès": ["Boumerdes","Boudouaou","Afir","Bordj Menaiel","Baghlia","Sidi Daoud","Naciria","Djinet","Issers","Zemmouri","Si Mustapha","Tidjelabine","Chabet el Ameur","Thenia","Timezrit","Corso","Ouled Moussa","Larbatache","Bouzegza Keddara","Taourga","Ouled Aissa","Ben Choud","Dellys","Ammal","Beni Amrane","Souk El Had","Boudouaou El Bahri","Ouled Hedadj","Leghata","Hammedi","Khemis El Khechna","El Kharrouba"],
+            "36 - El Tarf": ["Aïn El Assel","Aïn Kerma","Asfour","Ben Mehidi","Berrihane","Besbes","Bougous","Bouhadjar","Bouteldja","Chebaita Mokhtar","Chefia","Chihani","Dréan","Echatt","El Aioun","El Kala","El Tarf","Hammam Beni Salah","Lac des Oiseaux","Oued Zitoun","Raml Souk","Souarekh","Zerizer","Zitouna"],
+            "37 - Tindouf": ["Oum el Assel","Tindouf"],
+            "38 - Tissemsilt": ["Ammari","Beni Chaib","Beni Lahcene","Boucaid","Bordj Bou Naama","Bordj El Emir Abdelkader","Khemisti","Larbaa","Lardjem","Layoune","Lazharia","Maacem","Melaab","Ouled Bessem","Sidi Abed","Sidi Boutouchent","Sidi Lantri","Sidi Slimane","Tamalaht","Theniet El Had","Tissemsilt","Youssoufia"],
+            "39 - El Oued": ["El Oued","Robbah","Oued El Alenda","Bayadha","Nakhla","Guemar","Kouinine","Reguiba","Hamraia","Taghzout","Debila","Hassani Abdelkrim","Hassi Khalifa","Taleb Larbi","Douar El Ma","Sidi Aoun","Trifaoui","Magrane","Beni Guecha","Ourmas","El Ogla","Mih Ouansa"],
+            "40 - Khenchela": ["Aïn Touila","Babar","Baghai","Bouhmama","Chechar","Chelia","Djellal","El Hamma","El Mahmal","El Oueldja","Ensigha","Kais","Khenchela","Khirane","M'Sara","M'Toussa","Ouled Rechache","Remila","Tamza","Taouzient","Yabous"],
+            "41 - Souk Ahras": ["Souk Ahras","Sedrata","Hanancha","Mechroha","Ouled Driss","Tiffech","Zaarouria","Taoura","Drea","Heddada","Khedara","Merahna","Ouled Moumene","Bir Bou Haouch","M'daourouch","Oum El Adhaim","Aïn Zana","Aïn Soltane","Ouillen","Sidi Fredj","Safel El Ouiden","Ragouba","Khemissa","Oued Keberit","Terraguelt","Zouabi"],
+            "42 - Tipaza": ["Tipaza","Menaceur","Larhat","Douaouda","Bourkika","Khemisti","Aghbal","Hadjout","Sidi Amar","Gouraya","Nador","Chaiba","Aïn Tagourait","Cherchell","Damous","Merad","Fouka","Bou Ismaïl","Ahmar El Aïn","Bouharoun","Sidi Ghiles","Messelmoun","Sidi Rached","Koléa","Attatba","Sidi Semiane","Beni Milleuk","Hadjeret Ennous"],
+            "43 - Mila": ["Ahmed Rachedi","Aïn Beida Harriche","Aïn Mellouk","Aïn Tine","Amira Arrès","Benyahia Abderrahmane","Bouhatem","Chelghoum Laid","Chigara","Derradji Bousselah","El Mechira","Elayadi Barbes","Ferdjioua","Grarem Gouga","Hamala","Mila","Minar Zarza","Oued Athmania","Oued Endja","Oued Seguen","Ouled Khalouf","Rouached","Sidi Khelifa","Sidi Merouane","Tadjenanet","Tassadane Haddada","Teleghma","Terrai Bainen","Tessala Lemtaï","Tiberguent","Yahia Beni Guecha","Zeghaia"],
+            "44 - Aïn Defla": ["Aïn Defla","Aïn Bouyahia","Aïn Benian","Aïn Lechiekh","Aïn Soltane","Aïn Torki","Arib","Bathia","Belaas","Ben Allal","Birbouche","Bir Ould Khelifa","Bordj Emir Khaled","Boumedfaa","Bourached","Djelida","Djemaa Ouled Cheikh","Djendel","El Abadia","El Amra","El Attaf","El Hassania","El Maine","Hammam Righa","Hoceinia","Khemis Miliana","Mekhatria","Miliana","Oued Chorfa","Oued Djemaa","Rouina","Sidi Lakhdar","Tacheta Zougagha","Tarik Ibn Ziad","Tiberkanine","Zeddine"],
+            "45 - Naâma": ["Naâma","Mecheria","Aïn Sefra","Tiout","Sfissifa","Moghrar","Assela","Djeniene Bourezg","Aïn Ben Khelil","Makman Ben Amer","Kasdir","El Biod"],
+            "46 - Aïn Témouchent": ["Aghlal","Aïn El Arbaa","Aïn Kihal","Aïn Témouchent","Aïn Tolba","Aoubellil","Beni Saf","Bouzedjar","Chaabat El Leham","Chentouf","El Amria","El Emir Abdelkader","El Malah","El Messaid","Hammam Bouhadjar","Hassasna","Hassi El Ghella","Oued Berkeche","Oued Sabah","Ouled Boudjemaa","Ouled Kihal","Oulhaça El Gheraba","Sidi Ben Adda","Sidi Boumedienne","Sidi Ouriache","Sidi Safi","Tamzoura","Terga"],
+            "47 - Ghardaïa": ["Berrihane","Bounoura","Dhayet Bendhahoua","El Atteuf","El Guerrara","Ghardaïa","Mansoura","Metlili","Sebseb","Zelfana"],
+            "48 - Relizane": ["Aïn Rahma","Aïn Tarek","Ammi Moussa","Belassel Bouzegza","Bendaoud","Beni Dergoun","Beni Zentis","Dar Ben Abdellah","Djidioua","El Guettar","El Hamadna","El Hassi","El Matmar","El Ouldja","Had Echkalla","Hamri","Kalaa","Lahlef","Mazouna","Mediouna","Mendes","Merdja Sidi Abed","Ouarizane","Oued Essalem","Oued Rhiou","Ouled Aiche","Oued El Djemaa","Ouled Sidi Mihoub","Ramka","Relizane","Sidi Khettab","Sidi Lazreg","Sidi M'Hamed Ben Ali","Sidi M'Hamed Benaouda","Sidi Saada","Souk El Had","Yellel","Zemmora"],
+            "49 - Timimoun": ["Charouine","Ksar Kaddour","Timimoun","Ouled Saïd","Tinerkouk","Deldoul","Metarfa","Aougrout","Talmine","Ouled Aïssa"],
+            "50 - Bordj Badji Mokhtar": ["Bordj Badji Mokhtar","Timiaouine"],
+            "51 - Ouled Djellal": ["Besbes","Doucen","Ech Chaïba","Ouled Djellal","Ras El Miaad","Sidi Khaled"],
+            "52 - Béni Abbès": ["Ouled Khoudir"]
+        };
+
+        // 1. Setup Dropdowns on Load
+        document.addEventListener('DOMContentLoaded', function() {
+            setupLocationDropdowns();
+            setupForm();
+        });
+
+        function setupLocationDropdowns() {
+            const wilayaSelect = document.getElementById('wilaya');
+            const citySelect = document.getElementById('city');
+            const cityContainer = document.getElementById('city-container');
+
+            if (!wilayaSelect || !citySelect || !cityContainer) return;
+
+            let wilayaOptions = '<option value="" disabled selected>اختر ولايتك...</option>';
+            for (const wilayaKey in ALGERIA_LOCATIONS) {
+                wilayaOptions += `<option value="${wilayaKey}">${wilayaKey}</option>`;
+            }
+            wilayaSelect.innerHTML = wilayaOptions;
+
+            wilayaSelect.addEventListener('change', () => {
+                const selectedWilaya = wilayaSelect.value;
+                const cities = ALGERIA_LOCATIONS[selectedWilaya] || [];
+                
+                citySelect.innerHTML = '<option value="" disabled selected>اختر مدينتك/بلديتك...</option>';
+                
+                if (cities.length > 0) {
+                    citySelect.innerHTML += cities.map(city => `<option value="${city}">${city}</option>`).join('');
+                    citySelect.disabled = false;
+                    cityContainer.style.opacity = '1';
+                } else {
+                    citySelect.disabled = true;
+                    cityContainer.style.opacity = '0.5';
+                }
+            });
+        }
+
+        // 2. Encryption Helper for TikTok Tracking
+        async function sha256(str) {
+            const textAsBuffer = new TextEncoder().encode(str);
+            const hashBuffer = await crypto.subtle.digest('SHA-256', textAsBuffer);
+            const hashArray = Array.from(new Uint8Array(hashBuffer));
+            return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+        }
+
+        // 3. Form Submission & Tracking Engine
+        function setupForm() {
+            const form = document.getElementById('enrollment-form');
+            if (!form) return;
+
+            const submitButton = form.querySelector('button[type="submit"]');
+            const errorElement = document.getElementById('form-error-message');
+            const formContainer = document.getElementById('form-container');
+            const successMessage = document.getElementById('success-message');
+
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                const scriptURL = 'https://script.google.com/macros/s/AKfycbyvnpzRwvOcx-hMcOhX1YQYHvNHn2ZouNKSMfEYlJoz_rTVgUhGPCoU7PYLFRL3vJ9y/exec';
+                
+                submitButton.disabled = true;
+                submitButton.innerHTML = '...جاري التأكيد';
+                if (errorElement) {
+                    errorElement.style.display = 'none';
+                    errorElement.textContent = '';
+                }
+                
+                const formData = new FormData(form);
+
+                fetch(scriptURL, { method: 'POST', body: formData, mode: 'no-cors' })
+                    .then(async () => {
+                        const phoneInput = document.getElementById('phone');
+                        const userPhone = phoneInput ? phoneInput.value.trim() : '';
+                        
+                        // Fire Facebook Pixel
+                        try {
+                            if (typeof fbq === 'function') {
+                                if (userPhone) fbq('init', '2191072564678210', { ph: userPhone });
+                                fbq('track', 'Purchase', {value: 4900, currency: 'DZD'});
+                            }
+                        } catch (err) { console.error('FB Pixel Error:', err); }
+
+                        // Fire TikTok Pixel
+                        try {
+                            if (typeof ttq === 'object' && ttq !== null) {
+                                if(userPhone) {
+                                    const hashedPhone = await sha256(userPhone);
+                                    ttq.identify({ "phone_number": hashedPhone });
+                                }
+                                ttq.track('Purchase', {
+                                    "contents": [{
+                                        "content_id": "IELTS-COURSE-ALGERIA-V2",
+                                        "content_type": "product",
+                                        "content_name": "الدورة رقم #1 في الجزائر | إضمن نجاحك في امتحان IELTS",
+                                        "price": 4900
+                                    }],
+                                    "value": 4900,
+                                    "currency": "DZD"
+                                });
+                            }
+                        } catch (err) { console.error('TikTok Pixel Error:', err); }
+                        
+                        // Show Success Screen
+                        if (formContainer && successMessage) {
+                            formContainer.style.display = 'none';
+                            successMessage.style.display = 'block';
+                        }
+                    })
+                    .catch(error => {
+                        if (errorElement) {
+                            errorElement.textContent = 'حدث خطأ، يرجى المحاولة مرة أخرى أو الاتصال بنا مباشرة.';
+                            errorElement.style.display = 'block';
+                        }
+                        submitButton.disabled = false;
+                        submitButton.innerHTML = '🚀 احجز الآن بـ 4900 دج';
+                    });
+            });
+        }
+
+        // FAQ Toggle
+        function toggleFAQ(element) {
+            element.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
